@@ -4,6 +4,7 @@ import os
 from openai import APIConnectionError, APIStatusError, APITimeoutError, OpenAI
 
 BASE_URL = 'https://api.zhizengzeng.com/v1'
+DEFAULT_MODEL = 'deepseek-v4.1-flash'
 
 
 class ModelError(RuntimeError):
@@ -13,11 +14,9 @@ class ModelError(RuntimeError):
 class ChatModel:
     def __init__(self, model=None):
         key = os.environ.get('ZZZ_API_KEY', '').strip()
-        self.model = model or os.environ.get('LLM_MODEL_ID', '').strip()
+        self.model = (model or '').strip() or os.environ.get('LLM_MODEL_ID', '').strip() or DEFAULT_MODEL
         if not key:
             raise ValueError('请在本机环境变量中设置 ZZZ_API_KEY')
-        if not self.model:
-            raise ValueError('请设置 LLM_MODEL_ID 或使用 --model 指定模型 ID')
         self.client = OpenAI(api_key=key, base_url=BASE_URL, timeout=60, max_retries=0)
 
     def close(self):

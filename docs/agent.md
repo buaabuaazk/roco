@@ -9,18 +9,18 @@ conda activate hello-agents
 python -m pip install -r requirements.txt
 python -m roco_data import
 
-# 使用已验证的智增增模型 ID，进入多轮聊天
-python -m roco_agent --model deepseek-v4.1-flash-1017
+# 使用默认模型，进入多轮聊天
+python -m roco_agent
 
 # 单次提问并显示工具调用过程
-python -m roco_agent "喵喵能学毒沼吗？" --model deepseek-v4.1-flash-1017 --trace
+python -m roco_agent "喵喵能学毒沼吗？" --trace
 
 # 返回完整 JSON，适合后续接入其他程序
-python -m roco_agent "喵喵和迪莫谁速度种族值高？" --model deepseek-v4.1-flash-1017 --json
+python -m roco_agent "喵喵和迪莫谁速度种族值高？" --json
 ```
 
-密钥读取本机环境变量 `ZZZ_API_KEY`。`LLM_MODEL_ID` 设置后可省略 `--model`。
-模型 ID 以智增增账号实际可用名称为准；上面的 ID 沿用已有项目配置，并已进行真实工具调用联调。
+密钥读取本机环境变量 `ZZZ_API_KEY`。模型按 `--model`、`LLM_MODEL_ID`、默认 `deepseek-v4.1-flash` 的顺序选择。
+如需清除当前终端之前的模型设置，可执行 `unset LLM_MODEL_ID` 后使用默认值。
 本机环境中已安装 OpenAI Python SDK 3.41.0，依赖版本记录在 `requirements.txt`。
 
 多轮模式中输入 `/reset` 清空上下文，`/exit` 退出；Ctrl+C 也可退出。最近四轮成功对话保存在本次进程内存中。

@@ -41,9 +41,16 @@ class ModelTests(unittest.TestCase):
         with patch.dict(os.environ, {'ZZZ_API_KEY': '', 'LLM_MODEL_ID': ''}):
             with self.assertRaisesRegex(ValueError, 'ZZZ_API_KEY'):
                 ChatModel()
-        with patch.dict(os.environ, {'ZZZ_API_KEY': 'test-key', 'LLM_MODEL_ID': ''}):
-            with self.assertRaisesRegex(ValueError, 'LLM_MODEL_ID'):
-                ChatModel()
+
+    def test_model_precedence_and_default(self):
+        with patch.dict(os.environ, {'ZZZ_API_KEY': 'test-key', 'LLM_MODEL_ID': ''}), \
+                patch('roco_agent.llm.OpenAI'):
+            self.assertEqual(ChatModel().model, 'deepseek-v4.1-flash')
+            os.environ['LLM_MODEL_ID'] = 'env-model'
+            self.assertEqual(ChatModel().model, 'env-model')
+            self.assertEqual(ChatModel('explicit-model').model, 'explicit-model')
+            os.environ['LLM_MODEL_ID'] = ' '
+            self.assertEqual(ChatModel(' ').model, 'deepseek-v4.1-flash')
 
 
 if __name__ == '__main__':

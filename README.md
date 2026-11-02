@@ -5,10 +5,10 @@
 ```sh
 conda activate hello-agents
 python -m pip install -r requirements.txt
-python -m roco_agent --model deepseek-v4.1-flash-1017
+python -m roco_agent
 ```
 
-模型使用本机 `ZZZ_API_KEY` 环境变量通过智增增调用；也可用 `LLM_MODEL_ID` 指定模型。
+模型使用本机 `ZZZ_API_KEY` 环境变量通过智增增调用，默认使用 `deepseek-v4.1-flash`；可用 `--model` 或 `LLM_MODEL_ID` 覆盖。
 支持多轮追问、五个查询工具，以及 `--trace` 查看工具调用。首次使用请先按下节导入 SQLite。
 完整配置与限制见 [Agent 使用说明](docs/agent.md)。
 
