@@ -10,7 +10,16 @@ git commit -m "Update collected data"
 git push
 ```
 
-在另一台电脑上首次使用 `git clone <仓库地址>`，进入 `roco` 后即可运行采集脚本。
+仓库：https://github.com/buaabuaazk/roco （私有）。
+
+另一台电脑完成 GitHub SSH 密钥认证后，首次使用：
+
+```sh
+git clone ssh://git@ssh.github.com:443/buaabuaazk/roco.git
+cd roco
+```
+
+这里使用 GitHub SSH 的 443 端口，本机已验证可用。
 脚本和已保存的 JSON 数据一起同步；Python 缓存、临时文件和本地环境文件由 `.gitignore` 忽略。
 两台电脑轮流采集，每次开始前拉取、结束后推送，可减少数据文件冲突。
 
