@@ -1,0 +1,117 @@
+{
+    "ok": true,
+    "resource": "pet-appearance",
+    "pet_id": 3200,
+    "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3200",
+    "updated_at": "2026-11-02T23:04:05+08:00",
+    "pet": {
+        "body_size": {
+            "height": {
+                "max_cm": 60,
+                "max_m": 0.6,
+                "min_cm": 42,
+                "min_m": 0.42
+            },
+            "weight": {
+                "max_g": 11000,
+                "max_kg": 11,
+                "min_g": 8000,
+                "min_kg": 8
+            }
+        },
+        "classis": {
+            "id": 6,
+            "name": "自然类精灵"
+        },
+        "description": "似乎是一种非常古老的机械系造物，用处不详。身体结构精巧，拨弄它头顶的天线，会让它变得十分愉快，甚至能断断续续地播放音乐。“方方正正，顶天立地，做人亦该如此。”",
+        "egg_group_ids": [
+            15,
+            9
+        ],
+        "egg_group_names": [
+            "机械组",
+            "拟人组"
+        ],
+        "egg_groups": [
+            {
+                "id": 15,
+                "name": "机械组"
+            },
+            {
+                "id": 9,
+                "name": "拟人组"
+            }
+        ],
+        "feature": {
+            "desc": "回合开始时，技能顺序打乱，4号位的技能能耗-4。",
+            "name": "盲拧",
+            "skill_id": 200170
+        },
+        "handbook_no": "263",
+        "has_ride_talent": true,
+        "has_shiny": true,
+        "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/icon.png",
+        "name": "机械方方",
+        "pet_id": 3200,
+        "quality": 2,
+        "ride_talent": {
+            "enabled": true,
+            "name": "同乘",
+            "probability": 5760,
+            "probability_rate": 0.05760057600576006,
+            "talent_id": 402
+        },
+        "season": {
+            "end_time": "2026-05-21 03:59:59",
+            "id": 1,
+            "start_time": "2025-07-03 04:00:00",
+            "subtitle": "暗夜拾光",
+            "title": "S1赛季"
+        },
+        "season_id": 1,
+        "sections": {
+            "acquisition": "/api/v1/games/rocom/wiki/pets/3200/acquisition",
+            "ecology": "/api/v1/games/rocom/wiki/pets/3200/ecology",
+            "egg": "/api/v1/games/rocom/wiki/pets/3200/egg",
+            "family": "/api/v1/games/rocom/wiki/pets/3200/family",
+            "features": "/api/v1/games/rocom/wiki/pets/3200/features",
+            "fruit": "/api/v1/games/rocom/wiki/pets/3200/fruit",
+            "handbook": "/api/v1/games/rocom/wiki/pets/3200/handbook",
+            "natures": "/api/v1/games/rocom/wiki/pets/3200/natures",
+            "profile": "/api/v1/games/rocom/wiki/pets/3200/profile",
+            "ride": "/api/v1/games/rocom/wiki/pets/3200/ride",
+            "skills": "/api/v1/games/rocom/wiki/pets/3200/skills",
+            "stories": "/api/v1/games/rocom/wiki/pets/3200/stories",
+            "talents": "/api/v1/games/rocom/wiki/pets/3200/talents"
+        },
+        "shiny": {
+            "available": true,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/shiny.png",
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/shiny-small.png",
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/shiny.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/shiny-small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3200%2Fshiny.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3200%2Fshiny-small.png"
+        },
+        "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/small.png",
+        "stage": 1,
+        "type_ids": [
+            19
+        ],
+        "type_names": [
+            "机械"
+        ],
+        "types": [
+            {
+                "id": 19,
+                "name": "机械"
+            }
+        ],
+        "image_sources": [
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/icon.png",
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3200/small.png"
+        ],
+        "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3200%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3200%2Fsmall.png"
+    }
+}
