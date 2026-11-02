@@ -1,0 +1,62 @@
+{
+    "pet_id": 3007,
+    "started_at": "2026-11-02T20:45:31.879629+08:00",
+    "status": "complete",
+    "requests": [
+        {
+            "file": "pets\\3007\\pet-detail.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-detail&pet_id=3007",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3007",
+            "updated_at": "2026-09-22T02:52:24+08:00",
+            "stale": true,
+            "warning": "上游暂时不可用，返回最近缓存"
+        },
+        {
+            "file": "pets\\3007\\pet-ecology.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-ecology&pet_id=3007",
+            "fetched_at": "2026-11-02T20:45:40.440135+08:00",
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3007/ecology",
+            "updated_at": "2026-11-02T20:45:41+08:00",
+            "stale": false,
+            "warning": null
+        },
+        {
+            "file": "pets\\3007\\pet-natures.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-natures&pet_id=3007",
+            "fetched_at": "2026-11-02T20:45:50.360479+08:00",
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3007/natures",
+            "updated_at": "2026-11-02T20:45:51+08:00",
+            "stale": false,
+            "warning": null
+        },
+        {
+            "file": "pets\\3007\\pet-stories.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-stories&pet_id=3007",
+            "fetched_at": "2026-11-02T20:45:57.344484+08:00",
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3007/stories",
+            "updated_at": "2026-11-02T20:45:58+08:00",
+            "stale": false,
+            "warning": null
+        },
+        {
+            "file": "pets\\3007\\pet-appearance.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-appearance&pet_id=3007",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3007",
+            "updated_at": "2026-09-22T02:52:24+08:00",
+            "stale": true,
+            "warning": "上游暂时不可用，返回最近缓存"
+        }
+    ],
+    "finished_at": "2026-11-02T20:45:57.348906+08:00",
+    "name": "魔力猫",
+    "missing_sections": [],
+    "skill_count": 51,
+    "scope": "公开精灵分区及技能 ID 与学习条件；技能详情独立采集，图片保留 URL。"
+}

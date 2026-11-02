@@ -1,0 +1,100 @@
+{
+    "ok": true,
+    "resource": "pet-appearance",
+    "pet_id": 3005,
+    "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3005",
+    "updated_at": "2026-09-26T11:26:03+08:00",
+    "pet": {
+        "body_size": {
+            "height": {
+                "max_cm": 154,
+                "max_m": 1.54,
+                "min_cm": 108,
+                "min_m": 1.08
+            },
+            "weight": {
+                "max_g": 85500,
+                "max_kg": 85.5,
+                "min_g": 77000,
+                "min_kg": 77
+            }
+        },
+        "classis": {
+            "id": 6,
+            "name": "自然类精灵"
+        },
+        "description": "将刚刚孕育的胚胎顶在头上，胚胎由特殊水元素包裹着。能将身边的水元素汇集在一起喷射出去，产生强大的冲击力。“无论是云中落下的一滴水，还是湖面中微风吹起的一道涟漪，都有她的身影”。",
+        "egg_group_ids": [
+            12
+        ],
+        "egg_group_names": [
+            "魔力组"
+        ],
+        "egg_groups": [
+            {
+                "id": 12,
+                "name": "魔力组"
+            }
+        ],
+        "feature": {
+            "desc": "使用水系技能后，全技能能耗-1。",
+            "name": "浸润",
+            "skill_id": 200107
+        },
+        "handbook_no": "010",
+        "has_ride_talent": true,
+        "has_shiny": false,
+        "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3005/icon.png",
+        "name": "水灵",
+        "pet_id": 3005,
+        "quality": 2,
+        "ride_talent": {
+            "enabled": true,
+            "name": "同乘",
+            "probability": 5760,
+            "probability_rate": 0.05760057600576006,
+            "talent_id": 402
+        },
+        "season": null,
+        "season_id": 0,
+        "sections": {
+            "acquisition": "/api/v1/games/rocom/wiki/pets/3005/acquisition",
+            "ecology": "/api/v1/games/rocom/wiki/pets/3005/ecology",
+            "egg": "/api/v1/games/rocom/wiki/pets/3005/egg",
+            "family": "/api/v1/games/rocom/wiki/pets/3005/family",
+            "features": "/api/v1/games/rocom/wiki/pets/3005/features",
+            "fruit": "/api/v1/games/rocom/wiki/pets/3005/fruit",
+            "handbook": "/api/v1/games/rocom/wiki/pets/3005/handbook",
+            "natures": "/api/v1/games/rocom/wiki/pets/3005/natures",
+            "profile": "/api/v1/games/rocom/wiki/pets/3005/profile",
+            "ride": "/api/v1/games/rocom/wiki/pets/3005/ride",
+            "skills": "/api/v1/games/rocom/wiki/pets/3005/skills",
+            "stories": "/api/v1/games/rocom/wiki/pets/3005/stories",
+            "talents": "/api/v1/games/rocom/wiki/pets/3005/talents"
+        },
+        "shiny": {
+            "available": false
+        },
+        "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3005/small.png",
+        "stage": 3,
+        "type_ids": [
+            5
+        ],
+        "type_names": [
+            "水"
+        ],
+        "types": [
+            {
+                "id": 5,
+                "name": "水"
+            }
+        ],
+        "image_sources": [
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3005/icon.png",
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3005/small.png"
+        ],
+        "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3005%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3005%2Fsmall.png"
+    },
+    "stale": true,
+    "warning": "上游暂时不可用，返回最近缓存"
+}

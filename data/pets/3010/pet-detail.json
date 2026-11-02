@@ -1,0 +1,2563 @@
+{
+    "ok": true,
+    "resource": "pet-detail",
+    "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3010",
+    "updated_at": "2026-11-02T20:38:10+08:00",
+    "pet_id": 3010,
+    "sections": {
+        "base": {
+            "body_size": {
+                "height": {
+                    "max_cm": 56,
+                    "max_m": 0.56,
+                    "min_cm": 39,
+                    "min_m": 0.39
+                },
+                "weight": {
+                    "max_g": 5200,
+                    "max_kg": 5.2,
+                    "min_g": 3600,
+                    "min_kg": 3.6
+                }
+            },
+            "classis": {
+                "id": 2,
+                "name": "漂浮类精灵"
+            },
+            "description": "身体里似乎装满了坏心思，很轻松就能从试图抓住它的洛克手中挣脱。会三五成群地从洛克手上抢走东西，把东西丢下之后嘻嘻哈哈地飞走。如果惹怒它们的话，会气呼呼地撞向洛克。",
+            "egg_group_ids": [
+                7
+            ],
+            "egg_group_names": [
+                "妖精组"
+            ],
+            "egg_groups": [
+                {
+                    "id": 7,
+                    "name": "妖精组"
+                }
+            ],
+            "feature": {
+                "desc": "入场时获得50%吸血。",
+                "name": "渴求",
+                "skill_id": 200139
+            },
+            "handbook_no": "030",
+            "has_ride_talent": false,
+            "has_shiny": true,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "quality": 2,
+            "ride_talent": {
+                "enabled": false,
+                "probability": 0,
+                "probability_rate": 0
+            },
+            "season": {
+                "end_time": "2026-07-16 03:59:59",
+                "id": 2,
+                "start_time": "2026-05-21 04:00:00",
+                "subtitle": "狂欢怪谈",
+                "title": "S2赛季"
+            },
+            "season_id": 2,
+            "sections": {
+                "acquisition": "/api/v1/games/rocom/wiki/pets/3010/acquisition",
+                "ecology": "/api/v1/games/rocom/wiki/pets/3010/ecology",
+                "egg": "/api/v1/games/rocom/wiki/pets/3010/egg",
+                "family": "/api/v1/games/rocom/wiki/pets/3010/family",
+                "features": "/api/v1/games/rocom/wiki/pets/3010/features",
+                "fruit": "/api/v1/games/rocom/wiki/pets/3010/fruit",
+                "handbook": "/api/v1/games/rocom/wiki/pets/3010/handbook",
+                "natures": "/api/v1/games/rocom/wiki/pets/3010/natures",
+                "profile": "/api/v1/games/rocom/wiki/pets/3010/profile",
+                "ride": "/api/v1/games/rocom/wiki/pets/3010/ride",
+                "skills": "/api/v1/games/rocom/wiki/pets/3010/skills",
+                "stories": "/api/v1/games/rocom/wiki/pets/3010/stories",
+                "talents": "/api/v1/games/rocom/wiki/pets/3010/talents"
+            },
+            "shiny": {
+                "available": true,
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny.png",
+                "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny-small.png",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny.png",
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny-small.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fshiny.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fshiny-small.png"
+            },
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "stage": 1,
+            "type_ids": [
+                18,
+                15
+            ],
+            "type_names": [
+                "恶",
+                "翼"
+            ],
+            "types": [
+                {
+                    "id": 18,
+                    "name": "恶"
+                },
+                {
+                    "id": 15,
+                    "name": "翼"
+                }
+            ],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "family": {
+            "family_id": 7,
+            "members": [
+                {
+                    "display_order": 1,
+                    "feature": {
+                        "desc": "入场时获得50%吸血。",
+                        "name": "渴求",
+                        "skill_id": 200139
+                    },
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "name": "恶魔叮",
+                    "pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                    "stage": 1,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+                },
+                {
+                    "condition_level": 40,
+                    "condition_summary": "等级达到 40",
+                    "condition_texts": [
+                        "等级达到 40"
+                    ],
+                    "display_order": 2,
+                    "evolution_description": "恶魔叮升级到40级后进化为叮叮恶魔。",
+                    "feature": {
+                        "desc": "入场时获得50%吸血。",
+                        "name": "渴求",
+                        "skill_id": 200139
+                    },
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/icon.png",
+                    "items": [
+                        {
+                            "count": 5,
+                            "item_id": 100608,
+                            "name": "天使草"
+                        }
+                    ],
+                    "level": 40,
+                    "money": 12000,
+                    "name": "叮叮恶魔",
+                    "pet_id": 3039,
+                    "previous_pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/small.png",
+                    "stage": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3039%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3039%2Fsmall.png"
+                },
+                {
+                    "condition_summary": "首领化",
+                    "condition_texts": [
+                        "首领化"
+                    ],
+                    "display_order": 4,
+                    "evolution_description": "叮叮恶魔首领化后成为恶魔男爵。",
+                    "feature": {
+                        "desc": "入场时获得50%吸血，每过量回复5%生命转化为10%物攻。",
+                        "name": "贪得无厌",
+                        "skill_id": 280032
+                    },
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/icon.png",
+                    "money": 12000,
+                    "name": "恶魔男爵",
+                    "pet_id": 5055,
+                    "previous_pet_id": 3039,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/small.png",
+                    "stage": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F5055%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F5055%2Fsmall.png"
+                },
+                {
+                    "condition_level": 40,
+                    "condition_summary": "等级达到 40",
+                    "condition_texts": [
+                        "等级达到 40"
+                    ],
+                    "display_order": 5,
+                    "evolution_description": "恶魔叮升级到40级后进化为恶魔男爵。",
+                    "feature": {
+                        "desc": "入场时获得50%吸血，每过量回复5%生命转化为10%物攻。",
+                        "name": "贪得无厌",
+                        "skill_id": 280032
+                    },
+                    "form": "领地试炼用",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/icon.png",
+                    "items": [
+                        {
+                            "count": 5,
+                            "item_id": 100608,
+                            "name": "天使草"
+                        }
+                    ],
+                    "money": 12000,
+                    "name": "恶魔男爵",
+                    "pet_id": 13000172,
+                    "previous_pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/small.png",
+                    "stage": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F13000172%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F13000172%2Fsmall.png"
+                }
+            ],
+            "name": "恶魔叮进化链"
+        },
+        "skills": {
+            "blood": [
+                {
+                    "bloodline": {
+                        "id": 1,
+                        "name": "普通系血脉",
+                        "short_name": "普通",
+                        "type": {
+                            "id": 2,
+                            "name": "普通"
+                        }
+                    },
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 3,
+                        "name": "魔攻"
+                    },
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020910.png",
+                    "level": 15,
+                    "name": "星星撞击",
+                    "power": "90",
+                    "skill_id": 7020910,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "魔攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020910.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020910.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 2,
+                        "name": "草系血脉",
+                        "short_name": "草",
+                        "type": {
+                            "id": 3,
+                            "name": "草"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 3,
+                        "name": "魔攻"
+                    },
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element_type": {
+                        "id": 3,
+                        "name": "草"
+                    },
+                    "families": "草",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7030430.png",
+                    "level": 15,
+                    "name": "花香",
+                    "power": "60",
+                    "skill_id": 7030430,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "魔攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7030430.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7030430.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 3,
+                        "name": "火系血脉",
+                        "short_name": "火",
+                        "type": {
+                            "id": 4,
+                            "name": "火"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 4,
+                        "name": "火"
+                    },
+                    "families": "火",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7040150.png",
+                    "level": 15,
+                    "name": "火焰冲锋",
+                    "power": "60",
+                    "skill_id": 7040150,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7040150.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7040150.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 4,
+                        "name": "水系血脉",
+                        "short_name": "水",
+                        "type": {
+                            "id": 5,
+                            "name": "水"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 5,
+                        "name": "水"
+                    },
+                    "families": "水",
+                    "flavor_text": "白的、轻的、易碎的。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7050330.png",
+                    "level": 15,
+                    "name": "泡沫",
+                    "power": "60",
+                    "skill_id": 7050330,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7050330.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7050330.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 5,
+                        "name": "光系血脉",
+                        "short_name": "光",
+                        "type": {
+                            "id": 6,
+                            "name": "光"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 6,
+                        "name": "光"
+                    },
+                    "families": "光",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7060230.png",
+                    "level": 15,
+                    "name": "透射",
+                    "power": "60",
+                    "skill_id": 7060230,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7060230.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7060230.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 6,
+                        "name": "地系血脉",
+                        "short_name": "地",
+                        "type": {
+                            "id": 8,
+                            "name": "地"
+                        }
+                    },
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 8,
+                        "name": "地"
+                    },
+                    "families": "地",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7080120.png",
+                    "level": 15,
+                    "name": "跺地",
+                    "power": "80",
+                    "skill_id": 7080120,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7080120.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7080120.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 7,
+                        "name": "冰系血脉",
+                        "short_name": "冰",
+                        "type": {
+                            "id": 9,
+                            "name": "冰"
+                        }
+                    },
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 9,
+                        "name": "冰"
+                    },
+                    "families": "冰",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7090250.png",
+                    "level": 15,
+                    "name": "冰爪",
+                    "power": "80",
+                    "skill_id": 7090250,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7090250.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7090250.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 8,
+                        "name": "龙系血脉",
+                        "short_name": "龙",
+                        "type": {
+                            "id": 10,
+                            "name": "龙"
+                        }
+                    },
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 3,
+                        "name": "魔攻"
+                    },
+                    "desc": "蓄力，对敌方造成魔法伤害。",
+                    "element_type": {
+                        "id": 10,
+                        "name": "龙"
+                    },
+                    "families": "龙",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100150.png",
+                    "level": 15,
+                    "name": "升龙咆哮",
+                    "power": "200",
+                    "skill_id": 7100150,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "魔攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100150.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7100150.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 9,
+                        "name": "电系血脉",
+                        "short_name": "电",
+                        "type": {
+                            "id": 11,
+                            "name": "电"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 11,
+                        "name": "电"
+                    },
+                    "families": "电",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110300.png",
+                    "level": 15,
+                    "name": "球状闪电",
+                    "power": "60",
+                    "skill_id": 7110300,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110300.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110300.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 10,
+                        "name": "毒系血脉",
+                        "short_name": "毒",
+                        "type": {
+                            "id": 12,
+                            "name": "毒"
+                        }
+                    },
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 12,
+                        "name": "毒"
+                    },
+                    "families": "毒",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120200.png",
+                    "level": 15,
+                    "name": "毒沼",
+                    "power": "80",
+                    "skill_id": 7120200,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120200.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120200.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 11,
+                        "name": "虫系血脉",
+                        "short_name": "虫",
+                        "type": {
+                            "id": 13,
+                            "name": "虫"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 13,
+                        "name": "虫"
+                    },
+                    "families": "虫",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130260.png",
+                    "level": 15,
+                    "name": "噬心",
+                    "power": "60",
+                    "skill_id": 7130260,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130260.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130260.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 12,
+                        "name": "武系血脉",
+                        "short_name": "武",
+                        "type": {
+                            "id": 14,
+                            "name": "武"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，2连击。",
+                    "element_type": {
+                        "id": 14,
+                        "name": "武"
+                    },
+                    "families": "武",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140230.png",
+                    "level": 15,
+                    "name": "缠丝劲",
+                    "power": "25",
+                    "skill_id": 7140230,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140230.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140230.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 13,
+                        "name": "翼系血脉",
+                        "short_name": "翼",
+                        "type": {
+                            "id": 15,
+                            "name": "翼"
+                        }
+                    },
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150210.png",
+                    "level": 15,
+                    "name": "风矢",
+                    "power": "80",
+                    "skill_id": 7150210,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150210.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150210.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 14,
+                        "name": "萌系血脉",
+                        "short_name": "萌",
+                        "type": {
+                            "id": 16,
+                            "name": "萌"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 16,
+                        "name": "萌"
+                    },
+                    "families": "萌",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7160240.png",
+                    "level": 15,
+                    "name": "碰爪",
+                    "power": "60",
+                    "skill_id": 7160240,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7160240.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7160240.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 15,
+                        "name": "幽系血脉",
+                        "short_name": "幽",
+                        "type": {
+                            "id": 17,
+                            "name": "幽"
+                        }
+                    },
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 3,
+                        "name": "魔攻"
+                    },
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element_type": {
+                        "id": 17,
+                        "name": "幽"
+                    },
+                    "families": "幽",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170220.png",
+                    "level": 15,
+                    "name": "灵媒",
+                    "power": "100",
+                    "skill_id": 7170220,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "魔攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170220.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7170220.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 16,
+                        "name": "恶系血脉",
+                        "short_name": "恶",
+                        "type": {
+                            "id": 18,
+                            "name": "恶"
+                        }
+                    },
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180270.png",
+                    "level": 15,
+                    "name": "诋毁",
+                    "power": "80",
+                    "skill_id": 7180270,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180270.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180270.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 17,
+                        "name": "机械系血脉",
+                        "short_name": "机械",
+                        "type": {
+                            "id": 19,
+                            "name": "机械"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，本技能位于1号位时威力+60，传动1。",
+                    "element_type": {
+                        "id": 19,
+                        "name": "机械"
+                    },
+                    "families": "机械",
+                    "flavor_text": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7070010.png",
+                    "level": 15,
+                    "name": "械斗",
+                    "power": "45",
+                    "skill_id": 7070010,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7070010.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7070010.png"
+                },
+                {
+                    "bloodline": {
+                        "id": 18,
+                        "name": "幻系血脉",
+                        "short_name": "幻",
+                        "type": {
+                            "id": 20,
+                            "name": "幻"
+                        }
+                    },
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 20,
+                        "name": "幻"
+                    },
+                    "families": "幻",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7190360.png",
+                    "level": 15,
+                    "name": "星云漩涡",
+                    "power": "60",
+                    "skill_id": 7190360,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "blood",
+                    "source_label": "血脉",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7190360.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7190360.png"
+                }
+            ],
+            "filters": {
+                "bloodlines": [
+                    {
+                        "count": 1,
+                        "id": 1,
+                        "name": "普通系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 2,
+                        "name": "草系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 3,
+                        "name": "火系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 4,
+                        "name": "水系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 5,
+                        "name": "光系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 6,
+                        "name": "地系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 7,
+                        "name": "冰系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 8,
+                        "name": "龙系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 9,
+                        "name": "电系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 10,
+                        "name": "毒系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 11,
+                        "name": "虫系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 12,
+                        "name": "武系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 13,
+                        "name": "翼系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 14,
+                        "name": "萌系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 15,
+                        "name": "幽系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 16,
+                        "name": "恶系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 17,
+                        "name": "机械系血脉"
+                    },
+                    {
+                        "count": 1,
+                        "id": 18,
+                        "name": "幻系血脉"
+                    }
+                ],
+                "elements": [
+                    {
+                        "count": 9,
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    {
+                        "count": 1,
+                        "id": 3,
+                        "name": "草"
+                    },
+                    {
+                        "count": 1,
+                        "id": 4,
+                        "name": "火"
+                    },
+                    {
+                        "count": 1,
+                        "id": 5,
+                        "name": "水"
+                    },
+                    {
+                        "count": 1,
+                        "id": 6,
+                        "name": "光"
+                    },
+                    {
+                        "count": 1,
+                        "id": 8,
+                        "name": "地"
+                    },
+                    {
+                        "count": 1,
+                        "id": 9,
+                        "name": "冰"
+                    },
+                    {
+                        "count": 1,
+                        "id": 10,
+                        "name": "龙"
+                    },
+                    {
+                        "count": 1,
+                        "id": 11,
+                        "name": "电"
+                    },
+                    {
+                        "count": 2,
+                        "id": 12,
+                        "name": "毒"
+                    },
+                    {
+                        "count": 1,
+                        "id": 13,
+                        "name": "虫"
+                    },
+                    {
+                        "count": 1,
+                        "id": 14,
+                        "name": "武"
+                    },
+                    {
+                        "count": 8,
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    {
+                        "count": 1,
+                        "id": 16,
+                        "name": "萌"
+                    },
+                    {
+                        "count": 4,
+                        "id": 17,
+                        "name": "幽"
+                    },
+                    {
+                        "count": 11,
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    {
+                        "count": 1,
+                        "id": 19,
+                        "name": "机械"
+                    },
+                    {
+                        "count": 1,
+                        "id": 20,
+                        "name": "幻"
+                    }
+                ],
+                "skill_types": [
+                    {
+                        "count": 33,
+                        "key": "physical",
+                        "label": "物攻"
+                    },
+                    {
+                        "count": 4,
+                        "key": "magic",
+                        "label": "魔攻"
+                    },
+                    {
+                        "count": 1,
+                        "key": "defense",
+                        "label": "防御"
+                    },
+                    {
+                        "count": 9,
+                        "key": "status",
+                        "label": "状态"
+                    }
+                ],
+                "sources": [
+                    {
+                        "count": 13,
+                        "key": "level",
+                        "label": "升级技能"
+                    },
+                    {
+                        "count": 16,
+                        "key": "machine",
+                        "label": "技能石"
+                    },
+                    {
+                        "count": 18,
+                        "key": "blood",
+                        "label": "血脉"
+                    }
+                ]
+            },
+            "level": [
+                {
+                    "cost": "0",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，自己回复1能量。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180070.png",
+                    "level": 1,
+                    "name": "魔爪",
+                    "power": "30",
+                    "skill_id": 7180070,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180070.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180070.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得速度+120。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150120.png",
+                    "level": 1,
+                    "name": "乘风",
+                    "power": "0",
+                    "skill_id": 7150120,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150120.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150120.png"
+                },
+                {
+                    "cost": "0",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，自己回复1能量。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "flavor_text": "某些精灵平日里也会有这种行为，小心家里的厕纸和魔法卷轴。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020360.png",
+                    "level": 6,
+                    "name": "抓挠",
+                    "power": "35",
+                    "skill_id": 7020360,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020360.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020360.png"
+                },
+                {
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "减伤70%，应对攻击。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020780.png",
+                    "level": 8,
+                    "name": "防御",
+                    "power": "0",
+                    "skill_id": 7020780,
+                    "skill_type": {
+                        "id": 3,
+                        "name": "防御"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020780.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020780.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得100%吸血。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180160.png",
+                    "level": 10,
+                    "name": "贪婪",
+                    "power": "0",
+                    "skill_id": 7180160,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180160.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180160.png"
+                },
+                {
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150190.png",
+                    "level": 13,
+                    "name": "鹰爪",
+                    "power": "60",
+                    "skill_id": 7150190,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150190.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150190.png"
+                },
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，3连击，若自己的生命低于50%，本次技能连击数+2。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "flavor_text": "“别担心，受点小伤可以促进血液循环”。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180110.png",
+                    "level": 20,
+                    "name": "撕咬",
+                    "power": "20",
+                    "skill_id": 7180110,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180110.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180110.png"
+                },
+                {
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得双攻和双防-50%，应对防御：改为敌方获得双攻和双防-120%。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180320.png",
+                    "level": 23,
+                    "name": "暗箱操作",
+                    "power": "0",
+                    "skill_id": 7180320,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180320.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180320.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，1连击，若先于敌方攻击，改为3连击。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150090.png",
+                    "level": 29,
+                    "name": "疾风刺",
+                    "power": "25",
+                    "skill_id": 7150090,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150090.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150090.png"
+                },
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，若先于敌方攻击，本次技能威力+50%。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150060.png",
+                    "level": 30,
+                    "name": "扇风",
+                    "power": "75",
+                    "skill_id": 7150060,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150060.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150060.png"
+                },
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，2连击，若击败敌方，本技能连击数永久+2。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "flavor_text": "黑市售卖一种稀有咕噜球，据说一个球里能住两只精灵，每天都产一颗随机精灵蛋，出双倍价格买到手之后发现被骗了。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180340.png",
+                    "level": 37,
+                    "name": "趁火打劫",
+                    "power": "40",
+                    "skill_id": 7180340,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180340.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180340.png"
+                },
+                {
+                    "cost": "4",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，吸血50%，应对状态：本次技能威力翻倍。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180120.png",
+                    "level": 38,
+                    "name": "暗突袭",
+                    "power": "70",
+                    "skill_id": 7180120,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180120.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180120.png"
+                },
+                {
+                    "cost": "5",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150110.png",
+                    "level": 40,
+                    "name": "龙卷风",
+                    "power": "70",
+                    "skill_id": 7150110,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "level",
+                    "source_label": "升级技能",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150110.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150110.png"
+                }
+            ],
+            "machine": [
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，应对状态：本次攻击吸血100%。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180100.png",
+                    "name": "撕裂",
+                    "power": "85",
+                    "skill_id": 7180100,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180100.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180100.png"
+                },
+                {
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element_type": {
+                        "id": 17,
+                        "name": "幽"
+                    },
+                    "families": "幽",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170200.png",
+                    "name": "幻象",
+                    "power": "60",
+                    "skill_id": 7170200,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170200.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7170200.png"
+                },
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，应对状态：使敌方失去6能量。",
+                    "element_type": {
+                        "id": 17,
+                        "name": "幽"
+                    },
+                    "families": "幽",
+                    "flavor_text": "从家里带来的午餐盒，学长说帮我用炼金釜加热一下，就变成这样了……",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170100.png",
+                    "name": "惊吓盒子",
+                    "power": "80",
+                    "skill_id": 7170100,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170100.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7170100.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "敌方获得1层降灵印记。",
+                    "element_type": {
+                        "id": 17,
+                        "name": "幽"
+                    },
+                    "families": "幽",
+                    "flavor_text": "午夜，在黑暗的教室里，两个人共同握着一根羽毛笔，嘴里念念有词，笔尖疯狂抖动。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170140.png",
+                    "name": "降灵",
+                    "power": "0",
+                    "skill_id": 7170140,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7170140.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7170140.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，2连击，每次连击使敌方获得1层中毒。",
+                    "element_type": {
+                        "id": 12,
+                        "name": "毒"
+                    },
+                    "families": "毒",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120080.png",
+                    "name": "连续毒针",
+                    "power": "15",
+                    "skill_id": 7120080,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120080.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120080.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，1连击，每次使用后，本技能连击数永久+1。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "flavor_text": "“怎么又来了？”",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020510.png",
+                    "name": "乘胜追击",
+                    "power": "40",
+                    "skill_id": 7020510,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020510.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020510.png"
+                },
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，应对状态：本次技能威力变为3倍。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020490.png",
+                    "name": "偷袭",
+                    "power": "85",
+                    "skill_id": 7020490,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020490.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020490.png"
+                },
+                {
+                    "cost": "0",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "每回合随机变成自己未携带的技能，且该技能能耗-2。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020860.png",
+                    "name": "复写",
+                    "power": "0",
+                    "skill_id": 7020860,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020860.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020860.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得连击数+3。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7021090.png",
+                    "name": "热身运动",
+                    "power": "0",
+                    "skill_id": 7021090,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7021090.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7021090.png"
+                },
+                {
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得物攻+30%，3连击。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7021080.png",
+                    "name": "三连破",
+                    "power": "0",
+                    "skill_id": 7021080,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7021080.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7021080.png"
+                },
+                {
+                    "cost": "1",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得速度+80，应对防御：改为速度+160。",
+                    "element_type": {
+                        "id": 2,
+                        "name": "普通"
+                    },
+                    "families": "普通",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020690.png",
+                    "name": "快速移动",
+                    "power": "0",
+                    "skill_id": 7020690,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7020690.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7020690.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 1,
+                        "name": "无"
+                    },
+                    "desc": "自己获得全技能威力+20，迅捷。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150300.png",
+                    "name": "羽化加速",
+                    "power": "0",
+                    "skill_id": 7150300,
+                    "skill_type": {
+                        "id": 2,
+                        "name": "状态"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150300.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150300.png"
+                },
+                {
+                    "cost": "10",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，自己每失去10%生命，本技能能耗-1。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "flavor_text": "谋生之地也可能是葬身之处。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180150.png",
+                    "name": "彼岸之手",
+                    "power": "150",
+                    "skill_id": 7180150,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180150.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180150.png"
+                },
+                {
+                    "cost": "4",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，自己每失去10%生命，本技能威力+15。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "flavor_text": "向恶魔献上鲜血吧！没有的话，香蕉也可以。",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180400.png",
+                    "name": "血契",
+                    "power": "75",
+                    "skill_id": 7180400,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180400.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180400.png"
+                },
+                {
+                    "cost": "3",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，选择：本次技能威力+40，使用后自己生命-10%或自己生命低于50%时本次技能威力+100。",
+                    "element_type": {
+                        "id": 18,
+                        "name": "恶"
+                    },
+                    "families": "恶",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180420.png",
+                    "name": "下注",
+                    "power": "85",
+                    "skill_id": 7180420,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7180420.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7180420.png"
+                },
+                {
+                    "cost": "2",
+                    "damage_type": {
+                        "id": 2,
+                        "name": "物攻"
+                    },
+                    "desc": "造成物伤，2连击，若上回合双方有精灵使用幻系技能，本技能获得迅捷。",
+                    "element_type": {
+                        "id": 15,
+                        "name": "翼"
+                    },
+                    "families": "翼",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150400.png",
+                    "name": "月影交错",
+                    "power": "25",
+                    "skill_id": 7150400,
+                    "skill_type": {
+                        "id": 1,
+                        "name": "物攻"
+                    },
+                    "source": "machine",
+                    "source_label": "技能石",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7150400.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7150400.png"
+                }
+            ]
+        },
+        "acquisition": {
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "methods": [
+                {
+                    "text": "精灵蛋孵化：（12小时）",
+                    "type": "egg"
+                },
+                {
+                    "text": "果实刷新：精灵果实",
+                    "type": "fruit_refresh"
+                }
+            ],
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "sources": [
+                {
+                    "description": "精灵蛋孵化",
+                    "egg": {
+                        "egg_conf_id": 3010001,
+                        "egg_item": {
+                            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png",
+                            "id": 107007,
+                            "name": "精灵蛋",
+                            "image_sources": [
+                                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+                            ],
+                            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+                        },
+                        "hatch_label": "12小时",
+                        "hatch_seconds": 43200,
+                        "name": "",
+                        "image_sources": [
+                            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+                        ],
+                        "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+                    },
+                    "source_type": "egg"
+                },
+                {
+                    "fruit_refresh": {
+                        "display_order": 0,
+                        "fruit": {
+                            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png",
+                            "id": 108007,
+                            "name": "精灵果实",
+                            "image_sources": [
+                                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png"
+                            ],
+                            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F108007.png"
+                        },
+                        "fruit_item_id": 108007
+                    },
+                    "name": "精灵果实",
+                    "source_type": "fruit_refresh"
+                }
+            ],
+            "summary": "可通过精灵蛋孵化、果实刷新获得",
+            "world_maps": [],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "egg": {
+            "egg_conf_id": 3010001,
+            "egg_item": {
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png",
+                "id": 107007,
+                "name": "精灵蛋",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+            },
+            "egg_size": {
+                "height": {
+                    "max_cm": 23,
+                    "max_m": 0.23,
+                    "min_cm": 17,
+                    "min_m": 0.17
+                },
+                "weight": {
+                    "max_g": 1640,
+                    "max_kg": 1.64,
+                    "min_g": 1260,
+                    "min_kg": 1.26
+                }
+            },
+            "egg_type": {
+                "name": "普通",
+                "precious_egg_type": 0
+            },
+            "hatch_label": "12小时",
+            "hatch_seconds": 43200,
+            "name": "",
+            "pet": {
+                "egg_groups": [
+                    {
+                        "id": 7,
+                        "name": "妖精组"
+                    }
+                ],
+                "gender_ratio": {
+                    "female_percent": 50,
+                    "male_percent": 50
+                },
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "name": "恶魔叮",
+                "pet_id": 3010,
+                "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+            },
+            "pet_egg_pet_id": 3010001,
+            "probabilities": {
+                "blessing": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "祝福",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "boss": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "首领",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "friend_exchange": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "好友互换",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "home": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "家园",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "miracle_exchange": {
+                    "glass": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    },
+                    "label": "奇迹交换",
+                    "shining": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    }
+                },
+                "none": {
+                    "glass": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    },
+                    "label": "默认",
+                    "shining": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    }
+                },
+                "travel": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "旅行",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                }
+            },
+            "probability_denominator": 10000,
+            "random_effects": [
+                {
+                    "effect_id": 1,
+                    "egg_type": {
+                        "name": "普通",
+                        "precious_egg_type": 0
+                    },
+                    "is_precious": false,
+                    "name": "普通随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1001,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1002,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 2001,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 3001,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 4001,
+                    "egg_type": {
+                        "name": "噩梦污染",
+                        "precious_egg_type": 8
+                    },
+                    "is_precious": false,
+                    "mutation_type": 32,
+                    "name": "噩梦污染随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1003,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_particle": true,
+                    "mutation_param2": 1,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1004,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_particle": true,
+                    "mutation_param2": 2,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1005,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_particle": true,
+                    "mutation_param2": 3,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1006,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "mutation_param1": 15,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 3002,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                }
+            ],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+        },
+        "ride": {
+            "enabled": true,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "movements": [
+                {
+                    "id": 13001,
+                    "name": "陆地移动",
+                    "vitality_cost_text": "起始体力80，每秒消耗46，衰减50%，衰减阈值25%"
+                },
+                {
+                    "id": 20008,
+                    "name": "滑翔",
+                    "vitality_cost_text": "起始体力80，每秒消耗35，衰减50%，衰减阈值25%"
+                }
+            ],
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "summary": "可骑乘，移动方式2种",
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "fruit": {
+            "items": [
+                {
+                    "badges": [
+                        {
+                            "key": "target_pets",
+                            "label": "吸引精灵 2"
+                        }
+                    ],
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png",
+                    "item_id": 108007,
+                    "item_kind": "bag",
+                    "name": "精灵果实",
+                    "quality": 4,
+                    "summary": "吸引2只精灵",
+                    "target_pet_count": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F108007.png"
+                }
+            ],
+            "total": 1
+        },
+        "handbook": {
+            "areas": [
+                {
+                    "id": 1,
+                    "name": "世界图鉴"
+                },
+                {
+                    "id": 2,
+                    "name": "风眠省图鉴"
+                },
+                {
+                    "id": 3,
+                    "name": "洛克里安图鉴"
+                }
+            ],
+            "description": "捣蛋鬼精灵",
+            "handbook_id": 30,
+            "name": "恶魔叮",
+            "pets": [
+                {
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "name": "恶魔叮",
+                    "pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+                }
+            ],
+            "topics": [
+                {
+                    "count": 1,
+                    "description": "捕捉1只精灵",
+                    "display_order": 1,
+                    "reward": {
+                        "description": "图鉴课题-捕捉1只精灵",
+                        "items": [
+                            {
+                                "count": 150,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png",
+                                "item_id": 7,
+                                "item_kind": "visual",
+                                "name": "魔法经验",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F7.png"
+                            },
+                            {
+                                "count": 5,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png",
+                                "item_id": 17,
+                                "item_kind": "visual",
+                                "name": "课题研究点",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F17.png"
+                            }
+                        ],
+                        "name": "图鉴课题-捕捉1只精灵",
+                        "reward_id": 202001
+                    },
+                    "reward_id": 202001,
+                    "topic_id": 1,
+                    "topic_type": 1,
+                    "topic_type_priority": 0
+                },
+                {
+                    "count": 1,
+                    "description": "捕捉1只了不起天分的精灵",
+                    "display_order": 2,
+                    "reward": {
+                        "description": "图鉴课题-捕捉1只了不起天分的精灵",
+                        "items": [
+                            {
+                                "count": 150,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png",
+                                "item_id": 7,
+                                "item_kind": "visual",
+                                "name": "魔法经验",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F7.png"
+                            },
+                            {
+                                "count": 10,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png",
+                                "item_id": 17,
+                                "item_kind": "visual",
+                                "name": "课题研究点",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F17.png"
+                            }
+                        ],
+                        "name": "图鉴课题-捕捉1只了不起天分的精灵",
+                        "reward_id": 202006
+                    },
+                    "reward_id": 202006,
+                    "topic_id": 2,
+                    "topic_type": 9,
+                    "topic_type_priority": 0
+                },
+                {
+                    "count": 1,
+                    "description": "使精灵成功进化1次",
+                    "display_order": 3,
+                    "reward": {
+                        "description": "图鉴课题-使精灵进化1次",
+                        "items": [
+                            {
+                                "count": 50,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/100699.png",
+                                "item_id": 100699,
+                                "item_kind": "bag",
+                                "name": "分光水晶",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/100699.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F100699.png"
+                            },
+                            {
+                                "count": 10,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png",
+                                "item_id": 17,
+                                "item_kind": "visual",
+                                "name": "课题研究点",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F17.png"
+                            }
+                        ],
+                        "name": "图鉴课题-使精灵进化1次",
+                        "reward_id": 202002
+                    },
+                    "reward_id": 202002,
+                    "topic_id": 3,
+                    "topic_type": 10,
+                    "topic_type_priority": 0
+                }
+            ]
+        }
+    },
+    "warning": "部分资料暂不可用：profile、talents、features"
+}
