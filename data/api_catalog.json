@@ -1,0 +1,5107 @@
+{
+    "ok": true,
+    "service": "洛克魔法书 Wiki 开放接口",
+    "version": "1.2",
+    "endpoint": "wiki-api.php",
+    "documentation": "api.html",
+    "source": "https://rocom.shallow.ink/",
+    "authentication": "本站接口无需 API Key，匿名令牌仅在服务端使用，不对外返回。",
+    "methods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+    ],
+    "cors": "*",
+    "resource_count": 115,
+    "resources": [
+        {
+            "resource": "pets",
+            "name": "精灵图鉴",
+            "group": "精灵与战斗",
+            "mode": "list",
+            "description": "查询精灵图鉴，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "egg_group_id",
+                    "label": "蛋组 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "skill_id",
+                    "label": "技能 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "ride_talent",
+                    "label": "同乘筛选",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pets.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pets",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets",
+            "example": "wiki-api.php?resource=pets&page_size=5"
+        },
+        {
+            "resource": "skills",
+            "name": "技能图鉴",
+            "group": "精灵与战斗",
+            "mode": "list",
+            "description": "查询技能图鉴，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "skill_type_id",
+                    "label": "技能类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "damage_type_id",
+                    "label": "伤害类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "tag_id",
+                    "label": "标签 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "skills.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "skills",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skills",
+            "example": "wiki-api.php?resource=skills&page_size=5"
+        },
+        {
+            "resource": "skill-stones",
+            "name": "技能石",
+            "group": "精灵与战斗",
+            "mode": "list",
+            "description": "查询技能石，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "skill_id",
+                    "label": "技能 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "skill-stones.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "skill-stones",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skill-stones",
+            "example": "wiki-api.php?resource=skill-stones&page_size=5"
+        },
+        {
+            "resource": "skill-stone-recipes",
+            "name": "技能石配方",
+            "group": "精灵与战斗",
+            "mode": "list",
+            "description": "查询技能石配方，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "skill-stone-recipes.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "skill-stone-recipes",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skill-stone-recipes",
+            "example": "wiki-api.php?resource=skill-stone-recipes&page_size=5"
+        },
+        {
+            "resource": "pet-carryons",
+            "name": "精灵携带物",
+            "group": "精灵与战斗",
+            "mode": "list",
+            "description": "查询精灵携带物，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "skill_id",
+                    "label": "技能 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-carryons.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pet-carryons",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-carryons",
+            "example": "wiki-api.php?resource=pet-carryons&page_size=5"
+        },
+        {
+            "resource": "pet-levels",
+            "name": "升级经验表",
+            "group": "精灵与战斗",
+            "mode": "list",
+            "description": "查询升级经验表，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "level_min",
+                    "label": "最低等级",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "level_max",
+                    "label": "最高等级",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-levels.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-levels",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-levels",
+            "example": "wiki-api.php?resource=pet-levels&page_size=5"
+        },
+        {
+            "resource": "pet-eggs",
+            "name": "精灵蛋",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "查询精灵蛋，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "egg_group_id",
+                    "label": "蛋组 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "same_ride",
+                    "label": "同乘筛选",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-eggs.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pet-eggs",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-eggs",
+            "example": "wiki-api.php?resource=pet-eggs&page_size=5"
+        },
+        {
+            "resource": "random-eggs",
+            "name": "随机蛋",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "查询随机蛋，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "precious_egg_type",
+                    "label": "珍稀蛋类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "mutation_type",
+                    "label": "变异类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "random-eggs.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "random-eggs",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/random-eggs",
+            "example": "wiki-api.php?resource=random-eggs&page_size=5"
+        },
+        {
+            "resource": "egg-items",
+            "name": "蛋物品",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "查询蛋物品，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "same_ride",
+                    "label": "同乘筛选",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "egg_conf_id",
+                    "label": "蛋配置 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "egg-items.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "egg-items",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/egg-items",
+            "example": "wiki-api.php?resource=egg-items&page_size=5"
+        },
+        {
+            "resource": "pet-fruits",
+            "name": "精灵果实",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "查询精灵果实，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-fruits.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pet-fruits",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-fruits",
+            "example": "wiki-api.php?resource=pet-fruits&page_size=5"
+        },
+        {
+            "resource": "pet-foods",
+            "name": "精灵食物",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "查询精灵食物，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-foods.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pet-foods",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-foods",
+            "example": "wiki-api.php?resource=pet-foods&page_size=5"
+        },
+        {
+            "resource": "pet-gifts",
+            "name": "精灵礼物",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "查询精灵礼物，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "like_element_id",
+                    "label": "喜好属性 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-gifts.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pet-gifts",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-gifts",
+            "example": "wiki-api.php?resource=pet-gifts&page_size=5"
+        },
+        {
+            "resource": "home-progression",
+            "name": "家园成长",
+            "group": "家园",
+            "mode": "raw",
+            "description": "查询家园成长，仅透传下方列出的筛选参数。",
+            "parameters": [],
+            "response_key": "raw",
+            "page": "home-progression.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "home/progression",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/home/progression",
+            "example": "wiki-api.php?resource=home-progression"
+        },
+        {
+            "resource": "home-egg-lay-rates",
+            "name": "家园产蛋概率",
+            "group": "家园",
+            "mode": "list",
+            "description": "查询家园产蛋概率，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "nest_num",
+                    "label": "精灵巢数量",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "egg_laying_nest_num",
+                    "label": "已产蛋巢数量",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "home-egg-lay-rates.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "home-egg-lay-rates",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/home-egg-lay-rates",
+            "example": "wiki-api.php?resource=home-egg-lay-rates&page_size=5"
+        },
+        {
+            "resource": "furniture",
+            "name": "家具",
+            "group": "家园",
+            "mode": "list",
+            "description": "查询家具，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "tab_type_id",
+                    "label": "二级分类 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "classification_id",
+                    "label": "展示分类 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "furniture.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "furniture",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/furniture",
+            "example": "wiki-api.php?resource=furniture&page_size=5"
+        },
+        {
+            "resource": "plants",
+            "name": "种植",
+            "group": "家园",
+            "mode": "list",
+            "description": "查询种植，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "tab_id",
+                    "label": "种植标签 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "plants.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "plants",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/plants",
+            "example": "wiki-api.php?resource=plants&page_size=5"
+        },
+        {
+            "resource": "recipes",
+            "name": "食谱",
+            "group": "家园",
+            "mode": "list",
+            "description": "查询食谱，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "recipes.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "recipes",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/recipes",
+            "example": "wiki-api.php?resource=recipes&page_size=5"
+        },
+        {
+            "resource": "fruit-trees",
+            "name": "果实树",
+            "group": "家园",
+            "mode": "list",
+            "description": "查询果实树，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "area",
+                    "label": "区域名称",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "fruit_item_id",
+                    "label": "果实道具 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fruit-trees.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fruit-trees",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fruit-trees",
+            "example": "wiki-api.php?resource=fruit-trees&page_size=5"
+        },
+        {
+            "resource": "regions",
+            "name": "地区",
+            "group": "世界与冒险",
+            "mode": "list",
+            "description": "查询地区，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "regions.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "regions",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/regions",
+            "example": "wiki-api.php?resource=regions&page_size=5"
+        },
+        {
+            "resource": "dungeons",
+            "name": "副本",
+            "group": "世界与冒险",
+            "mode": "list",
+            "description": "查询副本，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "region_name",
+                    "label": "区域名称",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "hide_tag",
+                    "label": "展示标签",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "dungeons.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "dungeons",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/dungeons",
+            "example": "wiki-api.php?resource=dungeons&page_size=5"
+        },
+        {
+            "resource": "balls",
+            "name": "咕噜球",
+            "group": "世界与冒险",
+            "mode": "list",
+            "description": "查询咕噜球，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "balls.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "balls",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/balls",
+            "example": "wiki-api.php?resource=balls&page_size=5"
+        },
+        {
+            "resource": "medals",
+            "name": "奖章",
+            "group": "世界与冒险",
+            "mode": "list",
+            "description": "查询奖章，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "medal_type",
+                    "label": "奖章类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "medal_source",
+                    "label": "奖章来源",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "medals.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "medals",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/medals",
+            "example": "wiki-api.php?resource=medals&page_size=5"
+        },
+        {
+            "resource": "tasks",
+            "name": "任务",
+            "group": "任务与剧情",
+            "mode": "list",
+            "description": "查询任务，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "task_class",
+                    "label": "任务分类",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "paragraph_id",
+                    "label": "任务章节 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "reward_id",
+                    "label": "奖励 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "tasks.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "tasks",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/tasks",
+            "example": "wiki-api.php?resource=tasks&page_size=5"
+        },
+        {
+            "resource": "task-summaries",
+            "name": "剧情摘要",
+            "group": "任务与剧情",
+            "mode": "list",
+            "description": "查询剧情摘要，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "show_task_id",
+                    "label": "展示任务 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "task-summaries.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "task-summaries",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/task-summaries",
+            "example": "wiki-api.php?resource=task-summaries&page_size=5"
+        },
+        {
+            "resource": "shops",
+            "name": "商店",
+            "group": "商店与兑换",
+            "mode": "list",
+            "description": "查询商店，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "shop_type",
+                    "label": "商店类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "mall_type",
+                    "label": "商店分页类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "enabled",
+                    "label": "启用状态",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "shops.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "shops",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/shops",
+            "example": "wiki-api.php?resource=shops&page_size=5"
+        },
+        {
+            "resource": "exchanges",
+            "name": "兑换",
+            "group": "商店与兑换",
+            "mode": "list",
+            "description": "查询兑换，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "use_type",
+                    "label": "使用场景",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "unlock_type",
+                    "label": "解锁类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "cost_item_id",
+                    "label": "消耗道具 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "exchanges.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "exchanges",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/exchanges",
+            "example": "wiki-api.php?resource=exchanges&page_size=5"
+        },
+        {
+            "resource": "mails",
+            "name": "邮件",
+            "group": "商店与兑换",
+            "mode": "list",
+            "description": "查询邮件，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "mail_type",
+                    "label": "邮件类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "mail_platform",
+                    "label": "邮件平台",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "mails.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "mails",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/mails",
+            "example": "wiki-api.php?resource=mails&page_size=5"
+        },
+        {
+            "resource": "fashion",
+            "name": "时装套装",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询时装套装，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "gender",
+                    "label": "性别",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "suit_grade",
+                    "label": "套装品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fashions.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fashion",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion",
+            "example": "wiki-api.php?resource=fashion&page_size=5"
+        },
+        {
+            "resource": "fashion-bag-charms",
+            "name": "包挂饰",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询包挂饰，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "kind_name",
+                    "label": "包挂饰分类",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "launch_item",
+                    "label": "是否投放",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fashion-bag-charms.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fashion/bag-charms",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/bag-charms",
+            "example": "wiki-api.php?resource=fashion-bag-charms&page_size=5"
+        },
+        {
+            "resource": "fashion-wands",
+            "name": "魔杖",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询魔杖，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "magic_name",
+                    "label": "魔法类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "launch_item",
+                    "label": "是否投放",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fashion-wands.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fashion/wands",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/wands",
+            "example": "wiki-api.php?resource=fashion-wands&page_size=5"
+        },
+        {
+            "resource": "fashion-items",
+            "name": "服装单件",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询服装单件，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_name",
+                    "label": "部件类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "gender",
+                    "label": "性别",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "suit_id",
+                    "label": "套装 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fashion-items.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fashion/items",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/items",
+            "example": "wiki-api.php?resource=fashion-items&page_size=5"
+        },
+        {
+            "resource": "fashion-beauty",
+            "name": "美容妆容",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询美容妆容，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "gender",
+                    "label": "性别",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "avatar_id",
+                    "label": "形象 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "is_free_item",
+                    "label": "是否免费",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "launch_item",
+                    "label": "是否投放",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fashion-beauty.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fashion/beauty",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/beauty",
+            "example": "wiki-api.php?resource=fashion-beauty&page_size=5"
+        },
+        {
+            "resource": "fashion-bonds",
+            "name": "华丽徽章",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询华丽徽章，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "band",
+                    "label": "羁绊档位",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "suit_id",
+                    "label": "套装 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "fashion-bonds.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "fashion/bonds",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/bonds",
+            "example": "wiki-api.php?resource=fashion-bonds&page_size=5"
+        },
+        {
+            "resource": "music",
+            "name": "音乐",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询音乐，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "music.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "music",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/music",
+            "example": "wiki-api.php?resource=music&page_size=5"
+        },
+        {
+            "resource": "chat-emojis",
+            "name": "聊天表情",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询聊天表情，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "chat-emojis.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "chat-emojis",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/chat-emojis",
+            "example": "wiki-api.php?resource=chat-emojis&page_size=5"
+        },
+        {
+            "resource": "photo-actions",
+            "name": "拍照动作",
+            "group": "装扮与个性",
+            "mode": "list",
+            "description": "查询拍照动作，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "action_type",
+                    "label": "动作类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "photo-actions.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "photo-actions",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/photo-actions",
+            "example": "wiki-api.php?resource=photo-actions&page_size=5"
+        },
+        {
+            "resource": "items",
+            "name": "道具总览",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询道具总览，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "item_kind",
+                    "label": "物品来源类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240,
+                    "enum": [
+                        "bag",
+                        "visual"
+                    ]
+                },
+                {
+                    "name": "type_id",
+                    "label": "属性 / 类型 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "items.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=items&page_size=5"
+        },
+        {
+            "resource": "profile-assets",
+            "name": "个人名片资产",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询个人名片资产，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "asset_type",
+                    "label": "名片资产类型",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "profile-assets.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "profile-assets",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/profile-assets",
+            "example": "wiki-api.php?resource=profile-assets&page_size=5"
+        },
+        {
+            "resource": "handbook-areas",
+            "name": "图鉴区域",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询图鉴区域，仅透传下方列出的筛选参数。",
+            "parameters": [],
+            "response_key": "items",
+            "page": "handbook-areas.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "handbook/areas",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/handbook/areas",
+            "example": "wiki-api.php?resource=handbook-areas"
+        },
+        {
+            "resource": "catalogs",
+            "name": "Wiki 资源目录",
+            "group": "接口与目录",
+            "mode": "list",
+            "description": "查询Wiki 资源目录，仅透传下方列出的筛选参数。",
+            "parameters": [],
+            "response_key": "items",
+            "page": "catalogs.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "catalogs",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/catalogs",
+            "example": "wiki-api.php?resource=catalogs"
+        },
+        {
+            "resource": "avatars",
+            "name": "头像",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询头像，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "avatars.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_avatar": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=avatars&page_size=5"
+        },
+        {
+            "resource": "card-skins",
+            "name": "名片装扮",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询名片装扮，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "card-skins.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_card_skin": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=card-skins&page_size=5"
+        },
+        {
+            "resource": "titles",
+            "name": "称号",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询称号，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "titles.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_title": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=titles&page_size=5"
+        },
+        {
+            "resource": "actions",
+            "name": "动作",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询动作，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "actions.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_action": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=actions&page_size=5"
+        },
+        {
+            "resource": "glass-pieces",
+            "name": "炫彩拼图",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询炫彩拼图，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "glass-pieces.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_glass_piece": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=glass-pieces&page_size=5"
+        },
+        {
+            "resource": "bloodline-items",
+            "name": "血脉道具",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询血脉道具，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "bloodline-items.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_bloodline_item": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=bloodline-items&page_size=5"
+        },
+        {
+            "resource": "pet-growth-materials",
+            "name": "成长材料",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询成长材料，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-growth-materials.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_pet_growth_material": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=pet-growth-materials&page_size=5"
+        },
+        {
+            "resource": "boss-tokens",
+            "name": "首领信物",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询首领信物，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "boss-tokens.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_boss_token": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=boss-tokens&page_size=5"
+        },
+        {
+            "resource": "pet-medals",
+            "name": "精灵奖牌",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询精灵奖牌，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-medals.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_pet_medal": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=pet-medals&page_size=5"
+        },
+        {
+            "resource": "pet-memories",
+            "name": "精灵记忆",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询精灵记忆，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-memories.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_pet_memory": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=pet-memories&page_size=5"
+        },
+        {
+            "resource": "task-items",
+            "name": "任务道具",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询任务道具，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "task-items.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_task_item": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=task-items&page_size=5"
+        },
+        {
+            "resource": "food-materials",
+            "name": "食物材料",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询食物材料，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "food-materials.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_food_material": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=food-materials&page_size=5"
+        },
+        {
+            "resource": "plant-seeds",
+            "name": "植物种子",
+            "group": "道具与收藏",
+            "mode": "list",
+            "description": "查询植物种子，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "名称 / 描述关键词",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "quality",
+                    "label": "品质",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "plant-seeds.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "items",
+            "fixed_query": {
+                "is_plant_seed": "1"
+            },
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items",
+            "example": "wiki-api.php?resource=plant-seeds&page_size=5"
+        },
+        {
+            "resource": "pet-appearance",
+            "name": "精灵基础与外观",
+            "group": "精灵详情",
+            "mode": "pet-appearance",
+            "description": "精灵基础资料、立绘、小图和异色资源；返回 pet 字段。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "pet",
+            "page": "pet-appearance.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}",
+            "example": "wiki-api.php?resource=pet-appearance&pet_id=3001"
+        },
+        {
+            "resource": "pet-detail",
+            "name": "精灵完整档案",
+            "group": "精灵详情",
+            "mode": "pet-detail",
+            "description": "聚合基础资料及 10 个详情分区；部分分区不可用时返回 warning。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "sections",
+            "page": "pet.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}",
+            "example": "wiki-api.php?resource=pet-detail&pet_id=3001"
+        },
+        {
+            "resource": "pet-profile",
+            "name": "精灵种族值与生态",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "种族值、体型、属性克制、性别比和移动方式。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-profile.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "profile",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/profile",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/profile",
+            "example": "wiki-api.php?resource=pet-profile&pet_id=3001"
+        },
+        {
+            "resource": "pet-family",
+            "name": "精灵进化链",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "家族成员、进化关系和进化条件。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-family.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "family",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/family",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/family",
+            "example": "wiki-api.php?resource=pet-family&pet_id=3001"
+        },
+        {
+            "resource": "pet-skills",
+            "name": "精灵可学习技能",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "升级技能、血脉技能和技能石技能。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-skills.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "skills",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/skills",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/skills",
+            "example": "wiki-api.php?resource=pet-skills&pet_id=3001"
+        },
+        {
+            "resource": "pet-acquisition",
+            "name": "精灵获取方式",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵获取途径和相关条件。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-acquisition.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "acquisition",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/acquisition",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/acquisition",
+            "example": "wiki-api.php?resource=pet-acquisition&pet_id=3001"
+        },
+        {
+            "resource": "pet-egg",
+            "name": "精灵孵蛋配置",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "孵化时间、蛋尺寸和变异概率。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-egg.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "egg",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/egg",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/egg",
+            "example": "wiki-api.php?resource=pet-egg&pet_id=3001"
+        },
+        {
+            "resource": "pet-talents",
+            "name": "精灵特长池",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵特长和概率配置。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-talents.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "talents",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/talents",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/talents",
+            "example": "wiki-api.php?resource=pet-talents&pet_id=3001"
+        },
+        {
+            "resource": "pet-features",
+            "name": "精灵特性",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵特性与效果说明。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-features.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "features",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/features",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/features",
+            "example": "wiki-api.php?resource=pet-features&pet_id=3001"
+        },
+        {
+            "resource": "pet-ride",
+            "name": "精灵骑乘与同乘",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "骑乘能力和同乘配置。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-ride.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "ride",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/ride",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/ride",
+            "example": "wiki-api.php?resource=pet-ride&pet_id=3001"
+        },
+        {
+            "resource": "pet-fruit",
+            "name": "精灵吸引果实",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "吸引该精灵所需的果实资料。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-fruit.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "fruit",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/fruit",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/fruit",
+            "example": "wiki-api.php?resource=pet-fruit&pet_id=3001"
+        },
+        {
+            "resource": "pet-handbook",
+            "name": "精灵图鉴课题",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵收集与图鉴课题。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-handbook.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "handbook",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/handbook",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/handbook",
+            "example": "wiki-api.php?resource=pet-handbook&pet_id=3001"
+        },
+        {
+            "resource": "pet-ecology",
+            "name": "精灵生态资料",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵的生态、栖息环境和习性资料。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-ecology.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "ecology",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/ecology",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/ecology",
+            "example": "wiki-api.php?resource=pet-ecology&pet_id=3001"
+        },
+        {
+            "resource": "pet-natures",
+            "name": "精灵性格配置",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵的性格效果与属性修正。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-natures.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "natures",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/natures",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/natures",
+            "example": "wiki-api.php?resource=pet-natures&pet_id=3001"
+        },
+        {
+            "resource": "pet-stories",
+            "name": "精灵背景故事",
+            "group": "精灵详情",
+            "mode": "detail",
+            "description": "精灵的故事章节和解锁条件。",
+            "parameters": [
+                {
+                    "name": "pet_id",
+                    "label": "精灵 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-stories.html",
+            "pagination": false,
+            "id_param": "pet_id",
+            "section": "stories",
+            "cache_seconds": 86400,
+            "upstream_path": "pets/{pet_id}/stories",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/{pet_id}/stories",
+            "example": "wiki-api.php?resource=pet-stories&pet_id=3001"
+        },
+        {
+            "resource": "skill-detail",
+            "name": "技能详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "skill_id",
+                    "label": "技能 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "7020600",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "skill-detail.html",
+            "pagination": false,
+            "id_param": "skill_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "skills/{skill_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skills/{skill_id}",
+            "example": "wiki-api.php?resource=skill-detail&skill_id=7020600"
+        },
+        {
+            "resource": "item-detail",
+            "name": "道具详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "100403",
+                    "alias": "id"
+                },
+                {
+                    "name": "item_kind",
+                    "label": "物品来源类型",
+                    "type": "string",
+                    "required": false,
+                    "default": "bag",
+                    "enum": [
+                        "bag",
+                        "visual"
+                    ]
+                }
+            ],
+            "response_key": "data",
+            "page": "item-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "items/{item_kind}/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/items/{item_kind}/{item_id}",
+            "example": "wiki-api.php?resource=item-detail&item_id=100403&item_kind=bag"
+        },
+        {
+            "resource": "random-egg-detail",
+            "name": "随机蛋详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "random_egg_id",
+                    "label": "随机蛋 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "random-egg-detail.html",
+            "pagination": false,
+            "id_param": "random_egg_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "random-eggs/{random_egg_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/random-eggs/{random_egg_id}",
+            "example": "wiki-api.php?resource=random-egg-detail&random_egg_id=1"
+        },
+        {
+            "resource": "pet-egg-detail",
+            "name": "精灵蛋详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "egg_conf_id",
+                    "label": "蛋配置 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "3001001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-egg-detail.html",
+            "pagination": false,
+            "id_param": "egg_conf_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-eggs/{egg_conf_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-eggs/{egg_conf_id}",
+            "example": "wiki-api.php?resource=pet-egg-detail&egg_conf_id=3001001"
+        },
+        {
+            "resource": "task-detail",
+            "name": "任务详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "task_id",
+                    "label": "任务 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "102001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "task-detail.html",
+            "pagination": false,
+            "id_param": "task_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "tasks/{task_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/tasks/{task_id}",
+            "example": "wiki-api.php?resource=task-detail&task_id=102001"
+        },
+        {
+            "resource": "region-detail",
+            "name": "地区详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "region_id",
+                    "label": "地区 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "region-detail.html",
+            "pagination": false,
+            "id_param": "region_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "regions/{region_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/regions/{region_id}",
+            "example": "wiki-api.php?resource=region-detail&region_id=1"
+        },
+        {
+            "resource": "dungeon-detail",
+            "name": "副本详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "dungeon_id",
+                    "label": "副本 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "120108",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "dungeon-detail.html",
+            "pagination": false,
+            "id_param": "dungeon_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "dungeons/{dungeon_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/dungeons/{dungeon_id}",
+            "example": "wiki-api.php?resource=dungeon-detail&dungeon_id=120108"
+        },
+        {
+            "resource": "shop-detail",
+            "name": "商店详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "shop_id",
+                    "label": "商店 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "shop-detail.html",
+            "pagination": false,
+            "id_param": "shop_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "shops/{shop_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/shops/{shop_id}",
+            "example": "wiki-api.php?resource=shop-detail&shop_id=1001"
+        },
+        {
+            "resource": "furniture-detail",
+            "name": "家具详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "furniture_id",
+                    "label": "家具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1000013",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "furniture-detail.html",
+            "pagination": false,
+            "id_param": "furniture_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "furniture/{furniture_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/furniture/{furniture_id}",
+            "example": "wiki-api.php?resource=furniture-detail&furniture_id=1000013"
+        },
+        {
+            "resource": "exchange-detail",
+            "name": "兑换详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "exchange_id",
+                    "label": "兑换 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1001011",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "exchange-detail.html",
+            "pagination": false,
+            "id_param": "exchange_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "exchanges/{exchange_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/exchanges/{exchange_id}",
+            "example": "wiki-api.php?resource=exchange-detail&exchange_id=1001011"
+        },
+        {
+            "resource": "medal-detail",
+            "name": "奖章详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "medal_id",
+                    "label": "奖章 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1003",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "medal-detail.html",
+            "pagination": false,
+            "id_param": "medal_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "medals/{medal_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/medals/{medal_id}",
+            "example": "wiki-api.php?resource=medal-detail&medal_id=1003"
+        },
+        {
+            "resource": "skill-stone-detail",
+            "name": "技能石详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "231001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "skill-stone-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "skill-stones/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skill-stones/{item_id}",
+            "example": "wiki-api.php?resource=skill-stone-detail&item_id=231001"
+        },
+        {
+            "resource": "fashion-detail",
+            "name": "时装套装详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "suit_id",
+                    "label": "套装 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "59",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "fashion.html",
+            "pagination": false,
+            "id_param": "suit_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "fashion/{suit_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/{suit_id}",
+            "example": "wiki-api.php?resource=fashion-detail&suit_id=59"
+        },
+        {
+            "resource": "skill-stone-recipe-detail",
+            "name": "技能石配方详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "211001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "skill-stone-recipe-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "skill-stone-recipes/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skill-stone-recipes/{item_id}",
+            "example": "wiki-api.php?resource=skill-stone-recipe-detail&item_id=211001"
+        },
+        {
+            "resource": "egg-item-detail",
+            "name": "蛋物品详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "150006",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "egg-item-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "egg-items/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/egg-items/{item_id}",
+            "example": "wiki-api.php?resource=egg-item-detail&item_id=150006"
+        },
+        {
+            "resource": "pet-fruit-detail",
+            "name": "精灵果实详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "108001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-fruit-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-fruits/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-fruits/{item_id}",
+            "example": "wiki-api.php?resource=pet-fruit-detail&item_id=108001"
+        },
+        {
+            "resource": "pet-food-detail",
+            "name": "精灵食物详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "350001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-food-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-foods/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-foods/{item_id}",
+            "example": "wiki-api.php?resource=pet-food-detail&item_id=350001"
+        },
+        {
+            "resource": "pet-gift-detail",
+            "name": "精灵礼物详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "100604",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-gift-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-gifts/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-gifts/{item_id}",
+            "example": "wiki-api.php?resource=pet-gift-detail&item_id=100604"
+        },
+        {
+            "resource": "pet-level-detail",
+            "name": "等级经验详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "level",
+                    "label": "精灵等级",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-level-detail.html",
+            "pagination": false,
+            "id_param": "level",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-levels/{level}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-levels/{level}",
+            "example": "wiki-api.php?resource=pet-level-detail&level=1"
+        },
+        {
+            "resource": "recipe-detail",
+            "name": "食谱详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "370001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "recipe-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "recipes/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/recipes/{item_id}",
+            "example": "wiki-api.php?resource=recipe-detail&item_id=370001"
+        },
+        {
+            "resource": "ball-detail",
+            "name": "咕噜球详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "280001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "ball-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "balls/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/balls/{item_id}",
+            "example": "wiki-api.php?resource=ball-detail&item_id=280001"
+        },
+        {
+            "resource": "plant-detail",
+            "name": "种植详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "330001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "plant-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "plants/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/plants/{item_id}",
+            "example": "wiki-api.php?resource=plant-detail&item_id=330001"
+        },
+        {
+            "resource": "fashion-bag-charm-detail",
+            "name": "包挂饰详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "bag_charm_id",
+                    "label": "包挂饰 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "32400101",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "fashion-bag-charm-detail.html",
+            "pagination": false,
+            "id_param": "bag_charm_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "fashion/bag-charms/{bag_charm_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/bag-charms/{bag_charm_id}",
+            "example": "wiki-api.php?resource=fashion-bag-charm-detail&bag_charm_id=32400101"
+        },
+        {
+            "resource": "fashion-wand-detail",
+            "name": "魔杖详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "wand_id",
+                    "label": "魔杖 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "32500101",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "fashion-wand-detail.html",
+            "pagination": false,
+            "id_param": "wand_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "fashion/wands/{wand_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/wands/{wand_id}",
+            "example": "wiki-api.php?resource=fashion-wand-detail&wand_id=32500101"
+        },
+        {
+            "resource": "fashion-item-detail",
+            "name": "服装单件详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "10712001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "fashion-item-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "fashion/items/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fashion/items/{item_id}",
+            "example": "wiki-api.php?resource=fashion-item-detail&item_id=10712001"
+        },
+        {
+            "resource": "pet-carryon-detail",
+            "name": "精灵携带物详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "item_id",
+                    "label": "道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "100211",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "pet-carryon-detail.html",
+            "pagination": false,
+            "id_param": "item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "pet-carryons/{item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-carryons/{item_id}",
+            "example": "wiki-api.php?resource=pet-carryon-detail&item_id=100211"
+        },
+        {
+            "resource": "mail-detail",
+            "name": "邮件详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "mail_id",
+                    "label": "邮件 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "8000000",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "mail-detail.html",
+            "pagination": false,
+            "id_param": "mail_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "mails/{mail_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/mails/{mail_id}",
+            "example": "wiki-api.php?resource=mail-detail&mail_id=8000000"
+        },
+        {
+            "resource": "music-detail",
+            "name": "音乐详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "music_id",
+                    "label": "音乐 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "music-detail.html",
+            "pagination": false,
+            "id_param": "music_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "music/{music_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/music/{music_id}",
+            "example": "wiki-api.php?resource=music-detail&music_id=1"
+        },
+        {
+            "resource": "profile-asset-detail",
+            "name": "名片资产详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "asset_id",
+                    "label": "名片资产 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                },
+                {
+                    "name": "asset_type",
+                    "label": "名片资产类型",
+                    "type": "string",
+                    "required": true,
+                    "default": "avatar",
+                    "enum": [
+                        "avatar",
+                        "card_skin",
+                        "label"
+                    ]
+                }
+            ],
+            "response_key": "data",
+            "page": "profile-asset-detail.html",
+            "pagination": false,
+            "id_param": "asset_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "profile-assets/{asset_type}/{asset_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/profile-assets/{asset_type}/{asset_id}",
+            "example": "wiki-api.php?resource=profile-asset-detail&asset_id=1&asset_type=avatar"
+        },
+        {
+            "resource": "chat-emoji-detail",
+            "name": "聊天表情详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "emoji_id",
+                    "label": "聊天表情 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "chat-emoji-detail.html",
+            "pagination": false,
+            "id_param": "emoji_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "chat-emojis/{emoji_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/chat-emojis/{emoji_id}",
+            "example": "wiki-api.php?resource=chat-emoji-detail&emoji_id=1"
+        },
+        {
+            "resource": "photo-action-detail",
+            "name": "拍照动作详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "action_id",
+                    "label": "拍照动作 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "1",
+                    "alias": "id"
+                },
+                {
+                    "name": "action_type",
+                    "label": "动作类型",
+                    "type": "string",
+                    "required": true,
+                    "default": "pose",
+                    "enum": [
+                        "pose",
+                        "emoji",
+                        "filter"
+                    ]
+                }
+            ],
+            "response_key": "data",
+            "page": "photo-action-detail.html",
+            "pagination": false,
+            "id_param": "action_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "photo-actions/{action_type}/{action_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/photo-actions/{action_type}/{action_id}",
+            "example": "wiki-api.php?resource=photo-action-detail&action_id=1&action_type=pose"
+        },
+        {
+            "resource": "task-summary-detail",
+            "name": "剧情摘要详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "summary_id",
+                    "label": "剧情摘要 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "10034001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "task-summary-detail.html",
+            "pagination": false,
+            "id_param": "summary_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "task-summaries/{summary_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/task-summaries/{summary_id}",
+            "example": "wiki-api.php?resource=task-summary-detail&summary_id=10034001"
+        },
+        {
+            "resource": "fruit-tree-detail",
+            "name": "果实树详情",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "tree_id",
+                    "label": "果实树 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "5100240",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "fruit-tree-detail.html",
+            "pagination": false,
+            "id_param": "tree_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "fruit-trees/{tree_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fruit-trees/{tree_id}",
+            "example": "wiki-api.php?resource=fruit-tree-detail&tree_id=5100240"
+        },
+        {
+            "resource": "skill-learners",
+            "name": "技能可学习精灵",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "skill_id",
+                    "label": "技能 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "7020360",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "skill-learners.html",
+            "pagination": false,
+            "id_param": "skill_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "skills/{skill_id}/pets",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skills/{skill_id}/pets",
+            "example": "wiki-api.php?resource=skill-learners&skill_id=7020360"
+        },
+        {
+            "resource": "fruit-refresh",
+            "name": "果实刷新精灵",
+            "group": "图鉴详情",
+            "mode": "detail",
+            "description": "按 ID 获取完整条目，字段以洛克魔法书 Wiki 返回为准。",
+            "parameters": [
+                {
+                    "name": "fruit_item_id",
+                    "label": "果实道具 ID",
+                    "type": "integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 999999999,
+                    "example": "108001",
+                    "alias": "id"
+                }
+            ],
+            "response_key": "data",
+            "page": "fruit-refresh.html",
+            "pagination": false,
+            "id_param": "fruit_item_id",
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "fruit-refresh/{fruit_item_id}",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/fruit-refresh/{fruit_item_id}",
+            "example": "wiki-api.php?resource=fruit-refresh&fruit_item_id=108001"
+        },
+        {
+            "resource": "options",
+            "name": "筛选字典",
+            "group": "接口与目录",
+            "mode": "raw",
+            "description": "查看属性、蛋组、家具分类和装扮等上游筛选字典；不同命名空间的编号不可混用。",
+            "parameters": [],
+            "response_key": "raw",
+            "page": "options.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 86400,
+            "upstream_path": "options",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/options",
+            "example": "wiki-api.php?resource=options"
+        },
+        {
+            "resource": "activities",
+            "name": "活动日历",
+            "group": "活动与资讯",
+            "mode": "raw",
+            "description": "查看公开活动的时间、当前状态及奖励，实际活动内容以游戏内公告为准。",
+            "parameters": [],
+            "response_key": "raw",
+            "page": "activities.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "activities/info",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/activities/info",
+            "example": "wiki-api.php?resource=activities"
+        },
+        {
+            "resource": "pet-size",
+            "name": "随机蛋体型反查",
+            "group": "孵蛋与养育",
+            "mode": "list",
+            "description": "输入蛋的直径（米）和重量（千克），查看上游随机蛋池中的匹配精灵；池内概率不适用于家园配对蛋。",
+            "parameters": [
+                {
+                    "name": "diameter",
+                    "label": "蛋直径（米）",
+                    "type": "number",
+                    "required": true,
+                    "max_bytes": 24,
+                    "exclusive_min": 0,
+                    "example": "0.27"
+                },
+                {
+                    "name": "weight",
+                    "label": "蛋重量（千克）",
+                    "type": "number",
+                    "required": true,
+                    "max_bytes": 24,
+                    "exclusive_min": 0,
+                    "example": "1.5"
+                },
+                {
+                    "name": "pool",
+                    "label": "随机蛋池",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240,
+                    "enum": [
+                        "magic",
+                        "normal",
+                        "same_ride",
+                        "nightmare"
+                    ],
+                    "enum_labels": {
+                        "magic": "炫彩随机蛋",
+                        "normal": "普通随机蛋",
+                        "same_ride": "同乘随机蛋",
+                        "nightmare": "噩梦随机蛋"
+                    },
+                    "default": "magic"
+                },
+                {
+                    "name": "random_egg_id",
+                    "label": "随机蛋 ID",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "ride_talent",
+                    "label": "同乘筛选",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240,
+                    "enum": [
+                        "1"
+                    ],
+                    "enum_labels": {
+                        "1": "仅同乘特长"
+                    }
+                },
+                {
+                    "name": "include_display_only",
+                    "label": "包含仅显示匹配",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240,
+                    "enum": [
+                        "true",
+                        "false"
+                    ]
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 24,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "items",
+            "page": "pet-size.html",
+            "pagination": true,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "pet-size/query",
+            "fixed_query": {},
+            "upstream_scope": "wiki",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pet-size/query",
+            "example": "wiki-api.php?resource=pet-size&diameter=0.27&weight=1.5&page_size=5"
+        },
+        {
+            "resource": "egg-groups",
+            "name": "蛋组词典",
+            "group": "孵蛋与养育",
+            "mode": "raw",
+            "description": "查询蛋组词典，仅透传下方列出的筛选参数。",
+            "parameters": [],
+            "response_key": "raw",
+            "page": "egg-groups.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "egg/groups",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/egg/groups",
+            "example": "wiki-api.php?resource=egg-groups"
+        },
+        {
+            "resource": "egg-group-pets",
+            "name": "按蛋组查询精灵",
+            "group": "孵蛋与养育",
+            "mode": "raw",
+            "description": "查询按蛋组查询精灵，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "group_ids",
+                    "label": "蛋组 ID（多项用英文逗号分隔）",
+                    "type": "csv-integer",
+                    "required": true,
+                    "min": 1,
+                    "max": 15,
+                    "max_bytes": 80,
+                    "example": "6,9"
+                },
+                {
+                    "name": "match_mode",
+                    "label": "匹配方式",
+                    "type": "string",
+                    "required": false,
+                    "default": "all",
+                    "enum": [
+                        "all"
+                    ],
+                    "enum_labels": {
+                        "all": "同时匹配所选蛋组"
+                    }
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 20,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "raw",
+            "page": "egg-group-pets.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "egg/group-pets",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/egg/group-pets",
+            "example": "wiki-api.php?resource=egg-group-pets&group_ids=6%2C9&match_mode=all&page_no=1&page_size=20"
+        },
+        {
+            "resource": "egg-pet-groups",
+            "name": "按精灵查蛋组",
+            "group": "孵蛋与养育",
+            "mode": "raw",
+            "description": "查询按精灵查蛋组，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "精灵名称",
+                    "type": "string",
+                    "required": true,
+                    "max_bytes": 240,
+                    "example": "喵喵"
+                },
+                {
+                    "name": "limit",
+                    "label": "返回数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 20,
+                    "min": 1,
+                    "max": 50
+                }
+            ],
+            "response_key": "raw",
+            "page": "egg-pet-groups.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "egg/pet-groups",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/egg/pet-groups",
+            "example": "wiki-api.php?resource=egg-pet-groups&q=%E5%96%B5%E5%96%B5&limit=20"
+        },
+        {
+            "resource": "egg-search",
+            "name": "蛋显示尺寸匹配",
+            "group": "孵蛋与养育",
+            "mode": "raw",
+            "description": "查询蛋显示尺寸匹配，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "height",
+                    "label": "显示身高（米）",
+                    "type": "number",
+                    "required": true,
+                    "exclusive_min": 0,
+                    "max_bytes": 24,
+                    "example": "0.27"
+                },
+                {
+                    "name": "weight",
+                    "label": "显示体重（千克）",
+                    "type": "number",
+                    "required": true,
+                    "exclusive_min": 0,
+                    "max_bytes": 24,
+                    "example": "1.5"
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 20,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "raw",
+            "page": "egg-search.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "egg/search",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/egg/search",
+            "example": "wiki-api.php?resource=egg-search&height=0.27&weight=1.5&page_no=1&page_size=20"
+        },
+        {
+            "resource": "announcement-list",
+            "name": "公告列表",
+            "group": "活动与资讯",
+            "mode": "raw",
+            "description": "查询公告列表，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "category_id",
+                    "label": "公告分类 ID",
+                    "type": "integer",
+                    "required": false,
+                    "default": 99,
+                    "min": 1,
+                    "max": 999999999
+                },
+                {
+                    "name": "page",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "limit",
+                    "label": "返回数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 10,
+                    "min": 1,
+                    "max": 50
+                },
+                {
+                    "name": "order",
+                    "label": "公告排序",
+                    "type": "string",
+                    "required": false,
+                    "default": "ttDesc",
+                    "enum": [
+                        "ttDesc"
+                    ],
+                    "enum_labels": {
+                        "ttDesc": "发布时间从新到旧"
+                    }
+                }
+            ],
+            "response_key": "raw",
+            "page": "announcement-list.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "announcement/list",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/announcement/list",
+            "example": "wiki-api.php?resource=announcement-list&category_id=99&page=1&limit=10&order=ttDesc"
+        },
+        {
+            "resource": "announcement-latest",
+            "name": "最新公告",
+            "group": "活动与资讯",
+            "mode": "raw",
+            "description": "查询最新公告，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "category_id",
+                    "label": "公告分类 ID",
+                    "type": "integer",
+                    "required": false,
+                    "default": 99,
+                    "min": 1,
+                    "max": 999999999
+                },
+                {
+                    "name": "order",
+                    "label": "公告排序",
+                    "type": "string",
+                    "required": false,
+                    "default": "ttDesc",
+                    "enum": [
+                        "ttDesc"
+                    ],
+                    "enum_labels": {
+                        "ttDesc": "发布时间从新到旧"
+                    }
+                }
+            ],
+            "response_key": "raw",
+            "page": "announcement-latest.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "announcement/latest",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/announcement/latest",
+            "example": "wiki-api.php?resource=announcement-latest&category_id=99&order=ttDesc"
+        },
+        {
+            "resource": "announcement-detail",
+            "name": "公告详情",
+            "group": "活动与资讯",
+            "mode": "raw",
+            "description": "查询公告详情，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "thread_id",
+                    "label": "公告编号",
+                    "type": "string",
+                    "required": true,
+                    "max_bytes": 240,
+                    "example": "69632"
+                }
+            ],
+            "response_key": "raw",
+            "page": "announcement-detail.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "announcement/detail",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/announcement/detail",
+            "example": "wiki-api.php?resource=announcement-detail&thread_id=69632"
+        },
+        {
+            "resource": "share-code-records",
+            "name": "公开阵容分享",
+            "group": "精灵与战斗",
+            "mode": "raw",
+            "description": "查询公开阵容分享，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "share_code",
+                    "label": "已收录的阵容分享码",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 4096
+                },
+                {
+                    "name": "hash",
+                    "label": "分享码摘要",
+                    "type": "string",
+                    "required": false,
+                    "max_bytes": 240
+                },
+                {
+                    "name": "mode_id",
+                    "label": "模式 ID",
+                    "type": "integer",
+                    "required": false,
+                    "min": 1,
+                    "max": 999999999
+                },
+                {
+                    "name": "magic_id",
+                    "label": "魔法 ID",
+                    "type": "integer",
+                    "required": false,
+                    "min": 1,
+                    "max": 999999999
+                },
+                {
+                    "name": "page_no",
+                    "label": "页码",
+                    "type": "integer",
+                    "required": false,
+                    "default": 1,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "name": "page_size",
+                    "label": "每页数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 20,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "raw",
+            "page": "share-code-records.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "tools/share-code/records",
+            "fixed_query": {},
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/tools/share-code/records",
+            "example": "wiki-api.php?resource=share-code-records&page_no=1&page_size=20"
+        },
+        {
+            "resource": "pet-collection-rankings",
+            "name": "公开收集排行榜",
+            "group": "精灵与战斗",
+            "mode": "raw",
+            "description": "查询公开收集排行榜，仅透传下方列出的筛选参数。",
+            "parameters": [
+                {
+                    "name": "rank_type",
+                    "label": "收集类型",
+                    "type": "string",
+                    "required": true,
+                    "default": "glass",
+                    "enum": [
+                        "glass",
+                        "shining"
+                    ],
+                    "enum_labels": {
+                        "glass": "炫彩",
+                        "shining": "异色"
+                    },
+                    "in": "path"
+                },
+                {
+                    "name": "limit",
+                    "label": "返回数量",
+                    "type": "integer",
+                    "required": false,
+                    "default": 10,
+                    "min": 1,
+                    "max": 100
+                }
+            ],
+            "response_key": "raw",
+            "page": "pet-collection-rankings.html",
+            "pagination": false,
+            "id_param": null,
+            "section": null,
+            "cache_seconds": 180,
+            "upstream_path": "ingame/player/card/pet-stats/rankings/{rank_type}",
+            "fixed_query": {
+                "resolve_names": "0"
+            },
+            "upstream_scope": "game",
+            "upstream_url": "https://wegame.shallow.ink/api/v1/games/rocom/ingame/player/card/pet-stats/rankings/{rank_type}",
+            "example": "wiki-api.php?resource=pet-collection-rankings&rank_type=glass&limit=10"
+        }
+    ],
+    "response_fields": {
+        "ok": "请求是否成功",
+        "resource": "接口资源名",
+        "source": "实际数据来源 URL",
+        "updated_at": "数据获取时间（北京时间，ISO 8601）；命中缓存不会重置",
+        "items": "图鉴列表",
+        "data": "新增详情接口的原始资料",
+        "raw": "家园成长等非列表资料",
+        "pet": "精灵基础与外观",
+        "sections": "精灵聚合详情各分区",
+        "stale": "true 表示上游异常时使用了过期缓存",
+        "warning": "过期缓存或部分资料缺失提示",
+        "error": "失败原因；错误响应为 ok=false"
+    },
+    "status_codes": {
+        "200": "成功（可能带 stale / warning）",
+        "204": "OPTIONS 预检成功",
+        "400": "不支持的资源或参数无效",
+        "404": "未找到对应资料",
+        "405": "请求方法不支持",
+        "429": "上游访问频率受限",
+        "502": "上游不可用且没有可用缓存"
+    },
+    "notes": [
+        "所有接口只读。分页越界会限制到支持范围；空筛选不透传，筛选值最多 240 字节。",
+        "详情可使用原生 ID 参数或 id；两者同时传入时必须一致。道具详情 item_kind 默认为 bag，外观物品用 visual。",
+        "默认列表缓存 180 秒；详情与低频配置缓存 1 天，精灵聚合详情不完整时较早重试。",
+        "上游异常时，列表可使用 1 天内的缓存；新增详情接口可使用 7 天内的缓存。旧精灵聚合和外观接口保留原有缓存回退策略。",
+        "HTTP 缓存为 120 秒。请复用缓存、按需查询，避免高并发抓取；服务不承诺可用性。",
+        "返回字段以游戏资料源为准。本站是非官方工具，不代表游戏官方。"
+    ]
+}

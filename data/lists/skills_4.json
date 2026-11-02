@@ -1,0 +1,5727 @@
+{
+    "ok": true,
+    "resource": "skills",
+    "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/skills?page_no=4&page_size=100",
+    "updated_at": "2026-11-02T19:03:06+08:00",
+    "catalog": {
+        "description": "公开精灵可使用的技能列表。",
+        "filters": [
+            {
+                "key": "q",
+                "label": "名称/描述关键词"
+            },
+            {
+                "key": "type_id",
+                "label": "属性"
+            },
+            {
+                "key": "skill_type_id",
+                "label": "技能类型"
+            },
+            {
+                "key": "damage_type_id",
+                "label": "伤害类型"
+            },
+            {
+                "key": "tag_id",
+                "label": "技能标签"
+            }
+        ],
+        "key": "skills",
+        "name": "技能图鉴",
+        "path": "/api/v1/games/rocom/wiki/skills"
+    },
+    "items": [
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "龙"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己获得1层龙噬印记 。",
+            "element_type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "families": "龙",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100240.png",
+            "name": "龙威",
+            "pet_count": 7,
+            "power": "0",
+            "skill_id": 7100240,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "龙，状态，无，7只精灵可学习",
+            "type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100240.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7100240.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "龙"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。",
+            "element_type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "families": "龙",
+            "flavor_text": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100250.png",
+            "name": "龙血",
+            "pet_count": 2,
+            "power": "0",
+            "skill_id": 7100250,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "龙，防御，无，2只精灵可学习",
+            "type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100250.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7100250.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "龙"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，若自己上回合未使用攻击技能，本技能威力永久+20。",
+            "element_type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "families": "龙",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100260.png",
+            "name": "绵里藏针",
+            "pet_count": 14,
+            "power": "60",
+            "skill_id": 7100260,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 9,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "龙，魔攻，魔攻，14只精灵可学习",
+            "type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100260.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7100260.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "龙"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "下次技能无需蓄力，本技能可在蓄力状态下使用。选择：本次能耗-1或应对防御时打断，敌方下回合获得眩晕。",
+            "element_type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "families": "龙",
+            "flavor_text": "\"村民日记：今天龙又在山顶盯着我们看了一整天，什么都没做。但我们谁也没敢回家收庄稼。\"",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100300.png",
+            "name": "龙守望",
+            "pet_count": 10,
+            "power": "0",
+            "skill_id": 7100300,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 8,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "龙，状态，无，10只精灵可学习",
+            "type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100300.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7100300.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "龙"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤90%，应对攻击。巧变：龙系状态技能。",
+            "element_type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "families": "龙",
+            "flavor_text": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100320.png",
+            "name": "守护咒",
+            "pet_count": 12,
+            "power": "0",
+            "skill_id": 7100320,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 10,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "龙，防御，无，12只精灵可学习",
+            "type": {
+                "id": 10,
+                "name": "龙"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7100320.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7100320.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110010.png",
+            "name": "导电撞击",
+            "pet_count": 18,
+            "power": "40",
+            "skill_id": 7110010,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 12,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 6,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，物攻，物攻，18只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110010.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110010.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，迸发：本次技能威力+40。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110180.png",
+            "name": "电弧",
+            "pet_count": 41,
+            "power": "80",
+            "skill_id": 7110180,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 16,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 25,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，物攻，物攻，41只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110180.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110180.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110190.png",
+            "name": "触电",
+            "pet_count": 36,
+            "power": "80",
+            "skill_id": 7110190,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 36,
+                    "key": "blood",
+                    "label": "血脉"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，36只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110190.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110190.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，迸发：本技能能耗-2。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110200.png",
+            "name": "超导",
+            "pet_count": 42,
+            "power": "90",
+            "skill_id": 7110200,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 16,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 26,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，42只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110200.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110200.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，2连击，迸发：本次技能威力+20。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110210.png",
+            "name": "引雷",
+            "pet_count": 4,
+            "power": "35",
+            "skill_id": 7110210,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 4,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，4只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110210.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110210.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "5",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，2连击，自己脱离。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "flavor_text": "战术撤退，让敌方和己方都措手不及。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110220.png",
+            "name": "闪击折返",
+            "pet_count": 19,
+            "power": "45",
+            "skill_id": 7110220,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 13,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 6,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，物攻，物攻，19只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110220.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110220.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，每次入场，本技能威力永久+40。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110230.png",
+            "name": "落雷",
+            "pet_count": 14,
+            "power": "35",
+            "skill_id": 7110230,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 14,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，14只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110230.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110230.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，迸发：本技能获得所有生效过的迸发，每获得1种，本技能能耗+1，威力+10。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110240.png",
+            "name": "雷暴",
+            "pet_count": 9,
+            "power": "55",
+            "skill_id": 7110240,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，9只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110240.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110240.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方先手-1，应对防御：额外使敌方获得双攻-70%。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110250.png",
+            "name": "麻痹",
+            "pet_count": 204,
+            "power": "0",
+            "skill_id": 7110250,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 173,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 11,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 20,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，204只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110250.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110250.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己获得1层蓄电印记。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "flavor_text": "从新型电系炼金术中得到灵感，竟然可以活用于精灵对战中。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110260.png",
+            "name": "增程电池",
+            "pet_count": 20,
+            "power": "0",
+            "skill_id": 7110260,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 20,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，状态，无，20只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110260.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110260.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己脱离，替换入场的精灵回复8能量。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110270.png",
+            "name": "加大功率",
+            "pet_count": 22,
+            "power": "0",
+            "skill_id": 7110270,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 15,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，22只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110270.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110270.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤80%，应对攻击：自己回合结束返场。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110280.png",
+            "name": "集中",
+            "pet_count": 140,
+            "power": "0",
+            "skill_id": 7110280,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 135,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，防御，无，140只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110280.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110280.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110290.png",
+            "name": "电流",
+            "pet_count": 7,
+            "power": "40",
+            "skill_id": 7110290,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，7只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110290.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110290.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110300.png",
+            "name": "球状闪电",
+            "pet_count": 192,
+            "power": "60",
+            "skill_id": 7110300,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 181,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 11,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，物攻，物攻，192只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110300.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110300.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "flavor_text": "精灵对决中常发生的怪异现象，突然，指南针开始指北。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110310.png",
+            "name": "磁干扰",
+            "pet_count": 46,
+            "power": "60",
+            "skill_id": 7110310,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 44,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，46只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110310.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110310.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110320.png",
+            "name": "离子火花",
+            "pet_count": 11,
+            "power": "80",
+            "skill_id": 7110320,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 11,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "电，物攻，物攻，11只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110320.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110320.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110330.png",
+            "name": "交叉闪电",
+            "pet_count": 18,
+            "power": "100",
+            "skill_id": 7110330,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 11,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 7,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，物攻，物攻，18只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110330.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110330.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，自己获得速度+30。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110340.png",
+            "name": "超导加速",
+            "pet_count": 14,
+            "power": "70",
+            "skill_id": 7110340,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 7,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，14只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110340.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110340.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，迸发：本技能使用次数+1。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110350.png",
+            "name": "双联脉冲",
+            "pet_count": 10,
+            "power": "50",
+            "skill_id": 7110350,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 6,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 4,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，10只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110350.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110350.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "回合结束自己返场，下回合所选技能使用次数+1。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110360.png",
+            "name": "过载回路",
+            "pet_count": 38,
+            "power": "0",
+            "skill_id": 7110360,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 15,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 23,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，38只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110360.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110360.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "使敌方精灵返场。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110370.png",
+            "name": "远程访问",
+            "pet_count": 18,
+            "power": "0",
+            "skill_id": 7110370,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 13,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 5,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，18只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110370.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110370.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，每离场1次，本技能使用次数永久+1。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110380.png",
+            "name": "感电",
+            "pet_count": 14,
+            "power": "60",
+            "skill_id": 7110380,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 7,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，14只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110380.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110380.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，应对状态：回合结束时使敌方精灵返场。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110390.png",
+            "name": "强制重启",
+            "pet_count": 33,
+            "power": "90",
+            "skill_id": 7110390,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 22,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 11,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，魔攻，魔攻，33只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110390.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110390.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得魔攻-20%，速度-20，2连击。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110410.png",
+            "name": "电离爆破",
+            "pet_count": 21,
+            "power": "0",
+            "skill_id": 7110410,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 12,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 9,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，21只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110410.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110410.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤70%，应对攻击：下回合所选技能使用次数+1。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110420.png",
+            "name": "电磁偏转",
+            "pet_count": 22,
+            "power": "0",
+            "skill_id": 7110420,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 13,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，防御，无，22只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110420.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110420.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "5",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "将天气改为雷鸣，持续8回合。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "flavor_text": "从新型电系魔法中得到灵感：雷暴之下，没有绝缘体。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110440.png",
+            "name": "惊雷",
+            "pet_count": 11,
+            "power": "0",
+            "skill_id": 7110440,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 3,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 8,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，11只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110440.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110440.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，敌方获得1层引电。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "flavor_text": "\"安全须知第一条：不要摸它。第二条：它摸了你的话，不要摸别人。\"",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110450.png",
+            "name": "通电",
+            "pet_count": 15,
+            "power": "75",
+            "skill_id": 7110450,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 3,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 12,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，物攻，物攻，15只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110450.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110450.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "电"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己回合结束时返场，携带的攻击技能下回合获得1个已触发过的迸发效果，应对防御：改为获得所有触发过的迸发效果。",
+            "element_type": {
+                "id": 11,
+                "name": "电"
+            },
+            "families": "电",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110460.png",
+            "name": "踏雷",
+            "pet_count": 11,
+            "power": "0",
+            "skill_id": 7110460,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 9,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "电，状态，无，11只精灵可学习",
+            "type": {
+                "id": 11,
+                "name": "电"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7110460.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7110460.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，敌方获得1层中毒。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120060.png",
+            "name": "毒针",
+            "pet_count": 17,
+            "power": "20",
+            "skill_id": 7120060,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 14,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 3,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，物攻，物攻，17只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120060.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120060.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，敌方获得2层中毒。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120070.png",
+            "name": "腐蚀酸液",
+            "pet_count": 51,
+            "power": "35",
+            "skill_id": 7120070,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 20,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 31,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，51只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120070.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120070.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，2连击，每次连击使敌方获得1层中毒。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120080.png",
+            "name": "连续毒针",
+            "pet_count": 37,
+            "power": "15",
+            "skill_id": 7120080,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 11,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 26,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，物攻，物攻，37只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120080.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120080.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，敌方获得2层中毒，应对状态：改为获得6层。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120090.png",
+            "name": "毒囊",
+            "pet_count": 35,
+            "power": "25",
+            "skill_id": 7120090,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 20,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 15,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，物攻，物攻，35只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120090.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120090.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "5",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，敌方每有1层中毒效果，本技能能耗-1，敌方获得1层中毒。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "在空气和水中蔓延扩散，直到整个王国的尽头，察觉到的时候往往为时已晚。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120100.png",
+            "name": "毒液渗透",
+            "pet_count": 49,
+            "power": "120",
+            "skill_id": 7120100,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 49,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，49只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120100.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120100.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，若击败敌方则将中毒转化为中毒印记。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120110.png",
+            "name": "感染病",
+            "pet_count": 24,
+            "power": "110",
+            "skill_id": 7120110,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 13,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 11,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，24只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120110.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120110.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得5层中毒。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "毒祭司们将草药学与生物学知识活用，得到了这种技能。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120120.png",
+            "name": "毒孢子",
+            "pet_count": 213,
+            "power": "0",
+            "skill_id": 7120120,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 146,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 29,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 38,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，状态，无，213只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120120.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120120.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "7",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "将敌方所有增益，转化为相同层数的中毒。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "紫雀花迷雾下签订的契约。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120130.png",
+            "name": "毒雾",
+            "pet_count": 38,
+            "power": "0",
+            "skill_id": 7120130,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 12,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 26,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，状态，无，38只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120130.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120130.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得3层中毒，应对防御：改为获得8层。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "中毒之后，你能做的还有祈祷。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120140.png",
+            "name": "剧毒",
+            "pet_count": 54,
+            "power": "0",
+            "skill_id": 7120140,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 29,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 25,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，状态，无，54只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120140.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120140.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方每有1层中毒效果，自己获得魔攻+30%。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120150.png",
+            "name": "以毒攻毒",
+            "pet_count": 15,
+            "power": "0",
+            "skill_id": 7120150,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 15,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "毒，状态，无，15只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120150.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120150.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "使敌方精灵减益的层数翻倍。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "谁在井下？",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120160.png",
+            "name": "落井下毒",
+            "pet_count": 26,
+            "power": "0",
+            "skill_id": 7120160,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 26,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "毒，状态，无，26只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120160.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120160.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120180.png",
+            "name": "毒泡泡",
+            "pet_count": 12,
+            "power": "40",
+            "skill_id": 7120180,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 12,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，12只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120180.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120180.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120190.png",
+            "name": "溃烂触碰",
+            "pet_count": 218,
+            "power": "60",
+            "skill_id": 7120190,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 213,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "毒，物攻，物攻，218只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120190.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120190.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120200.png",
+            "name": "毒沼",
+            "pet_count": 264,
+            "power": "80",
+            "skill_id": 7120200,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 210,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 26,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 28,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，物攻，物攻，264只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120200.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120200.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120210.png",
+            "name": "瘴气喷射",
+            "pet_count": 42,
+            "power": "100",
+            "skill_id": 7120210,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 33,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，42只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120210.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120210.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，敌方每有1层中毒效果，本次技能威力+10，应对状态：改为本次威力+40。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "一种从黄金时代遗迹中挖掘到的炼金药剂。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120220.png",
+            "name": "鸩毒",
+            "pet_count": 34,
+            "power": "75",
+            "skill_id": 7120220,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 29,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，34只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120220.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120220.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方每有1层中毒效果，敌方获得双攻-30%。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120230.png",
+            "name": "腐化",
+            "pet_count": 50,
+            "power": "0",
+            "skill_id": 7120230,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 33,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 17,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，状态，无，50只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120230.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120230.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得1层中毒印记。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120240.png",
+            "name": "疫病吐息",
+            "pet_count": 21,
+            "power": "0",
+            "skill_id": 7120240,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 21,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "毒，状态，无，21只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120240.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120240.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120250.png",
+            "name": "不可接触",
+            "pet_count": 18,
+            "power": "0",
+            "skill_id": 7120250,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 9,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，防御，无，18只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120250.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120250.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "紫雀花下说出的誓言，终将应验。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120260.png",
+            "name": "毒誓",
+            "pet_count": 24,
+            "power": "120",
+            "skill_id": 7120260,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 3,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 21,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，物攻，物攻，24只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120260.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120260.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤90%，应对攻击：驱散敌方1种增益。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "紫雀花王朝的某些魔法师战斗时从不着甲，他们不相信也不需要任何盔甲的保护。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120270.png",
+            "name": "溶解",
+            "pet_count": 19,
+            "power": "0",
+            "skill_id": 7120270,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 17,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，防御，无，19只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120270.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120270.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，1连击，若敌方有中毒效果，本次技能连击数+2。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120280.png",
+            "name": "过敏原",
+            "pet_count": 9,
+            "power": "35",
+            "skill_id": 7120280,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 7,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，魔攻，魔攻，9只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120280.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120280.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "携带的攻击技能获得附加中毒3，应对防御：改为获得附加中毒6。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "老师千叮咛万嘱咐，实验室里的粉尘不要用嘴吹，但总有人不听。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120290.png",
+            "name": "重金属粉尘",
+            "pet_count": 25,
+            "power": "0",
+            "skill_id": 7120290,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 20,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，状态，无，25只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120290.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120290.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "毒"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤70%，巧变：毒系状态技能，应对攻击。",
+            "element_type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "families": "毒",
+            "flavor_text": "啊——阿嚏——\n没关系，喝下之后，就可以拥抱。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120300.png",
+            "name": "毒肽",
+            "pet_count": 15,
+            "power": "0",
+            "skill_id": 7120300,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 13,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "毒，防御，无，15只精灵可学习",
+            "type": {
+                "id": 12,
+                "name": "毒"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7120300.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7120300.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，1连击，本技能会受奉献影响，每被影响1次，能耗永久+1。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "轻轻咬一小口，不会痛。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130100.png",
+            "name": "啃咬",
+            "pet_count": 20,
+            "power": "40",
+            "skill_id": 7130100,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 20,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "虫，物攻，物攻，20只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130100.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130100.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，己方队伍获得1次奉献：威力+20。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130110.png",
+            "name": "飞断",
+            "pet_count": 40,
+            "power": "20",
+            "skill_id": 7130110,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 11,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 29,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，40只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130110.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130110.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，2连击。己方队伍获得1次奉献：获得连击数+1。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130120.png",
+            "name": "虫群过境",
+            "pet_count": 22,
+            "power": "30",
+            "skill_id": 7130120,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 10,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 12,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，22只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130120.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130120.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "7",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，1连击，本技能会受奉献影响。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "即使圣城坠毁，虫群也不会灭绝。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130130.png",
+            "name": "虫群",
+            "pet_count": 11,
+            "power": "20",
+            "skill_id": 7130130,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 4,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，11只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130130.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130130.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，自己回复1能量。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130140.png",
+            "name": "虫网",
+            "pet_count": 31,
+            "power": "30",
+            "skill_id": 7130140,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 23,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 8,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，魔攻，魔攻，31只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130140.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130140.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：本次技能威力变为2倍，无视敌方系别抵抗。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130150.png",
+            "name": "虫击",
+            "pet_count": 40,
+            "power": "90",
+            "skill_id": 7130150,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 15,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 25,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，40只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130150.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130150.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，队伍中的精灵每携带1个虫鸣，本次技能连击数+1。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130160.png",
+            "name": "虫鸣",
+            "pet_count": 43,
+            "power": "15",
+            "skill_id": 7130160,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 21,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 22,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，魔攻，魔攻，43只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130160.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130160.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得2层中毒，获得1次奉献：敌方获得2层中毒。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130170.png",
+            "name": "捆缚",
+            "pet_count": 19,
+            "power": "0",
+            "skill_id": 7130170,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 13,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 6,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，状态，无，19只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130170.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130170.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己回复2能量，己方队伍获得1次奉献：能耗-2。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "研究手记：我在巢中坠入无光之梦，听见黑暗深处传来虫群的轰鸣。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130180.png",
+            "name": "假寐",
+            "pet_count": 189,
+            "power": "0",
+            "skill_id": 7130180,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 170,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 19,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "虫，状态，无，189只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130180.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130180.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "研究手记：茧不透光，只听到内里传出咀嚼声。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130190.png",
+            "name": "虫茧",
+            "pet_count": 22,
+            "power": "0",
+            "skill_id": 7130190,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 22,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "虫，状态，无，22只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130190.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130190.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "己方队伍获得2次随机奉献。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "奉献吧！为了虫群的崇高意志！",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130200.png",
+            "name": "虫群智慧",
+            "pet_count": 29,
+            "power": "0",
+            "skill_id": 7130200,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 14,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 15,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，状态，无，29只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130200.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130200.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己获得双攻+50%，每携带1个0能耗技能，额外+50%。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130210.png",
+            "name": "贮藏",
+            "pet_count": 16,
+            "power": "0",
+            "skill_id": 7130210,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 6,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 10,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，状态，无，16只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130210.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130210.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130220.png",
+            "name": "掩护",
+            "pet_count": 127,
+            "power": "0",
+            "skill_id": 7130220,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 102,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 14,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 11,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，防御，无，127只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130220.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130220.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130240.png",
+            "name": "蛰针",
+            "pet_count": 23,
+            "power": "40",
+            "skill_id": 7130240,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 15,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 8,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，23只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130240.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130240.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，3连击。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130250.png",
+            "name": "虫刺",
+            "pet_count": 13,
+            "power": "15",
+            "skill_id": 7130250,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 4,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，魔攻，魔攻，13只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130250.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130250.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130260.png",
+            "name": "噬心",
+            "pet_count": 216,
+            "power": "60",
+            "skill_id": 7130260,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 210,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 6,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "虫，物攻，物攻，216只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130260.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130260.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "对敌方精灵造成物理伤害。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130270.png",
+            "name": "尾后针",
+            "pet_count": 123,
+            "power": "80",
+            "skill_id": 7130270,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 87,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 7,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 29,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，123只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130270.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130270.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130280.png",
+            "name": "虫蛊",
+            "pet_count": 40,
+            "power": "100",
+            "skill_id": 7130280,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 20,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 20,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，魔攻，魔攻，40只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130280.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130280.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130290.png",
+            "name": "翅刃",
+            "pet_count": 21,
+            "power": "85",
+            "skill_id": 7130290,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 12,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，21只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130290.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130290.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，敌方获得物防-30%。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130300.png",
+            "name": "网缚",
+            "pet_count": 20,
+            "power": "60",
+            "skill_id": 7130300,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 13,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 7,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，20只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130300.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130300.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "驱散敌方印记，每层印记回复自己10%生命。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130310.png",
+            "name": "食腐",
+            "pet_count": 29,
+            "power": "0",
+            "skill_id": 7130310,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 14,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 15,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，状态，无，29只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130310.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130310.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤80%，应对攻击：己方队伍获得1次随机奉献。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "研究手记：虫群盘成漩涡，每一次振翅都将最终掀起龙卷。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130320.png",
+            "name": "虫结阵",
+            "pet_count": 26,
+            "power": "0",
+            "skill_id": 7130320,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 13,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 13,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，防御，无，26只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130320.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130320.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "选择：己方队伍获得1次奉献：连击+1或威力+20。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "每一片微小的翅膀都甘愿为整体而振动。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130330.png",
+            "name": "振翅",
+            "pet_count": 14,
+            "power": "0",
+            "skill_id": 7130330,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 12,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，状态，无，14只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130330.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130330.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "造成魔伤，偷取敌方1层印记。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130340.png",
+            "name": "拟寄生",
+            "pet_count": 19,
+            "power": "80",
+            "skill_id": 7130340,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 3,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 16,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，魔攻，魔攻，19只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130340.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130340.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，若敌方本回合更换精灵，本次威力+90且无视敌方系别抵抗。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130350.png",
+            "name": "草虫冲击",
+            "pet_count": 12,
+            "power": "75",
+            "skill_id": 7130350,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 12,
+                    "key": "level",
+                    "label": "升级技能"
+                }
+            ],
+            "summary": "虫，物攻，物攻，12只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130350.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130350.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "己方队伍获得1次随机奉献，若上回合双方有精灵使用地系技能，额外获得3次随机奉献。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "flavor_text": "它们不说话，但它们都知道。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130360.png",
+            "name": "信息素",
+            "pet_count": 10,
+            "power": "0",
+            "skill_id": 7130360,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 1,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 9,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，状态，无，10只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130360.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130360.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "虫"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，若敌方本回合更换精灵，己方队伍获得3次随机奉献。",
+            "element_type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "families": "虫",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130370.png",
+            "name": "迁飞扩散",
+            "pet_count": 17,
+            "power": "55",
+            "skill_id": 7130370,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 1,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 16,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "虫，物攻，物攻，17只精灵可学习",
+            "type": {
+                "id": 13,
+                "name": "虫"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7130370.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7130370.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，自己回复1能量。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140050.png",
+            "name": "寸拳",
+            "pet_count": 41,
+            "power": "30",
+            "skill_id": 7140050,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 22,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 19,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，41只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140050.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140050.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：自己获得物攻+100%。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "崩的是对方的架势，合的是破招的美学。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140060.png",
+            "name": "崩拳",
+            "pet_count": 32,
+            "power": "65",
+            "skill_id": 7140060,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 30,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，32只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140060.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140060.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，2连击，应对状态：本技能改为6连击。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "对战课的某个老师，认为精灵对战存在一种美学，来自对手之间默契的喂招和破招。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140070.png",
+            "name": "散手",
+            "pet_count": 14,
+            "power": "35",
+            "skill_id": 7140070,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 9,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，14只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140070.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140070.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：本次技能威力变为2倍。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140080.png",
+            "name": "无影脚",
+            "pet_count": 12,
+            "power": "85",
+            "skill_id": 7140080,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 10,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，12只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140080.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140080.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：额外打断被应对技能。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140090.png",
+            "name": "斩断",
+            "pet_count": 35,
+            "power": "70",
+            "skill_id": 7140090,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 15,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 20,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，35只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140090.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140090.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，2连击，若后手攻击，改为3连击。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "“对决的时候，我从不说话，精灵的技能就是我的回答”。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140100.png",
+            "name": "反击拳",
+            "pet_count": 190,
+            "power": "25",
+            "skill_id": 7140100,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 117,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 6,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 67,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，190只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140100.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140100.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：本次技能威力变为10倍。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140120.png",
+            "name": "技巧打击",
+            "pet_count": 7,
+            "power": "35",
+            "skill_id": 7140120,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 5,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 2,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，7只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140120.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140120.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：造成打断，回复被打断技能能耗的能量。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "对战课的某个老师，认为精灵对战中存在一种哲学，以此发展出后发先制的战术，是为“截”。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140130.png",
+            "name": "截拳",
+            "pet_count": 17,
+            "power": "85",
+            "skill_id": 7140130,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 8,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，17只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140130.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140130.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己获得全技能威力+40。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "对战课临时教室：接，化，发！这都是巧劲！",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140140.png",
+            "name": "化劲",
+            "pet_count": 232,
+            "power": "0",
+            "skill_id": 7140140,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 169,
+                    "key": "blood",
+                    "label": "血脉"
+                },
+                {
+                    "count": 29,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 34,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，状态，无，232只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140140.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140140.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "1",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得双防-70%，应对防御：自己额外获得物攻+70%。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140150.png",
+            "name": "破绽",
+            "pet_count": 40,
+            "power": "0",
+            "skill_id": 7140150,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 12,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 28,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，状态，无，40只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140150.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140150.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140160.png",
+            "name": "破防",
+            "pet_count": 14,
+            "power": "0",
+            "skill_id": 7140160,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 3,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 11,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，状态，无，14只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140160.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140160.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "状态"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "10",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "自己回复60%生命，获得物攻+130%，每次应对后本技能能耗-3，使用后能耗重置。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "学院的助教老师盘腿示范这从东方流传过来的武学，却不小心睡着了。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140170.png",
+            "name": "气沉丹田",
+            "pet_count": 25,
+            "power": "0",
+            "skill_id": 7140170,
+            "skill_type": {
+                "id": 2,
+                "name": "状态"
+            },
+            "source_counts": [
+                {
+                    "count": 9,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 16,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，状态，无，25只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140170.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140170.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "2",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "应对攻击：打断被应对技能，并造成90威力物伤。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140180.png",
+            "name": "硬门",
+            "pet_count": 23,
+            "power": "0",
+            "skill_id": 7140180,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 8,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 15,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，防御，无，23只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140180.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140180.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "防御"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "无"
+                }
+            ],
+            "cost": "4",
+            "damage_type": {
+                "id": 1,
+                "name": "无"
+            },
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "flavor_text": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140190.png",
+            "name": "听桥",
+            "pet_count": 21,
+            "power": "0",
+            "skill_id": 7140190,
+            "skill_type": {
+                "id": 3,
+                "name": "防御"
+            },
+            "source_counts": [
+                {
+                    "count": 8,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 13,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，防御，无，21只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140190.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140190.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "魔攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "魔攻"
+                }
+            ],
+            "cost": "0",
+            "damage_type": {
+                "id": 3,
+                "name": "魔攻"
+            },
+            "description": "对敌方精灵造成魔法伤害。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140210.png",
+            "name": "气波",
+            "pet_count": 79,
+            "power": "40",
+            "skill_id": 7140210,
+            "skill_type": {
+                "id": 1,
+                "name": "魔攻"
+            },
+            "source_counts": [
+                {
+                    "count": 30,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 49,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，魔攻，魔攻，79只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140210.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140210.png"
+        },
+        {
+            "badges": [
+                {
+                    "key": "type",
+                    "label": "武"
+                },
+                {
+                    "key": "skill_type",
+                    "label": "物攻"
+                },
+                {
+                    "key": "damage_type",
+                    "label": "物攻"
+                }
+            ],
+            "cost": "3",
+            "damage_type": {
+                "id": 2,
+                "name": "物攻"
+            },
+            "description": "造成物伤，应对状态：本次技能威力变为5倍。",
+            "element_type": {
+                "id": 14,
+                "name": "武"
+            },
+            "families": "武",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140220.png",
+            "name": "爆冲",
+            "pet_count": 13,
+            "power": "65",
+            "skill_id": 7140220,
+            "skill_type": {
+                "id": 1,
+                "name": "物攻"
+            },
+            "source_counts": [
+                {
+                    "count": 2,
+                    "key": "level",
+                    "label": "升级技能"
+                },
+                {
+                    "count": 11,
+                    "key": "machine",
+                    "label": "技能石"
+                }
+            ],
+            "summary": "武，物攻，物攻，13只精灵可学习",
+            "type": {
+                "id": 14,
+                "name": "武"
+            },
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/skills/7140220.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fskills%2F7140220.png"
+        }
+    ],
+    "total": 588,
+    "total_pages": 6,
+    "has_more": true,
+    "page_no": 4,
+    "page_size": 100
+}

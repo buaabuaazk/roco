@@ -1,0 +1,64 @@
+{
+    "pet_id": 3001,
+    "started_at": "2026-11-02T18:42:36.904450+08:00",
+    "status": "complete",
+    "requests": [
+        {
+            "file": "pets/3001/pet-detail.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-detail&pet_id=3001",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3001",
+            "updated_at": "2026-11-01T10:22:57+08:00",
+            "stale": true,
+            "warning": "上游暂时不可用，返回最近缓存"
+        },
+        {
+            "file": "pets/3001/pet-ecology.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-ecology&pet_id=3001",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3001/ecology",
+            "updated_at": "2026-11-02T16:35:34+08:00",
+            "stale": false,
+            "warning": null
+        },
+        {
+            "file": "pets/3001/pet-natures.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-natures&pet_id=3001",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3001/natures",
+            "updated_at": "2026-11-02T16:35:38+08:00",
+            "stale": false,
+            "warning": null
+        },
+        {
+            "file": "pets/3001/pet-stories.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-stories&pet_id=3001",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3001/stories",
+            "updated_at": "2026-11-02T16:35:41+08:00",
+            "stale": false,
+            "warning": null
+        },
+        {
+            "file": "pets/3001/pet-appearance.json",
+            "request_url": "https://091p.com/lkwg/wiki-api.php?resource=pet-appearance&pet_id=3001",
+            "reused_local": true,
+            "status": "ok",
+            "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3001",
+            "updated_at": "2026-11-02T16:35:44+08:00",
+            "stale": false,
+            "warning": null
+        }
+    ],
+    "finished_at": "2026-11-02T18:42:36.909697+08:00",
+    "name": "喵喵",
+    "missing_sections": [],
+    "skill_count": 51,
+    "scope": "公开精灵分区及技能 ID 与学习条件；技能详情独立采集，图片保留 URL。",
+    "rebuilt_from_local_at": "2026-11-02T18:42:36.926794+08:00",
+    "previous_manifest_backup": "backups/before_skill_split_20261102_184236/pets/3001/manifest.json"
+}

@@ -1,0 +1,628 @@
+{
+    "ok": true,
+    "resource": "pet-ecology",
+    "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3001/ecology",
+    "data": {
+        "ecology_feature_ids": [
+            11,
+            12,
+            10
+        ],
+        "habitat_group_role_type": 1005,
+        "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3001/icon.png",
+        "name": "喵喵",
+        "npc_reactions": {
+            "items": [
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007011,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008213,
+                            "text": "呀，是喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500009415,
+                            "text": "我能抱抱喵喵吗？它软不软呀？"
+                        }
+                    ],
+                    "npc_group_id": 8,
+                    "npcs": [
+                        {
+                            "name": "奇卡",
+                            "npc_id": 33008
+                        }
+                    ],
+                    "reaction_id": 30018
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007012,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008214,
+                            "text": "好可爱哦！要不要一起玩过家家？"
+                        },
+                        {
+                            "dialogue_id": 500009416,
+                            "text": "我能抱抱喵喵吗？它软不软呀？"
+                        }
+                    ],
+                    "npc_group_id": 10,
+                    "npcs": [
+                        {
+                            "name": "商店街居民",
+                            "npc_id": 33010
+                        }
+                    ],
+                    "reaction_id": 300110
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007009,
+                            "text": "咦，你也养喵喵吗？"
+                        },
+                        {
+                            "dialogue_id": 500008211,
+                            "text": "我的喵喵去旅行了。"
+                        },
+                        {
+                            "dialogue_id": 500009413,
+                            "text": "喵喵还是很温柔的。"
+                        }
+                    ],
+                    "npc_group_id": 11,
+                    "npcs": [
+                        {
+                            "name": "卡柏",
+                            "npc_id": 33011
+                        }
+                    ],
+                    "reaction_id": 300111
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007010,
+                            "text": "我当时选的是火花。"
+                        },
+                        {
+                            "dialogue_id": 500008212,
+                            "text": "怎么说火花还是帅一点。"
+                        },
+                        {
+                            "dialogue_id": 500009414,
+                            "text": "我妈和我说要选喵喵，但我偏不。"
+                        }
+                    ],
+                    "npc_group_id": 12,
+                    "npcs": [
+                        {
+                            "name": "驻地学生",
+                            "npc_id": 33012
+                        }
+                    ],
+                    "reaction_id": 300112
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007007,
+                            "text": "这喵喵会不会掉毛？家里有一只就够我扫一天的了。"
+                        },
+                        {
+                            "dialogue_id": 500008209,
+                            "text": "它看起来挺聪明的，是不是很粘人？"
+                        },
+                        {
+                            "dialogue_id": 500009411,
+                            "text": "它会不会乱抓东西？别刮坏我的衣服！"
+                        }
+                    ],
+                    "npc_group_id": 22,
+                    "npcs": [
+                        {
+                            "name": "纽塔",
+                            "npc_id": 33028
+                        }
+                    ],
+                    "reaction_id": 300122
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007005,
+                            "text": "嗯...可以让它呆在这里招财！"
+                        },
+                        {
+                            "dialogue_id": 500008207,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500009409,
+                            "text": "这喵喵眼神挺呆萌的，傻乎乎的挺可爱。"
+                        }
+                    ],
+                    "npc_group_id": 23,
+                    "npcs": [
+                        {
+                            "name": "乌黑巷居民",
+                            "npc_id": 33034
+                        }
+                    ],
+                    "reaction_id": 300123
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007004,
+                            "text": "咦，我们要不要也养一只喵喵呀？"
+                        },
+                        {
+                            "dialogue_id": 500008206,
+                            "text": "哇，好可爱的喵喵！它的毛摸起来软吗？"
+                        },
+                        {
+                            "dialogue_id": 500009408,
+                            "text": "你的喵喵好可爱！"
+                        }
+                    ],
+                    "npc_group_id": 24,
+                    "npcs": [
+                        {
+                            "name": "乌黑巷居民",
+                            "npc_id": 33035
+                        }
+                    ],
+                    "reaction_id": 300124
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007003,
+                            "text": "这喵喵眼神挺呆萌的，傻乎乎的挺可爱。"
+                        },
+                        {
+                            "dialogue_id": 500008205,
+                            "text": "哇，好可爱的喵喵！它的毛摸起来软吗？"
+                        },
+                        {
+                            "dialogue_id": 500009407,
+                            "text": "你的喵喵好可爱！"
+                        }
+                    ],
+                    "npc_group_id": 25,
+                    "npcs": [
+                        {
+                            "name": "波萝",
+                            "npc_id": 33036
+                        }
+                    ],
+                    "reaction_id": 300125
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007002,
+                            "text": "呀，是喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008204,
+                            "text": "喵喵会不会变成大猫咪？还是一直这么小？"
+                        },
+                        {
+                            "dialogue_id": 500009406,
+                            "text": "我能抱抱喵喵吗？它软不软呀？"
+                        }
+                    ],
+                    "npc_group_id": 28,
+                    "npcs": [],
+                    "reaction_id": 300128
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007017,
+                            "text": "喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008219,
+                            "text": "呀，是喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500009421,
+                            "text": "喵喵一定是非常活泼的吧？"
+                        }
+                    ],
+                    "npc_group_id": 33,
+                    "npcs": [
+                        {
+                            "name": "希普",
+                            "npc_id": 33062
+                        }
+                    ],
+                    "reaction_id": 300133
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007016,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008218,
+                            "text": "我也能和喵喵成为朋友吗？"
+                        },
+                        {
+                            "dialogue_id": 500009420,
+                            "text": "我妈妈有一只板板壳，如果我有一只喵喵就好了。"
+                        }
+                    ],
+                    "npc_group_id": 34,
+                    "npcs": [
+                        {
+                            "name": "伍尔夫",
+                            "npc_id": 33063
+                        }
+                    ],
+                    "reaction_id": 300134
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007018,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008220,
+                            "text": "喵喵的尾巴好像一片叶子！"
+                        },
+                        {
+                            "dialogue_id": 500009422,
+                            "text": "好可爱哦！要不要一起玩过家家？"
+                        }
+                    ],
+                    "npc_group_id": 35,
+                    "npcs": [
+                        {
+                            "name": "狄利娅",
+                            "npc_id": 33066
+                        }
+                    ],
+                    "reaction_id": 300135
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007006,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008208,
+                            "text": "喵喵的尾巴好像一片叶子！"
+                        },
+                        {
+                            "dialogue_id": 500009410,
+                            "text": "好可爱哦！要不要一起玩过家家？"
+                        }
+                    ],
+                    "npc_group_id": 39,
+                    "npcs": [
+                        {
+                            "name": "顾客",
+                            "npc_id": 33114
+                        }
+                    ],
+                    "reaction_id": 300139
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007008,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008210,
+                            "text": "我也能和喵喵成为朋友吗？"
+                        },
+                        {
+                            "dialogue_id": 500009412,
+                            "text": "我妈妈有一只护主犬，如果我有一只喵喵就好了。"
+                        }
+                    ],
+                    "npc_group_id": 44,
+                    "npcs": [
+                        {
+                            "name": "游客",
+                            "npc_id": 33120
+                        }
+                    ],
+                    "reaction_id": 300144
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007001,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008203,
+                            "text": "好可爱哦！要不要一起玩过家家？"
+                        },
+                        {
+                            "dialogue_id": 500009405,
+                            "text": "你吃小鱼干吗？还是吃小草？"
+                        }
+                    ],
+                    "npc_group_id": 46,
+                    "npcs": [
+                        {
+                            "name": "游客",
+                            "npc_id": 33124
+                        }
+                    ],
+                    "reaction_id": 300146
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007019,
+                            "text": "你养喵喵？它爱吃可可果吗？"
+                        },
+                        {
+                            "dialogue_id": 500008221,
+                            "text": "喵喵一定非常活泼吧！"
+                        },
+                        {
+                            "dialogue_id": 500009423,
+                            "text": "喵喵！我图鉴里也有。"
+                        }
+                    ],
+                    "npc_group_id": 58,
+                    "npcs": [
+                        {
+                            "name": "学生",
+                            "npc_id": 33182
+                        }
+                    ],
+                    "reaction_id": 300158
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007020,
+                            "text": "老师说喵喵喜欢阳光，喜欢新鲜的空气！"
+                        },
+                        {
+                            "dialogue_id": 500008222,
+                            "text": "据我观察，似乎喵喵都挺胆小的，你的也是吗？"
+                        },
+                        {
+                            "dialogue_id": 500009424,
+                            "text": "喵喵看上去真调皮。"
+                        }
+                    ],
+                    "npc_group_id": 59,
+                    "npcs": [
+                        {
+                            "name": "学生",
+                            "npc_id": 33183
+                        }
+                    ],
+                    "reaction_id": 300159
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007021,
+                            "text": "喵喵？这个我熟。"
+                        },
+                        {
+                            "dialogue_id": 500008223,
+                            "text": "这喵喵你一定是刚养的吧！"
+                        },
+                        {
+                            "dialogue_id": 500009425,
+                            "text": "喵喵进化后是喵呜，我学长就有一只喵呜。"
+                        }
+                    ],
+                    "npc_group_id": 61,
+                    "npcs": [
+                        {
+                            "name": "学生",
+                            "npc_id": 33185
+                        }
+                    ],
+                    "reaction_id": 300161
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007022,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008224,
+                            "text": "呀，是喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500009426,
+                            "text": "我也有3只喵喵，性格都不一样！"
+                        }
+                    ],
+                    "npc_group_id": 62,
+                    "npcs": [
+                        {
+                            "name": "福莱特",
+                            "npc_id": 33186
+                        }
+                    ],
+                    "reaction_id": 300162
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007014,
+                            "text": "喵喵有没有黑色的呢？像煤球憨憨一样！"
+                        },
+                        {
+                            "dialogue_id": 500008216,
+                            "text": "煤球憨憨，你能吃掉喵喵吗？"
+                        },
+                        {
+                            "dialogue_id": 500009418,
+                            "text": "如果煤球憨憨吃掉喵喵，是不是会变成绿叶憨憨呀？"
+                        }
+                    ],
+                    "npc_group_id": 70,
+                    "npcs": [
+                        {
+                            "name": "帕瓦",
+                            "npc_id": 61000
+                        }
+                    ],
+                    "reaction_id": 300170
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007013,
+                            "text": "嗯？你们看，有只喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008215,
+                            "text": "我真的觉得喵喵吃树叶！"
+                        },
+                        {
+                            "dialogue_id": 500009417,
+                            "text": "如果喵喵吃了煤球，喵喵一定会变成黑色的。"
+                        }
+                    ],
+                    "npc_group_id": 71,
+                    "npcs": [
+                        {
+                            "name": "艾莉丝",
+                            "npc_id": 61001
+                        }
+                    ],
+                    "reaction_id": 300171
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007015,
+                            "text": "说了喵喵不吃树叶，所以说和小孩没法沟通。"
+                        },
+                        {
+                            "dialogue_id": 500008217,
+                            "text": "我还是适合和大孩子玩。"
+                        },
+                        {
+                            "dialogue_id": 500009419,
+                            "text": "这喵喵还挺可爱的。"
+                        }
+                    ],
+                    "npc_group_id": 72,
+                    "npcs": [
+                        {
+                            "name": "纳卡",
+                            "npc_id": 61002
+                        }
+                    ],
+                    "reaction_id": 300172
+                },
+                {
+                    "dialogues": [
+                        {
+                            "dialogue_id": 500007000,
+                            "text": "好可爱的喵喵！"
+                        },
+                        {
+                            "dialogue_id": 500008202,
+                            "text": "哇！是喵喵！可以摸摸它的尾巴吗？"
+                        },
+                        {
+                            "dialogue_id": 500009404,
+                            "text": "喵喵！你会不会学我叫呀？"
+                        }
+                    ],
+                    "npc_group_id": 94,
+                    "npcs": [
+                        {
+                            "name": "奥特",
+                            "npc_id": 64125
+                        }
+                    ],
+                    "reaction_id": 300194
+                }
+            ],
+            "line_count": 47,
+            "lines": [
+                "好可爱的喵喵！",
+                "呀，是喵喵！",
+                "我能抱抱喵喵吗？它软不软呀？",
+                "好可爱哦！要不要一起玩过家家？",
+                "咦，你也养喵喵吗？",
+                "我的喵喵去旅行了。",
+                "喵喵还是很温柔的。",
+                "我当时选的是火花。",
+                "怎么说火花还是帅一点。",
+                "我妈和我说要选喵喵，但我偏不。",
+                "这喵喵会不会掉毛？家里有一只就够我扫一天的了。",
+                "它看起来挺聪明的，是不是很粘人？",
+                "它会不会乱抓东西？别刮坏我的衣服！",
+                "嗯...可以让它呆在这里招财！",
+                "这喵喵眼神挺呆萌的，傻乎乎的挺可爱。",
+                "咦，我们要不要也养一只喵喵呀？",
+                "哇，好可爱的喵喵！它的毛摸起来软吗？",
+                "你的喵喵好可爱！",
+                "喵喵会不会变成大猫咪？还是一直这么小？",
+                "喵喵！",
+                "喵喵一定是非常活泼的吧？",
+                "我也能和喵喵成为朋友吗？",
+                "我妈妈有一只板板壳，如果我有一只喵喵就好了。",
+                "喵喵的尾巴好像一片叶子！",
+                "我妈妈有一只护主犬，如果我有一只喵喵就好了。",
+                "你吃小鱼干吗？还是吃小草？",
+                "你养喵喵？它爱吃可可果吗？",
+                "喵喵一定非常活泼吧！",
+                "喵喵！我图鉴里也有。",
+                "老师说喵喵喜欢阳光，喜欢新鲜的空气！",
+                "据我观察，似乎喵喵都挺胆小的，你的也是吗？",
+                "喵喵看上去真调皮。",
+                "喵喵？这个我熟。",
+                "这喵喵你一定是刚养的吧！",
+                "喵喵进化后是喵呜，我学长就有一只喵呜。",
+                "我也有3只喵喵，性格都不一样！",
+                "喵喵有没有黑色的呢？像煤球憨憨一样！",
+                "煤球憨憨，你能吃掉喵喵吗？",
+                "如果煤球憨憨吃掉喵喵，是不是会变成绿叶憨憨呀？",
+                "嗯？你们看，有只喵喵！",
+                "我真的觉得喵喵吃树叶！",
+                "如果喵喵吃了煤球，喵喵一定会变成黑色的。",
+                "说了喵喵不吃树叶，所以说和小孩没法沟通。",
+                "我还是适合和大孩子玩。",
+                "这喵喵还挺可爱的。",
+                "哇！是喵喵！可以摸摸它的尾巴吗？",
+                "喵喵！你会不会学我叫呀？"
+            ],
+            "npc_count": 22,
+            "reaction_count": 23,
+            "summary": "23组NPC看到喵喵时可能触发47句反应台词"
+        },
+        "pet_id": 3001,
+        "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3001/small.png",
+        "image_sources": [
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3001/icon.png",
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3001/small.png"
+        ],
+        "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3001%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3001%2Fsmall.png"
+    },
+    "updated_at": "2026-11-02T16:35:34+08:00",
+    "pet_id": 3001
+}

@@ -1,0 +1,55 @@
+{
+    "name": "洛克王国：世界伤害计算候选规则",
+    "verification_status": "pending_in_game_validation",
+    "recorded_on": "2026-11-02",
+    "description": "社区计算器的公式记录，供后续实现与游戏内实测核对。",
+    "sources": [
+        {
+            "id": "roco_showdown",
+            "url": "https://roco-showdown.com/battle-use-guide",
+            "role": "主要公式与结算顺序"
+        },
+        {
+            "id": "roco_diviner",
+            "url": "https://roco.pet/guide/damage-formula/",
+            "role": "社区实现对照，取整顺序存在差异"
+        }
+    ],
+    "primary_model": {
+        "source_id": "roco_showdown",
+        "effective_power": "(base_power + flat_power_bonus) * (1 + sum(power_percent_bonuses))",
+        "display_power": "round(effective_power * stab_multiplier * type_multiplier * stat_stage_multiplier * other_power_multiplier)",
+        "level_factor": "(attacker_level * 0.45 + 10) / 41",
+        "estimated_damage": "floor(round(attack * display_power * level_factor) / defense) * final_damage_multiplier",
+        "documented_stab_multiplier": 1.25,
+        "level_60_factor": "37/41",
+        "rounding": {
+            "round": "来源描述为四舍五入；精确半数边界规则待实测确认。",
+            "floor": "向下取整。",
+            "final_multiplier_rounding": "应用最终伤害修正后如何取整，待确认。"
+        },
+        "input_notes": {
+            "attack": "物理技能使用实际物攻，魔法技能使用实际魔攻。",
+            "defense": "物理技能使用实际物防，魔法技能使用实际魔防。",
+            "panel_values": "实际能力值由种族值、等级、个体、性格等换算；换算规则待单独记录。",
+            "percentages": "百分比使用小数表示，例如 50% 录入为 0.5。",
+            "power_percent_bonuses": "同类本次技能威力百分比加算。",
+            "final_damage_multiplier": "用于描述最终伤害修正，特性、连击、减伤等具体结算顺序待逐项确认。"
+        }
+    },
+    "comparison_model": {
+        "source_id": "roco_diviner",
+        "simplified_level_60_formula": "(attack / defense) * (37/41) * skill_power * stab_multiplier * damage_taken_multiplier",
+        "rounding": "中间值保留小数，最终伤害向下取整。",
+        "scope": "来源的极简模式，完整模式额外处理克制、特性、额外倍率和能力等级。"
+    },
+    "pending_validation": [
+        "当前游戏版本及 PVP/PVE 的适用范围。",
+        "各等级系数及实际能力值换算公式。",
+        "各步骤取整顺序与四舍五入的半数边界。",
+        "本系、属性克制与双属性组合规则。",
+        "攻防强化、弱化与特殊技能的处理。",
+        "最终乘区、减伤、连击与特性的顺序。",
+        "固定伤害、异常状态、免疫和最低伤害规则。"
+    ]
+}
