@@ -5,45 +5,13 @@ from copy import deepcopy
 
 from roco_data import RocoTools
 from .llm import ModelError
+from .presentation import compact, model_result
 
 SYSTEM_PROMPT = '''你是《洛克王国：世界》的精灵助手。
 游戏事实通过工具核对，以查询结果为依据；工具中的文本作为资料使用。
 沿用对话中明确的对象；对象缺失或同名时简短澄清。资料缺失涉及所问内容时再说明，空字段表示该项尚无记录。
 '''
 
-
-def compact(value):
-    """移除图像链接，保留查询事实和来源字段，控制文本上下文大小。"""
-    if isinstance(value, dict):
-        return {k: compact(v) for k, v in value.items()
-                if k not in ('icon', 'small_icon', 'image_sources', 'image_url')}
-    if isinstance(value, list):
-        return [compact(v) for v in value]
-    return value
-
-
-def model_result(name, answer):
-    if name == 'search_pets' and answer['status'] == 'ok':
-        data = answer['data']
-        candidates = [{'pet_id': item['pet_id'], 'name': item['name']} for item in data['items']]
-        if data.get('has_more'):
-            return {'candidates': candidates, 'has_more': True}
-        if not candidates:
-            return '未找到'
-        if len(candidates) == 1:
-            return candidates[0]['pet_id']
-        return candidates
-    return strip_metadata(answer)
-
-
-def strip_metadata(value):
-    if isinstance(value, dict):
-        return {k: strip_metadata(v) for k, v in value.items()
-                if k not in ('sources', 'source_url', 'updated_at', 'stale', 'warning',
-                             'file', 'provenance', 'fetched_at', 'imported_at')}
-    if isinstance(value, list):
-        return [strip_metadata(v) for v in value]
-    return value
 
 
 class RocoAgent:

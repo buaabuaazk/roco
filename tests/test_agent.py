@@ -96,9 +96,8 @@ class AgentTests(unittest.TestCase):
                            message(text='可以通过技能石学习。')])
         answer = RocoAgent(model, self.queries).ask('喵喵能学毒沼吗？')
         payload = json.loads(model.requests[1][-1]['content'])
-        self.assertEqual(payload, {'status': 'ok', 'data': {'items': [{
-            'skill_id': 7120200, 'name': '毒沼', 'source': 'machine', 'level': None,
-            'detail': {'power': '80', 'cost': '2'},
+        self.assertEqual(payload, {'status': 'ok', 'data': {'技能': [{
+            '名称': '毒沼', '威力': 80, '能耗': 2, '学习方式': '技能石',
         }]}})
         self.assertEqual(len(answer['sources']), 2)
         self.assertTrue(self.payload['stale'])
