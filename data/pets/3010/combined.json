@@ -1,0 +1,2409 @@
+{
+    "pet_id": 3010,
+    "name": "恶魔叮",
+    "sections": {
+        "base": {
+            "body_size": {
+                "height": {
+                    "max_cm": 56,
+                    "max_m": 0.56,
+                    "min_cm": 39,
+                    "min_m": 0.39
+                },
+                "weight": {
+                    "max_g": 5200,
+                    "max_kg": 5.2,
+                    "min_g": 3600,
+                    "min_kg": 3.6
+                }
+            },
+            "classis": {
+                "id": 2,
+                "name": "漂浮类精灵"
+            },
+            "description": "身体里似乎装满了坏心思，很轻松就能从试图抓住它的洛克手中挣脱。会三五成群地从洛克手上抢走东西，把东西丢下之后嘻嘻哈哈地飞走。如果惹怒它们的话，会气呼呼地撞向洛克。",
+            "egg_group_ids": [
+                7
+            ],
+            "egg_group_names": [
+                "妖精组"
+            ],
+            "egg_groups": [
+                {
+                    "id": 7,
+                    "name": "妖精组"
+                }
+            ],
+            "feature": {
+                "desc": "入场时获得50%吸血。",
+                "name": "渴求",
+                "skill_id": 200139
+            },
+            "handbook_no": "030",
+            "has_ride_talent": false,
+            "has_shiny": true,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "quality": 2,
+            "ride_talent": {
+                "enabled": false,
+                "probability": 0,
+                "probability_rate": 0
+            },
+            "season": {
+                "end_time": "2026-07-16 03:59:59",
+                "id": 2,
+                "start_time": "2026-05-21 04:00:00",
+                "subtitle": "狂欢怪谈",
+                "title": "S2赛季"
+            },
+            "season_id": 2,
+            "sections": {
+                "acquisition": "/api/v1/games/rocom/wiki/pets/3010/acquisition",
+                "ecology": "/api/v1/games/rocom/wiki/pets/3010/ecology",
+                "egg": "/api/v1/games/rocom/wiki/pets/3010/egg",
+                "family": "/api/v1/games/rocom/wiki/pets/3010/family",
+                "features": "/api/v1/games/rocom/wiki/pets/3010/features",
+                "fruit": "/api/v1/games/rocom/wiki/pets/3010/fruit",
+                "handbook": "/api/v1/games/rocom/wiki/pets/3010/handbook",
+                "natures": "/api/v1/games/rocom/wiki/pets/3010/natures",
+                "profile": "/api/v1/games/rocom/wiki/pets/3010/profile",
+                "ride": "/api/v1/games/rocom/wiki/pets/3010/ride",
+                "skills": "/api/v1/games/rocom/wiki/pets/3010/skills",
+                "stories": "/api/v1/games/rocom/wiki/pets/3010/stories",
+                "talents": "/api/v1/games/rocom/wiki/pets/3010/talents"
+            },
+            "shiny": {
+                "available": true,
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny.png",
+                "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny-small.png",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny.png",
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny-small.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fshiny.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fshiny-small.png"
+            },
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "stage": 1,
+            "type_ids": [
+                18,
+                15
+            ],
+            "type_names": [
+                "恶",
+                "翼"
+            ],
+            "types": [
+                {
+                    "id": 18,
+                    "name": "恶"
+                },
+                {
+                    "id": 15,
+                    "name": "翼"
+                }
+            ],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "family": {
+            "family_id": 7,
+            "members": [
+                {
+                    "display_order": 1,
+                    "feature": {
+                        "desc": "入场时获得50%吸血。",
+                        "name": "渴求",
+                        "skill_id": 200139
+                    },
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "name": "恶魔叮",
+                    "pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                    "stage": 1,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+                },
+                {
+                    "condition_level": 40,
+                    "condition_summary": "等级达到 40",
+                    "condition_texts": [
+                        "等级达到 40"
+                    ],
+                    "display_order": 2,
+                    "evolution_description": "恶魔叮升级到40级后进化为叮叮恶魔。",
+                    "feature": {
+                        "desc": "入场时获得50%吸血。",
+                        "name": "渴求",
+                        "skill_id": 200139
+                    },
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/icon.png",
+                    "items": [
+                        {
+                            "count": 5,
+                            "item_id": 100608,
+                            "name": "天使草"
+                        }
+                    ],
+                    "level": 40,
+                    "money": 12000,
+                    "name": "叮叮恶魔",
+                    "pet_id": 3039,
+                    "previous_pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/small.png",
+                    "stage": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3039/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3039%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3039%2Fsmall.png"
+                },
+                {
+                    "condition_summary": "首领化",
+                    "condition_texts": [
+                        "首领化"
+                    ],
+                    "display_order": 4,
+                    "evolution_description": "叮叮恶魔首领化后成为恶魔男爵。",
+                    "feature": {
+                        "desc": "入场时获得50%吸血，每过量回复5%生命转化为10%物攻。",
+                        "name": "贪得无厌",
+                        "skill_id": 280032
+                    },
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/icon.png",
+                    "money": 12000,
+                    "name": "恶魔男爵",
+                    "pet_id": 5055,
+                    "previous_pet_id": 3039,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/small.png",
+                    "stage": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F5055%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F5055%2Fsmall.png"
+                },
+                {
+                    "condition_level": 40,
+                    "condition_summary": "等级达到 40",
+                    "condition_texts": [
+                        "等级达到 40"
+                    ],
+                    "display_order": 5,
+                    "evolution_description": "恶魔叮升级到40级后进化为恶魔男爵。",
+                    "feature": {
+                        "desc": "入场时获得50%吸血，每过量回复5%生命转化为10%物攻。",
+                        "name": "贪得无厌",
+                        "skill_id": 280032
+                    },
+                    "form": "领地试炼用",
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/icon.png",
+                    "items": [
+                        {
+                            "count": 5,
+                            "item_id": 100608,
+                            "name": "天使草"
+                        }
+                    ],
+                    "money": 12000,
+                    "name": "恶魔男爵",
+                    "pet_id": 13000172,
+                    "previous_pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/small.png",
+                    "stage": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F13000172%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F13000172%2Fsmall.png"
+                }
+            ],
+            "name": "恶魔叮进化链"
+        },
+        "skills": {
+            "level": [
+                {
+                    "skill_id": 7180070,
+                    "level": 1
+                },
+                {
+                    "skill_id": 7150120,
+                    "level": 1
+                },
+                {
+                    "skill_id": 7020360,
+                    "level": 6
+                },
+                {
+                    "skill_id": 7020780,
+                    "level": 8
+                },
+                {
+                    "skill_id": 7180160,
+                    "level": 10
+                },
+                {
+                    "skill_id": 7150190,
+                    "level": 13
+                },
+                {
+                    "skill_id": 7180110,
+                    "level": 20
+                },
+                {
+                    "skill_id": 7180320,
+                    "level": 23
+                },
+                {
+                    "skill_id": 7150090,
+                    "level": 29
+                },
+                {
+                    "skill_id": 7150060,
+                    "level": 30
+                },
+                {
+                    "skill_id": 7180340,
+                    "level": 37
+                },
+                {
+                    "skill_id": 7180120,
+                    "level": 38
+                },
+                {
+                    "skill_id": 7150110,
+                    "level": 40
+                }
+            ],
+            "machine": [
+                {
+                    "skill_id": 7180100
+                },
+                {
+                    "skill_id": 7170200
+                },
+                {
+                    "skill_id": 7170100
+                },
+                {
+                    "skill_id": 7170140
+                },
+                {
+                    "skill_id": 7120080
+                },
+                {
+                    "skill_id": 7020510
+                },
+                {
+                    "skill_id": 7020490
+                },
+                {
+                    "skill_id": 7020860
+                },
+                {
+                    "skill_id": 7021090
+                },
+                {
+                    "skill_id": 7021080
+                },
+                {
+                    "skill_id": 7020690
+                },
+                {
+                    "skill_id": 7150300
+                },
+                {
+                    "skill_id": 7180150
+                },
+                {
+                    "skill_id": 7180400
+                },
+                {
+                    "skill_id": 7180420
+                },
+                {
+                    "skill_id": 7150400
+                }
+            ],
+            "blood": [
+                {
+                    "skill_id": 7020910,
+                    "level": 15,
+                    "bloodline_id": 1
+                },
+                {
+                    "skill_id": 7030430,
+                    "level": 15,
+                    "bloodline_id": 2
+                },
+                {
+                    "skill_id": 7040150,
+                    "level": 15,
+                    "bloodline_id": 3
+                },
+                {
+                    "skill_id": 7050330,
+                    "level": 15,
+                    "bloodline_id": 4
+                },
+                {
+                    "skill_id": 7060230,
+                    "level": 15,
+                    "bloodline_id": 5
+                },
+                {
+                    "skill_id": 7080120,
+                    "level": 15,
+                    "bloodline_id": 6
+                },
+                {
+                    "skill_id": 7090250,
+                    "level": 15,
+                    "bloodline_id": 7
+                },
+                {
+                    "skill_id": 7100150,
+                    "level": 15,
+                    "bloodline_id": 8
+                },
+                {
+                    "skill_id": 7110300,
+                    "level": 15,
+                    "bloodline_id": 9
+                },
+                {
+                    "skill_id": 7120200,
+                    "level": 15,
+                    "bloodline_id": 10
+                },
+                {
+                    "skill_id": 7130260,
+                    "level": 15,
+                    "bloodline_id": 11
+                },
+                {
+                    "skill_id": 7140230,
+                    "level": 15,
+                    "bloodline_id": 12
+                },
+                {
+                    "skill_id": 7150210,
+                    "level": 15,
+                    "bloodline_id": 13
+                },
+                {
+                    "skill_id": 7160240,
+                    "level": 15,
+                    "bloodline_id": 14
+                },
+                {
+                    "skill_id": 7170220,
+                    "level": 15,
+                    "bloodline_id": 15
+                },
+                {
+                    "skill_id": 7180270,
+                    "level": 15,
+                    "bloodline_id": 16
+                },
+                {
+                    "skill_id": 7070010,
+                    "level": 15,
+                    "bloodline_id": 17
+                },
+                {
+                    "skill_id": 7190360,
+                    "level": 15,
+                    "bloodline_id": 18
+                }
+            ]
+        },
+        "acquisition": {
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "methods": [
+                {
+                    "text": "精灵蛋孵化：（12小时）",
+                    "type": "egg"
+                },
+                {
+                    "text": "果实刷新：精灵果实",
+                    "type": "fruit_refresh"
+                }
+            ],
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "sources": [
+                {
+                    "description": "精灵蛋孵化",
+                    "egg": {
+                        "egg_conf_id": 3010001,
+                        "egg_item": {
+                            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png",
+                            "id": 107007,
+                            "name": "精灵蛋",
+                            "image_sources": [
+                                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+                            ],
+                            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+                        },
+                        "hatch_label": "12小时",
+                        "hatch_seconds": 43200,
+                        "name": "",
+                        "image_sources": [
+                            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+                        ],
+                        "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+                    },
+                    "source_type": "egg"
+                },
+                {
+                    "fruit_refresh": {
+                        "display_order": 0,
+                        "fruit": {
+                            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png",
+                            "id": 108007,
+                            "name": "精灵果实",
+                            "image_sources": [
+                                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png"
+                            ],
+                            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F108007.png"
+                        },
+                        "fruit_item_id": 108007
+                    },
+                    "name": "精灵果实",
+                    "source_type": "fruit_refresh"
+                }
+            ],
+            "summary": "可通过精灵蛋孵化、果实刷新获得",
+            "world_maps": [],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "egg": {
+            "egg_conf_id": 3010001,
+            "egg_item": {
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png",
+                "id": 107007,
+                "name": "精灵蛋",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+            },
+            "egg_size": {
+                "height": {
+                    "max_cm": 23,
+                    "max_m": 0.23,
+                    "min_cm": 17,
+                    "min_m": 0.17
+                },
+                "weight": {
+                    "max_g": 1640,
+                    "max_kg": 1.64,
+                    "min_g": 1260,
+                    "min_kg": 1.26
+                }
+            },
+            "egg_type": {
+                "name": "普通",
+                "precious_egg_type": 0
+            },
+            "hatch_label": "12小时",
+            "hatch_seconds": 43200,
+            "name": "",
+            "pet": {
+                "egg_groups": [
+                    {
+                        "id": 7,
+                        "name": "妖精组"
+                    }
+                ],
+                "gender_ratio": {
+                    "female_percent": 50,
+                    "male_percent": 50
+                },
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "name": "恶魔叮",
+                "pet_id": 3010,
+                "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+            },
+            "pet_egg_pet_id": 3010001,
+            "probabilities": {
+                "blessing": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "祝福",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "boss": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "首领",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "friend_exchange": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "好友互换",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "home": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "家园",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                },
+                "miracle_exchange": {
+                    "glass": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    },
+                    "label": "奇迹交换",
+                    "shining": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    }
+                },
+                "none": {
+                    "glass": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    },
+                    "label": "默认",
+                    "shining": {
+                        "base": 1125,
+                        "base_percent": 11.25,
+                        "contact_add": 50,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.5,
+                        "enabled": true,
+                        "total_with_contact": 1175,
+                        "total_with_contact_percent": 11.75
+                    }
+                },
+                "travel": {
+                    "glass": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    },
+                    "label": "旅行",
+                    "shining": {
+                        "base": 8,
+                        "base_percent": 0.08,
+                        "contact_add": 1,
+                        "contact_add_enabled": true,
+                        "contact_add_percent": 0.01,
+                        "enabled": true,
+                        "total_with_contact": 9,
+                        "total_with_contact_percent": 0.09
+                    }
+                }
+            },
+            "probability_denominator": 10000,
+            "random_effects": [
+                {
+                    "effect_id": 1,
+                    "egg_type": {
+                        "name": "普通",
+                        "precious_egg_type": 0
+                    },
+                    "is_precious": false,
+                    "name": "普通随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1001,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1002,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 2001,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 3001,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 4001,
+                    "egg_type": {
+                        "name": "噩梦污染",
+                        "precious_egg_type": 8
+                    },
+                    "is_precious": false,
+                    "mutation_type": 32,
+                    "name": "噩梦污染随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1003,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_particle": true,
+                    "mutation_param2": 1,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1004,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_particle": true,
+                    "mutation_param2": 2,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1005,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_particle": true,
+                    "mutation_param2": 3,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 1006,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "mutation_param1": 15,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                },
+                {
+                    "effect_id": 3002,
+                    "egg_type": {
+                        "name": "炫彩",
+                        "precious_egg_type": 6
+                    },
+                    "is_precious": false,
+                    "known_mutation_glass_color": true,
+                    "known_mutation_glass_particle": true,
+                    "mutation_type": 8,
+                    "name": "炫彩随机蛋",
+                    "random_weight": 100
+                }
+            ],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/107007.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F107007.png"
+        },
+        "ride": {
+            "enabled": true,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "movements": [
+                {
+                    "id": 13001,
+                    "name": "陆地移动",
+                    "vitality_cost_text": "起始体力80，每秒消耗46，衰减50%，衰减阈值25%"
+                },
+                {
+                    "id": 20008,
+                    "name": "滑翔",
+                    "vitality_cost_text": "起始体力80，每秒消耗35，衰减50%，衰减阈值25%"
+                }
+            ],
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "summary": "可骑乘，移动方式2种",
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "fruit": {
+            "items": [
+                {
+                    "badges": [
+                        {
+                            "key": "target_pets",
+                            "label": "吸引精灵 2"
+                        }
+                    ],
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png",
+                    "item_id": 108007,
+                    "item_kind": "bag",
+                    "name": "精灵果实",
+                    "quality": 4,
+                    "summary": "吸引2只精灵",
+                    "target_pet_count": 2,
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/108007.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F108007.png"
+                }
+            ],
+            "total": 1
+        },
+        "handbook": {
+            "areas": [
+                {
+                    "id": 1,
+                    "name": "世界图鉴"
+                },
+                {
+                    "id": 2,
+                    "name": "风眠省图鉴"
+                },
+                {
+                    "id": 3,
+                    "name": "洛克里安图鉴"
+                }
+            ],
+            "description": "捣蛋鬼精灵",
+            "handbook_id": 30,
+            "name": "恶魔叮",
+            "pets": [
+                {
+                    "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "name": "恶魔叮",
+                    "pet_id": 3010,
+                    "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                    "image_sources": [
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                        "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                    ],
+                    "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+                }
+            ],
+            "topics": [
+                {
+                    "count": 1,
+                    "description": "捕捉1只精灵",
+                    "display_order": 1,
+                    "reward": {
+                        "description": "图鉴课题-捕捉1只精灵",
+                        "items": [
+                            {
+                                "count": 150,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png",
+                                "item_id": 7,
+                                "item_kind": "visual",
+                                "name": "魔法经验",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F7.png"
+                            },
+                            {
+                                "count": 5,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png",
+                                "item_id": 17,
+                                "item_kind": "visual",
+                                "name": "课题研究点",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F17.png"
+                            }
+                        ],
+                        "name": "图鉴课题-捕捉1只精灵",
+                        "reward_id": 202001
+                    },
+                    "reward_id": 202001,
+                    "topic_id": 1,
+                    "topic_type": 1,
+                    "topic_type_priority": 0
+                },
+                {
+                    "count": 1,
+                    "description": "捕捉1只了不起天分的精灵",
+                    "display_order": 2,
+                    "reward": {
+                        "description": "图鉴课题-捕捉1只了不起天分的精灵",
+                        "items": [
+                            {
+                                "count": 150,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png",
+                                "item_id": 7,
+                                "item_kind": "visual",
+                                "name": "魔法经验",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/7.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F7.png"
+                            },
+                            {
+                                "count": 10,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png",
+                                "item_id": 17,
+                                "item_kind": "visual",
+                                "name": "课题研究点",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F17.png"
+                            }
+                        ],
+                        "name": "图鉴课题-捕捉1只了不起天分的精灵",
+                        "reward_id": 202006
+                    },
+                    "reward_id": 202006,
+                    "topic_id": 2,
+                    "topic_type": 9,
+                    "topic_type_priority": 0
+                },
+                {
+                    "count": 1,
+                    "description": "使精灵成功进化1次",
+                    "display_order": 3,
+                    "reward": {
+                        "description": "图鉴课题-使精灵进化1次",
+                        "items": [
+                            {
+                                "count": 50,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/100699.png",
+                                "item_id": 100699,
+                                "item_kind": "bag",
+                                "name": "分光水晶",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/bag/100699.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fbag%2F100699.png"
+                            },
+                            {
+                                "count": 10,
+                                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png",
+                                "item_id": 17,
+                                "item_kind": "visual",
+                                "name": "课题研究点",
+                                "image_sources": [
+                                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/items/visual/17.png"
+                                ],
+                                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fitems%2Fvisual%2F17.png"
+                            }
+                        ],
+                        "name": "图鉴课题-使精灵进化1次",
+                        "reward_id": 202002
+                    },
+                    "reward_id": 202002,
+                    "topic_id": 3,
+                    "topic_type": 10,
+                    "topic_type_priority": 0
+                }
+            ]
+        },
+        "profile": {
+            "attributes": {
+                "hp": 90,
+                "magic_attack": 42,
+                "magic_defense": 56,
+                "physical_attack": 100,
+                "physical_defense": 80,
+                "speed": 84,
+                "sum": 452
+            },
+            "body_size": {
+                "height": {
+                    "max_cm": 56,
+                    "max_m": 0.56,
+                    "min_cm": 39,
+                    "min_m": 0.39
+                },
+                "weight": {
+                    "max_g": 5200,
+                    "max_kg": 5.2,
+                    "min_g": 3600,
+                    "min_kg": 3.6
+                }
+            },
+            "classis": {
+                "id": 2,
+                "name": "漂浮类精灵"
+            },
+            "description": "身体里似乎装满了坏心思，很轻松就能从试图抓住它的洛克手中挣脱。会三五成群地从洛克手上抢走东西，把东西丢下之后嘻嘻哈哈地飞走。如果惹怒它们的话，会气呼呼地撞向洛克。",
+            "ecology": {
+                "ecology_feature_ids": [
+                    1,
+                    10
+                ],
+                "habitat_group_role_type": 1004,
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "name": "恶魔叮",
+                "pet_id": 3010,
+                "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+            },
+            "egg_groups": [
+                {
+                    "id": 7,
+                    "name": "妖精组"
+                }
+            ],
+            "gender_ratio": {
+                "female_percent": 50,
+                "male_percent": 50
+            },
+            "handbook_no": "030",
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "move_type": "地面",
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "type_effectiveness": {
+                "attack": {
+                    "strong": [
+                        {
+                            "multiplier": 2,
+                            "name": "草",
+                            "type_id": 3
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "毒",
+                            "type_id": 12
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "虫",
+                            "type_id": 13
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "武",
+                            "type_id": 14
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "萌",
+                            "type_id": 16
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "幽",
+                            "type_id": 17
+                        }
+                    ],
+                    "weak": [
+                        {
+                            "multiplier": 0.5,
+                            "name": "光",
+                            "type_id": 6
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "地",
+                            "type_id": 8
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "龙",
+                            "type_id": 10
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "电",
+                            "type_id": 11
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "武",
+                            "type_id": 14
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "恶",
+                            "type_id": 18
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "机械",
+                            "type_id": 19
+                        }
+                    ]
+                },
+                "defense": {
+                    "resist": [
+                        {
+                            "multiplier": 0.5,
+                            "name": "草",
+                            "type_id": 3
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "幽",
+                            "type_id": 17
+                        },
+                        {
+                            "multiplier": 0.5,
+                            "name": "恶",
+                            "type_id": 18
+                        }
+                    ],
+                    "weak": [
+                        {
+                            "multiplier": 2,
+                            "name": "光",
+                            "type_id": 6
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "冰",
+                            "type_id": 9
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "电",
+                            "type_id": 11
+                        },
+                        {
+                            "multiplier": 2,
+                            "name": "萌",
+                            "type_id": 16
+                        }
+                    ]
+                }
+            },
+            "types": [
+                {
+                    "id": 18,
+                    "name": "恶"
+                },
+                {
+                    "id": 15,
+                    "name": "翼"
+                }
+            ],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "talents": {
+            "talent_pool_id": 1001,
+            "name": "特长池：无双人骑乘",
+            "has_ride_talent": false,
+            "ride_talent_probability": 0,
+            "ride_talent_rate": 0,
+            "items": [
+                {
+                    "talent_id": 1,
+                    "name": "无",
+                    "probability": 64000,
+                    "probability_rate": 0.6400064000640007
+                },
+                {
+                    "talent_id": 101,
+                    "name": "奇袭",
+                    "probability": 6912,
+                    "probability_rate": 0.06912069120691207
+                },
+                {
+                    "talent_id": 103,
+                    "name": "亲密",
+                    "probability": 6912,
+                    "probability_rate": 0.06912069120691207
+                },
+                {
+                    "talent_id": 104,
+                    "name": "灵巧",
+                    "probability": 6912,
+                    "probability_rate": 0.06912069120691207
+                },
+                {
+                    "talent_id": 401,
+                    "name": "疾行",
+                    "probability": 6912,
+                    "probability_rate": 0.06912069120691207
+                },
+                {
+                    "talent_id": 502,
+                    "name": "无畏",
+                    "probability": 6912,
+                    "probability_rate": 0.06912069120691207
+                },
+                {
+                    "talent_id": 1001,
+                    "name": "爱分享",
+                    "probability": 475,
+                    "probability_rate": 0.004750047500475005
+                },
+                {
+                    "talent_id": 3001,
+                    "name": "家里蹲",
+                    "probability": 475,
+                    "probability_rate": 0.004750047500475005
+                },
+                {
+                    "talent_id": 5002,
+                    "name": "热心教",
+                    "probability": 475,
+                    "probability_rate": 0.004750047500475005
+                },
+                {
+                    "talent_id": 50001,
+                    "name": "慈悲为怀",
+                    "probability": 14,
+                    "probability_rate": 0.00014000140001400014
+                }
+            ]
+        },
+        "features": {
+            "items": [
+                {
+                    "desc": "入场时获得50%吸血。",
+                    "feature_kind": "normal",
+                    "name": "渴求",
+                    "skill_id": 200139
+                }
+            ]
+        },
+        "ecology": {
+            "ecology_feature_ids": [
+                1,
+                10
+            ],
+            "habitat_group_role_type": 1004,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "natures": {
+            "items": [
+                {
+                    "id": 1,
+                    "name": "大胆",
+                    "buff_attribute_ids": [
+                        80
+                    ],
+                    "debuff_attribute_ids": [
+                        82
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢独处",
+                        "警惕性强",
+                        "有些敏感",
+                        "独立自主",
+                        "似乎有点黏人"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "固执",
+                    "buff_attribute_ids": [
+                        80
+                    ],
+                    "debuff_attribute_ids": [
+                        81
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢随心所欲",
+                        "有点倔强",
+                        "不服输",
+                        "领地意识强",
+                        "坚持自我"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "调皮",
+                    "buff_attribute_ids": [
+                        80
+                    ],
+                    "debuff_attribute_ids": [
+                        83
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢捣乱",
+                        "精力充沛",
+                        "活泼好动",
+                        "偶尔会闯祸",
+                        "经常撒娇"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "勇敢",
+                    "buff_attribute_ids": [
+                        80
+                    ],
+                    "debuff_attribute_ids": [
+                        84
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢挑战",
+                        "好奇心旺盛",
+                        "无所畏惧",
+                        "偶尔会冲动",
+                        "坚韧不屈"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "逞强",
+                    "buff_attribute_ids": [
+                        80
+                    ],
+                    "debuff_attribute_ids": [
+                        79
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢交朋友",
+                        "自由自在",
+                        "常与同伴打闹",
+                        "偶尔会任性",
+                        "经常撒娇"
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "稳重",
+                    "buff_attribute_ids": [
+                        82
+                    ],
+                    "debuff_attribute_ids": [
+                        80
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢探险",
+                        "有些冒失",
+                        "总是一往直前",
+                        "行动有些冲动",
+                        "喜欢新鲜事物"
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "天真",
+                    "buff_attribute_ids": [
+                        82
+                    ],
+                    "debuff_attribute_ids": [
+                        81
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢胡闹",
+                        "好奇心旺盛",
+                        "有些粗心",
+                        "偶尔会恶作剧",
+                        "喜欢寻求关注"
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "懒散",
+                    "buff_attribute_ids": [
+                        82
+                    ],
+                    "debuff_attribute_ids": [
+                        83
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢打瞌睡",
+                        "常常偷懒",
+                        "有些迟钝",
+                        "偶尔会打呼噜",
+                        "总是漫不经心"
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "悠闲",
+                    "buff_attribute_ids": [
+                        82
+                    ],
+                    "debuff_attribute_ids": [
+                        84
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢看风景",
+                        "从容不迫",
+                        "悠然自得",
+                        "偶尔会发呆",
+                        "总是慢吞吞"
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "坦率",
+                    "buff_attribute_ids": [
+                        82
+                    ],
+                    "debuff_attribute_ids": [
+                        79
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢宁静",
+                        "善于忍耐",
+                        "害怕陌生事物",
+                        "行动谨慎",
+                        "非常黏人"
+                    ]
+                },
+                {
+                    "id": 11,
+                    "name": "聪明",
+                    "buff_attribute_ids": [
+                        81
+                    ],
+                    "debuff_attribute_ids": [
+                        80
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢独处",
+                        "享受安静",
+                        "谨小慎微",
+                        "行动谨慎",
+                        "总是一板一眼"
+                    ]
+                },
+                {
+                    "id": 12,
+                    "name": "专注",
+                    "buff_attribute_ids": [
+                        81
+                    ],
+                    "debuff_attribute_ids": [
+                        82
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "非常可靠",
+                        "经常思考",
+                        "一丝不苟",
+                        "决策慎重",
+                        "总是不慌不忙"
+                    ]
+                },
+                {
+                    "id": 13,
+                    "name": "偏执",
+                    "buff_attribute_ids": [
+                        81
+                    ],
+                    "debuff_attribute_ids": [
+                        83
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢玩闹",
+                        "不拘小节",
+                        "丢三落四",
+                        "常常闯祸",
+                        "活泼好动"
+                    ]
+                },
+                {
+                    "id": 14,
+                    "name": "冷静",
+                    "buff_attribute_ids": [
+                        81
+                    ],
+                    "debuff_attribute_ids": [
+                        84
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢思考",
+                        "临危不乱",
+                        "行动谨慎",
+                        "有些迟钝",
+                        "总是慢条斯理"
+                    ]
+                },
+                {
+                    "id": 15,
+                    "name": "理性",
+                    "buff_attribute_ids": [
+                        81
+                    ],
+                    "debuff_attribute_ids": [
+                        79
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "非常敏锐",
+                        "专注力强",
+                        "有些偏执",
+                        "专心致志",
+                        "一丝不苟"
+                    ]
+                },
+                {
+                    "id": 16,
+                    "name": "警惕",
+                    "buff_attribute_ids": [
+                        83
+                    ],
+                    "debuff_attribute_ids": [
+                        80
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢思考",
+                        "偶尔会任性",
+                        "行动谨慎",
+                        "总是有条不紊",
+                        "总是深思熟虑"
+                    ]
+                },
+                {
+                    "id": 17,
+                    "name": "温顺",
+                    "buff_attribute_ids": [
+                        83
+                    ],
+                    "debuff_attribute_ids": [
+                        82
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢撒娇",
+                        "乖巧听话",
+                        "友善宽和",
+                        "善于忍耐",
+                        "温柔体贴"
+                    ]
+                },
+                {
+                    "id": 18,
+                    "name": "害羞",
+                    "buff_attribute_ids": [
+                        83
+                    ],
+                    "debuff_attribute_ids": [
+                        81
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "行动谨慎",
+                        "有一点任性",
+                        "偶尔会不听指令",
+                        "善于忍耐",
+                        "谨小慎微"
+                    ]
+                },
+                {
+                    "id": 19,
+                    "name": "慎重",
+                    "buff_attribute_ids": [
+                        83
+                    ],
+                    "debuff_attribute_ids": [
+                        84
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "争强好胜",
+                        "经常吵闹",
+                        "行为强势",
+                        "不轻易放弃",
+                        "容易得意忘形"
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "焦虑",
+                    "buff_attribute_ids": [
+                        83
+                    ],
+                    "debuff_attribute_ids": [
+                        79
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "善于抗压",
+                        "非常勤奋",
+                        "吃苦耐劳",
+                        "意志坚强",
+                        "有些执拗"
+                    ]
+                },
+                {
+                    "id": 21,
+                    "name": "胆小",
+                    "buff_attribute_ids": [
+                        84
+                    ],
+                    "debuff_attribute_ids": [
+                        80
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "对动静非常敏感",
+                        "逃跑飞快",
+                        "警惕性强",
+                        "总是小心翼翼",
+                        "有些粘人"
+                    ]
+                },
+                {
+                    "id": 22,
+                    "name": "急躁",
+                    "buff_attribute_ids": [
+                        84
+                    ],
+                    "debuff_attribute_ids": [
+                        82
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "容易生气",
+                        "喜欢赛跑",
+                        "迅疾如风",
+                        "有些莽撞",
+                        "行动迅捷"
+                    ]
+                },
+                {
+                    "id": 23,
+                    "name": "开朗",
+                    "buff_attribute_ids": [
+                        84
+                    ],
+                    "debuff_attribute_ids": [
+                        81
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "爱与同伴嬉闹",
+                        "热情阳光",
+                        "喜欢自由驰骋",
+                        "有些冲动",
+                        "有时会心不在焉"
+                    ]
+                },
+                {
+                    "id": 24,
+                    "name": "莽撞",
+                    "buff_attribute_ids": [
+                        84
+                    ],
+                    "debuff_attribute_ids": [
+                        83
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢新奇事物",
+                        "偶尔惹祸",
+                        "总是三心二意",
+                        "喜欢被夸奖",
+                        "非常粘人"
+                    ]
+                },
+                {
+                    "id": 25,
+                    "name": "热情",
+                    "buff_attribute_ids": [
+                        84
+                    ],
+                    "debuff_attribute_ids": [
+                        79
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "容易生气",
+                        "缺乏耐心",
+                        "喜欢赛跑",
+                        "反应迅速",
+                        "有点容易得意忘形"
+                    ]
+                },
+                {
+                    "id": 26,
+                    "name": "沉默",
+                    "buff_attribute_ids": [
+                        79
+                    ],
+                    "debuff_attribute_ids": [
+                        80
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 80,
+                            "name": "物攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢独自沉思",
+                        "总是默默无闻",
+                        "总是十分被动",
+                        "疏于交朋友",
+                        "缺乏自信"
+                    ]
+                },
+                {
+                    "id": 27,
+                    "name": "忧郁",
+                    "buff_attribute_ids": [
+                        79
+                    ],
+                    "debuff_attribute_ids": [
+                        82
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 82,
+                            "name": "物防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢独自沉思",
+                        "有些冷漠",
+                        "善于观察",
+                        "思维敏捷",
+                        "总是深思熟虑"
+                    ]
+                },
+                {
+                    "id": 28,
+                    "name": "平和",
+                    "buff_attribute_ids": [
+                        79
+                    ],
+                    "debuff_attribute_ids": [
+                        81
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 81,
+                            "name": "魔攻"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "情绪稳定",
+                        "喜欢拥抱",
+                        "悠闲自在",
+                        "值得信任",
+                        "偶尔会偷吃"
+                    ]
+                },
+                {
+                    "id": 29,
+                    "name": "粗心",
+                    "buff_attribute_ids": [
+                        79
+                    ],
+                    "debuff_attribute_ids": [
+                        83
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 83,
+                            "name": "魔防"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢发呆",
+                        "无精打采",
+                        "有些消极",
+                        "总是闷闷不乐",
+                        "善于观察"
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "踏实",
+                    "buff_attribute_ids": [
+                        79
+                    ],
+                    "debuff_attribute_ids": [
+                        84
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢独处",
+                        "非常黏人",
+                        "缺乏安全感",
+                        "总是忐忑不安",
+                        "善于观察"
+                    ]
+                },
+                {
+                    "id": 31,
+                    "name": "热情",
+                    "buff_attribute_ids": [
+                        84
+                    ],
+                    "debuff_attribute_ids": [
+                        79
+                    ],
+                    "buff_attributes": [
+                        {
+                            "id": 84,
+                            "name": "速度"
+                        }
+                    ],
+                    "debuff_attributes": [
+                        {
+                            "id": 79,
+                            "name": "生命"
+                        }
+                    ],
+                    "random_descriptions": [
+                        "喜欢撒娇"
+                    ]
+                }
+            ]
+        },
+        "stories": {
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "items": [],
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "total": 0,
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        },
+        "appearance": {
+            "body_size": {
+                "height": {
+                    "max_cm": 56,
+                    "max_m": 0.56,
+                    "min_cm": 39,
+                    "min_m": 0.39
+                },
+                "weight": {
+                    "max_g": 5200,
+                    "max_kg": 5.2,
+                    "min_g": 3600,
+                    "min_kg": 3.6
+                }
+            },
+            "classis": {
+                "id": 2,
+                "name": "漂浮类精灵"
+            },
+            "description": "身体里似乎装满了坏心思，很轻松就能从试图抓住它的洛克手中挣脱。会三五成群地从洛克手上抢走东西，把东西丢下之后嘻嘻哈哈地飞走。如果惹怒它们的话，会气呼呼地撞向洛克。",
+            "egg_group_ids": [
+                7
+            ],
+            "egg_group_names": [
+                "妖精组"
+            ],
+            "egg_groups": [
+                {
+                    "id": 7,
+                    "name": "妖精组"
+                }
+            ],
+            "feature": {
+                "desc": "入场时获得50%吸血。",
+                "name": "渴求",
+                "skill_id": 200139
+            },
+            "handbook_no": "030",
+            "has_ride_talent": false,
+            "has_shiny": true,
+            "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+            "name": "恶魔叮",
+            "pet_id": 3010,
+            "quality": 2,
+            "ride_talent": {
+                "enabled": false,
+                "probability": 0,
+                "probability_rate": 0
+            },
+            "season": {
+                "end_time": "2026-07-16 03:59:59",
+                "id": 2,
+                "start_time": "2026-05-21 04:00:00",
+                "subtitle": "狂欢怪谈",
+                "title": "S2赛季"
+            },
+            "season_id": 2,
+            "sections": {
+                "acquisition": "/api/v1/games/rocom/wiki/pets/3010/acquisition",
+                "ecology": "/api/v1/games/rocom/wiki/pets/3010/ecology",
+                "egg": "/api/v1/games/rocom/wiki/pets/3010/egg",
+                "family": "/api/v1/games/rocom/wiki/pets/3010/family",
+                "features": "/api/v1/games/rocom/wiki/pets/3010/features",
+                "fruit": "/api/v1/games/rocom/wiki/pets/3010/fruit",
+                "handbook": "/api/v1/games/rocom/wiki/pets/3010/handbook",
+                "natures": "/api/v1/games/rocom/wiki/pets/3010/natures",
+                "profile": "/api/v1/games/rocom/wiki/pets/3010/profile",
+                "ride": "/api/v1/games/rocom/wiki/pets/3010/ride",
+                "skills": "/api/v1/games/rocom/wiki/pets/3010/skills",
+                "stories": "/api/v1/games/rocom/wiki/pets/3010/stories",
+                "talents": "/api/v1/games/rocom/wiki/pets/3010/talents"
+            },
+            "shiny": {
+                "available": true,
+                "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny.png",
+                "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny-small.png",
+                "image_sources": [
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny.png",
+                    "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/shiny-small.png"
+                ],
+                "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fshiny.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fshiny-small.png"
+            },
+            "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png",
+            "stage": 1,
+            "type_ids": [
+                18,
+                15
+            ],
+            "type_names": [
+                "恶",
+                "翼"
+            ],
+            "types": [
+                {
+                    "id": 18,
+                    "name": "恶"
+                },
+                {
+                    "id": 15,
+                    "name": "翼"
+                }
+            ],
+            "image_sources": [
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/icon.png",
+                "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3010/small.png"
+            ],
+            "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3010%2Fsmall.png"
+        }
+    },
+    "skill_ids": [
+        7020360,
+        7020490,
+        7020510,
+        7020690,
+        7020780,
+        7020860,
+        7020910,
+        7021080,
+        7021090,
+        7030430,
+        7040150,
+        7050330,
+        7060230,
+        7070010,
+        7080120,
+        7090250,
+        7100150,
+        7110300,
+        7120080,
+        7120200,
+        7130260,
+        7140230,
+        7150060,
+        7150090,
+        7150110,
+        7150120,
+        7150190,
+        7150210,
+        7150300,
+        7150400,
+        7160240,
+        7170100,
+        7170140,
+        7170200,
+        7170220,
+        7180070,
+        7180100,
+        7180110,
+        7180120,
+        7180150,
+        7180160,
+        7180270,
+        7180320,
+        7180340,
+        7180400,
+        7180420,
+        7190360
+    ],
+    "skill_detail_directory": "../../skills",
+    "provenance": "manifest.json"
+}

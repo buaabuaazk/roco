@@ -1,0 +1,106 @@
+{
+    "ok": true,
+    "resource": "pet-appearance",
+    "pet_id": 3007,
+    "source": "https://wegame.shallow.ink/api/v1/games/rocom/wiki/pets/3007",
+    "updated_at": "2026-09-22T02:52:24+08:00",
+    "pet": {
+        "body_size": {
+            "height": {
+                "max_cm": 215,
+                "max_m": 2.15,
+                "min_cm": 150,
+                "min_m": 1.5
+            },
+            "weight": {
+                "max_g": 125000,
+                "max_kg": 125,
+                "min_g": 105000,
+                "min_kg": 105
+            }
+        },
+        "classis": {
+            "id": 3,
+            "name": "猫咪类精灵"
+        },
+        "description": "普遍性情温和，体型巨大，据说深吸一口气能呼出将洛克都吹走的狂风，但通常情况下举止动作十分轻柔。“长了三条锋利的尾巴，经常会用身体冲撞碾压对手”。",
+        "egg_group_ids": [
+            6,
+            9
+        ],
+        "egg_group_names": [
+            "动物组",
+            "拟人组"
+        ],
+        "egg_groups": [
+            {
+                "id": 6,
+                "name": "动物组"
+            },
+            {
+                "id": 9,
+                "name": "拟人组"
+            }
+        ],
+        "feature": {
+            "desc": "使用草系技能后，回复10%生命。",
+            "name": "氧循环",
+            "skill_id": 200076
+        },
+        "handbook_no": "004",
+        "has_ride_talent": true,
+        "has_shiny": false,
+        "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3007/icon.png",
+        "name": "魔力猫",
+        "pet_id": 3007,
+        "quality": 2,
+        "ride_talent": {
+            "enabled": true,
+            "name": "同乘",
+            "probability": 5760,
+            "probability_rate": 0.05760057600576006,
+            "talent_id": 402
+        },
+        "season": null,
+        "season_id": 0,
+        "sections": {
+            "acquisition": "/api/v1/games/rocom/wiki/pets/3007/acquisition",
+            "ecology": "/api/v1/games/rocom/wiki/pets/3007/ecology",
+            "egg": "/api/v1/games/rocom/wiki/pets/3007/egg",
+            "family": "/api/v1/games/rocom/wiki/pets/3007/family",
+            "features": "/api/v1/games/rocom/wiki/pets/3007/features",
+            "fruit": "/api/v1/games/rocom/wiki/pets/3007/fruit",
+            "handbook": "/api/v1/games/rocom/wiki/pets/3007/handbook",
+            "natures": "/api/v1/games/rocom/wiki/pets/3007/natures",
+            "profile": "/api/v1/games/rocom/wiki/pets/3007/profile",
+            "ride": "/api/v1/games/rocom/wiki/pets/3007/ride",
+            "skills": "/api/v1/games/rocom/wiki/pets/3007/skills",
+            "stories": "/api/v1/games/rocom/wiki/pets/3007/stories",
+            "talents": "/api/v1/games/rocom/wiki/pets/3007/talents"
+        },
+        "shiny": {
+            "available": false
+        },
+        "small_icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3007/small.png",
+        "stage": 3,
+        "type_ids": [
+            3
+        ],
+        "type_names": [
+            "草"
+        ],
+        "types": [
+            {
+                "id": 3,
+                "name": "草"
+            }
+        ],
+        "image_sources": [
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3007/icon.png",
+            "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3007/small.png"
+        ],
+        "image_url": "https://091p.com/lkwg/image.php?url=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3007%2Ficon.png&fallback%5B0%5D=https%3A%2F%2Fwegame.shallow.ink%2Fapi%2Fv1%2Fresources%2Fwiki%2Fassets%2Fpets%2F3007%2Fsmall.png"
+    },
+    "stale": true,
+    "warning": "上游暂时不可用，返回最近缓存"
+}
