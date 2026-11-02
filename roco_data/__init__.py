@@ -2,5 +2,6 @@
 
 from .database import DEFAULT_DB, import_data
 from .queries import RocoQueries
+from .tools import RocoTools
 
-__all__ = ['DEFAULT_DB', 'import_data', 'RocoQueries']
+__all__ = ['DEFAULT_DB', 'import_data', 'RocoQueries', 'RocoTools']
