@@ -41,3 +41,34 @@ BWIKI 补充了机械方方的他人世界条件以及魔力猫首领化的具�
 ```sh
 python -m unittest discover -s scripts -p test_collect_bwiki.py -v
 ```
+
+## Lua 结构化试采
+
+```sh
+python scripts/collect_bwiki_modules.py 喵喵 机械方方
+```
+
+新增文件：
+
+- `modules/response.json`：从公开 MediaWiki revisions 接口读取的原始模块响应，含模块修订 ID、修订时间及 Lua 原文。
+- `<名称>/structured.json`：结构化精灵数据。`pet` 包含种族值、生态获取、蛋组等；`feature` 为关联特性；`learnset` 保留等级、血脉及技能详情；`evolutions` 保留分支和条件；`handbook` 为图鉴课题；`manual_evolution_conditions` 为适用的人工条件补充。
+
+数据读取 Catalog、Skills、Learnsets、Evolutions、Handbooks 表，按 Wiki 稳定 ID 关联；`game_id` 是游戏 ID，`pet_000177` 等是 Wiki 稳定 ID，两者分别保留。
+Lua 只解析数据字面量，遇到可执行代码或不支持语法会报错；空表统一表示为 JSON 空数组。原始 Lua 响应可供复核。
+`--from-response data/bwiki/modules/response.json` 可复用本地模块响应进行离线转换，输出时间标记为采集或转换时间，来源修订时间独立保存。
+
+当前页面通过 SeasonData 和 ContentVisibility 适配器使用基础表及修订表。本脚本已核对并实现当前 S5 隐藏策略下、所采字段使用的 Catalog/Skills/Learnsets 修订、异色与课题过滤；当该赛季开关切换时显式停止，需重新核验新版聚合规则。
+人工进化条件补充表单独保留：渲染页面的规则是等级保留，人工条件（含空字符串）优先于成员 `cond`，首领分支另用 `item` 描述信物。本试采保留这些原始字段供核对。
+
+样本验证：
+
+- 喵喵：自学 16、技能石 17、血脉 18，共 51；机械方方：自学 13、技能石 18、血脉 18，共 49，与已采页面数量一致。
+- 两只样本的种族值与本地原接口资料一致。
+- 机械方方进化链中，多彩方方节点明确含 `level: 28` 和 `cond: "需在他人世界"`。
+- 喵喵两段普通进化仅有等级，首领分支另含 `item`，不把所有材料字段自动归类为条件。
+
+这是关联数据模块的试点，培养参考、变动历史等模块尚未纳入结构化输出；现有页面快照继续保留。结果仍独立保存，尚未接入 SQLite/Agent。
+
+```sh
+python -m unittest discover -s scripts -p 'test_collect_bwiki*.py' -v
+```

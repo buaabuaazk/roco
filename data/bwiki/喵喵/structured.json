@@ -1,0 +1,1216 @@
+{
+    "pet": {
+        "affinity": {
+            "enjoy": [
+                "草系",
+                "水系"
+            ],
+            "hate": [
+                "火系",
+                "冰系"
+            ]
+        },
+        "can_double_ride": true,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "猫咪类精灵",
+        "description": "喜欢阳光，喜欢新鲜的空气，会摇晃尾巴，受到惊吓会快速逃跑。虽然很胆小，但有时候也很调皮。",
+        "ecology": {
+            "activities": [
+                {
+                    "name": "重逢契约-S2赛季回流活动",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-05-21 ~ 2026-07-31"
+                },
+                {
+                    "name": "重逢契约-S3赛季回流活动",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-07-16 ~ 2026-09-25"
+                },
+                {
+                    "name": "重逢契约-S4赛季（区分14天、30天、60天）",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-09-10 ~ 2026-11-20"
+                },
+                {
+                    "name": "重逢契约-S5赛季（区分14天、30天、60天）",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-11-05 ~ 2027-01-15"
+                }
+            ],
+            "eggs": [
+                {
+                    "description": "参与活动「重逢契约」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分、开朗的喵喵。",
+                    "fixed_nature": "开朗",
+                    "fixed_nature_negative": "魔攻",
+                    "fixed_nature_positive": "速度",
+                    "icon": "Item_151063.png",
+                    "name": "喵喵的蛋",
+                    "sources": [
+                        "参与活动「重逢契约」"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是喵喵的果实。",
+                    "icon": "Item_108001.png",
+                    "name": "喵喵的果实",
+                    "sources": [
+                        "完成风眠省魔法手册第一章必修课程获得"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            6,
+            9
+        ],
+        "egg_size": {
+            "huge_min": 1829,
+            "max": 1840,
+            "min": 1267,
+            "mini_max": 1278,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_30b562936521",
+        "feature_skill_id": "skill_000003",
+        "game_id": 3001,
+        "gender_ratio": {
+            "female": 5,
+            "male": 5
+        },
+        "handbook_id": "handbook_000002",
+        "handbook_show_topics": true,
+        "has_shiny": false,
+        "height": "0.53~0.75M",
+        "id": "pet_000001",
+        "image": {
+            "egg": "Item_107001.png",
+            "fruits": [
+                "Item_108001.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3001.png",
+            "illustration": "PetPortrait_miaomiao.png"
+        },
+        "learnset_id": "learnset_cc37434489e2",
+        "move_type": "步行",
+        "name": "喵喵",
+        "number": "002",
+        "perception_range": 40,
+        "relation_key": "草系",
+        "release": {
+            "date": "2026-03-26",
+            "version": "1.0.0"
+        },
+        "review_gold": 1200,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 24,
+        "stats": {
+            "atk": 66,
+            "def": 49,
+            "hp": 65,
+            "spa": 66,
+            "spd": 91,
+            "spe": 33
+        },
+        "submit_reward": 1200,
+        "talent_pool_id": 1002,
+        "title": "喵喵",
+        "types": [
+            "草系"
+        ],
+        "weight": "3.62~4.6KG"
+    },
+    "feature": {
+        "category": "特性",
+        "desc": "使用草系技能后，回复10%生命。",
+        "element": "无系别",
+        "energy": 0,
+        "game_id": 200076,
+        "icon": "Feature_200076.png",
+        "name": "氧循环"
+    },
+    "learnset": {
+        "blood_skills": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "skill": "skill_000307",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element": "普通系",
+                    "energy": 2,
+                    "game_id": 7020910,
+                    "icon": "Skill_101073.png",
+                    "name": "星星撞击",
+                    "power": 90
+                }
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "skill": "skill_000340",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element": "草系",
+                    "energy": 2,
+                    "game_id": 7030170,
+                    "icon": "Skill_703014.png",
+                    "name": "荆棘爪",
+                    "power": 80
+                }
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "skill": "skill_000388",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得10层灼烧。",
+                    "desc_notes": [
+                        1002
+                    ],
+                    "element": "火系",
+                    "energy": 2,
+                    "game_id": 7040260,
+                    "icon": "Skill_704012.png",
+                    "name": "引燃"
+                }
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "skill": "skill_000426",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "下次使用的技能能耗-6。",
+                    "element": "水系",
+                    "energy": 1,
+                    "game_id": 7050230,
+                    "icon": "Skill_705024.png",
+                    "name": "蓄水"
+                }
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "skill": "skill_000459",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element": "光系",
+                    "energy": 3,
+                    "game_id": 7060200,
+                    "icon": "Skill_105012.png",
+                    "name": "虹光冲击",
+                    "power": 100
+                }
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "skill": "skill_000507",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得物攻和物防+60%，应对防御：额外使自己的增益翻倍。",
+                    "desc_notes": [
+                        1017,
+                        1012
+                    ],
+                    "element": "地系",
+                    "energy": 2,
+                    "flavor": "即使地底蛮兽也不曾让他们退缩。",
+                    "game_id": 7080200,
+                    "icon": "Skill_708018.png",
+                    "name": "泥浆铠甲"
+                }
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "skill": "skill_000536",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得4层冻结。",
+                    "desc_notes": [
+                        1004
+                    ],
+                    "element": "冰系",
+                    "energy": 1,
+                    "game_id": 7090160,
+                    "icon": "Skill_709006.png",
+                    "name": "霜降"
+                }
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "skill": "skill_000567",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "蓄力，对敌方造成魔法伤害。",
+                    "desc_notes": [
+                        1007
+                    ],
+                    "element": "龙系",
+                    "energy": 3,
+                    "game_id": 7100150,
+                    "icon": "Skill_710004.png",
+                    "name": "升龙咆哮",
+                    "power": 200
+                }
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "skill": "skill_000589",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方先手-1，应对防御：额外使敌方获得双攻-70%。",
+                    "desc_notes": [
+                        1020,
+                        1017
+                    ],
+                    "element": "电系",
+                    "energy": 2,
+                    "game_id": 7110250,
+                    "icon": "Skill_110009.png",
+                    "name": "麻痹"
+                }
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "skill": "skill_000621",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element": "毒系",
+                    "energy": 1,
+                    "game_id": 7120190,
+                    "icon": "Skill_111016.png",
+                    "name": "溃烂触碰",
+                    "power": 60
+                }
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "skill": "skill_000641",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己回复2能量，己方队伍获得1次奉献：能耗-2。",
+                    "desc_notes": [
+                        1009
+                    ],
+                    "element": "虫系",
+                    "energy": 2,
+                    "flavor": "研究手记：我在巢中坠入无光之梦，听见黑暗深处传来虫群的轰鸣。",
+                    "game_id": 7130180,
+                    "icon": "Skill_713010.png",
+                    "name": "假寐"
+                }
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "skill": "skill_000668",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得全技能威力+40。",
+                    "element": "武系",
+                    "energy": 2,
+                    "flavor": "对战课临时教室：接，化，发！这都是巧劲！",
+                    "game_id": 7140140,
+                    "icon": "Skill_714011.png",
+                    "name": "化劲"
+                }
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "skill": "skill_000706",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得全技能威力+20，迅捷。",
+                    "desc_notes": [
+                        1005
+                    ],
+                    "element": "翼系",
+                    "energy": 2,
+                    "game_id": 7150300,
+                    "icon": "Skill_114025.png",
+                    "name": "羽化加速"
+                }
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "skill": "skill_000724",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己和敌方获得萌化：回复40%生命。",
+                    "desc_notes": [
+                        1006
+                    ],
+                    "element": "萌系",
+                    "energy": 3,
+                    "game_id": 7160200,
+                    "icon": "Skill_716005.png",
+                    "name": "甜心续航"
+                }
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "skill": "skill_000757",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "偷取敌方3能量。",
+                    "element": "幽系",
+                    "energy": 1,
+                    "flavor": "真的有鬼，月圆夜的时候，魔法学院2楼厕所的卫生纸会全部消失，太可怕了。",
+                    "game_id": 7170250,
+                    "icon": "Skill_116019.png",
+                    "name": "勾魂"
+                }
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "skill": "skill_000776",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得100%吸血。",
+                    "desc_notes": [
+                        1029
+                    ],
+                    "element": "恶系",
+                    "energy": 2,
+                    "game_id": 7180160,
+                    "icon": "Skill_718014.png",
+                    "name": "贪婪"
+                }
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "skill": "skill_000484",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得速度+30，本技能位于1号或3号位时额外获得物攻+80%，传动1。",
+                    "desc_notes": [
+                        1033
+                    ],
+                    "element": "机械系",
+                    "energy": 1,
+                    "game_id": 7070170,
+                    "icon": "Skill_106017.png",
+                    "name": "啮合传递"
+                }
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "skill": "skill_000811",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得4层星陨印记。",
+                    "desc_notes": [
+                        1035
+                    ],
+                    "element": "幻系",
+                    "energy": 4,
+                    "flavor": "一位小洛克一口气许下五个愿望，此时五颗星星应声划过。",
+                    "game_id": 7190280,
+                    "icon": "Skill_719004.png",
+                    "name": "超维投射"
+                }
+            }
+        ],
+        "feature_skill": "skill_000003",
+        "native_skills": [
+            {
+                "level": 1,
+                "skill": "skill_000247",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "造成物伤，自己回复1能量。",
+                    "element": "普通系",
+                    "energy": 0,
+                    "flavor": "某些精灵平日里也会有这种行为，小心家里的厕纸和魔法卷轴。",
+                    "game_id": 7020360,
+                    "icon": "Skill_700005.png",
+                    "name": "抓挠",
+                    "power": 35
+                }
+            },
+            {
+                "level": 1,
+                "skill": "skill_000274",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己回复30%生命。",
+                    "element": "普通系",
+                    "energy": 2,
+                    "game_id": 7020640,
+                    "icon": "Skill_700031.png",
+                    "name": "休息回复"
+                }
+            },
+            {
+                "level": 6,
+                "skill": "skill_000360",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element": "草系",
+                    "energy": 3,
+                    "game_id": 7030440,
+                    "icon": "Skill_102027.png",
+                    "name": "棘突",
+                    "power": 100
+                }
+            },
+            {
+                "level": 7,
+                "skill": "skill_000250",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element": "普通系",
+                    "energy": 2,
+                    "flavor": "注意：当看到尾巴扫过来的时候，请记得起跳，像跳绳那样。",
+                    "game_id": 7020390,
+                    "icon": "Skill_702047.png",
+                    "name": "扫尾",
+                    "power": 90
+                }
+            },
+            {
+                "level": 8,
+                "skill": "skill_000343",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "造成物伤，自己回复5能量。",
+                    "element": "草系",
+                    "energy": 4,
+                    "game_id": 7030200,
+                    "icon": "Skill_703020.png",
+                    "name": "藤绞",
+                    "power": 80
+                }
+            },
+            {
+                "level": 10,
+                "skill": "skill_000287",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "防御",
+                    "desc": "减伤70%，应对攻击。",
+                    "desc_notes": [
+                        1016
+                    ],
+                    "element": "普通系",
+                    "energy": 1,
+                    "game_id": 7020780,
+                    "icon": "Skill_700023.png",
+                    "name": "防御"
+                }
+            },
+            {
+                "level": 12,
+                "skill": "skill_000345",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己回复10能量。",
+                    "element": "草系",
+                    "energy": 2,
+                    "flavor": "只要能活下来，不论用什么手段……",
+                    "game_id": 7030220,
+                    "icon": "Skill_703029.png",
+                    "name": "徒长"
+                }
+            },
+            {
+                "level": 17,
+                "skill": "skill_000362",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element": "草系",
+                    "energy": 4,
+                    "game_id": 7030460,
+                    "icon": "Skill_102029.png",
+                    "name": "叶绿光束",
+                    "power": 120
+                }
+            },
+            {
+                "level": 21,
+                "skill": "skill_000354",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "防御",
+                    "desc": "减伤80%，应对攻击：自己回复20%生命。",
+                    "desc_notes": [
+                        1016
+                    ],
+                    "element": "草系",
+                    "energy": 3,
+                    "flavor": "酶溶剂有一点臭臭的，但精灵们很喜欢，会使劲地嗅。",
+                    "game_id": 7030320,
+                    "icon": "Skill_102019.png",
+                    "name": "酶浓度调整"
+                }
+            },
+            {
+                "level": 29,
+                "skill": "skill_000364",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "造成物伤，自己生命大于80%时，本次技能威力+75。",
+                    "element": "草系",
+                    "energy": 3,
+                    "game_id": 7030480,
+                    "icon": "Skill_102031.png",
+                    "name": "筛管奔流",
+                    "power": 80
+                }
+            },
+            {
+                "level": 30,
+                "skill": "skill_000346",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得全技能威力+30，应对防御：改为威力+60。",
+                    "desc_notes": [
+                        1017
+                    ],
+                    "element": "草系",
+                    "energy": 1,
+                    "game_id": 7030230,
+                    "icon": "Skill_102008.png",
+                    "name": "盛开"
+                }
+            },
+            {
+                "level": 36,
+                "skill": "skill_000349",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得3层寄生。",
+                    "desc_notes": [
+                        1008
+                    ],
+                    "element": "草系",
+                    "energy": 3,
+                    "game_id": 7030260,
+                    "icon": "Skill_701003.png",
+                    "name": "孢子"
+                }
+            },
+            {
+                "level": 42,
+                "skill": "skill_000341",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element": "草系",
+                    "energy": 6,
+                    "game_id": 7030180,
+                    "icon": "Skill_701001.png",
+                    "name": "仙人掌刺击",
+                    "power": 150
+                }
+            },
+            {
+                "level": 48,
+                "skill": "skill_000351",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得物攻和魔攻+140%。",
+                    "element": "草系",
+                    "energy": 3,
+                    "flavor": "“信我！白树真的没有死，她仍然在喂养我们！”",
+                    "game_id": 7030280,
+                    "icon": "Skill_202015.png",
+                    "name": "丰饶"
+                }
+            },
+            {
+                "level": 49,
+                "skill": "skill_000353",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己获得1层光合印记。",
+                    "desc_notes": [
+                        1021
+                    ],
+                    "element": "草系",
+                    "energy": 4,
+                    "game_id": 7030300,
+                    "icon": "Skill_701005.png",
+                    "name": "光合作用"
+                }
+            },
+            {
+                "level": 50,
+                "skill": "skill_000344",
+                "stage": 1,
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "造成魔伤，每次使用其他草系技能后，本技能威力永久+60。",
+                    "element": "草系",
+                    "energy": 7,
+                    "game_id": 7030210,
+                    "icon": "Skill_701004.png",
+                    "name": "光能聚集",
+                    "power": 100
+                }
+            }
+        ],
+        "skill_stones": [
+            {
+                "skill": "skill_000622",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element": "毒系",
+                    "energy": 2,
+                    "game_id": 7120200,
+                    "icon": "Skill_111017.png",
+                    "name": "毒沼",
+                    "power": 80
+                }
+            },
+            {
+                "skill": "skill_000610",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "造成魔伤，敌方获得2层中毒。",
+                    "desc_notes": [
+                        1001
+                    ],
+                    "element": "毒系",
+                    "energy": 2,
+                    "game_id": 7120070,
+                    "icon": "Skill_712005.png",
+                    "name": "腐蚀酸液",
+                    "power": 35
+                }
+            },
+            {
+                "skill": "skill_000623",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "对敌方精灵造成魔法伤害。",
+                    "element": "毒系",
+                    "energy": 3,
+                    "game_id": 7120210,
+                    "icon": "Skill_111018.png",
+                    "name": "瘴气喷射",
+                    "power": 100
+                }
+            },
+            {
+                "skill": "skill_000615",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得5层中毒。",
+                    "desc_notes": [
+                        1001
+                    ],
+                    "element": "毒系",
+                    "energy": 3,
+                    "flavor": "毒祭司们将草药学与生物学知识活用，得到了这种技能。",
+                    "game_id": 7120120,
+                    "icon": "Skill_712007.png",
+                    "name": "毒孢子"
+                }
+            },
+            {
+                "skill": "skill_000625",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方每有1层中毒效果，敌方获得双攻-30%。",
+                    "desc_notes": [
+                        1036
+                    ],
+                    "element": "毒系",
+                    "energy": 1,
+                    "game_id": 7120230,
+                    "icon": "Skill_111020.png",
+                    "name": "腐化"
+                }
+            },
+            {
+                "skill": "skill_000617",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得3层中毒，应对防御：改为获得8层。",
+                    "desc_notes": [
+                        1001,
+                        1017
+                    ],
+                    "element": "毒系",
+                    "energy": 2,
+                    "flavor": "中毒之后，你能做的还有祈祷。",
+                    "game_id": 7120140,
+                    "icon": "Skill_712004.png",
+                    "name": "剧毒"
+                }
+            },
+            {
+                "skill": "skill_000462",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "对敌方精灵造成物理伤害。",
+                    "element": "光系",
+                    "energy": 1,
+                    "game_id": 7060230,
+                    "icon": "Skill_105015.png",
+                    "name": "透射",
+                    "power": 60
+                }
+            },
+            {
+                "skill": "skill_000461",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "魔攻",
+                    "desc": "造成魔伤，本技能系别和天气系别相同。",
+                    "element": "光系",
+                    "energy": 3,
+                    "flavor": "晶石蜗的狂热研究员说，可以在这个世界上找到6种天然矿石，矿石中蕴含的魔力与相似颜色的晶石蜗十分相似。",
+                    "game_id": 7060220,
+                    "icon": "Skill_205014.png",
+                    "name": "天光",
+                    "power": 95
+                }
+            },
+            {
+                "skill": "skill_000326",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "驱散敌方所有增益。",
+                    "desc_notes": [
+                        1012
+                    ],
+                    "element": "普通系",
+                    "energy": 1,
+                    "game_id": 7021100,
+                    "icon": "Skill_201092.png",
+                    "name": "晒太阳"
+                }
+            },
+            {
+                "skill": "skill_000265",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "造成物伤，每次使用后，本技能能耗永久+1。",
+                    "element": "普通系",
+                    "energy": 2,
+                    "flavor": "所谓重击，就是要让全身的力量爆发，绝对不要想着还会挥出第二拳。",
+                    "game_id": 7020540,
+                    "icon": "Skill_702059.png",
+                    "name": "重击",
+                    "power": 140
+                }
+            },
+            {
+                "skill": "skill_000352",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己回复15%生命，随后脱离。",
+                    "desc_notes": [
+                        1003
+                    ],
+                    "element": "草系",
+                    "energy": 2,
+                    "flavor": "不算逃跑。",
+                    "game_id": 7030290,
+                    "icon": "Skill_302016.png",
+                    "name": "移花接木"
+                }
+            },
+            {
+                "skill": "skill_000291",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "每回合随机变成己方队伍中其他精灵的技能。",
+                    "element": "普通系",
+                    "energy": 0,
+                    "game_id": 7020840,
+                    "icon": "Skill_700029.png",
+                    "name": "借用"
+                }
+            },
+            {
+                "skill": "skill_000283",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "自己回复25%生命，应对防御：改为回复50%生命。",
+                    "desc_notes": [
+                        1017
+                    ],
+                    "element": "普通系",
+                    "energy": 2,
+                    "game_id": 7020730,
+                    "icon": "Skill_702053.png",
+                    "name": "应激反应"
+                }
+            },
+            {
+                "skill": "skill_000332",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得全技能能耗+3，应对防御：额外造成打断，且敌方下回合获得眩晕。",
+                    "desc_notes": [
+                        1017,
+                        1011
+                    ],
+                    "element": "普通系",
+                    "energy": 5,
+                    "game_id": 7021160,
+                    "icon": "Skill_201102.png",
+                    "name": "摇篮曲"
+                }
+            },
+            {
+                "skill": "skill_000285",
+                "skill_detail": {
+                    "category": "状态",
+                    "desc": "敌方获得全技能能耗+1，应对防御：改为能耗+3。",
+                    "desc_notes": [
+                        1017
+                    ],
+                    "element": "普通系",
+                    "energy": 0,
+                    "game_id": 7020760,
+                    "icon": "Skill_401047.png",
+                    "name": "精神扰乱"
+                }
+            },
+            {
+                "skill": "skill_000368",
+                "skill_detail": {
+                    "category": "防御",
+                    "desc": "减伤80%，应对攻击：自己获得物防+70%。",
+                    "desc_notes": [
+                        1016
+                    ],
+                    "element": "草系",
+                    "energy": 2,
+                    "game_id": 7030520,
+                    "icon": "Skill_102036.png",
+                    "name": "纤维化"
+                }
+            },
+            {
+                "skill": "skill_000664",
+                "skill_detail": {
+                    "category": "攻击",
+                    "damage_class": "物攻",
+                    "desc": "造成物伤，应对状态：额外打断被应对技能。",
+                    "desc_notes": [
+                        1015,
+                        1011
+                    ],
+                    "element": "武系",
+                    "energy": 2,
+                    "game_id": 7140090,
+                    "icon": "Skill_213009.png",
+                    "name": "斩断",
+                    "power": 70
+                }
+            }
+        ]
+    },
+    "evolutions": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3001.png",
+                    "id": "pet_000001",
+                    "illustration": "PetPortrait_miaomiao.png",
+                    "name": "喵喵",
+                    "stage": 1,
+                    "title": "喵喵",
+                    "types": [
+                        "草系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3025.png",
+                    "id": "pet_000022",
+                    "illustration": "PetPortrait_miaowu.png",
+                    "level": 16,
+                    "name": "喵呜",
+                    "stage": 2,
+                    "title": "喵呜",
+                    "types": [
+                        "草系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3007.png",
+                    "id": "pet_000007",
+                    "illustration": "PetPortrait_molimiao.png",
+                    "level": 32,
+                    "name": "魔力猫",
+                    "stage": 3,
+                    "title": "魔力猫",
+                    "types": [
+                        "草系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "首领形态",
+                    "head": "PetAvatar_4007.png",
+                    "id": "pet_000536",
+                    "illustration": "PetPortrait_molimiao_shouling.png",
+                    "item": "阳光罐头",
+                    "name": "叶冕魔力猫",
+                    "stage": 4,
+                    "title": "叶冕魔力猫",
+                    "types": [
+                        "草系"
+                    ]
+                }
+            ],
+            "name": "喵喵进化链（叶冕魔力猫分支）"
+        },
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3001.png",
+                    "id": "pet_000001",
+                    "illustration": "PetPortrait_miaomiao.png",
+                    "name": "喵喵",
+                    "stage": 1,
+                    "title": "喵喵",
+                    "types": [
+                        "草系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3025.png",
+                    "id": "pet_000022",
+                    "illustration": "PetPortrait_miaowu.png",
+                    "level": 16,
+                    "name": "喵呜",
+                    "stage": 2,
+                    "title": "喵呜",
+                    "types": [
+                        "草系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3007.png",
+                    "id": "pet_000007",
+                    "illustration": "PetPortrait_molimiao.png",
+                    "level": 32,
+                    "name": "魔力猫",
+                    "stage": 3,
+                    "title": "魔力猫",
+                    "types": [
+                        "草系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "首领形态",
+                    "head": "PetAvatar_3158.png",
+                    "id": "pet_000593",
+                    "illustration": "PetPortrait_wumiao.png",
+                    "item": "月光罐头",
+                    "name": "武斗酷猫",
+                    "stage": 4,
+                    "title": "武斗酷猫",
+                    "types": [
+                        "草系"
+                    ]
+                }
+            ],
+            "name": "喵喵进化链（武斗酷猫分支）"
+        }
+    ],
+    "manual_evolution_conditions": {},
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "风眠省图鉴"
+        ],
+        "entry_name": "喵喵",
+        "habitat": "行踪神秘",
+        "title": "草元素精灵",
+        "topics": [
+            {
+                "id": "topic_000008",
+                "progress_id": "pt_000002_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_000009",
+                "progress_id": "pt_000002_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_000010",
+                "progress_id": "pt_000002_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "source": "BWIKI nrc Lua modules",
+    "fetched_or_converted_at": "2026-11-02T23:25:38.680338+08:00",
+    "scope": "当前 S5 隐藏展示规则下的数据投影试采；保留条件原始字段，尚未接入 Agent",
+    "modules": [
+        {
+            "title": "模块:Pets/data/Catalog",
+            "revision_id": 20330,
+            "revision_timestamp": "2026-10-31T19:43:16Z"
+        },
+        {
+            "title": "模块:Pets/data/Skills",
+            "revision_id": 20323,
+            "revision_timestamp": "2026-10-31T19:43:04Z"
+        },
+        {
+            "title": "模块:Pets/data/Learnsets",
+            "revision_id": 20320,
+            "revision_timestamp": "2026-10-31T19:43:00Z"
+        },
+        {
+            "title": "模块:Pets/data/Evolutions",
+            "revision_id": 20321,
+            "revision_timestamp": "2026-10-31T19:43:01Z"
+        },
+        {
+            "title": "模块:Pets/data/Handbooks",
+            "revision_id": 20322,
+            "revision_timestamp": "2026-10-31T19:43:03Z"
+        },
+        {
+            "title": "模块:Pets/EvolutionConditions",
+            "revision_id": 13113,
+            "revision_timestamp": "2026-09-12T20:41:48Z"
+        },
+        {
+            "title": "模块:Pets/SeasonData",
+            "revision_id": 20629,
+            "revision_timestamp": "2026-11-02T09:56:36Z"
+        },
+        {
+            "title": "模块:ContentVisibility/Config",
+            "revision_id": 20607,
+            "revision_timestamp": "2026-11-02T09:55:32Z"
+        },
+        {
+            "title": "模块:ContentVisibility/S5Legacy/Catalog",
+            "revision_id": 20608,
+            "revision_timestamp": "2026-11-02T09:55:33Z"
+        },
+        {
+            "title": "模块:ContentVisibility/S5Legacy/Skills",
+            "revision_id": 20609,
+            "revision_timestamp": "2026-11-02T09:55:35Z"
+        },
+        {
+            "title": "模块:ContentVisibility/S5Legacy/Learnsets",
+            "revision_id": 20610,
+            "revision_timestamp": "2026-11-02T09:55:36Z"
+        }
+    ]
+}
