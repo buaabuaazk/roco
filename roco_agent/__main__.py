@@ -7,6 +7,7 @@ import sys
 from roco_data import DEFAULT_DB, RocoQueries
 from .agent import RocoAgent
 from .llm import ChatModel, DEFAULT_MODEL
+from .session_log import SessionLog
 
 
 def main():
@@ -23,7 +24,10 @@ def main():
     try:
         with RocoQueries(args.db) as queries:
             model = ChatModel(args.model)
-            agent = RocoAgent(model, queries)
+            logger = SessionLog()
+            agent = RocoAgent(model, queries, logger=logger)
+            if args.trace:
+                print(f'日志：{logger.path}', file=sys.stderr)
 
             def ask(question):
                 answer = agent.ask(question)

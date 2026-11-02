@@ -10,6 +10,7 @@ python -m roco_agent
 
 模型使用本机 `ZZZ_API_KEY` 环境变量通过智增增调用，默认使用 `deepseek-v4.1-flash`；可用 `--model` 或 `LLM_MODEL_ID` 覆盖。
 支持多轮追问、五个查询工具，以及 `--trace` 查看工具调用。首次使用请先按下节导入 SQLite。
+命令行默认将问题、工具参数、完整查询结果、模型收到的结果和最终回答保存至本地 `logs/*.jsonl`，日志由 Git 忽略。
 完整配置与限制见 [Agent 使用说明](docs/agent.md)。
 
 ## SQLite 查询

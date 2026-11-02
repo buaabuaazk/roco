@@ -25,6 +25,36 @@ python -m roco_agent "喵喵和迪莫谁速度种族值高？" --json
 
 多轮模式中输入 `/reset` 清空上下文，`/exit` 退出；Ctrl+C 也可退出。最近四轮成功对话保存在本次进程内存中。
 
+## 本地调用日志
+
+命令行默认记录日志，普通运行和 `--trace` 模式均生效。文件位于项目的 `logs/` 目录，每次启动生成一个 `日期-时间-会话ID.jsonl` 文件。`--trace` 还会在终端显示日志路径；普通回答保持原样。
+
+每行是一个 JSON 事件，包含北京时间（`+08:00`）、会话 ID 和事件类型；每轮问题另有独立 `turn_id`：
+
+| 事件 | 内容 |
+|---|---|
+| `session_start` | 模型 ID、系统提示词、工具定义和执行限制 |
+| `turn_start` | 本轮用户问题 |
+| `model_request` | 当前模型调用轮数 |
+| `tool_call` | 工具名称、参数、调用 ID |
+| `tool_result` | `query_result` 完整底层结果、`model_result` 实际发给模型的内容 |
+| `turn_end` | 最终回答、状态、调用摘要、来源及耗时；异常时记录异常类型 |
+| `context_reset` | 用户清空对话上下文 |
+
+日志按事件即时追加保存，模型连接失败或 Ctrl+C 后，先前已完成的工具记录仍可读取。写入失败会向命令行报告错误。
+日志保存查询数据与最终回答；SDK 鉴权头及模型内部推理文本保持私密。已配置的 API 密钥和敏感键名会脱敏。
+`logs/` 已加入 Git 忽略规则。JSONL 采用每行一个 JSON 对象的格式，区别于采集文件的多行缩进 JSON。
+
+Python 接口按需传入日志实例：
+
+```python
+from roco_agent.session_log import SessionLog
+
+agent = RocoAgent(model, queries, logger=SessionLog())
+```
+
+Python 接口默认 `logger=None`；命令行会自动创建日志。此前运行的历史记录无法追溯恢复，新启动的命令开始记录。
+
 另一台电脑拉取代码后，配置该电脑的环境变量、安装依赖并导入 JSON，即可使用。
 
 ## 执行过程
