@@ -1,11 +1,26 @@
-# Roco 精灵数据采集
+# Roco 数据采集与查询
+
+## SQLite 查询
+
+在项目目录运行：
+
+```sh
+conda activate hello-agents
+python -m roco_data import
+python -m roco_data pet 喵喵
+python -m roco_data pet-skills 喵喵 --source machine --skill 毒沼
+python -m roco_data compare 喵喵 迪莫 --stat speed
+```
+
+查询库位于 `data/roco.db`，支持精灵与技能名称检索、资料分区查询、技能关联、学习等级筛选和种族值比较。
+每次采集更新后重新运行导入命令，数据库会从当前 JSON 重建。完整用法见 [SQLite 查询层说明](docs/sqlite.md)。
 
 ## 两台电脑之间同步
 
 每次开始采集前，在项目目录运行 `git pull --ff-only`。采集结束后提交并推送：
 
 ```sh
-git add scripts data README.md .gitignore .gitattributes
+git add scripts data roco_data tests docs AGENTS.md README.md .gitignore .gitattributes
 git commit -m "Update collected data"
 git push
 ```
