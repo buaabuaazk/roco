@@ -97,6 +97,8 @@ class DataTests(unittest.TestCase):
     def test_search_parameterization_and_input_validation(self):
         with RocoQueries(self.db) as q:
             self.assertEqual(q.search_pets('喵', '草')['data']['items'][0]['pet_id'], 3001)
+            self.assertTrue(q.search_pets(limit=1)['data']['has_more'])
+            self.assertFalse(q.search_pets('喵')['data']['has_more'])
             self.assertEqual(q.search_pets("' OR 1=1 --")['data']['items'], [])
             self.assertEqual(q.get_pet("' OR 1=1 --")['status'], 'not_found')
             self.assertEqual(q.get_pet('不存在XYZ')['status'], 'not_found')

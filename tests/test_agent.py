@@ -68,6 +68,23 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(answer['status'], 'ok')
         self.assertEqual([m['tool_call_id'] for m in model.requests[1] if m['role'] == 'tool'], ['a', 'b'])
 
+    def test_search_model_payload_preserves_ambiguity_and_backend_metadata(self):
+        candidates = [{'pet_id': 3001, 'name': '喵喵', 'handbook_no': '002'},
+                      {'pet_id': 3025, 'name': '喵呜', 'handbook_no': '003'}]
+        short = [{'pet_id': p['pet_id'], 'name': p['name']} for p in candidates]
+        for items, has_more, expected in [
+                (candidates[:1], False, 3001),
+                (candidates, False, short),
+                ([], False, '未找到'),
+                (candidates[:1], True, {'candidates': short[:1], 'has_more': True})]:
+            with self.subTest(items=items, has_more=has_more):
+                self.payload['data'] = {'items': items, 'has_more': has_more, 'limit': 20}
+                model = FakeModel([message([call('search_pets', '{"query":"喵"}')]), message(text='查询完成')])
+                answer = RocoAgent(model, self.queries).ask('查找喵')
+                self.assertEqual(json.loads(model.requests[1][-1]['content']), expected)
+                self.assertEqual(answer['tool_calls'][0]['status'], 'ok')
+                self.assertEqual(answer['sources'], self.payload['sources'])
+
     def test_invalid_arguments_and_unknown_tool_are_feedback(self):
         model = FakeModel([message([call(arguments='{'), call('delete_data', '{}', 'b')]),
                            message(text='请确认查询对象。')])

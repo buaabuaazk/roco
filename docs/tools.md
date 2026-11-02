@@ -14,6 +14,8 @@
 `identifier` 为准确名称或正整数 ID。`source` 使用 `level`、`machine`、`blood`。
 `section` 与 `stat` 的可选值由工具规格明确列出，模型可依据描述选择。
 
+Agent 向模型回传 `search_pets` 结果时采用精简格式：唯一匹配为 ID（如 `3001`），多匹配为名称和 ID 列表，无匹配为“未找到”。数量截断时返回 `candidates` 和 `has_more: true`，供模型继续搜索。底层查询结果与调试状态仍保持结构化格式。
+
 ## 本地调用
 
 在项目目录激活 `hello-agents` 环境后：

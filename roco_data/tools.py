@@ -22,7 +22,8 @@ def specification(name, description, properties, required=()):
 
 TOOL_DEFINITIONS = [
     specification('search_pets',
-                  '按名称关键词或属性寻找精灵，返回候选 ID。名称不确定时先用此工具，再按 ID 查询资料。',
+                  '按名称关键词或属性寻找精灵。唯一匹配返回精灵ID；多匹配返回名称与ID列表；无匹配返回“未找到”。'
+                  'has_more为true时结果受数量限制，可增加limit或缩小关键词。再按ID查询资料。',
                   {'query': {'type': 'string', 'description': '名称关键词；省略时列出精灵。'},
                    'type_name': {'type': 'string', 'minLength': 1, 'description': '属性名称，例如草、水、火。'},
                    'limit': {'type': 'integer', 'minimum': 1, 'maximum': 100,

@@ -22,6 +22,20 @@ def compact(value):
     return value
 
 
+def model_result(name, answer):
+    if name == 'search_pets' and answer['status'] == 'ok':
+        data = answer['data']
+        candidates = [{'pet_id': item['pet_id'], 'name': item['name']} for item in data['items']]
+        if data.get('has_more'):
+            return {'candidates': candidates, 'has_more': True}
+        if not candidates:
+            return '未找到'
+        if len(candidates) == 1:
+            return candidates[0]['pet_id']
+        return candidates
+    return answer
+
+
 class RocoAgent:
     def __init__(self, model, queries, max_rounds=6, max_tool_calls=12, timeout=120):
         if max_rounds < 1 or max_tool_calls < 1 or timeout <= 0:
@@ -91,7 +105,7 @@ class RocoAgent:
                     function = call['function']
                     arguments = function.get('arguments')
                     answer = compact(self.tools.execute(function['name'], arguments))
-                    encoded = json.dumps(answer, ensure_ascii=False)
+                    encoded = json.dumps(model_result(function['name'], answer), ensure_ascii=False)
                     if len(encoded) > 50000:
                         answer = {'status': 'result_too_large', 'data': None, 'sources': [],
                                   'message': '查询结果较长，请指定分区、来源、技能或学习等级缩小范围'}
