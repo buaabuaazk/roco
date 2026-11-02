@@ -85,6 +85,24 @@ class AgentTests(unittest.TestCase):
                 self.assertEqual(answer['tool_calls'][0]['status'], 'ok')
                 self.assertEqual(answer['sources'], self.payload['sources'])
 
+    def test_model_results_exclude_nested_metadata_but_keep_learning_source(self):
+        self.payload['data'] = {'items': [{
+            'skill_id': 7120200, 'name': '毒沼', 'source': 'machine', 'level': None,
+            'detail': {'power': '80', 'cost': '2', 'updated_at': 'old-time', 'stale': True},
+            'sources': [{'file': 'skills/7120200.json', 'warning': 'upstream unavailable'}],
+        }], 'updated_at': 'old-time'}
+        self.payload.update(stale=True, warning='upstream unavailable')
+        model = FakeModel([message([call('get_pet_skills', '{"identifier":3001,"skill":"毒沼"}')]),
+                           message(text='可以通过技能石学习。')])
+        answer = RocoAgent(model, self.queries).ask('喵喵能学毒沼吗？')
+        payload = json.loads(model.requests[1][-1]['content'])
+        self.assertEqual(payload, {'status': 'ok', 'data': {'items': [{
+            'skill_id': 7120200, 'name': '毒沼', 'source': 'machine', 'level': None,
+            'detail': {'power': '80', 'cost': '2'},
+        }]}})
+        self.assertEqual(len(answer['sources']), 2)
+        self.assertTrue(self.payload['stale'])
+
     def test_invalid_arguments_and_unknown_tool_are_feedback(self):
         model = FakeModel([message([call(arguments='{'), call('delete_data', '{}', 'b')]),
                            message(text='请确认查询对象。')])

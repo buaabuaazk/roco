@@ -30,7 +30,7 @@ TOOL_DEFINITIONS = [
                              'description': '最多返回数量，默认20。'}}),
     specification('get_pet',
                   '查询精灵概览或指定分区：profile种族值，family进化，features特性，acquisition获取，egg孵蛋。'
-                  '返回来源与缓存信息。skills分区提供学习关联，技能效果通过get_pet_skills或get_skill查询。',
+                  'skills分区提供学习关联，技能效果通过get_pet_skills或get_skill查询。',
                   {'identifier': IDENTIFIER,
                    'section': {'type': 'string', 'enum': list(SECTIONS),
                                'description': '省略时返回概览，指定时读取对应分区。'}}, ('identifier',)),

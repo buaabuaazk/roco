@@ -33,7 +33,17 @@ def model_result(name, answer):
         if len(candidates) == 1:
             return candidates[0]['pet_id']
         return candidates
-    return answer
+    return strip_metadata(answer)
+
+
+def strip_metadata(value):
+    if isinstance(value, dict):
+        return {k: strip_metadata(v) for k, v in value.items()
+                if k not in ('sources', 'source_url', 'updated_at', 'stale', 'warning',
+                             'file', 'provenance', 'fetched_at', 'imported_at')}
+    if isinstance(value, list):
+        return [strip_metadata(v) for v in value]
+    return value
 
 
 class RocoAgent:
@@ -109,7 +119,7 @@ class RocoAgent:
                     if len(encoded) > 50000:
                         answer = {'status': 'result_too_large', 'data': None, 'sources': [],
                                   'message': '查询结果较长，请指定分区、来源、技能或学习等级缩小范围'}
-                        encoded = json.dumps(answer, ensure_ascii=False)
+                        encoded = json.dumps(model_result(function['name'], answer), ensure_ascii=False)
                     trace.append({'name': function['name'], 'arguments': arguments, 'status': answer['status']})
                     for source in answer.get('sources', []):
                         if source not in sources:
