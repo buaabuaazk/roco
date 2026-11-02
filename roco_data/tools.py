@@ -38,7 +38,7 @@ TOOL_DEFINITIONS = [
                   {'identifier': IDENTIFIER}, ('identifier',)),
     specification('get_pet_skills',
                   '查询精灵可学习技能并关联详情，或核对能否学会某技能。level为升级，machine为技能石，blood为血脉。'
-                  '保留学习等级及血脉条件；详情缺失仍保留已知学习关系。',
+                  '保留学习等级及血脉条件；null表示该项条件缺少记录。详情缺失仍保留已知学习关系。',
                   {'identifier': IDENTIFIER,
                    'source': {'type': 'string', 'enum': list(GROUPS), 'description': '省略时查询三类来源。'},
                    'max_level': {'type': 'integer', 'minimum': 1, 'maximum': 9223372036854775807,

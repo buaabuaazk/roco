@@ -1,5 +1,17 @@
 # Roco 数据采集与查询
 
+## 与 Agent 对话
+
+```sh
+conda activate hello-agents
+python -m pip install -r requirements.txt
+python -m roco_agent --model deepseek-v4.1-flash-1017
+```
+
+模型使用本机 `ZZZ_API_KEY` 环境变量通过智增增调用；也可用 `LLM_MODEL_ID` 指定模型。
+支持多轮追问、五个查询工具，以及 `--trace` 查看工具调用。首次使用请先按下节导入 SQLite。
+完整配置与限制见 [Agent 使用说明](docs/agent.md)。
+
 ## SQLite 查询
 
 在项目目录运行：
@@ -23,7 +35,7 @@ python -m roco_data compare 喵喵 迪莫 --stat speed
 每次开始采集前，在项目目录运行 `git pull --ff-only`。采集结束后提交并推送：
 
 ```sh
-git add scripts data roco_data tests docs AGENTS.md README.md .gitignore .gitattributes
+git add scripts data roco_data roco_agent tests docs AGENTS.md README.md requirements.txt .gitignore .gitattributes
 git commit -m "Update collected data"
 git push
 ```

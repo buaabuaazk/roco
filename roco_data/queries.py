@@ -15,6 +15,11 @@ def result(status, data=None, sources=None, message=None):
     return answer
 
 
+def pet_sources(sources, section):
+    specific = [s for s in sources if s.get('section') == 'pet-' + section]
+    return specific or [s for s in sources if s.get('section') == 'pet-detail'] or sources
+
+
 class RocoQueries:
     def __init__(self, db_path=DEFAULT_DB):
         path = Path(db_path).resolve()
@@ -89,13 +94,16 @@ class RocoQueries:
         if section is not None:
             if section not in sections or sections[section] is None:
                 return result('data_missing', identity, sources, '该精灵的指定资料分区待补齐')
-            return result('ok', {**identity, 'section': section, 'value': sections[section]}, sources)
+            return result('ok', {**identity, 'section': section, 'value': sections[section]}, pet_sources(sources, section))
         types = self.conn.execute('SELECT type_id, name FROM pet_types WHERE pet_id=? ORDER BY type_id',
                                   (row['pet_id'],)).fetchall()
         data = {**identity, 'handbook_no': row['handbook_no'], 'types': [dict(t) for t in types],
                 'attributes': sections.get('profile', {}).get('attributes'),
                 'features': sections.get('features'), 'available_sections': sorted(sections)}
-        return result('ok', data, sources)
+        overview_sources = []
+        for field in ('base', 'profile', 'features'):
+            overview_sources.extend(s for s in pet_sources(sources, field) if s not in overview_sources)
+        return result('ok', data, overview_sources)
 
     def get_skill(self, identifier):
         row, error = self._resolve('skills', identifier)
@@ -118,7 +126,8 @@ class RocoQueries:
         pet, error = self._resolve('pets', identifier)
         if error:
             return error
-        sections, sources = json.loads(pet['sections_json']), json.loads(pet['sources_json'])
+        sections = json.loads(pet['sections_json'])
+        sources = pet_sources(json.loads(pet['sources_json']), 'skills')
         groups = sections.get('skills', {})
         selected = (source,) if source else GROUPS
         if any(g not in groups for g in selected):
@@ -165,7 +174,7 @@ class RocoQueries:
             if error:
                 return error
             rows.append({'pet_id': row['pet_id'], 'name': row['name'], 'value': row[column]})
-            sources.extend(json.loads(row['sources_json']))
+            sources.extend(s for s in pet_sources(json.loads(row['sources_json']), 'profile') if s not in sources)
         if len({r['pet_id'] for r in rows}) != len(rows):
             return result('invalid_argument', message='比较对象应为不同精灵')
         if any(r['value'] is None for r in rows):

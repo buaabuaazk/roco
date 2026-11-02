@@ -69,6 +69,21 @@ class DataTests(unittest.TestCase):
                              (15, 1, '普通系血脉'))
             self.assertEqual(q.get_pet_skills(3001, 'level', skill=9)['data']['can_learn_in_selected_scope'], False)
 
+    def test_sources_follow_requested_section(self):
+        pet_path = self.root / 'pets/3001/combined.json'
+        pet = json.loads(pet_path.read_text())
+        pet['sections']['ecology'] = {'name': '喵喵'}
+        self.write('pets/3001/combined.json', pet)
+        self.write('pets/3001/pet-ecology.json', {
+            'ok': True, 'resource': 'pet-ecology', 'data': {'name': '喵喵'},
+            'updated_at': '2026-11-02T10:00:00+08:00'})
+        import_data(self.root, self.db)
+        with RocoQueries(self.db) as q:
+            ecology = q.get_pet('喵喵', 'ecology')
+            self.assertEqual([s['section'] for s in ecology['sources']], ['pet-ecology'])
+            self.assertEqual([s['section'] for s in q.get_pet('喵喵', 'features')['sources']], ['pet-detail'])
+            self.assertEqual([s['section'] for s in q.get_pet('喵喵')['sources']], ['pet-detail'])
+
     def test_missing_detail_preserves_learning_membership(self):
         with RocoQueries(self.db) as q:
             answer = q.get_pet_skills(3001, 'machine', skill='毒沼')

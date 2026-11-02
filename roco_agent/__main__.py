@@ -1,0 +1,67 @@
+"""命令行：python -m roco_agent [问题] [--model 模型ID] [--trace]。"""
+import argparse
+import json
+import sqlite3
+import sys
+
+from roco_data import DEFAULT_DB, RocoQueries
+from .agent import RocoAgent
+from .llm import ChatModel
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Roco 精灵助手：智增增模型与五个本地查询工具')
+    parser.add_argument('question', nargs='?', help='省略时进入多轮聊天')
+    parser.add_argument('--model', help='模型 ID，默认读取 LLM_MODEL_ID')
+    parser.add_argument('--db', default=str(DEFAULT_DB))
+    parser.add_argument('--trace', action='store_true', help='显示工具名称、参数和状态')
+    parser.add_argument('--json', action='store_true', help='单次提问返回完整结构化结果')
+    args = parser.parse_args()
+    if args.json and args.question is None:
+        parser.error('--json 用于单次提问，请同时提供问题')
+    model = None
+    try:
+        with RocoQueries(args.db) as queries:
+            model = ChatModel(args.model)
+            agent = RocoAgent(model, queries)
+
+            def ask(question):
+                answer = agent.ask(question)
+                if args.json:
+                    print(json.dumps(answer, ensure_ascii=False, indent=4))
+                else:
+                    print(answer['answer'])
+                    if args.trace:
+                        print(json.dumps(answer['tool_calls'], ensure_ascii=False, indent=4))
+                return 0 if answer['status'] == 'ok' else 2
+
+            if args.question is not None:
+                return ask(args.question)
+            print('Roco 助手已启动。输入 /reset 清空上下文，/exit 退出。')
+            while True:
+                try:
+                    question = input('\n你：').strip()
+                except EOFError:
+                    break
+                if question == '/exit':
+                    break
+                if question == '/reset':
+                    agent.reset()
+                    print('上下文已清空。')
+                elif question:
+                    print('\n助手：', end='', flush=True)
+                    ask(question)
+            return 0
+    except (ValueError, OSError, sqlite3.Error) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    except KeyboardInterrupt:
+        print('\n已退出。', file=sys.stderr)
+        return 130
+    finally:
+        if model is not None:
+            model.close()
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
