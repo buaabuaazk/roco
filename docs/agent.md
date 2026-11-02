@@ -52,6 +52,7 @@ python -m roco_agent "喵喵和迪莫谁速度种族值高？" --model deepseek-
 
 `--json` 返回 `status`、`answer`、`tool_calls`、`sources`。单次提问成功退出码为 0，其他结果为 2。
 `tool_calls` 记录工具名称、模型提供的参数和执行状态；`sources` 提供实际返回资料的来源。
+普通回答聚焦游戏结论与实际条件。来源链接、文件路径、更新时间及缓存状态保留在结构化结果中，用户询问来源或时效时再说明。
 
 ## Python 接入
 
