@@ -3,3 +3,4 @@
 - JSON 是采集原始资料；SQLite 是可通过 `python -m roco_data import` 重建的本地查询快照。
 - 精灵技能关联保留来源、等级、血脉条件；技能详情通过 `skill_id` 关联。
 - JSON 保持 UTF-8、4 空格缩进和可读中文；数据库文件由 Git 忽略。
+- 每次完成有意义的更改后执行本地 `git commit`；仅在用户明确要求时执行 `git push`。
