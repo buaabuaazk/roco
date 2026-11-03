@@ -274,15 +274,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('titles', nargs='*', help='完整精灵页面标题')
     parser.add_argument('--ids', nargs='+', type=int, default=[], help='游戏精灵 ID')
+    parser.add_argument('--skill-ids', nargs='+', type=int, default=[], help='独立采集指定游戏技能 ID')
     parser.add_argument('--all', action='store_true', help='转换全部精灵及技能目录')
     parser.add_argument('--limit', type=int, help='限制精灵数量')
     parser.add_argument('--refresh', action='store_true', help='重新请求模块，否则复用缓存')
     parser.add_argument('--output', type=Path, default=ROOT / 'converted')
     parser.add_argument('--from-response', type=Path, help='复用已保存的模块响应，离线转换')
     args = parser.parse_args()
-    if not (args.titles or args.ids or args.all):
-        parser.error('请指定名称、--ids 或 --all')
-    if args.limit is not None and args.limit < 1 or any(key < 1 for key in args.ids):
+    if not (args.titles or args.ids or args.skill_ids or args.all):
+        parser.error('请指定名称、--ids、--skill-ids 或 --all')
+    if args.limit is not None and args.limit < 1 or any(key < 1 for key in args.ids + args.skill_ids):
         parser.error('ID 和数量须为正数')
     if args.from_response and args.refresh:
         parser.error('--from-response 与 --refresh 不能同时使用')
@@ -308,6 +309,11 @@ def main():
         skill_keys = set(tables['Skills']) if args.all and not args.limit else {
             row['wiki_skill_id'] for pet in pets for rows in pet['skills'].values() for row in rows}
         skill_keys.update(pet['feature_skill_id'] for pet in selected)
+        by_game_id = {row['game_id']: key for key, row in tables['Skills'].items()}
+        for game_id in args.skill_ids:
+            if game_id not in by_game_id:
+                raise ValueError(f'未找到游戏技能 ID {game_id}')
+            skill_keys.add(by_game_id[game_id])
         skills = [skill_record(tables, key) for key in sorted(skill_keys) if key in tables['Skills']]
         if network:
             save(cache, raw)

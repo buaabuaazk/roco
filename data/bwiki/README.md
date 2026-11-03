@@ -21,6 +21,9 @@ python scripts/collect_bwiki_modules.py --all --refresh
 python scripts/collect_bwiki_modules.py 喵喵 机械方方
 python scripts/collect_bwiki_modules.py --ids 3001 3200
 
+# 独立采集三个技能（抓挠、毒沼、啮合传递）
+python scripts/collect_bwiki_modules.py --skill-ids 7020360 7120200 7070170 --refresh
+
 # 转换前十个精灵及其关联技能、特性
 python scripts/collect_bwiki_modules.py --all --limit 10
 
