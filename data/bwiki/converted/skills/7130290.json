@@ -1,0 +1,39 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。",
+    "desc_notes": [
+        3010,
+        1015,
+        3010
+    ],
+    "element": "虫系",
+    "energy": 3,
+    "game_id": 7130290,
+    "icon": "Skill_112021.png",
+    "name": "翅刃",
+    "power": 85,
+    "skill_id": 7130290,
+    "wiki_id": "skill_000651",
+    "terms": {
+        "3010": {
+            "desc": "精灵下场后印记不会消失，新入场的精灵会继承印记效果。精灵最多同时拥有1种正面印记和1种负面印记。",
+            "note": "印记"
+        },
+        "1015": {
+            "desc": "若敌方使用状态技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对状态"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000298",
+            "head": "PetAvatar_3605.png",
+            "pet_id": "pet_000470",
+            "pet_name": "食尘短绒",
+            "stone_icon": "Item_242001.png",
+            "topic": "使用1次翅刃",
+            "topic_id": "topic_001563"
+        }
+    ]
+}

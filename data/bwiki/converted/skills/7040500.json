@@ -1,0 +1,36 @@
+{
+    "category": "状态",
+    "desc": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。",
+    "desc_notes": [
+        3010,
+        1002
+    ],
+    "element": "火系",
+    "energy": 3,
+    "game_id": 7040500,
+    "icon": "Skill_103039.png",
+    "name": "焚烧烙印",
+    "skill_id": 7040500,
+    "wiki_id": "skill_000409",
+    "terms": {
+        "3010": {
+            "desc": "精灵下场后印记不会消失，新入场的精灵会继承印记效果。精灵最多同时拥有1种正面印记和1种负面印记。",
+            "note": "印记"
+        },
+        "1002": {
+            "desc": "回合结束时，造成2%生命的火系伤害，并衰减一半层数。（火系精灵免疫此效果）",
+            "note": "灼烧"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000048",
+            "head": "PetAvatar_3071.png",
+            "pet_id": "pet_000062",
+            "pet_name": "音速犬",
+            "stone_icon": "Item_104000.png",
+            "topic": "使用1次焚烧烙印",
+            "topic_id": "topic_000256"
+        }
+    ]
+}

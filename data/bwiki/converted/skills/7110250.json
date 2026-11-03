@@ -1,0 +1,36 @@
+{
+    "category": "状态",
+    "desc": "敌方先手-1，应对防御：额外使敌方获得双攻-70%。",
+    "desc_notes": [
+        1020,
+        1017
+    ],
+    "element": "电系",
+    "energy": 2,
+    "game_id": 7110250,
+    "icon": "Skill_110009.png",
+    "name": "麻痹",
+    "skill_id": 7110250,
+    "wiki_id": "skill_000589",
+    "terms": {
+        "1020": {
+            "desc": "技能行动的优先级，先手度更高的技能忽略双方精灵速度差异，优先释放，先手度可叠加。",
+            "note": "先手"
+        },
+        "1017": {
+            "desc": "若敌方使用防御技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对防御"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000209",
+            "head": "PetAvatar_3197.png",
+            "pet_id": "pet_000174",
+            "pet_name": "荆棘电环",
+            "stone_icon": "Item_240001.png",
+            "topic": "使用1次麻痹",
+            "topic_id": "topic_001101"
+        }
+    ]
+}

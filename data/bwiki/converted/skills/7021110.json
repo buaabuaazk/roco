@@ -1,0 +1,36 @@
+{
+    "category": "防御",
+    "desc": "减伤50%，应对攻击：下一次行动获得先手+1。",
+    "desc_notes": [
+        1016,
+        1020
+    ],
+    "element": "普通系",
+    "energy": 1,
+    "game_id": 7021110,
+    "icon": "Skill_201094.png",
+    "name": "有效预防",
+    "skill_id": 7021110,
+    "wiki_id": "skill_000327",
+    "terms": {
+        "1016": {
+            "desc": "若敌方使用攻击技能，则本技能应对成功，本次行动必定先手，且触发应对效果。使用后，携带的防御技能进入1回合冷却。",
+            "note": "应对攻击"
+        },
+        "1020": {
+            "desc": "技能行动的优先级，先手度更高的技能忽略双方精灵速度差异，优先释放，先手度可叠加。",
+            "note": "先手"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000038",
+            "head": "PetAvatar_3317.png",
+            "pet_id": "pet_000263",
+            "pet_name": "卷胡巨獭",
+            "stone_icon": "Item_231001.png",
+            "topic": "使用2次有效预防",
+            "topic_id": "topic_000199"
+        }
+    ]
+}

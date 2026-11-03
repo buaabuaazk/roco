@@ -1,0 +1,67 @@
+{
+    "category": "特性",
+    "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音威力提升，且获得巧变：同系别技能。",
+    "desc_notes": [
+        3011
+    ],
+    "effect_details": {
+        "intro": "换碟为自身携带的以下技能增加威力。",
+        "rows": [
+            {
+                "effects": [
+                    {
+                        "label": "技能威力",
+                        "value": "+15"
+                    }
+                ],
+                "icon": "Skill_101071.png",
+                "label": "音波弹"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "技能威力",
+                        "value": "+20"
+                    }
+                ],
+                "icon": "Skill_702046.png",
+                "label": "音爆"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "技能威力",
+                        "value": "+20"
+                    }
+                ],
+                "icon": "Skill_106013.png",
+                "label": "金属噪音"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "技能威力",
+                        "value": "+5"
+                    }
+                ],
+                "icon": "Skill_116015.png",
+                "label": "午夜噪音"
+            }
+        ],
+        "title": "携带技能与威力加成"
+    },
+    "element": "无系别",
+    "energy": 0,
+    "game_id": 200287,
+    "icon": "Feature_200287.png",
+    "name": "换碟",
+    "skill_id": 200287,
+    "wiki_id": "skill_000169",
+    "terms": {
+        "3011": {
+            "desc": "使用后会变为指定范围内的随机技能，且能耗-1。使用该随机技能后会变回原技能。",
+            "note": "巧变"
+        }
+    },
+    "stone_topics": []
+}

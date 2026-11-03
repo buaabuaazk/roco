@@ -1,0 +1,235 @@
+{
+    "category": "攻击",
+    "damage_class": "魔攻",
+    "desc": "造成魔伤，携带其他系别技能会给本技能带来不同效果。",
+    "effect_details": {
+        "intro": "根据携带技能的系别，为折射附加不同效果。",
+        "note": "速度以固定数值增减。",
+        "rows": [
+            {
+                "effects": [
+                    {
+                        "label": "技能威力",
+                        "target": "自身",
+                        "value": "+10"
+                    }
+                ],
+                "icon": "Type_2.png",
+                "label": "普通系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "回复生命",
+                        "target": "自身",
+                        "value": "15%"
+                    }
+                ],
+                "icon": "Type_3.png",
+                "label": "草系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "灼烧",
+                        "target": "对手",
+                        "value": "4层"
+                    }
+                ],
+                "icon": "Type_4.png",
+                "label": "火系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "所有技能能耗",
+                        "target": "自身",
+                        "value": "−1"
+                    }
+                ],
+                "icon": "Type_5.png",
+                "label": "水系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "魔攻",
+                        "target": "自身",
+                        "value": "+30%"
+                    }
+                ],
+                "icon": "Type_6.png",
+                "label": "光系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "速度",
+                        "target": "对手",
+                        "value": "−40"
+                    },
+                    {
+                        "label": "连击次数",
+                        "target": "对手",
+                        "value": "−2"
+                    }
+                ],
+                "icon": "Type_8.png",
+                "label": "地系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "冻结",
+                        "target": "对手",
+                        "value": "2层"
+                    }
+                ],
+                "icon": "Type_9.png",
+                "label": "冰系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "魔防",
+                        "target": "对手",
+                        "value": "−40%"
+                    }
+                ],
+                "icon": "Type_10.png",
+                "label": "龙系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "速度",
+                        "target": "自身",
+                        "value": "+20"
+                    }
+                ],
+                "icon": "Type_11.png",
+                "label": "电系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "中毒",
+                        "target": "对手",
+                        "value": "2层"
+                    }
+                ],
+                "icon": "Type_12.png",
+                "label": "毒系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "物防",
+                        "target": "对手",
+                        "value": "−40%"
+                    }
+                ],
+                "icon": "Type_13.png",
+                "label": "虫系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "物攻",
+                        "target": "自身",
+                        "value": "+30%"
+                    }
+                ],
+                "icon": "Type_14.png",
+                "label": "武系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "连击次数",
+                        "target": "自身",
+                        "value": "+1"
+                    }
+                ],
+                "icon": "Type_15.png",
+                "label": "翼系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "双攻",
+                        "target": "对手",
+                        "value": "−30%"
+                    }
+                ],
+                "icon": "Type_16.png",
+                "label": "萌系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "能量",
+                        "target": "对手",
+                        "value": "−2"
+                    }
+                ],
+                "icon": "Type_17.png",
+                "label": "幽系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "吸血",
+                        "target": "自身",
+                        "value": "30%"
+                    }
+                ],
+                "icon": "Type_18.png",
+                "label": "恶系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "物防",
+                        "target": "自身",
+                        "value": "+30%"
+                    }
+                ],
+                "icon": "Type_19.png",
+                "label": "机械系"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "星陨印记",
+                        "target": "对手",
+                        "value": "1层"
+                    }
+                ],
+                "icon": "Type_20.png",
+                "label": "幻系"
+            }
+        ],
+        "title": "携带技能与附加效果"
+    },
+    "element": "光系",
+    "energy": 4,
+    "game_id": 7060130,
+    "icon": "Skill_706009.png",
+    "name": "折射",
+    "power": 50,
+    "skill_id": 7060130,
+    "wiki_id": "skill_000452",
+    "terms": {},
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000312",
+            "head": "PetAvatar_3311.png",
+            "pet_id": "pet_000260",
+            "pet_name": "疾光千兽",
+            "stone_icon": "Item_235001.png",
+            "topic": "使用3次折射",
+            "topic_id": "topic_001627"
+        }
+    ]
+}

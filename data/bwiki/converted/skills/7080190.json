@@ -1,0 +1,37 @@
+{
+    "category": "状态",
+    "desc": "敌方获得3回合禁足，应对防御：敌方获得双防-60%。",
+    "desc_notes": [
+        3023,
+        1017
+    ],
+    "element": "地系",
+    "energy": 2,
+    "flavor": "越挣扎，时间反而流走得越快。",
+    "game_id": 7080190,
+    "icon": "Skill_708017.png",
+    "name": "流沙",
+    "skill_id": 7080190,
+    "wiki_id": "skill_000506",
+    "terms": {
+        "3023": {
+            "desc": "处于禁足状态时，精灵无法离场，且无法获得新的禁足状态。",
+            "note": "禁足"
+        },
+        "1017": {
+            "desc": "若敌方使用防御技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对防御"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000112",
+            "head": "PetAvatar_3171.png",
+            "pet_id": "pet_000150",
+            "pet_name": "巨灵石",
+            "stone_icon": "Item_237001.png",
+            "topic": "使用1次流沙",
+            "topic_id": "topic_000596"
+        }
+    ]
+}

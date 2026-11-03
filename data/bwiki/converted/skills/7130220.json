@@ -1,0 +1,36 @@
+{
+    "category": "防御",
+    "desc": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
+    "desc_notes": [
+        1026,
+        1016
+    ],
+    "element": "虫系",
+    "energy": 2,
+    "game_id": 7130220,
+    "icon": "Skill_212015.png",
+    "name": "掩护",
+    "skill_id": 7130220,
+    "wiki_id": "skill_000645",
+    "terms": {
+        "1026": {
+            "desc": "精灵离场，并随机选择队伍里一只其他精灵替换入场。本回合入场的精灵免疫此效果。",
+            "note": "紧急脱离"
+        },
+        "1016": {
+            "desc": "若敌方使用攻击技能，则本技能应对成功，本次行动必定先手，且触发应对效果。使用后，携带的防御技能进入1回合冷却。",
+            "note": "应对攻击"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000319",
+            "head": "PetAvatar_3400.png",
+            "pet_id": "pet_000322",
+            "pet_name": "陨星虫",
+            "stone_icon": "Item_242001.png",
+            "topic": "使用1次掩护",
+            "topic_id": "topic_001661"
+        }
+    ]
+}

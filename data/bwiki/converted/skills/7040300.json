@@ -1,0 +1,36 @@
+{
+    "category": "防御",
+    "desc": "减伤70%，应对攻击：敌方获得6层灼烧。",
+    "desc_notes": [
+        1016,
+        1002
+    ],
+    "element": "火系",
+    "energy": 2,
+    "game_id": 7040300,
+    "icon": "Skill_704019.png",
+    "name": "火焰护盾",
+    "skill_id": 7040300,
+    "wiki_id": "skill_000392",
+    "terms": {
+        "1016": {
+            "desc": "若敌方使用攻击技能，则本技能应对成功，本次行动必定先手，且触发应对效果。使用后，携带的防御技能进入1回合冷却。",
+            "note": "应对攻击"
+        },
+        "1002": {
+            "desc": "回合结束时，造成2%生命的火系伤害，并衰减一半层数。（火系精灵免疫此效果）",
+            "note": "灼烧"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000316",
+            "head": "PetAvatar_3528.png",
+            "pet_id": "pet_000415",
+            "pet_name": "熔岩布丁",
+            "stone_icon": "Item_104000.png",
+            "topic": "使用2次火焰护盾",
+            "topic_id": "topic_001648"
+        }
+    ]
+}

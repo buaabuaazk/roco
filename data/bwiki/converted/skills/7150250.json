@@ -1,0 +1,136 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物伤，速度比敌方越高，本次技能威力越高。",
+    "effect_details": {
+        "columns": [
+            "速度差",
+            "档位数值"
+        ],
+        "icon": "Stat_Spe.png",
+        "intro": "自身速度高于对手时，差值越大，技能威力越高。",
+        "kind": "tiers",
+        "rows": [
+            {
+                "bar": 0,
+                "effects": [
+                    {
+                        "value": "0"
+                    }
+                ],
+                "label": "不高于对手"
+            },
+            {
+                "bar": 14,
+                "effects": [
+                    {
+                        "value": "20"
+                    }
+                ],
+                "label": "高出 1–30"
+            },
+            {
+                "bar": 29,
+                "effects": [
+                    {
+                        "value": "40"
+                    }
+                ],
+                "label": "高出 31–60"
+            },
+            {
+                "bar": 43,
+                "effects": [
+                    {
+                        "value": "60"
+                    }
+                ],
+                "label": "高出 61–90"
+            },
+            {
+                "bar": 57,
+                "effects": [
+                    {
+                        "value": "80"
+                    }
+                ],
+                "label": "高出 91–120"
+            },
+            {
+                "bar": 64,
+                "effects": [
+                    {
+                        "value": "90"
+                    }
+                ],
+                "label": "高出 121–150"
+            },
+            {
+                "bar": 71,
+                "effects": [
+                    {
+                        "value": "100"
+                    }
+                ],
+                "label": "高出 151–180"
+            },
+            {
+                "bar": 79,
+                "effects": [
+                    {
+                        "value": "110"
+                    }
+                ],
+                "label": "高出 181–210"
+            },
+            {
+                "bar": 86,
+                "effects": [
+                    {
+                        "value": "120"
+                    }
+                ],
+                "label": "高出 211–240"
+            },
+            {
+                "bar": 93,
+                "effects": [
+                    {
+                        "value": "130"
+                    }
+                ],
+                "label": "高出 241–270"
+            },
+            {
+                "bar": 100,
+                "effects": [
+                    {
+                        "value": "140"
+                    }
+                ],
+                "label": "高出 271 及以上"
+            }
+        ],
+        "title": "速度差与威力"
+    },
+    "element": "翼系",
+    "energy": 4,
+    "game_id": 7150250,
+    "icon": "Skill_114020.png",
+    "name": "闪击",
+    "power": 60,
+    "skill_id": 7150250,
+    "wiki_id": "skill_000703",
+    "terms": {},
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000233",
+            "head": "PetAvatar_3252.png",
+            "pet_id": "pet_000212",
+            "pet_name": "高脚鹬",
+            "stone_icon": "Item_244001.png",
+            "topic": "使用2次闪击",
+            "topic_id": "topic_001225"
+        }
+    ]
+}

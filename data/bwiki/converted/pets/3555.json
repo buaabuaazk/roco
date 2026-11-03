@@ -1,0 +1,1510 @@
+{
+    "pet_id": 3555,
+    "wiki_id": "pet_000437",
+    "name": "棋棋",
+    "title": "棋棋（黑子）",
+    "profile": {
+        "can_double_ride": true,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "“从黄金时代至今，黑色棋子在月光下仍呈现乌金般幽深的纹路，它们存在本身就是黄金时代工艺的证明。传言每当乌云遮月，所有黑子便会同时转向月亮的方向，据研究可能和守夜指令有关。”——《黄金时代的地系工匠们·九》",
+        "ecology": {
+            "areas": [
+                "二叠山丘"
+            ],
+            "eggs": [
+                {
+                    "description": "击败精灵首领·棋契陛下后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“了不起”天分的精灵。",
+                    "icon": "Item_150523.png",
+                    "name": "棋棋的蛋",
+                    "sources": [
+                        "精灵首领·棋契陛下掉落"
+                    ]
+                },
+                {
+                    "description": "击败精灵首领·棋契陛下后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“相当好”天分的精灵。",
+                    "icon": "Item_150623.png",
+                    "name": "棋棋的蛋",
+                    "sources": [
+                        "精灵首领·棋契陛下掉落"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是棋棋的果实。",
+                    "icon": "Item_108177.png",
+                    "name": "棋棋的果实",
+                    "sources": [
+                        "完成棋骑士的图鉴课题获得"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            7
+        ],
+        "egg_size": {
+            "huge_min": 5759,
+            "max": 5800,
+            "min": 3745,
+            "mini_max": 3786,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_c9d1431680a6",
+        "feature_skill_id": "skill_000134",
+        "form": "黑子",
+        "game_id": 3555,
+        "gender_ratio": {
+            "female": 5,
+            "male": 5
+        },
+        "handbook_id": "handbook_000188",
+        "has_shiny": false,
+        "height": "0.35~0.47M",
+        "id": "pet_000437",
+        "image": {
+            "egg": "Item_107194.png",
+            "fruits": [
+                "Item_108177.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3555.png",
+            "illustration": "PetPortrait_qiqi_yidi.png"
+        },
+        "learnset_id": "learnset_0ab652ff61a7",
+        "move_type": "步行",
+        "name": "棋棋",
+        "number": "188",
+        "perception_range": 40,
+        "relation_key": "武系|地系",
+        "release": {
+            "date": "2026-03-26",
+            "version": "1.0.0"
+        },
+        "review_gold": 800,
+        "siblings": [
+            "pet_000432"
+        ],
+        "stage": 1,
+        "starlight": 16,
+        "stats": {
+            "atk": 97,
+            "def": 67,
+            "hp": 66,
+            "spa": 35,
+            "spd": 53,
+            "spe": 100
+        },
+        "submit_reward": 800,
+        "talent_pool_id": 1002,
+        "title": "棋棋（黑子）",
+        "types": [
+            "武系",
+            "地系"
+        ],
+        "weight": "10.7~14.5KG"
+    },
+    "feature_id": 200236,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000660",
+                "skill_id": 7140050
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000273",
+                "skill_id": 7020630
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 7,
+                "stage": 1,
+                "wiki_skill_id": "skill_000674",
+                "skill_id": 7140210
+            },
+            {
+                "level": 9,
+                "stage": 1,
+                "wiki_skill_id": "skill_000676",
+                "skill_id": 7140230
+            },
+            {
+                "level": 11,
+                "stage": 1,
+                "wiki_skill_id": "skill_000272",
+                "skill_id": 7020620
+            },
+            {
+                "level": 17,
+                "stage": 1,
+                "wiki_skill_id": "skill_000499",
+                "skill_id": 7080120
+            },
+            {
+                "level": 23,
+                "stage": 1,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "level": 27,
+                "stage": 1,
+                "wiki_skill_id": "skill_000248",
+                "skill_id": 7020370
+            },
+            {
+                "level": 28,
+                "stage": 1,
+                "wiki_skill_id": "skill_000678",
+                "skill_id": 7140250
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000250",
+                "skill_id": 7020390
+            },
+            {
+                "wiki_skill_id": "skill_000251",
+                "skill_id": 7020400
+            },
+            {
+                "wiki_skill_id": "skill_000313",
+                "skill_id": 7020970
+            },
+            {
+                "wiki_skill_id": "skill_000255",
+                "skill_id": 7020440
+            },
+            {
+                "wiki_skill_id": "skill_000291",
+                "skill_id": 7020840
+            },
+            {
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000304",
+                "skill_id": 7020880
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000359",
+                "skill_id": 7030430
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000377",
+                "skill_id": 7040150
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000435",
+                "skill_id": 7050330
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000498",
+                "skill_id": 7080110
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000543",
+                "skill_id": 7090240
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000594",
+                "skill_id": 7110300
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000621",
+                "skill_id": 7120190
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000648",
+                "skill_id": 7130260
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000677",
+                "skill_id": 7140240
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000698",
+                "skill_id": 7150190
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000752",
+                "skill_id": 7170200
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000768",
+                "skill_id": 7180080
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000478",
+                "skill_id": 7070110
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000818",
+                "skill_id": 7190360
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "form": "黑子",
+                    "head": "PetAvatar_3555.png",
+                    "id": "pet_000437",
+                    "illustration": "PetPortrait_qiqi_yidi.png",
+                    "name": "棋棋",
+                    "stage": 1,
+                    "title": "棋棋（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "生涯击败[棋骑士（白子）]3只 + 雄性",
+                    "form": "黑子",
+                    "head": "PetAvatar_3556.png",
+                    "id": "pet_000438",
+                    "illustration": "PetPortrait_qiqishi_yidi.png",
+                    "level": 26,
+                    "name": "棋骑士",
+                    "stage": 2,
+                    "title": "棋骑士（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "黑棋棋骑士分支",
+                    "head": "PetAvatar_4086.png",
+                    "id": "pet_000576",
+                    "illustration": "PetPortrait_qiqibixia.png",
+                    "item": "棋契陛下的信物",
+                    "name": "棋契陛下",
+                    "stage": 4,
+                    "title": "棋契陛下（黑棋棋骑士分支）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "棋棋进化链（黑棋棋骑士分支）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000437",
+                    "to_wiki_id": "pet_000438",
+                    "from_pet_id": 3555,
+                    "to_pet_id": 3556,
+                    "conditions": {
+                        "level": 26,
+                        "special": "生涯击败[棋骑士（白子）]3只 + 雄性"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000438",
+                    "to_wiki_id": "pet_000576",
+                    "from_pet_id": 3556,
+                    "to_pet_id": 5043,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "棋契陛下的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "form": "黑子",
+                    "head": "PetAvatar_3555.png",
+                    "id": "pet_000437",
+                    "illustration": "PetPortrait_qiqi_yidi.png",
+                    "name": "棋棋",
+                    "stage": 1,
+                    "title": "棋棋（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "生涯击败[棋绮后（白子）]3只 + 雌性",
+                    "form": "黑子",
+                    "head": "PetAvatar_3557.png",
+                    "id": "pet_000439",
+                    "illustration": "PetPortrait_qiqihou_yidi.png",
+                    "level": 26,
+                    "name": "棋绮后",
+                    "stage": 2,
+                    "title": "棋绮后（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "黑棋棋绮后分支",
+                    "head": "PetAvatar_4086.png",
+                    "id": "pet_000577",
+                    "illustration": "PetPortrait_qiqibixia.png",
+                    "item": "棋契陛下的信物",
+                    "name": "棋契陛下",
+                    "stage": 4,
+                    "title": "棋契陛下（黑棋棋绮后分支）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "棋棋进化链（黑棋棋绮后分支）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000437",
+                    "to_wiki_id": "pet_000439",
+                    "from_pet_id": 3555,
+                    "to_pet_id": 3557,
+                    "conditions": {
+                        "level": 26,
+                        "special": "生涯击败[棋绮后（白子）]3只 + 雌性"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000439",
+                    "to_wiki_id": "pet_000577",
+                    "from_pet_id": 3557,
+                    "to_pet_id": 5044,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "棋契陛下的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "form": "黑子",
+                    "head": "PetAvatar_3555.png",
+                    "id": "pet_000437",
+                    "illustration": "PetPortrait_qiqi_yidi.png",
+                    "name": "棋棋",
+                    "stage": 1,
+                    "title": "棋棋（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "生涯击败[棋齐垒（白子）]3只 + 雄性",
+                    "form": "黑子",
+                    "head": "PetAvatar_3558.png",
+                    "id": "pet_000440",
+                    "illustration": "PetPortrait_qiqilei_yidi.png",
+                    "level": 26,
+                    "name": "棋齐垒",
+                    "stage": 2,
+                    "title": "棋齐垒（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "黑棋棋齐垒分支",
+                    "head": "PetAvatar_4086.png",
+                    "id": "pet_000578",
+                    "illustration": "PetPortrait_qiqibixia.png",
+                    "item": "棋契陛下的信物",
+                    "name": "棋契陛下",
+                    "stage": 4,
+                    "title": "棋契陛下（黑棋棋齐垒分支）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "棋棋进化链（黑棋棋齐垒分支）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000437",
+                    "to_wiki_id": "pet_000440",
+                    "from_pet_id": 3555,
+                    "to_pet_id": 3558,
+                    "conditions": {
+                        "level": 26,
+                        "special": "生涯击败[棋齐垒（白子）]3只 + 雄性"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000440",
+                    "to_wiki_id": "pet_000578",
+                    "from_pet_id": 3558,
+                    "to_pet_id": 5045,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "棋契陛下的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "form": "黑子",
+                    "head": "PetAvatar_3555.png",
+                    "id": "pet_000437",
+                    "illustration": "PetPortrait_qiqi_yidi.png",
+                    "name": "棋棋",
+                    "stage": 1,
+                    "title": "棋棋（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "生涯击败[棋祈督（白子）]3只 + 雄性",
+                    "form": "黑子",
+                    "head": "PetAvatar_3559.png",
+                    "id": "pet_000441",
+                    "illustration": "PetPortrait_qiqidu_yidi.png",
+                    "level": 26,
+                    "name": "棋祈督",
+                    "stage": 2,
+                    "title": "棋祈督（黑子）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "黑棋棋祈督分支",
+                    "head": "PetAvatar_4086.png",
+                    "id": "pet_000579",
+                    "illustration": "PetPortrait_qiqibixia.png",
+                    "item": "棋契陛下的信物",
+                    "name": "棋契陛下",
+                    "stage": 4,
+                    "title": "棋契陛下（黑棋棋祈督分支）",
+                    "types": [
+                        "武系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "棋棋进化链（黑棋棋祈督分支）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000437",
+                    "to_wiki_id": "pet_000441",
+                    "from_pet_id": 3555,
+                    "to_pet_id": 3559,
+                    "conditions": {
+                        "level": 26,
+                        "special": "生涯击败[棋祈督（白子）]3只 + 雄性"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000441",
+                    "to_wiki_id": "pet_000579",
+                    "from_pet_id": 3559,
+                    "to_pet_id": 5046,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "棋契陛下的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "洛克里安图鉴"
+        ],
+        "entry_name": "棋棋",
+        "habitat": "常见于山林、城堡周边",
+        "title": "棋子精灵",
+        "topics": [
+            {
+                "id": "topic_000973",
+                "progress_id": "pt_000188_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_000974",
+                "progress_id": "pt_000188_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_000975",
+                "progress_id": "pt_000188_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            },
+            {
+                "id": "topic_000976",
+                "progress_id": "pt_000188_000004",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_3.png",
+                        "kind": "资源",
+                        "name": "许愿星"
+                    },
+                    {
+                        "count": 20,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 2,
+                "text": "确认2种不同样子的棋棋"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "普通系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "火系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "地系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "电系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "毒系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "虫系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "恶系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "草系"
+            },
+            {
+                "multiplier": 2,
+                "type": "水系"
+            },
+            {
+                "multiplier": 2,
+                "type": "冰系"
+            },
+            {
+                "multiplier": 2,
+                "type": "武系"
+            },
+            {
+                "multiplier": 2,
+                "type": "萌系"
+            },
+            {
+                "multiplier": 2,
+                "type": "机械系"
+            },
+            {
+                "multiplier": 2,
+                "type": "幻系"
+            }
+        ]
+    },
+    "training_reference": {
+        "pvp": {
+            "blood": [
+                [
+                    19,
+                    6591
+                ],
+                [
+                    12,
+                    1553
+                ],
+                [
+                    6,
+                    1517
+                ],
+                [
+                    24,
+                    112
+                ],
+                [
+                    16,
+                    44
+                ],
+                [
+                    10,
+                    36
+                ],
+                [
+                    8,
+                    28
+                ],
+                [
+                    9,
+                    24
+                ],
+                [
+                    17,
+                    24
+                ],
+                [
+                    3,
+                    16
+                ],
+                [
+                    4,
+                    12
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    23,
+                    12
+                ],
+                [
+                    18,
+                    8
+                ],
+                [
+                    11,
+                    7
+                ],
+                [
+                    5,
+                    4
+                ]
+            ],
+            "nature": [
+                [
+                    23,
+                    1348
+                ],
+                [
+                    2,
+                    826
+                ],
+                [
+                    22,
+                    678
+                ],
+                [
+                    3,
+                    598
+                ],
+                [
+                    24,
+                    566
+                ],
+                [
+                    25,
+                    525
+                ],
+                [
+                    1,
+                    489
+                ],
+                [
+                    21,
+                    481
+                ],
+                [
+                    5,
+                    409
+                ],
+                [
+                    28,
+                    345
+                ],
+                [
+                    30,
+                    301
+                ],
+                [
+                    6,
+                    297
+                ],
+                [
+                    4,
+                    276
+                ],
+                [
+                    27,
+                    264
+                ],
+                [
+                    7,
+                    256
+                ],
+                [
+                    26,
+                    244
+                ],
+                [
+                    29,
+                    236
+                ],
+                [
+                    9,
+                    208
+                ],
+                [
+                    20,
+                    188
+                ],
+                [
+                    18,
+                    180
+                ],
+                [
+                    19,
+                    172
+                ],
+                [
+                    12,
+                    160
+                ],
+                [
+                    17,
+                    156
+                ],
+                [
+                    10,
+                    156
+                ],
+                [
+                    16,
+                    121
+                ],
+                [
+                    11,
+                    112
+                ],
+                [
+                    14,
+                    112
+                ],
+                [
+                    8,
+                    108
+                ],
+                [
+                    13,
+                    96
+                ],
+                [
+                    15,
+                    92
+                ]
+            ],
+            "skill": [
+                [
+                    7020780,
+                    6467
+                ],
+                [
+                    7140050,
+                    5242
+                ],
+                [
+                    7020630,
+                    4749
+                ],
+                [
+                    7140250,
+                    4363
+                ],
+                [
+                    7080120,
+                    4106
+                ],
+                [
+                    7140140,
+                    2974
+                ],
+                [
+                    7020370,
+                    2509
+                ],
+                [
+                    7020620,
+                    2071
+                ],
+                [
+                    7140230,
+                    1268
+                ],
+                [
+                    7140210,
+                    963
+                ],
+                [
+                    7140240,
+                    357
+                ],
+                [
+                    7080110,
+                    180
+                ],
+                [
+                    7020840,
+                    68
+                ],
+                [
+                    7020970,
+                    64
+                ],
+                [
+                    7100150,
+                    28
+                ],
+                [
+                    7020400,
+                    24
+                ],
+                [
+                    7040150,
+                    16
+                ],
+                [
+                    7020880,
+                    12
+                ],
+                [
+                    7180180,
+                    12
+                ],
+                [
+                    7070210,
+                    12
+                ],
+                [
+                    7060170,
+                    12
+                ],
+                [
+                    7040680,
+                    12
+                ],
+                [
+                    7150380,
+                    12
+                ],
+                [
+                    7020440,
+                    12
+                ],
+                [
+                    7020390,
+                    12
+                ],
+                [
+                    7180080,
+                    12
+                ],
+                [
+                    7120300,
+                    12
+                ],
+                [
+                    7050510,
+                    8
+                ],
+                [
+                    7190400,
+                    8
+                ],
+                [
+                    7160280,
+                    8
+                ]
+            ],
+            "talent": [
+                [
+                    2,
+                    6503
+                ],
+                [
+                    6,
+                    6194
+                ],
+                [
+                    1,
+                    4909
+                ],
+                [
+                    4,
+                    4628
+                ],
+                [
+                    5,
+                    3588
+                ],
+                [
+                    3,
+                    2308
+                ]
+            ]
+        },
+        "world": {
+            "blood": [
+                [
+                    19,
+                    5053
+                ],
+                [
+                    12,
+                    2151
+                ],
+                [
+                    6,
+                    2137
+                ],
+                [
+                    23,
+                    162
+                ],
+                [
+                    24,
+                    146
+                ],
+                [
+                    9,
+                    80
+                ],
+                [
+                    10,
+                    80
+                ],
+                [
+                    16,
+                    48
+                ],
+                [
+                    18,
+                    43
+                ],
+                [
+                    17,
+                    31
+                ],
+                [
+                    11,
+                    17
+                ],
+                [
+                    2,
+                    10
+                ],
+                [
+                    8,
+                    6
+                ],
+                [
+                    7,
+                    6
+                ],
+                [
+                    15,
+                    6
+                ],
+                [
+                    3,
+                    5
+                ],
+                [
+                    1,
+                    4
+                ],
+                [
+                    14,
+                    4
+                ],
+                [
+                    5,
+                    4
+                ],
+                [
+                    13,
+                    4
+                ],
+                [
+                    4,
+                    3
+                ]
+            ],
+            "nature": [
+                [
+                    23,
+                    559
+                ],
+                [
+                    2,
+                    447
+                ],
+                [
+                    7,
+                    382
+                ],
+                [
+                    28,
+                    369
+                ],
+                [
+                    25,
+                    369
+                ],
+                [
+                    4,
+                    368
+                ],
+                [
+                    22,
+                    367
+                ],
+                [
+                    3,
+                    356
+                ],
+                [
+                    24,
+                    350
+                ],
+                [
+                    21,
+                    338
+                ],
+                [
+                    1,
+                    332
+                ],
+                [
+                    26,
+                    326
+                ],
+                [
+                    9,
+                    323
+                ],
+                [
+                    5,
+                    322
+                ],
+                [
+                    10,
+                    318
+                ],
+                [
+                    30,
+                    315
+                ],
+                [
+                    12,
+                    315
+                ],
+                [
+                    19,
+                    314
+                ],
+                [
+                    11,
+                    311
+                ],
+                [
+                    29,
+                    309
+                ],
+                [
+                    16,
+                    303
+                ],
+                [
+                    18,
+                    301
+                ],
+                [
+                    15,
+                    297
+                ],
+                [
+                    17,
+                    295
+                ],
+                [
+                    8,
+                    290
+                ],
+                [
+                    20,
+                    288
+                ],
+                [
+                    27,
+                    288
+                ],
+                [
+                    6,
+                    288
+                ],
+                [
+                    13,
+                    285
+                ],
+                [
+                    14,
+                    275
+                ]
+            ],
+            "skill": [
+                [
+                    7140250,
+                    5687
+                ],
+                [
+                    7080120,
+                    5491
+                ],
+                [
+                    7020780,
+                    4767
+                ],
+                [
+                    7140140,
+                    4564
+                ],
+                [
+                    7140050,
+                    4293
+                ],
+                [
+                    7020370,
+                    4164
+                ],
+                [
+                    7020630,
+                    3582
+                ],
+                [
+                    7020620,
+                    2975
+                ],
+                [
+                    7140230,
+                    1475
+                ],
+                [
+                    7140210,
+                    969
+                ],
+                [
+                    7140240,
+                    354
+                ],
+                [
+                    7080110,
+                    312
+                ],
+                [
+                    7020840,
+                    64
+                ],
+                [
+                    7020970,
+                    56
+                ],
+                [
+                    7020440,
+                    53
+                ],
+                [
+                    7020390,
+                    43
+                ],
+                [
+                    7021100,
+                    40
+                ],
+                [
+                    7020400,
+                    34
+                ],
+                [
+                    7180080,
+                    9
+                ],
+                [
+                    7180380,
+                    9
+                ],
+                [
+                    7120260,
+                    7
+                ],
+                [
+                    7120190,
+                    7
+                ],
+                [
+                    7070200,
+                    7
+                ],
+                [
+                    7180390,
+                    7
+                ],
+                [
+                    7140330,
+                    7
+                ],
+                [
+                    7060250,
+                    6
+                ],
+                [
+                    7050480,
+                    6
+                ],
+                [
+                    7021210,
+                    6
+                ],
+                [
+                    7120300,
+                    5
+                ],
+                [
+                    7021190,
+                    5
+                ]
+            ],
+            "talent": [
+                [
+                    6,
+                    5535
+                ],
+                [
+                    2,
+                    5427
+                ],
+                [
+                    1,
+                    4382
+                ],
+                [
+                    4,
+                    4229
+                ],
+                [
+                    5,
+                    3534
+                ],
+                [
+                    3,
+                    2627
+                ]
+            ]
+        }
+    },
+    "history": [
+        {
+            "changes": [
+                {
+                    "after": 95,
+                    "before": 65,
+                    "delta": 30,
+                    "field": "触底强击威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 4,
+                    "before": 3,
+                    "delta": 1,
+                    "field": "触底强击能耗",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成魔伤，使用后若能量耗尽，本次技能威力+120。",
+                    "before": "造成魔伤，使用后若能量耗尽，本次技能威力+110。",
+                    "field": "触底强击说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s2-2026-05-21"
+        },
+        {
+            "changes": [
+                {
+                    "after": "攻击技能应对1次后，回满能量和生命，变为棋绮后。",
+                    "before": "攻击技能应对1次后，回满状态，变为棋绮后。",
+                    "field": "特性说明",
+                    "group": "feature"
+                }
+            ],
+            "kind": "changed",
+            "version": "s3-2026-07-17"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

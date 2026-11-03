@@ -1,0 +1,38 @@
+{
+    "category": "攻击",
+    "damage_class": "魔攻",
+    "desc": "造成魔伤，天气为沙暴时，先手+1。",
+    "desc_notes": [
+        3006,
+        1020
+    ],
+    "element": "地系",
+    "energy": 3,
+    "game_id": 7080450,
+    "icon": "Skill_107044.png",
+    "name": "扬尘",
+    "power": 80,
+    "skill_id": 7080450,
+    "wiki_id": "skill_000527",
+    "terms": {
+        "3006": {
+            "desc": "天气为沙暴时，双方的地系技能能耗减半。",
+            "note": "沙暴"
+        },
+        "1020": {
+            "desc": "技能行动的优先级，先手度更高的技能忽略双方精灵速度差异，优先释放，先手度可叠加。",
+            "note": "先手"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000383",
+            "head": "PetAvatar_3404.png",
+            "pet_id": "pet_000325",
+            "pet_name": "蝎子王",
+            "stone_icon": "Item_237001.png",
+            "topic": "使用1次扬尘",
+            "topic_id": "topic_001965"
+        }
+    ]
+}

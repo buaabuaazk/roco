@@ -1,0 +1,672 @@
+{
+    "pet_id": 3664,
+    "wiki_id": "pet_000605",
+    "name": "测风蝉",
+    "title": "测风蝉",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            250
+        ],
+        "class": "自然类精灵",
+        "description": "测风蝉知道风要从哪边来，也知道风要停多久。研究院早就换上了新一代的电子测风仪，那些造它们的老工程师大多也已经退休了。它们每天照旧停在山口和楼顶，等待着风来，像是在等一个再也不会来的洛克下班。",
+        "ecology": {
+            "acquisition_pet_id": "pet_000604",
+            "activities": [
+                {
+                    "name": "命定花种",
+                    "note": "花种出没·战斗后可捕捉",
+                    "window": "2026-10-09 ~ 2026-10-23"
+                }
+            ],
+            "destined_flower": {
+                "nature": "开朗"
+            }
+        },
+        "egg_group": [
+            4,
+            15
+        ],
+        "egg_size": {
+            "huge_min": 1444,
+            "max": 1460,
+            "min": 665,
+            "mini_max": 681,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_3c77fefa3b7b",
+        "feature_skill_id": "skill_000201",
+        "game_id": 3664,
+        "handbook_id": "handbook_000458",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "1.3~1.6M",
+        "id": "pet_000605",
+        "image": {
+            "egg": "Item_107244.png",
+            "fruits": [
+                "Item_108206.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3664.png",
+            "illustration": "PetPortrait_LiangFengWan2.png",
+            "shiny": "PetPortrait_LiangFengWan2_yise.png",
+            "shiny_head": "PetAvatar_3664_1.png"
+        },
+        "learnset_id": "learnset_c26ddb3efde3",
+        "move_type": "浮游",
+        "name": "测风蝉",
+        "number": "458",
+        "perception_range": 40,
+        "relation_key": "翼系|机械系",
+        "release": {
+            "date": "2026-09-10",
+            "version": "1.1.1"
+        },
+        "review_gold": 3000,
+        "siblings": [],
+        "stage": 2,
+        "starlight": 60,
+        "stats": {
+            "atk": 105,
+            "def": 123,
+            "hp": 107,
+            "spa": 103,
+            "spd": 90,
+            "spe": 120
+        },
+        "title": "测风蝉",
+        "types": [
+            "翼系",
+            "机械系"
+        ],
+        "weight": "9.9~17KG"
+    },
+    "feature_id": 200319,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000700",
+                "skill_id": 7150210
+            },
+            {
+                "level": 5,
+                "stage": 1,
+                "wiki_skill_id": "skill_000272",
+                "skill_id": 7020620
+            },
+            {
+                "level": 8,
+                "stage": 1,
+                "wiki_skill_id": "skill_000470",
+                "skill_id": 7070020
+            },
+            {
+                "level": 11,
+                "stage": 1,
+                "wiki_skill_id": "skill_000273",
+                "skill_id": 7020630
+            },
+            {
+                "level": 19,
+                "stage": 1,
+                "wiki_skill_id": "skill_000492",
+                "skill_id": 7070270
+            },
+            {
+                "level": 26,
+                "stage": 1,
+                "wiki_skill_id": "skill_000689",
+                "skill_id": 7150080
+            },
+            {
+                "level": 30,
+                "stage": 1,
+                "wiki_skill_id": "skill_000493",
+                "skill_id": 7070280
+            },
+            {
+                "level": 36,
+                "stage": 1,
+                "wiki_skill_id": "skill_000707",
+                "skill_id": 7150310
+            },
+            {
+                "level": 36,
+                "stage": 1,
+                "wiki_skill_id": "skill_000713",
+                "skill_id": 7150390
+            },
+            {
+                "level": 38,
+                "stage": 1,
+                "wiki_skill_id": "skill_000482",
+                "skill_id": 7070150
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000476",
+                "skill_id": 7070080
+            },
+            {
+                "level": 42,
+                "stage": 1,
+                "wiki_skill_id": "skill_000712",
+                "skill_id": 7150380
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000496",
+                "skill_id": 7070330
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000716",
+                "skill_id": 7150420
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000691",
+                "skill_id": 7150110
+            },
+            {
+                "wiki_skill_id": "skill_000605",
+                "skill_id": 7110420
+            },
+            {
+                "wiki_skill_id": "skill_000584",
+                "skill_id": 7110200
+            },
+            {
+                "wiki_skill_id": "skill_000582",
+                "skill_id": 7110180
+            },
+            {
+                "wiki_skill_id": "skill_000256",
+                "skill_id": 7020450
+            },
+            {
+                "wiki_skill_id": "skill_000260",
+                "skill_id": 7020490
+            },
+            {
+                "wiki_skill_id": "skill_000329",
+                "skill_id": 7021130
+            },
+            {
+                "wiki_skill_id": "skill_000328",
+                "skill_id": 7021120
+            },
+            {
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            },
+            {
+                "wiki_skill_id": "skill_000333",
+                "skill_id": 7021170
+            },
+            {
+                "wiki_skill_id": "skill_000268",
+                "skill_id": 7020570
+            },
+            {
+                "wiki_skill_id": "skill_000277",
+                "skill_id": 7020670
+            },
+            {
+                "wiki_skill_id": "skill_000284",
+                "skill_id": 7020740
+            },
+            {
+                "wiki_skill_id": "skill_000321",
+                "skill_id": 7021050
+            },
+            {
+                "wiki_skill_id": "skill_000327",
+                "skill_id": 7021110
+            },
+            {
+                "wiki_skill_id": "skill_000295",
+                "skill_id": 7020850
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000307",
+                "skill_id": 7020910
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000359",
+                "skill_id": 7030430
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000388",
+                "skill_id": 7040260
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000435",
+                "skill_id": 7050330
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000498",
+                "skill_id": 7080110
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000543",
+                "skill_id": 7090240
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000595",
+                "skill_id": 7110310
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000724",
+                "skill_id": 7160200
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000748",
+                "skill_id": 7170150
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000478",
+                "skill_id": 7070110
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000820",
+                "skill_id": 7190380
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3663.png",
+                    "id": "pet_000604",
+                    "illustration": "PetPortrait_LiangFengWan1.png",
+                    "name": "量风碗",
+                    "stage": 1,
+                    "title": "量风碗",
+                    "types": [
+                        "翼系",
+                        "机械系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3664.png",
+                    "id": "pet_000605",
+                    "illustration": "PetPortrait_LiangFengWan2.png",
+                    "level": 42,
+                    "name": "测风蝉",
+                    "stage": 2,
+                    "title": "测风蝉",
+                    "types": [
+                        "翼系",
+                        "机械系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "量风碗进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000604",
+                    "to_wiki_id": "pet_000605",
+                    "from_pet_id": 3663,
+                    "to_pet_id": 3664,
+                    "conditions": {
+                        "level": 42,
+                        "special": "除晴天/雾天外的天气"
+                    },
+                    "special_condition_source": "manual"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "测风蝉",
+        "habitat": "行踪神秘",
+        "title": "角蝉精灵",
+        "topics": [
+            {
+                "id": "topic_002305",
+                "progress_id": "pt_000458_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002306",
+                "progress_id": "pt_000458_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002307",
+                "progress_id": "pt_000458_000003",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 30,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只炫彩突变的精灵"
+            },
+            {
+                "id": "topic_002308",
+                "progress_id": "pt_000458_000004",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
+            },
+            {
+                "id": "topic_002309",
+                "progress_id": "pt_000458_000005",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "获得「命定勇者」奖牌"
+            },
+            {
+                "id": "topic_002310",
+                "progress_id": "pt_000458_000006",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_244001.png",
+                        "kind": "道具",
+                        "name": "无风"
+                    },
+                    {
+                        "count": 1,
+                        "icon": "Item_224001.png",
+                        "kind": "道具",
+                        "name": "配方-无风"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使用1次无风"
+            },
+            {
+                "id": "topic_002311",
+                "progress_id": "pt_000458_000007",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_236001.png",
+                        "kind": "道具",
+                        "name": "广播"
+                    },
+                    {
+                        "count": 1,
+                        "icon": "Item_216001.png",
+                        "kind": "道具",
+                        "name": "配方-广播"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使用1次广播"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.25,
+                "type": "草系"
+            },
+            {
+                "multiplier": 0.25,
+                "type": "虫系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "普通系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "龙系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "毒系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "翼系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "萌系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "机械系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "幻系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "火系"
+            },
+            {
+                "multiplier": 2,
+                "type": "水系"
+            },
+            {
+                "multiplier": 2,
+                "type": "电系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "测风蝉"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 107,
+                    "before": 98,
+                    "delta": 9,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 105,
+                    "before": 98,
+                    "delta": 7,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 123,
+                    "before": 116,
+                    "delta": 7,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 103,
+                    "before": 97,
+                    "delta": 6,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 90,
+                    "before": 84,
+                    "delta": 6,
+                    "field": "魔防",
+                    "group": "stats"
+                }
+            ],
+            "kind": "changed",
+            "version": "s4-2026-10-15"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

@@ -1,0 +1,1026 @@
+{
+    "pet_id": 3496,
+    "wiki_id": "pet_000394",
+    "name": "旋叶虫",
+    "title": "旋叶虫（枯叶的样子）",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "主要栖息于恶水泛滥的湿地环境，因长期被恶水侵蚀，其体表发生了不可逆的变化——受到杂质的侵蚀，体表褪去明黄，变得像一片干枯的树叶，再也无法恢复如初。",
+        "ecology": {
+            "areas": [
+                "独角兽领地",
+                "恶水沼泽"
+            ],
+            "eggs": [
+                {
+                    "description": "击败精灵首领·暮风隐者后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“了不起”天分的精灵。",
+                    "icon": "Item_150526.png",
+                    "name": "旋叶虫的蛋",
+                    "sources": [
+                        "挑战精灵首领·暮风隐者获得"
+                    ]
+                },
+                {
+                    "description": "击败精灵首领·暮风隐者后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“相当好”天分的精灵。",
+                    "icon": "Item_150635.png",
+                    "name": "旋叶虫的蛋",
+                    "sources": [
+                        "挑战精灵首领·暮风隐者获得"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是旋叶虫的果实。",
+                    "icon": "Item_108129.png",
+                    "name": "旋叶虫的果实",
+                    "sources": [
+                        "完成风滚暮虫的图鉴课题获得"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            4,
+            8
+        ],
+        "egg_size": {
+            "huge_min": 99,
+            "max": 100,
+            "min": 53,
+            "mini_max": 54,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_e84564299274",
+        "feature_skill_id": "skill_000022",
+        "form": "枯叶的样子",
+        "game_id": 3496,
+        "gender_ratio": {
+            "female": 5,
+            "male": 5
+        },
+        "handbook_id": "handbook_000118",
+        "has_shiny": false,
+        "height": "0.1~0.15M",
+        "id": "pet_000394",
+        "image": {
+            "egg": "Item_107181.png",
+            "fruits": [
+                "Item_108129.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3496.png",
+            "illustration": "PetPortrait_xuanyechong_yidi.png"
+        },
+        "learnset_id": "learnset_08152124e1c8",
+        "move_type": "地面",
+        "name": "旋叶虫",
+        "number": "118",
+        "perception_range": 40,
+        "relation_key": "普通系|虫系",
+        "release": {
+            "date": "2026-03-26",
+            "version": "1.0.0"
+        },
+        "review_gold": 800,
+        "siblings": [
+            "pet_000303"
+        ],
+        "stage": 1,
+        "starlight": 16,
+        "stats": {
+            "atk": 15,
+            "def": 61,
+            "hp": 57,
+            "spa": 67,
+            "spd": 52,
+            "spe": 72
+        },
+        "submit_reward": 800,
+        "talent_pool_id": 1001,
+        "title": "旋叶虫（枯叶的样子）",
+        "types": [
+            "普通系",
+            "虫系"
+        ],
+        "weight": "0.1~0.85KG"
+    },
+    "feature_id": 200098,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000637",
+                "skill_id": 7130140
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000275",
+                "skill_id": 7020650
+            },
+            {
+                "level": 9,
+                "stage": 1,
+                "wiki_skill_id": "skill_000304",
+                "skill_id": 7020880
+            },
+            {
+                "level": 13,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 20,
+                "stage": 1,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "level": 25,
+                "stage": 1,
+                "wiki_skill_id": "skill_000639",
+                "skill_id": 7130160
+            },
+            {
+                "level": 27,
+                "stage": 1,
+                "wiki_skill_id": "skill_000332",
+                "skill_id": 7021160
+            },
+            {
+                "level": 28,
+                "stage": 1,
+                "wiki_skill_id": "skill_000305",
+                "skill_id": 7020890
+            },
+            {
+                "level": 33,
+                "stage": 1,
+                "wiki_skill_id": "skill_000650",
+                "skill_id": 7130280
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000266",
+                "skill_id": 7020550
+            },
+            {
+                "level": 36,
+                "stage": 1,
+                "wiki_skill_id": "skill_000255",
+                "skill_id": 7020440
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000258",
+                "skill_id": 7020470
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000325",
+                "skill_id": 7021090
+            },
+            {
+                "wiki_skill_id": "skill_000263",
+                "skill_id": 7020520
+            },
+            {
+                "wiki_skill_id": "skill_000284",
+                "skill_id": 7020740
+            },
+            {
+                "wiki_skill_id": "skill_000281",
+                "skill_id": 7020710
+            },
+            {
+                "wiki_skill_id": "skill_000346",
+                "skill_id": 7030230
+            },
+            {
+                "wiki_skill_id": "skill_000333",
+                "skill_id": 7021170
+            },
+            {
+                "wiki_skill_id": "skill_000651",
+                "skill_id": 7130290
+            },
+            {
+                "wiki_skill_id": "skill_000359",
+                "skill_id": 7030430
+            },
+            {
+                "wiki_skill_id": "skill_000347",
+                "skill_id": 7030240
+            },
+            {
+                "wiki_skill_id": "skill_000821",
+                "skill_id": 7190390
+            },
+            {
+                "wiki_skill_id": "skill_000299",
+                "skill_id": 7020860
+            },
+            {
+                "wiki_skill_id": "skill_000280",
+                "skill_id": 7020700
+            },
+            {
+                "wiki_skill_id": "skill_000324",
+                "skill_id": 7021080
+            },
+            {
+                "wiki_skill_id": "skill_000634",
+                "skill_id": 7130110
+            },
+            {
+                "wiki_skill_id": "skill_000336",
+                "skill_id": 7021220
+            },
+            {
+                "wiki_skill_id": "skill_000288",
+                "skill_id": 7020790
+            },
+            {
+                "wiki_skill_id": "skill_000658",
+                "skill_id": 7130360
+            },
+            {
+                "wiki_skill_id": "skill_000645",
+                "skill_id": 7130220
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000307",
+                "skill_id": 7020910
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000340",
+                "skill_id": 7030170
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000397",
+                "skill_id": 7040360
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000436",
+                "skill_id": 7050340
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000499",
+                "skill_id": 7080120
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000543",
+                "skill_id": 7090240
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000595",
+                "skill_id": 7110310
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000622",
+                "skill_id": 7120200
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000649",
+                "skill_id": 7130270
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000677",
+                "skill_id": 7140240
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000700",
+                "skill_id": 7150210
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000754",
+                "skill_id": 7170220
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000785",
+                "skill_id": 7180260
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000478",
+                "skill_id": 7070110
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000820",
+                "skill_id": 7190380
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "form": "枯叶的样子",
+                    "head": "PetAvatar_3496.png",
+                    "id": "pet_000394",
+                    "illustration": "PetPortrait_xuanyechong_yidi.png",
+                    "name": "旋叶虫",
+                    "stage": 1,
+                    "title": "旋叶虫（枯叶的样子）",
+                    "types": [
+                        "普通系",
+                        "虫系"
+                    ]
+                },
+                {
+                    "form": "枯叶的样子",
+                    "head": "PetAvatar_3497.png",
+                    "id": "pet_000395",
+                    "illustration": "PetPortrait_pengyechong_yidi.png",
+                    "level": 25,
+                    "name": "蓬叶虫",
+                    "stage": 2,
+                    "title": "蓬叶虫（枯叶的样子）",
+                    "types": [
+                        "普通系",
+                        "虫系"
+                    ]
+                },
+                {
+                    "form": "枯叶的样子",
+                    "head": "PetAvatar_3498.png",
+                    "id": "pet_000396",
+                    "illustration": "PetPortrait_fengguanmuchong_yidi.png",
+                    "level": 45,
+                    "name": "风滚暮虫",
+                    "stage": 3,
+                    "title": "风滚暮虫（枯叶的样子）",
+                    "types": [
+                        "普通系",
+                        "虫系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "枯叶的样子",
+                    "head": "PetAvatar_4101.png",
+                    "id": "pet_000594",
+                    "illustration": "PetPortrait_fenggunmuchong_shouling.png",
+                    "item": "暮风隐者的信物",
+                    "name": "暮风隐者",
+                    "stage": 4,
+                    "title": "暮风隐者（枯叶的样子）",
+                    "types": [
+                        "普通系",
+                        "虫系"
+                    ]
+                }
+            ],
+            "name": "旋叶虫进化链（枯叶的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000394",
+                    "to_wiki_id": "pet_000395",
+                    "from_pet_id": 3496,
+                    "to_pet_id": 3497,
+                    "conditions": {
+                        "level": 25
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000395",
+                    "to_wiki_id": "pet_000396",
+                    "from_pet_id": 3497,
+                    "to_pet_id": 3498,
+                    "conditions": {
+                        "level": 45
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000396",
+                    "to_wiki_id": "pet_000594",
+                    "from_pet_id": 3498,
+                    "to_pet_id": 5062,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "暮风隐者的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "风眠省图鉴",
+            "洛克里安图鉴"
+        ],
+        "entry_name": "旋叶虫",
+        "habitat": "常见于树林",
+        "title": "拟态精灵",
+        "topics": [
+            {
+                "id": "topic_000623",
+                "progress_id": "pt_000118_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_000624",
+                "progress_id": "pt_000118_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_000625",
+                "progress_id": "pt_000118_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            },
+            {
+                "id": "topic_000626",
+                "progress_id": "pt_000118_000004",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_3.png",
+                        "kind": "资源",
+                        "name": "许愿星"
+                    },
+                    {
+                        "count": 20,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 2,
+                "text": "确认2种不同样子的旋叶虫"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "草系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "幽系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "火系"
+            },
+            {
+                "multiplier": 2,
+                "type": "翼系"
+            }
+        ]
+    },
+    "training_reference": {
+        "pvp": {
+            "blood": [],
+            "nature": [],
+            "skill": [],
+            "talent": []
+        },
+        "world": {
+            "blood": [
+                [
+                    19,
+                    6804
+                ],
+                [
+                    11,
+                    1365
+                ],
+                [
+                    1,
+                    1011
+                ],
+                [
+                    24,
+                    252
+                ],
+                [
+                    23,
+                    160
+                ],
+                [
+                    18,
+                    118
+                ],
+                [
+                    2,
+                    84
+                ],
+                [
+                    16,
+                    67
+                ],
+                [
+                    17,
+                    50
+                ],
+                [
+                    10,
+                    25
+                ],
+                [
+                    5,
+                    25
+                ],
+                [
+                    8,
+                    16
+                ],
+                [
+                    6,
+                    15
+                ],
+                [
+                    3,
+                    8
+                ]
+            ],
+            "nature": [
+                [
+                    6,
+                    581
+                ],
+                [
+                    15,
+                    505
+                ],
+                [
+                    11,
+                    480
+                ],
+                [
+                    8,
+                    463
+                ],
+                [
+                    13,
+                    430
+                ],
+                [
+                    28,
+                    396
+                ],
+                [
+                    4,
+                    362
+                ],
+                [
+                    2,
+                    362
+                ],
+                [
+                    17,
+                    362
+                ],
+                [
+                    21,
+                    354
+                ],
+                [
+                    19,
+                    345
+                ],
+                [
+                    5,
+                    345
+                ],
+                [
+                    25,
+                    337
+                ],
+                [
+                    7,
+                    320
+                ],
+                [
+                    26,
+                    320
+                ],
+                [
+                    23,
+                    311
+                ],
+                [
+                    30,
+                    311
+                ],
+                [
+                    29,
+                    295
+                ],
+                [
+                    9,
+                    286
+                ],
+                [
+                    1,
+                    286
+                ],
+                [
+                    22,
+                    286
+                ],
+                [
+                    14,
+                    278
+                ],
+                [
+                    20,
+                    278
+                ],
+                [
+                    24,
+                    278
+                ],
+                [
+                    12,
+                    269
+                ],
+                [
+                    10,
+                    269
+                ],
+                [
+                    27,
+                    269
+                ],
+                [
+                    18,
+                    252
+                ],
+                [
+                    3,
+                    244
+                ],
+                [
+                    16,
+                    126
+                ]
+            ],
+            "skill": [
+                [
+                    7130140,
+                    7377
+                ],
+                [
+                    7020650,
+                    7369
+                ],
+                [
+                    7020880,
+                    3878
+                ],
+                [
+                    7020780,
+                    3701
+                ],
+                [
+                    7130160,
+                    2183
+                ],
+                [
+                    7130280,
+                    1905
+                ],
+                [
+                    7020890,
+                    1897
+                ],
+                [
+                    7021160,
+                    1492
+                ],
+                [
+                    7020550,
+                    1180
+                ],
+                [
+                    7020440,
+                    801
+                ],
+                [
+                    7130180,
+                    430
+                ],
+                [
+                    7130270,
+                    92
+                ],
+                [
+                    7021170,
+                    75
+                ],
+                [
+                    7020520,
+                    59
+                ],
+                [
+                    7020910,
+                    50
+                ],
+                [
+                    7020710,
+                    50
+                ],
+                [
+                    7130290,
+                    42
+                ],
+                [
+                    7070240,
+                    42
+                ],
+                [
+                    7120270,
+                    33
+                ],
+                [
+                    7180270,
+                    33
+                ],
+                [
+                    7020700,
+                    25
+                ],
+                [
+                    7030570,
+                    25
+                ],
+                [
+                    7060190,
+                    25
+                ],
+                [
+                    7020670,
+                    25
+                ],
+                [
+                    7060200,
+                    25
+                ],
+                [
+                    7021190,
+                    25
+                ],
+                [
+                    7060270,
+                    25
+                ],
+                [
+                    7170300,
+                    25
+                ],
+                [
+                    7040200,
+                    25
+                ],
+                [
+                    7180430,
+                    16
+                ]
+            ],
+            "talent": [
+                [
+                    4,
+                    5320
+                ],
+                [
+                    6,
+                    5303
+                ],
+                [
+                    3,
+                    5193
+                ],
+                [
+                    1,
+                    5134
+                ],
+                [
+                    5,
+                    4224
+                ],
+                [
+                    2,
+                    2040
+                ]
+            ]
+        }
+    },
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "同频",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "防反",
+                    "source": "技能书"
+                },
+                {
+                    "after": "敌方获得全攻击技能能耗+2，持续3回合。",
+                    "before": "敌方获得全攻击技能能耗+3，持续3回合。",
+                    "field": "聒噪说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 95,
+                    "before": 65,
+                    "delta": 30,
+                    "field": "触底强击威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 4,
+                    "before": 3,
+                    "delta": 1,
+                    "field": "触底强击能耗",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成魔伤，使用后若能量耗尽，本次技能威力+120。",
+                    "before": "造成魔伤，使用后若能量耗尽，本次技能威力+110。",
+                    "field": "触底强击说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 75,
+                    "before": 80,
+                    "delta": -5,
+                    "field": "阻断威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s2-2026-05-21"
+        },
+        {
+            "changes": [
+                {
+                    "after": 85,
+                    "before": 95,
+                    "delta": -10,
+                    "field": "翅刃威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 3,
+                    "before": 4,
+                    "delta": -1,
+                    "field": "翅刃能耗",
+                    "group": "skill"
+                },
+                {
+                    "action": "lord_added",
+                    "group": "lord",
+                    "value": "暮风隐者"
+                }
+            ],
+            "kind": "changed",
+            "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "信息素",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "掩护",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s4-2026-09-10"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

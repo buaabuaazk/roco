@@ -1,0 +1,1430 @@
+{
+    "pet_id": 3142,
+    "wiki_id": "pet_000128",
+    "name": "小夜",
+    "title": "小夜",
+    "profile": {
+        "affinity": {
+            "enjoy": [
+                "幽系"
+            ],
+            "hate": [
+                "光系"
+            ]
+        },
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000,
+            50000
+        ],
+        "class": "漂浮类精灵",
+        "description": "身手敏捷的小猫，擅长在雾气中隐藏身形，也可以幻化成其他物体。常常以惊讶和恐惧为食，消化后会散发出一种奇怪的味道。",
+        "ecology": {
+            "activities": [
+                {
+                    "name": "重逢契约-S2赛季回流活动",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-05-21 ~ 2026-07-31"
+                },
+                {
+                    "name": "重逢契约-S3赛季回流活动",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-07-16 ~ 2026-09-25"
+                },
+                {
+                    "name": "重逢契约-S4赛季（区分14天、30天、60天）",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-09-10 ~ 2026-11-20"
+                },
+                {
+                    "name": "重逢契约-S5赛季（区分14天、30天、60天）",
+                    "note": "回归精灵自选蛋",
+                    "window": "2026-11-05 ~ 2027-01-15"
+                }
+            ],
+            "areas": [
+                "聆风塔地",
+                "风息山口",
+                "旧飞艇航道",
+                "风眠圣所",
+                "港口驻地",
+                "拾荒港口",
+                "威廉古堡",
+                "迷雾之森"
+            ],
+            "eggs": [
+                {
+                    "description": "在幻影屋发现的珍贵精灵蛋，经过孵化可以得到“了不起”天分、且拥有量身定制资质、“无畏”特长的小夜。",
+                    "dungeon": "dg_000021",
+                    "fixed_aptitudes": [
+                        {
+                            "stat": "生命",
+                            "value": 8
+                        },
+                        {
+                            "stat": "物攻",
+                            "value": 8
+                        },
+                        {
+                            "stat": "速度",
+                            "value": 8
+                        }
+                    ],
+                    "fixed_nature": "固执",
+                    "fixed_nature_negative": "魔攻",
+                    "fixed_nature_positive": "物攻",
+                    "fixed_talent": "无畏",
+                    "fixed_talent_description": "同种群会触发抵触的环境，本精灵会触发亲和。",
+                    "icon": "Item_150072.png",
+                    "name": "小夜的蛋",
+                    "sources": [
+                        "幻影屋"
+                    ]
+                },
+                {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的小夜。",
+                    "icon": "Item_150755.png",
+                    "is_shiny": true,
+                    "name": "异色小夜的蛋"
+                },
+                {
+                    "description": "参与活动「重逢契约」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分、开朗的小夜。",
+                    "fixed_nature": "开朗",
+                    "fixed_nature_negative": "魔攻",
+                    "fixed_nature_positive": "速度",
+                    "icon": "Item_151055.png",
+                    "name": "小夜的蛋",
+                    "sources": [
+                        "参与活动「重逢契约」"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是小夜的果实。",
+                    "icon": "Item_108055.png",
+                    "name": "小夜的果实",
+                    "sources": [
+                        "完成朔夜伊芙的图鉴课题获得"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            9,
+            7
+        ],
+        "egg_size": {
+            "huge_min": 3011,
+            "max": 3040,
+            "min": 1575,
+            "mini_max": 1604,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_b2ef98f04e2e",
+        "feature_skill_id": "skill_000062",
+        "game_id": 3142,
+        "gender_ratio": {
+            "female": 10,
+            "male": 0
+        },
+        "handbook_id": "handbook_000085",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "0.51~0.73M",
+        "id": "pet_000128",
+        "image": {
+            "egg": "Item_107055.png",
+            "fruits": [
+                "Item_108055.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3142.png",
+            "illustration": "PetPortrait_xiaoye.png",
+            "shiny": "PetPortrait_xiaoye_yise.png",
+            "shiny_head": "PetAvatar_3142_1.png"
+        },
+        "learnset_id": "learnset_5388bac09bf5",
+        "move_type": "步行",
+        "name": "小夜",
+        "number": "085",
+        "perception_range": 40,
+        "relation_key": "恶系",
+        "release": {
+            "date": "2026-03-26",
+            "version": "1.0.0"
+        },
+        "review_gold": 1600,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 32,
+        "stats": {
+            "atk": 69,
+            "def": 62,
+            "hp": 60,
+            "spa": 63,
+            "spd": 51,
+            "spe": 69
+        },
+        "submit_reward": 1600,
+        "talent_pool_id": 1001,
+        "title": "小夜",
+        "types": [
+            "恶系"
+        ],
+        "weight": "4.5~7.6KG"
+    },
+    "feature_id": 200143,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000767",
+                "skill_id": 7180070
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000784",
+                "skill_id": 7180250
+            },
+            {
+                "level": 13,
+                "stage": 1,
+                "wiki_skill_id": "skill_000277",
+                "skill_id": 7020670
+            },
+            {
+                "level": 22,
+                "stage": 1,
+                "wiki_skill_id": "skill_000305",
+                "skill_id": 7020890
+            },
+            {
+                "level": 28,
+                "stage": 1,
+                "wiki_skill_id": "skill_000272",
+                "skill_id": 7020620
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000781",
+                "skill_id": 7180210
+            },
+            {
+                "level": 36,
+                "stage": 1,
+                "wiki_skill_id": "skill_000769",
+                "skill_id": 7180090
+            },
+            {
+                "level": 38,
+                "stage": 1,
+                "wiki_skill_id": "skill_000794",
+                "skill_id": 7180350
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000785",
+                "skill_id": 7180260
+            },
+            {
+                "level": 41,
+                "stage": 1,
+                "wiki_skill_id": "skill_000778",
+                "skill_id": 7180180
+            },
+            {
+                "level": 46,
+                "stage": 1,
+                "wiki_skill_id": "skill_000780",
+                "skill_id": 7180200
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000771",
+                "skill_id": 7180110
+            },
+            {
+                "level": 50,
+                "stage": 1,
+                "wiki_skill_id": "skill_000779",
+                "skill_id": 7180190
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000717",
+                "skill_id": 7160130
+            },
+            {
+                "wiki_skill_id": "skill_000729",
+                "skill_id": 7160250
+            },
+            {
+                "wiki_skill_id": "skill_000732",
+                "skill_id": 7160280
+            },
+            {
+                "wiki_skill_id": "skill_000724",
+                "skill_id": 7160200
+            },
+            {
+                "wiki_skill_id": "skill_000731",
+                "skill_id": 7160270
+            },
+            {
+                "wiki_skill_id": "skill_000676",
+                "skill_id": 7140230
+            },
+            {
+                "wiki_skill_id": "skill_000680",
+                "skill_id": 7140270
+            },
+            {
+                "wiki_skill_id": "skill_000681",
+                "skill_id": 7140280
+            },
+            {
+                "wiki_skill_id": "skill_000669",
+                "skill_id": 7140150
+            },
+            {
+                "wiki_skill_id": "skill_000791",
+                "skill_id": 7180320
+            },
+            {
+                "wiki_skill_id": "skill_000325",
+                "skill_id": 7021090
+            },
+            {
+                "wiki_skill_id": "skill_000295",
+                "skill_id": 7020850
+            },
+            {
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            },
+            {
+                "wiki_skill_id": "skill_000279",
+                "skill_id": 7020690
+            },
+            {
+                "wiki_skill_id": "skill_000324",
+                "skill_id": 7021080
+            },
+            {
+                "wiki_skill_id": "skill_000327",
+                "skill_id": 7021110
+            },
+            {
+                "wiki_skill_id": "skill_000799",
+                "skill_id": 7180420
+            },
+            {
+                "wiki_skill_id": "skill_000740",
+                "skill_id": 7160390
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000274",
+                "skill_id": 7020640
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000345",
+                "skill_id": 7030220
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000388",
+                "skill_id": 7040260
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000420",
+                "skill_id": 7050170
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000507",
+                "skill_id": 7080200
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000536",
+                "skill_id": 7090160
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000589",
+                "skill_id": 7110250
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000757",
+                "skill_id": 7170250
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000786",
+                "skill_id": 7180270
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000484",
+                "skill_id": 7070170
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000811",
+                "skill_id": 7190280
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3142.png",
+                    "id": "pet_000128",
+                    "illustration": "PetPortrait_xiaoye.png",
+                    "name": "小夜",
+                    "stage": 1,
+                    "title": "小夜",
+                    "types": [
+                        "恶系"
+                    ]
+                },
+                {
+                    "cond": "雌性",
+                    "head": "PetAvatar_3143.png",
+                    "id": "pet_000129",
+                    "illustration": "PetPortrait_ziye.png",
+                    "level": 26,
+                    "name": "紫夜",
+                    "stage": 2,
+                    "title": "紫夜",
+                    "types": [
+                        "恶系"
+                    ]
+                },
+                {
+                    "cond": "雌性",
+                    "head": "PetAvatar_3144.png",
+                    "id": "pet_000130",
+                    "illustration": "PetPortrait_ziyemeiying.png",
+                    "level": 44,
+                    "name": "朔夜伊芙",
+                    "stage": 3,
+                    "title": "朔夜伊芙",
+                    "types": [
+                        "恶系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "小夜进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000128",
+                    "to_wiki_id": "pet_000129",
+                    "from_pet_id": 3142,
+                    "to_pet_id": 3143,
+                    "conditions": {
+                        "level": 26,
+                        "special": "雌性"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000129",
+                    "to_wiki_id": "pet_000130",
+                    "from_pet_id": 3143,
+                    "to_pet_id": 3144,
+                    "conditions": {
+                        "level": 44,
+                        "special": "雌性"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "风眠省图鉴",
+            "洛克里安图鉴"
+        ],
+        "entry_name": "小夜",
+        "habitat": "行踪神秘",
+        "title": "猫精灵",
+        "topics": [
+            {
+                "id": "topic_000453",
+                "progress_id": "pt_000085_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_000454",
+                "progress_id": "pt_000085_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_000455",
+                "progress_id": "pt_000085_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "幽系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "恶系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "光系"
+            },
+            {
+                "multiplier": 2,
+                "type": "虫系"
+            },
+            {
+                "multiplier": 2,
+                "type": "武系"
+            },
+            {
+                "multiplier": 2,
+                "type": "萌系"
+            }
+        ]
+    },
+    "training_reference": {
+        "pvp": {
+            "blood": [
+                [
+                    16,
+                    7155
+                ],
+                [
+                    8,
+                    2273
+                ],
+                [
+                    24,
+                    150
+                ],
+                [
+                    17,
+                    72
+                ],
+                [
+                    14,
+                    43
+                ],
+                [
+                    3,
+                    33
+                ],
+                [
+                    13,
+                    31
+                ],
+                [
+                    9,
+                    29
+                ],
+                [
+                    23,
+                    29
+                ],
+                [
+                    10,
+                    28
+                ],
+                [
+                    2,
+                    27
+                ],
+                [
+                    18,
+                    23
+                ],
+                [
+                    15,
+                    21
+                ],
+                [
+                    1,
+                    15
+                ],
+                [
+                    7,
+                    15
+                ],
+                [
+                    5,
+                    13
+                ],
+                [
+                    6,
+                    11
+                ],
+                [
+                    11,
+                    11
+                ],
+                [
+                    4,
+                    11
+                ],
+                [
+                    12,
+                    10
+                ]
+            ],
+            "nature": [
+                [
+                    2,
+                    2481
+                ],
+                [
+                    21,
+                    773
+                ],
+                [
+                    23,
+                    429
+                ],
+                [
+                    7,
+                    341
+                ],
+                [
+                    22,
+                    322
+                ],
+                [
+                    25,
+                    261
+                ],
+                [
+                    1,
+                    257
+                ],
+                [
+                    3,
+                    250
+                ],
+                [
+                    11,
+                    244
+                ],
+                [
+                    13,
+                    241
+                ],
+                [
+                    28,
+                    237
+                ],
+                [
+                    24,
+                    237
+                ],
+                [
+                    5,
+                    235
+                ],
+                [
+                    12,
+                    234
+                ],
+                [
+                    17,
+                    233
+                ],
+                [
+                    4,
+                    232
+                ],
+                [
+                    15,
+                    229
+                ],
+                [
+                    20,
+                    229
+                ],
+                [
+                    14,
+                    228
+                ],
+                [
+                    27,
+                    228
+                ],
+                [
+                    16,
+                    227
+                ],
+                [
+                    26,
+                    222
+                ],
+                [
+                    29,
+                    222
+                ],
+                [
+                    19,
+                    215
+                ],
+                [
+                    30,
+                    215
+                ],
+                [
+                    10,
+                    206
+                ],
+                [
+                    18,
+                    202
+                ],
+                [
+                    6,
+                    193
+                ],
+                [
+                    9,
+                    190
+                ],
+                [
+                    8,
+                    187
+                ]
+            ],
+            "skill": [
+                [
+                    7020780,
+                    4366
+                ],
+                [
+                    7180070,
+                    3782
+                ],
+                [
+                    7180160,
+                    3694
+                ],
+                [
+                    7180090,
+                    3001
+                ],
+                [
+                    7020620,
+                    2448
+                ],
+                [
+                    7100150,
+                    2180
+                ],
+                [
+                    7020670,
+                    2006
+                ],
+                [
+                    7180250,
+                    1979
+                ],
+                [
+                    7020890,
+                    1902
+                ],
+                [
+                    7180260,
+                    1780
+                ],
+                [
+                    7180210,
+                    1686
+                ],
+                [
+                    7180270,
+                    1536
+                ],
+                [
+                    7180350,
+                    1308
+                ],
+                [
+                    7180180,
+                    1175
+                ],
+                [
+                    7180110,
+                    801
+                ],
+                [
+                    7180200,
+                    692
+                ],
+                [
+                    7180190,
+                    279
+                ],
+                [
+                    7070170,
+                    51
+                ],
+                [
+                    7160200,
+                    44
+                ],
+                [
+                    7021090,
+                    44
+                ],
+                [
+                    7160270,
+                    43
+                ],
+                [
+                    7021080,
+                    37
+                ],
+                [
+                    7020850,
+                    29
+                ],
+                [
+                    7021110,
+                    22
+                ],
+                [
+                    7140230,
+                    21
+                ],
+                [
+                    7160230,
+                    17
+                ],
+                [
+                    7020690,
+                    17
+                ],
+                [
+                    7160130,
+                    14
+                ],
+                [
+                    7030220,
+                    14
+                ],
+                [
+                    7040260,
+                    13
+                ]
+            ],
+            "talent": [
+                [
+                    6,
+                    6622
+                ],
+                [
+                    2,
+                    6297
+                ],
+                [
+                    1,
+                    5869
+                ],
+                [
+                    3,
+                    3713
+                ],
+                [
+                    4,
+                    3624
+                ],
+                [
+                    5,
+                    3269
+                ]
+            ]
+        },
+        "world": {
+            "blood": [
+                [
+                    16,
+                    7517
+                ],
+                [
+                    24,
+                    835
+                ],
+                [
+                    23,
+                    351
+                ],
+                [
+                    14,
+                    205
+                ],
+                [
+                    9,
+                    188
+                ],
+                [
+                    3,
+                    168
+                ],
+                [
+                    8,
+                    115
+                ],
+                [
+                    13,
+                    92
+                ],
+                [
+                    18,
+                    88
+                ],
+                [
+                    17,
+                    87
+                ],
+                [
+                    2,
+                    74
+                ],
+                [
+                    15,
+                    73
+                ],
+                [
+                    10,
+                    52
+                ],
+                [
+                    4,
+                    32
+                ],
+                [
+                    5,
+                    31
+                ],
+                [
+                    12,
+                    25
+                ],
+                [
+                    6,
+                    19
+                ],
+                [
+                    1,
+                    19
+                ],
+                [
+                    7,
+                    17
+                ],
+                [
+                    11,
+                    12
+                ]
+            ],
+            "nature": [
+                [
+                    21,
+                    815
+                ],
+                [
+                    2,
+                    692
+                ],
+                [
+                    23,
+                    465
+                ],
+                [
+                    22,
+                    448
+                ],
+                [
+                    7,
+                    394
+                ],
+                [
+                    8,
+                    304
+                ],
+                [
+                    17,
+                    302
+                ],
+                [
+                    9,
+                    301
+                ],
+                [
+                    24,
+                    296
+                ],
+                [
+                    28,
+                    295
+                ],
+                [
+                    25,
+                    295
+                ],
+                [
+                    4,
+                    290
+                ],
+                [
+                    1,
+                    289
+                ],
+                [
+                    29,
+                    287
+                ],
+                [
+                    13,
+                    287
+                ],
+                [
+                    11,
+                    287
+                ],
+                [
+                    18,
+                    286
+                ],
+                [
+                    27,
+                    285
+                ],
+                [
+                    26,
+                    285
+                ],
+                [
+                    3,
+                    285
+                ],
+                [
+                    12,
+                    284
+                ],
+                [
+                    5,
+                    283
+                ],
+                [
+                    16,
+                    283
+                ],
+                [
+                    19,
+                    282
+                ],
+                [
+                    14,
+                    282
+                ],
+                [
+                    6,
+                    281
+                ],
+                [
+                    10,
+                    280
+                ],
+                [
+                    20,
+                    280
+                ],
+                [
+                    30,
+                    280
+                ],
+                [
+                    15,
+                    277
+                ]
+            ],
+            "skill": [
+                [
+                    7180070,
+                    4958
+                ],
+                [
+                    7020780,
+                    4928
+                ],
+                [
+                    7180250,
+                    3497
+                ],
+                [
+                    7180160,
+                    3397
+                ],
+                [
+                    7020890,
+                    3186
+                ],
+                [
+                    7020670,
+                    3183
+                ],
+                [
+                    7180090,
+                    3070
+                ],
+                [
+                    7020620,
+                    3058
+                ],
+                [
+                    7180270,
+                    2495
+                ],
+                [
+                    7180260,
+                    1878
+                ],
+                [
+                    7180210,
+                    958
+                ],
+                [
+                    7180350,
+                    921
+                ],
+                [
+                    7180180,
+                    540
+                ],
+                [
+                    7180110,
+                    399
+                ],
+                [
+                    7180200,
+                    165
+                ],
+                [
+                    7180190,
+                    109
+                ],
+                [
+                    7100150,
+                    95
+                ],
+                [
+                    7021090,
+                    60
+                ],
+                [
+                    7021080,
+                    56
+                ],
+                [
+                    7160230,
+                    44
+                ],
+                [
+                    7021110,
+                    39
+                ],
+                [
+                    7140230,
+                    39
+                ],
+                [
+                    7070170,
+                    38
+                ],
+                [
+                    7020850,
+                    38
+                ],
+                [
+                    7070270,
+                    38
+                ],
+                [
+                    7040260,
+                    37
+                ],
+                [
+                    7100320,
+                    37
+                ],
+                [
+                    7150390,
+                    36
+                ],
+                [
+                    7140270,
+                    36
+                ],
+                [
+                    7120300,
+                    36
+                ]
+            ],
+            "talent": [
+                [
+                    6,
+                    5616
+                ],
+                [
+                    2,
+                    5197
+                ],
+                [
+                    1,
+                    4881
+                ],
+                [
+                    4,
+                    4526
+                ],
+                [
+                    3,
+                    4488
+                ],
+                [
+                    5,
+                    4045
+                ]
+            ]
+        }
+    },
+    "history": [
+        {
+            "changes": [
+                {
+                    "after": "敌方获得物攻-60%和速度-60。",
+                    "before": "敌方获得物攻-130%。",
+                    "field": "咆哮说明",
+                    "group": "skill"
+                },
+                {
+                    "after": "自己获得速度+30，本技能位于1号或3号位时额外获得物攻+80%，传动1。",
+                    "before": "自己获得速度+80，本技能位于1号或3号位时额外获得物攻+60%，传动1。",
+                    "field": "啮合传递说明",
+                    "group": "skill"
+                },
+                {
+                    "after": "自己和敌方获得萌化：回复40%生命。",
+                    "before": "自己和敌方获得萌化：回复40%生命和4能量。",
+                    "field": "甜心续航说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s2-2026-05-21"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "下注",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "耍赖",
+                    "source": "技能书"
+                },
+                {
+                    "after": "若敌方本回合回复生命，改为失去2倍（含溢出的回复量）。先手+1。",
+                    "before": "若敌方本回合回复生命，改为失去2倍。先手+1。",
+                    "field": "伪造账单说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "after": "造成魔伤，3连击。自己获得萌化：威力永久+10。",
+                    "before": "造成魔伤，3连击。自己获得萌化：威力永久+20。",
+                    "field": "撒娇说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s3-2026-08-18"
+        },
+        {
+            "changes": [
+                {
+                    "after": "造成魔伤，3连击。自己获得萌化：全技能威力永久+10。",
+                    "before": "造成魔伤，3连击。自己获得萌化：威力永久+10。",
+                    "field": "撒娇说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 20,
+                    "before": 30,
+                    "delta": -10,
+                    "field": "撕咬威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "自己获得双攻和双防-50%，应对防御：改为敌方获得双攻和双防-120%。",
+                    "before": "自己获得双攻和双防-100%，应对防御：改为敌方获得双攻和双防-100%。",
+                    "field": "暗箱操作说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s4-2026-09-10"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

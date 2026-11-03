@@ -1,0 +1,38 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物伤，应对状态：额外打断被应对技能。",
+    "desc_notes": [
+        1015,
+        1011
+    ],
+    "element": "武系",
+    "energy": 2,
+    "game_id": 7140090,
+    "icon": "Skill_213009.png",
+    "name": "斩断",
+    "power": 70,
+    "skill_id": 7140090,
+    "wiki_id": "skill_000664",
+    "terms": {
+        "1015": {
+            "desc": "若敌方使用状态技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对状态"
+        },
+        "1011": {
+            "desc": "使敌方本次无法释放对应技能。",
+            "note": "打断"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000158",
+            "head": "PetAvatar_3602.png",
+            "pet_id": "pet_000467",
+            "pet_name": "炽心勇狮",
+            "stone_icon": "Item_243001.png",
+            "topic": "使用2次斩断",
+            "topic_id": "topic_000824"
+        }
+    ]
+}

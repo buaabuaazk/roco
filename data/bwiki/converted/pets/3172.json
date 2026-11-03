@@ -1,0 +1,1382 @@
+{
+    "pet_id": 3172,
+    "wiki_id": "pet_000151",
+    "name": "雪豆丁",
+    "title": "雪豆丁",
+    "profile": {
+        "affinity": {
+            "enjoy": [
+                "草系",
+                "水系",
+                "冰系"
+            ],
+            "hate": [
+                "火系"
+            ]
+        },
+        "can_double_ride": true,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "出生后被父母放置在雪窝里，进食补充的能量会在冬眠时令身躯快速成长。大手大脚的雪豆丁习惯于翻滚着移动。思维直接，比较容易发脾气，可以抚摸脑袋令其冷静。",
+        "ecology": {
+            "areas": [
+                "星霜崖地",
+                "岚语峰西侧",
+                "巨人裂谷南",
+                "巨人裂谷北"
+            ],
+            "eggs": [
+                {
+                    "description": "在雪巨人的守护地发现的珍贵精灵蛋，经过孵化可以得到“了不起”天分、且拥有量身定制资质、“同乘”特长的雪豆丁。",
+                    "dungeon": "dg_000036",
+                    "fixed_aptitudes": [
+                        {
+                            "stat": "生命",
+                            "value": 8
+                        },
+                        {
+                            "stat": "物攻",
+                            "value": 8
+                        },
+                        {
+                            "stat": "魔防",
+                            "value": 8
+                        }
+                    ],
+                    "fixed_nature": "固执",
+                    "fixed_nature_negative": "魔攻",
+                    "fixed_nature_positive": "物攻",
+                    "fixed_talent": "同乘",
+                    "fixed_talent_description": "本精灵可以携带其他洛克同乘。",
+                    "icon": "Item_150090.png",
+                    "name": "雪豆丁的蛋",
+                    "sources": [
+                        "雪巨人的守护地"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是雪豆丁的果实。",
+                    "icon": "Item_108065.png",
+                    "name": "雪豆丁的果实",
+                    "sources": [
+                        "完成雪巨人的图鉴课题获得"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            9,
+            2
+        ],
+        "egg_size": {
+            "huge_min": 4967,
+            "max": 5000,
+            "min": 3325,
+            "mini_max": 3359,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_e00adb96ae21",
+        "feature_skill_id": "skill_000041",
+        "game_id": 3172,
+        "gender_ratio": {
+            "female": 5,
+            "male": 5
+        },
+        "handbook_id": "handbook_000134",
+        "handbook_show_topics": true,
+        "has_shiny": false,
+        "height": "0.86~1.23M",
+        "id": "pet_000151",
+        "image": {
+            "egg": "Item_107065.png",
+            "fruits": [
+                "Item_108065.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3172.png",
+            "illustration": "PetPortrait_xuedouding.png"
+        },
+        "learnset_id": "learnset_1adcdb808e69",
+        "move_type": "步行",
+        "name": "雪豆丁",
+        "number": "134",
+        "perception_range": 40,
+        "relation_key": "冰系",
+        "release": {
+            "date": "2026-03-26",
+            "version": "1.0.0"
+        },
+        "review_gold": 800,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 16,
+        "stats": {
+            "atk": 104,
+            "def": 83,
+            "hp": 97,
+            "spa": 47,
+            "spd": 62,
+            "spe": 36
+        },
+        "submit_reward": 800,
+        "talent_pool_id": 1002,
+        "title": "雪豆丁",
+        "types": [
+            "冰系"
+        ],
+        "weight": "9.5~12.5KG"
+    },
+    "feature_id": 200118,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000542",
+                "skill_id": 7090230
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000549",
+                "skill_id": 7090300
+            },
+            {
+                "level": 11,
+                "stage": 1,
+                "wiki_skill_id": "skill_000313",
+                "skill_id": 7020970
+            },
+            {
+                "level": 21,
+                "stage": 1,
+                "wiki_skill_id": "skill_000539",
+                "skill_id": 7090190
+            },
+            {
+                "level": 29,
+                "stage": 1,
+                "wiki_skill_id": "skill_000547",
+                "skill_id": 7090280
+            },
+            {
+                "level": 34,
+                "stage": 1,
+                "wiki_skill_id": "skill_000554",
+                "skill_id": 7090350
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000531",
+                "skill_id": 7090110
+            },
+            {
+                "level": 39,
+                "stage": 1,
+                "wiki_skill_id": "skill_000532",
+                "skill_id": 7090120
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000541",
+                "skill_id": 7090210
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000533",
+                "skill_id": 7090130
+            },
+            {
+                "level": 46,
+                "stage": 1,
+                "wiki_skill_id": "skill_000553",
+                "skill_id": 7090340
+            },
+            {
+                "level": 49,
+                "stage": 1,
+                "wiki_skill_id": "skill_000540",
+                "skill_id": 7090200
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000272",
+                "skill_id": 7020620
+            },
+            {
+                "wiki_skill_id": "skill_000751",
+                "skill_id": 7170190
+            },
+            {
+                "wiki_skill_id": "skill_000752",
+                "skill_id": 7170200
+            },
+            {
+                "wiki_skill_id": "skill_000747",
+                "skill_id": 7170140
+            },
+            {
+                "wiki_skill_id": "skill_000748",
+                "skill_id": 7170150
+            },
+            {
+                "wiki_skill_id": "skill_000679",
+                "skill_id": 7140260
+            },
+            {
+                "wiki_skill_id": "skill_000683",
+                "skill_id": 7140300
+            },
+            {
+                "wiki_skill_id": "skill_000309",
+                "skill_id": 7020930
+            },
+            {
+                "wiki_skill_id": "skill_000260",
+                "skill_id": 7020490
+            },
+            {
+                "wiki_skill_id": "skill_000295",
+                "skill_id": 7020850
+            },
+            {
+                "wiki_skill_id": "skill_000327",
+                "skill_id": 7021110
+            },
+            {
+                "wiki_skill_id": "skill_000290",
+                "skill_id": 7020810
+            },
+            {
+                "wiki_skill_id": "skill_000743",
+                "skill_id": 7170100
+            },
+            {
+                "wiki_skill_id": "skill_000559",
+                "skill_id": 7090430
+            },
+            {
+                "wiki_skill_id": "skill_000562",
+                "skill_id": 7090460
+            },
+            {
+                "wiki_skill_id": "skill_000684",
+                "skill_id": 7140330
+            },
+            {
+                "wiki_skill_id": "skill_000338",
+                "skill_id": 7021280
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000288",
+                "skill_id": 7020790
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000355",
+                "skill_id": 7030330
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000392",
+                "skill_id": 7040300
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000430",
+                "skill_id": 7050270
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000462",
+                "skill_id": 7060230
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000525",
+                "skill_id": 7080400
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000544",
+                "skill_id": 7090250
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000592",
+                "skill_id": 7110280
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000621",
+                "skill_id": 7120190
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000645",
+                "skill_id": 7130220
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000677",
+                "skill_id": 7140240
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000707",
+                "skill_id": 7150310
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000728",
+                "skill_id": 7160240
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000758",
+                "skill_id": 7170260
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000781",
+                "skill_id": 7180210
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000469",
+                "skill_id": 7070010
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000822",
+                "skill_id": 7190400
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3172.png",
+                    "id": "pet_000151",
+                    "illustration": "PetPortrait_xuedouding.png",
+                    "name": "雪豆丁",
+                    "stage": 1,
+                    "title": "雪豆丁",
+                    "types": [
+                        "冰系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3173.png",
+                    "id": "pet_000152",
+                    "illustration": "PetPortrait_xuemanren.png",
+                    "level": 28,
+                    "name": "雪蛮人",
+                    "stage": 2,
+                    "title": "雪蛮人",
+                    "types": [
+                        "冰系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3174.png",
+                    "id": "pet_000153",
+                    "illustration": "PetPortrait_xuejuren.png",
+                    "level": 40,
+                    "name": "雪巨人",
+                    "stage": 3,
+                    "title": "雪巨人",
+                    "types": [
+                        "冰系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "雪豆丁进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000151",
+                    "to_wiki_id": "pet_000152",
+                    "from_pet_id": 3172,
+                    "to_pet_id": 3173,
+                    "conditions": {
+                        "level": 28
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000152",
+                    "to_wiki_id": "pet_000153",
+                    "from_pet_id": 3173,
+                    "to_pet_id": 3174,
+                    "conditions": {
+                        "level": 40
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "风眠省图鉴"
+        ],
+        "entry_name": "雪豆丁",
+        "habitat": "常见于雪山",
+        "title": "冰冰凉精灵",
+        "topics": [
+            {
+                "id": "topic_000710",
+                "progress_id": "pt_000134_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_000711",
+                "progress_id": "pt_000134_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_000712",
+                "progress_id": "pt_000134_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "水系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "光系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "冰系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "火系"
+            },
+            {
+                "multiplier": 2,
+                "type": "地系"
+            },
+            {
+                "multiplier": 2,
+                "type": "武系"
+            },
+            {
+                "multiplier": 2,
+                "type": "机械系"
+            }
+        ]
+    },
+    "training_reference": {
+        "pvp": {
+            "blood": [
+                [
+                    7,
+                    8540
+                ],
+                [
+                    24,
+                    423
+                ],
+                [
+                    6,
+                    108
+                ],
+                [
+                    2,
+                    101
+                ],
+                [
+                    23,
+                    92
+                ],
+                [
+                    14,
+                    92
+                ],
+                [
+                    16,
+                    73
+                ],
+                [
+                    15,
+                    73
+                ],
+                [
+                    3,
+                    66
+                ],
+                [
+                    11,
+                    57
+                ],
+                [
+                    18,
+                    54
+                ],
+                [
+                    17,
+                    50
+                ],
+                [
+                    4,
+                    50
+                ],
+                [
+                    5,
+                    44
+                ],
+                [
+                    12,
+                    34
+                ],
+                [
+                    9,
+                    34
+                ],
+                [
+                    8,
+                    34
+                ],
+                [
+                    10,
+                    28
+                ],
+                [
+                    13,
+                    28
+                ],
+                [
+                    1,
+                    19
+                ]
+            ],
+            "nature": [
+                [
+                    2,
+                    1895
+                ],
+                [
+                    28,
+                    912
+                ],
+                [
+                    29,
+                    512
+                ],
+                [
+                    27,
+                    496
+                ],
+                [
+                    4,
+                    467
+                ],
+                [
+                    30,
+                    438
+                ],
+                [
+                    1,
+                    416
+                ],
+                [
+                    3,
+                    394
+                ],
+                [
+                    26,
+                    388
+                ],
+                [
+                    5,
+                    372
+                ],
+                [
+                    13,
+                    270
+                ],
+                [
+                    7,
+                    267
+                ],
+                [
+                    23,
+                    257
+                ],
+                [
+                    21,
+                    244
+                ],
+                [
+                    19,
+                    229
+                ],
+                [
+                    6,
+                    209
+                ],
+                [
+                    11,
+                    194
+                ],
+                [
+                    22,
+                    187
+                ],
+                [
+                    8,
+                    184
+                ],
+                [
+                    9,
+                    184
+                ],
+                [
+                    24,
+                    184
+                ],
+                [
+                    20,
+                    181
+                ],
+                [
+                    25,
+                    181
+                ],
+                [
+                    10,
+                    162
+                ],
+                [
+                    17,
+                    162
+                ],
+                [
+                    15,
+                    162
+                ],
+                [
+                    18,
+                    152
+                ],
+                [
+                    16,
+                    124
+                ],
+                [
+                    12,
+                    95
+                ],
+                [
+                    14,
+                    82
+                ]
+            ],
+            "skill": [
+                [
+                    7090230,
+                    5992
+                ],
+                [
+                    7020780,
+                    5906
+                ],
+                [
+                    7020970,
+                    3326
+                ],
+                [
+                    7090190,
+                    2690
+                ],
+                [
+                    7090300,
+                    2086
+                ],
+                [
+                    7090250,
+                    2067
+                ],
+                [
+                    7090280,
+                    1797
+                ],
+                [
+                    7090350,
+                    1498
+                ],
+                [
+                    7090110,
+                    1463
+                ],
+                [
+                    7090120,
+                    846
+                ],
+                [
+                    7090210,
+                    744
+                ],
+                [
+                    7090130,
+                    394
+                ],
+                [
+                    7140260,
+                    149
+                ],
+                [
+                    7170150,
+                    101
+                ],
+                [
+                    7090340,
+                    82
+                ],
+                [
+                    7090200,
+                    76
+                ],
+                [
+                    7160240,
+                    73
+                ],
+                [
+                    7030330,
+                    63
+                ],
+                [
+                    7020620,
+                    63
+                ],
+                [
+                    7170100,
+                    41
+                ],
+                [
+                    7130220,
+                    38
+                ],
+                [
+                    7080400,
+                    38
+                ],
+                [
+                    7170260,
+                    38
+                ],
+                [
+                    7140240,
+                    34
+                ],
+                [
+                    7050270,
+                    31
+                ],
+                [
+                    7180210,
+                    28
+                ],
+                [
+                    7021110,
+                    28
+                ],
+                [
+                    7190400,
+                    25
+                ],
+                [
+                    7110280,
+                    25
+                ],
+                [
+                    7070010,
+                    25
+                ]
+            ],
+            "talent": [
+                [
+                    2,
+                    6860
+                ],
+                [
+                    1,
+                    6736
+                ],
+                [
+                    5,
+                    4745
+                ],
+                [
+                    4,
+                    4468
+                ],
+                [
+                    3,
+                    2802
+                ],
+                [
+                    6,
+                    2534
+                ]
+            ]
+        },
+        "world": {
+            "blood": [
+                [
+                    7,
+                    8335
+                ],
+                [
+                    23,
+                    302
+                ],
+                [
+                    24,
+                    142
+                ],
+                [
+                    3,
+                    115
+                ],
+                [
+                    6,
+                    113
+                ],
+                [
+                    2,
+                    107
+                ],
+                [
+                    12,
+                    84
+                ],
+                [
+                    9,
+                    81
+                ],
+                [
+                    13,
+                    76
+                ],
+                [
+                    5,
+                    75
+                ],
+                [
+                    17,
+                    73
+                ],
+                [
+                    14,
+                    69
+                ],
+                [
+                    8,
+                    66
+                ],
+                [
+                    4,
+                    60
+                ],
+                [
+                    16,
+                    59
+                ],
+                [
+                    18,
+                    58
+                ],
+                [
+                    1,
+                    51
+                ],
+                [
+                    10,
+                    45
+                ],
+                [
+                    15,
+                    45
+                ],
+                [
+                    11,
+                    44
+                ]
+            ],
+            "nature": [
+                [
+                    2,
+                    2091
+                ],
+                [
+                    28,
+                    343
+                ],
+                [
+                    5,
+                    317
+                ],
+                [
+                    29,
+                    306
+                ],
+                [
+                    18,
+                    295
+                ],
+                [
+                    26,
+                    295
+                ],
+                [
+                    27,
+                    289
+                ],
+                [
+                    13,
+                    288
+                ],
+                [
+                    30,
+                    287
+                ],
+                [
+                    6,
+                    286
+                ],
+                [
+                    1,
+                    285
+                ],
+                [
+                    23,
+                    279
+                ],
+                [
+                    4,
+                    278
+                ],
+                [
+                    9,
+                    276
+                ],
+                [
+                    25,
+                    272
+                ],
+                [
+                    11,
+                    270
+                ],
+                [
+                    22,
+                    269
+                ],
+                [
+                    19,
+                    265
+                ],
+                [
+                    16,
+                    265
+                ],
+                [
+                    12,
+                    263
+                ],
+                [
+                    14,
+                    262
+                ],
+                [
+                    10,
+                    259
+                ],
+                [
+                    24,
+                    257
+                ],
+                [
+                    21,
+                    251
+                ],
+                [
+                    17,
+                    251
+                ],
+                [
+                    15,
+                    247
+                ],
+                [
+                    8,
+                    246
+                ],
+                [
+                    3,
+                    244
+                ],
+                [
+                    7,
+                    237
+                ],
+                [
+                    20,
+                    227
+                ]
+            ],
+            "skill": [
+                [
+                    7090230,
+                    7394
+                ],
+                [
+                    7020780,
+                    6666
+                ],
+                [
+                    7020970,
+                    5539
+                ],
+                [
+                    7090300,
+                    4536
+                ],
+                [
+                    7090250,
+                    2284
+                ],
+                [
+                    7090190,
+                    1833
+                ],
+                [
+                    7090280,
+                    1337
+                ],
+                [
+                    7090110,
+                    1107
+                ],
+                [
+                    7090350,
+                    1062
+                ],
+                [
+                    7090120,
+                    569
+                ],
+                [
+                    7090210,
+                    316
+                ],
+                [
+                    7080400,
+                    92
+                ],
+                [
+                    7040300,
+                    86
+                ],
+                [
+                    7140240,
+                    79
+                ],
+                [
+                    7090130,
+                    78
+                ],
+                [
+                    7030330,
+                    76
+                ],
+                [
+                    7150310,
+                    70
+                ],
+                [
+                    7070010,
+                    69
+                ],
+                [
+                    7060230,
+                    67
+                ],
+                [
+                    7160240,
+                    65
+                ],
+                [
+                    7100150,
+                    62
+                ],
+                [
+                    7180210,
+                    55
+                ],
+                [
+                    7050270,
+                    52
+                ],
+                [
+                    7190400,
+                    51
+                ],
+                [
+                    7090460,
+                    50
+                ],
+                [
+                    7110280,
+                    48
+                ],
+                [
+                    7090430,
+                    47
+                ],
+                [
+                    7140260,
+                    46
+                ],
+                [
+                    7170260,
+                    44
+                ],
+                [
+                    7020790,
+                    43
+                ]
+            ],
+            "talent": [
+                [
+                    2,
+                    6269
+                ],
+                [
+                    1,
+                    6090
+                ],
+                [
+                    5,
+                    4928
+                ],
+                [
+                    4,
+                    3879
+                ],
+                [
+                    3,
+                    2615
+                ],
+                [
+                    6,
+                    2282
+                ]
+            ]
+        }
+    },
+    "history": [
+        {
+            "changes": [
+                {
+                    "after": "结晶水",
+                    "before": "打雪仗",
+                    "field": "基础特性",
+                    "group": "feature"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冰封",
+                    "source": "技能书"
+                },
+                {
+                    "after": "减伤70%，应对攻击：敌方获得2层减速印记。",
+                    "before": "减伤60%，应对攻击：敌方获得2层减速印记。",
+                    "field": "冰蛋壳说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 2,
+                    "before": 3,
+                    "delta": -1,
+                    "field": "羽翼庇护能耗",
+                    "group": "skill"
+                },
+                {
+                    "after": "减伤70%，应对攻击：自己获得连击数+2。",
+                    "before": "减伤70%，应对攻击：自己获得连击数+3。",
+                    "field": "羽翼庇护说明",
+                    "group": "skill"
+                },
+                {
+                    "after": "减伤70%，应对攻击：自己获得物攻和魔攻+70%。",
+                    "before": "减伤60%，应对攻击：自己获得物攻和魔攻+40%。",
+                    "field": "防反说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s2-2026-05-21"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冷凝",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "缓一缓",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "雪原狩猎",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "马步",
+                    "source": "技能书"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "冰封",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "after": 85,
+                    "before": 80,
+                    "delta": 5,
+                    "field": "雪原狩猎威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成物伤，天气为暴风雪时，本次技能威力+50",
+                    "before": "造成物伤，天气为暴风雪时，本次技能威力+50%",
+                    "field": "雪原狩猎说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s4-2026-09-10"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

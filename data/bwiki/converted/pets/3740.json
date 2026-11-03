@@ -1,0 +1,870 @@
+{
+    "pet_id": 3740,
+    "wiki_id": "pet_000595",
+    "name": "宝藏小狐",
+    "title": "宝藏小狐",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "宝藏小狐是一种从容的精灵，即使被其他精灵咬到，也可以保持冷静。它大大的眼睛中，蕴含着深邃的平静。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "参与活动「小狐安家记」获得的珍贵精灵蛋，经过孵化可以得到“了不起”天分、且拥有量身定制资质、“爱分享”特长的宝藏小狐。",
+                    "fixed_aptitudes": [
+                        {
+                            "stat": "生命",
+                            "value": 8
+                        },
+                        {
+                            "stat": "物攻",
+                            "value": 8
+                        },
+                        {
+                            "stat": "速度",
+                            "value": 8
+                        }
+                    ],
+                    "fixed_nature": "固执",
+                    "fixed_nature_negative": "魔攻",
+                    "fixed_nature_positive": "物攻",
+                    "fixed_talent": "爱分享",
+                    "fixed_talent_description": "当本精灵位于出战编队中，任意精灵挖矿和采集时有概率获得大量产物。",
+                    "icon": "Item_150005.png",
+                    "name": "宝藏小狐的蛋",
+                    "sources": [
+                        "参与活动「小狐安家记」"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是宝藏小狐的果实。",
+                    "icon": "Item_108239.png",
+                    "name": "宝藏小狐果实",
+                    "sources": [
+                        "活动获取"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            6
+        ],
+        "egg_size": {
+            "huge_min": 1886,
+            "max": 1900,
+            "min": 1187,
+            "mini_max": 1201,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_4beb782b8a2a",
+        "feature_skill_id": "skill_000195",
+        "game_id": 3740,
+        "gender_ratio": {
+            "female": 5,
+            "male": 5
+        },
+        "handbook_id": "handbook_000441",
+        "handbook_show_topics": true,
+        "has_shiny": false,
+        "height": "0.43~0.69M",
+        "id": "pet_000595",
+        "image": {
+            "egg": "Item_107228.png",
+            "fruits": [
+                "Item_108239.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3740.png",
+            "illustration": "PetPortrait_fangfanghu.png"
+        },
+        "learnset_id": "learnset_dc36e85434e6",
+        "move_type": "地面",
+        "name": "宝藏小狐",
+        "number": "441",
+        "perception_range": 40,
+        "relation_key": "普通系",
+        "release": {
+            "date": "2026-07-16",
+            "version": "1.1.0"
+        },
+        "review_gold": 1600,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 32,
+        "stats": {
+            "atk": 81,
+            "def": 99,
+            "hp": 77,
+            "spa": 33,
+            "spd": 73,
+            "spe": 80
+        },
+        "submit_reward": 1600,
+        "talent_pool_id": 1001,
+        "title": "宝藏小狐",
+        "types": [
+            "普通系"
+        ],
+        "weight": "3.39~4.75KG"
+    },
+    "feature_id": 200313,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000247",
+                "skill_id": 7020360
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000274",
+                "skill_id": 7020640
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000250",
+                "skill_id": 7020390
+            },
+            {
+                "level": 12,
+                "stage": 1,
+                "wiki_skill_id": "skill_000313",
+                "skill_id": 7020970
+            },
+            {
+                "level": 16,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 26,
+                "stage": 1,
+                "wiki_skill_id": "skill_000272",
+                "skill_id": 7020620
+            },
+            {
+                "level": 27,
+                "stage": 1,
+                "wiki_skill_id": "skill_000331",
+                "skill_id": 7021150
+            },
+            {
+                "level": 28,
+                "stage": 1,
+                "wiki_skill_id": "skill_000278",
+                "skill_id": 7020680
+            },
+            {
+                "level": 33,
+                "stage": 1,
+                "wiki_skill_id": "skill_000281",
+                "skill_id": 7020710
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000254",
+                "skill_id": 7020430
+            },
+            {
+                "level": 37,
+                "stage": 1,
+                "wiki_skill_id": "skill_000279",
+                "skill_id": 7020690
+            },
+            {
+                "level": 42,
+                "stage": 1,
+                "wiki_skill_id": "skill_000283",
+                "skill_id": 7020730
+            },
+            {
+                "level": 46,
+                "stage": 1,
+                "wiki_skill_id": "skill_000309",
+                "skill_id": 7020930
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000295",
+                "skill_id": 7020850
+            },
+            {
+                "wiki_skill_id": "skill_000682",
+                "skill_id": 7140290
+            },
+            {
+                "wiki_skill_id": "skill_000660",
+                "skill_id": 7140050
+            },
+            {
+                "wiki_skill_id": "skill_000676",
+                "skill_id": 7140230
+            },
+            {
+                "wiki_skill_id": "skill_000646",
+                "skill_id": 7130240
+            },
+            {
+                "wiki_skill_id": "skill_000634",
+                "skill_id": 7130110
+            },
+            {
+                "wiki_skill_id": "skill_000649",
+                "skill_id": 7130270
+            },
+            {
+                "wiki_skill_id": "skill_000643",
+                "skill_id": 7130200
+            },
+            {
+                "wiki_skill_id": "skill_000329",
+                "skill_id": 7021130
+            },
+            {
+                "wiki_skill_id": "skill_000327",
+                "skill_id": 7021110
+            },
+            {
+                "wiki_skill_id": "skill_000332",
+                "skill_id": 7021160
+            },
+            {
+                "wiki_skill_id": "skill_000286",
+                "skill_id": 7020770
+            },
+            {
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000307",
+                "skill_id": 7020910
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000345",
+                "skill_id": 7030220
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000398",
+                "skill_id": 7040370
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000426",
+                "skill_id": 7050230
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000462",
+                "skill_id": 7060230
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000507",
+                "skill_id": 7080200
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000536",
+                "skill_id": 7090160
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000589",
+                "skill_id": 7110250
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000754",
+                "skill_id": 7170220
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000786",
+                "skill_id": 7180270
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000480",
+                "skill_id": 7070130
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000811",
+                "skill_id": 7190280
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3740.png",
+                    "id": "pet_000595",
+                    "illustration": "PetPortrait_fangfanghu.png",
+                    "name": "宝藏小狐",
+                    "stage": 1,
+                    "title": "宝藏小狐",
+                    "types": [
+                        "普通系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3741.png",
+                    "id": "pet_000596",
+                    "illustration": "PetPortrait_hulianchacha.png",
+                    "level": 33,
+                    "name": "宝藏沙狐",
+                    "stage": 2,
+                    "title": "宝藏沙狐",
+                    "types": [
+                        "普通系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "宝藏小狐进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000595",
+                    "to_wiki_id": "pet_000596",
+                    "from_pet_id": 3740,
+                    "to_pet_id": 3741,
+                    "conditions": {
+                        "level": 33
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "宝藏小狐",
+        "habitat": "行踪神秘",
+        "title": "藏狐精灵",
+        "topics": [
+            {
+                "id": "topic_002231",
+                "progress_id": "pt_000441_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002232",
+                "progress_id": "pt_000441_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002233",
+                "progress_id": "pt_000441_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "幽系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "武系"
+            }
+        ]
+    },
+    "training_reference": {
+        "pvp": {
+            "blood": [],
+            "nature": [],
+            "skill": [],
+            "talent": []
+        },
+        "world": {
+            "blood": [
+                [
+                    1,
+                    9810
+                ],
+                [
+                    24,
+                    54
+                ],
+                [
+                    23,
+                    31
+                ],
+                [
+                    10,
+                    17
+                ],
+                [
+                    2,
+                    14
+                ],
+                [
+                    3,
+                    11
+                ],
+                [
+                    8,
+                    11
+                ],
+                [
+                    9,
+                    10
+                ],
+                [
+                    5,
+                    8
+                ],
+                [
+                    7,
+                    5
+                ],
+                [
+                    14,
+                    5
+                ],
+                [
+                    16,
+                    4
+                ],
+                [
+                    4,
+                    3
+                ],
+                [
+                    15,
+                    3
+                ],
+                [
+                    6,
+                    3
+                ],
+                [
+                    12,
+                    3
+                ],
+                [
+                    11,
+                    2
+                ],
+                [
+                    18,
+                    2
+                ],
+                [
+                    17,
+                    2
+                ],
+                [
+                    13,
+                    2
+                ]
+            ],
+            "nature": [
+                [
+                    2,
+                    8782
+                ],
+                [
+                    21,
+                    84
+                ],
+                [
+                    22,
+                    68
+                ],
+                [
+                    14,
+                    53
+                ],
+                [
+                    23,
+                    49
+                ],
+                [
+                    28,
+                    44
+                ],
+                [
+                    17,
+                    44
+                ],
+                [
+                    9,
+                    43
+                ],
+                [
+                    8,
+                    43
+                ],
+                [
+                    7,
+                    42
+                ],
+                [
+                    5,
+                    41
+                ],
+                [
+                    6,
+                    41
+                ],
+                [
+                    26,
+                    40
+                ],
+                [
+                    27,
+                    39
+                ],
+                [
+                    3,
+                    39
+                ],
+                [
+                    1,
+                    39
+                ],
+                [
+                    24,
+                    38
+                ],
+                [
+                    10,
+                    38
+                ],
+                [
+                    4,
+                    38
+                ],
+                [
+                    29,
+                    38
+                ],
+                [
+                    13,
+                    38
+                ],
+                [
+                    18,
+                    38
+                ],
+                [
+                    19,
+                    37
+                ],
+                [
+                    12,
+                    37
+                ],
+                [
+                    20,
+                    36
+                ],
+                [
+                    30,
+                    35
+                ],
+                [
+                    25,
+                    35
+                ],
+                [
+                    11,
+                    35
+                ],
+                [
+                    16,
+                    34
+                ],
+                [
+                    15,
+                    32
+                ]
+            ],
+            "skill": [
+                [
+                    7020640,
+                    9656
+                ],
+                [
+                    7020360,
+                    9373
+                ],
+                [
+                    7020390,
+                    5660
+                ],
+                [
+                    7020970,
+                    4851
+                ],
+                [
+                    7020910,
+                    3009
+                ],
+                [
+                    7020780,
+                    2079
+                ],
+                [
+                    7020680,
+                    195
+                ],
+                [
+                    7020430,
+                    166
+                ],
+                [
+                    7020710,
+                    122
+                ],
+                [
+                    7020690,
+                    108
+                ],
+                [
+                    7020620,
+                    89
+                ],
+                [
+                    7020930,
+                    89
+                ],
+                [
+                    7021150,
+                    81
+                ],
+                [
+                    7020730,
+                    48
+                ],
+                [
+                    7021130,
+                    9
+                ],
+                [
+                    7120120,
+                    9
+                ],
+                [
+                    7100150,
+                    8
+                ],
+                [
+                    7130200,
+                    7
+                ],
+                [
+                    7021100,
+                    6
+                ],
+                [
+                    7021110,
+                    6
+                ],
+                [
+                    7020770,
+                    4
+                ],
+                [
+                    7130110,
+                    4
+                ],
+                [
+                    7140050,
+                    4
+                ],
+                [
+                    7030220,
+                    4
+                ],
+                [
+                    7020850,
+                    4
+                ],
+                [
+                    7021160,
+                    4
+                ],
+                [
+                    7130270,
+                    3
+                ],
+                [
+                    7040370,
+                    3
+                ],
+                [
+                    7180380,
+                    3
+                ],
+                [
+                    7140290,
+                    3
+                ]
+            ],
+            "talent": [
+                [
+                    6,
+                    9247
+                ],
+                [
+                    2,
+                    9240
+                ],
+                [
+                    1,
+                    9230
+                ],
+                [
+                    4,
+                    577
+                ],
+                [
+                    5,
+                    462
+                ],
+                [
+                    3,
+                    255
+                ]
+            ]
+        }
+    },
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "宝藏小狐"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s3-2026-07-30"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

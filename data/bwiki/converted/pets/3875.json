@@ -1,0 +1,534 @@
+{
+    "pet_id": 3875,
+    "wiki_id": "pet_000634",
+    "name": "花怨鳗",
+    "title": "花怨鳗（果壳铃的样子）",
+    "profile": {
+        "can_double_ride": true,
+        "can_ride": true,
+        "catch_threshold": [
+            500
+        ],
+        "class": "自然类精灵",
+        "description": "这种精灵拥有对音乐的奇思妙想，落在泥土里大大小小的果壳，捡起来，擦干净，做成铃铛，叮叮咚咚。花怨鳗说，这叫果壳铃呀，声音像落雨，又像颂歌。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "参与活动「秋，丰收与机器人」获得的珍贵精灵蛋，经过孵化可以得到“了不起”天分、且支持自选性格与个体资质的花怨鳗（果壳铃的样子）。",
+                    "icon": "Item_150011.png",
+                    "name": "花怨鳗的蛋",
+                    "sources": [
+                        "参与活动「秋，丰收与机器人」"
+                    ]
+                }
+            ]
+        },
+        "egg_group": [
+            13,
+            3
+        ],
+        "egg_size": {
+            "huge_min": 1588,
+            "max": 1600,
+            "min": 1015,
+            "mini_max": 1027,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_176ab057d3ff",
+        "feature_skill_id": "skill_000124",
+        "form": "果壳铃的样子",
+        "game_id": 3875,
+        "handbook_id": "handbook_000201",
+        "has_shiny": false,
+        "height": "0.58~0.68M",
+        "id": "pet_000634",
+        "image": {
+            "egg": "Item_150011.png",
+            "has_egg": true,
+            "has_fruit": false,
+            "head": "PetAvatar_3875.png",
+            "illustration": "PetPortrait_HuaYuanMan1Ar.png"
+        },
+        "learnset_id": "learnset_17c502e931f0",
+        "move_type": "地面",
+        "name": "花怨鳗",
+        "number": "201",
+        "perception_range": 40,
+        "relation_key": "地系|草系",
+        "release": {
+            "date": "2026-10-09"
+        },
+        "review_gold": 1400,
+        "siblings": [
+            "pet_000401"
+        ],
+        "stage": 1,
+        "starlight": 28,
+        "stats": {
+            "atk": 73,
+            "def": 110,
+            "hp": 232,
+            "spa": 73,
+            "spd": 90,
+            "spe": 52
+        },
+        "title": "花怨鳗（果壳铃的样子）",
+        "types": [
+            "地系",
+            "草系"
+        ],
+        "weight": "2.9~4KG"
+    },
+    "feature_id": 200223,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000366",
+                "skill_id": 7030500
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000513",
+                "skill_id": 7080270
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000358",
+                "skill_id": 7030420
+            },
+            {
+                "level": 7,
+                "stage": 1,
+                "wiki_skill_id": "skill_000524",
+                "skill_id": 7080380
+            },
+            {
+                "level": 13,
+                "stage": 1,
+                "wiki_skill_id": "skill_000359",
+                "skill_id": 7030430
+            },
+            {
+                "level": 21,
+                "stage": 1,
+                "wiki_skill_id": "skill_000508",
+                "skill_id": 7080210
+            },
+            {
+                "level": 23,
+                "stage": 1,
+                "wiki_skill_id": "skill_000525",
+                "skill_id": 7080400
+            },
+            {
+                "level": 26,
+                "stage": 1,
+                "wiki_skill_id": "skill_000516",
+                "skill_id": 7080300
+            },
+            {
+                "level": 33,
+                "stage": 1,
+                "wiki_skill_id": "skill_000520",
+                "skill_id": 7080340
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000512",
+                "skill_id": 7080250
+            },
+            {
+                "level": 37,
+                "stage": 1,
+                "wiki_skill_id": "skill_000310",
+                "skill_id": 7020940
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000500",
+                "skill_id": 7080130
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000354",
+                "skill_id": 7030320
+            },
+            {
+                "level": 50,
+                "stage": 1,
+                "wiki_skill_id": "skill_000369",
+                "skill_id": 7030530
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000501",
+                "skill_id": 7080140
+            },
+            {
+                "wiki_skill_id": "skill_000343",
+                "skill_id": 7030200
+            },
+            {
+                "wiki_skill_id": "skill_000509",
+                "skill_id": 7080220
+            },
+            {
+                "wiki_skill_id": "skill_000362",
+                "skill_id": 7030460
+            },
+            {
+                "wiki_skill_id": "skill_000368",
+                "skill_id": 7030520
+            },
+            {
+                "wiki_skill_id": "skill_000749",
+                "skill_id": 7170160
+            },
+            {
+                "wiki_skill_id": "skill_000745",
+                "skill_id": 7170120
+            },
+            {
+                "wiki_skill_id": "skill_000330",
+                "skill_id": 7021140
+            },
+            {
+                "wiki_skill_id": "skill_000271",
+                "skill_id": 7020600
+            },
+            {
+                "wiki_skill_id": "skill_000291",
+                "skill_id": 7020840
+            },
+            {
+                "wiki_skill_id": "skill_000282",
+                "skill_id": 7020720
+            },
+            {
+                "wiki_skill_id": "skill_000284",
+                "skill_id": 7020740
+            },
+            {
+                "wiki_skill_id": "skill_000289",
+                "skill_id": 7020800
+            },
+            {
+                "wiki_skill_id": "skill_000325",
+                "skill_id": 7021090
+            },
+            {
+                "wiki_skill_id": "skill_000328",
+                "skill_id": 7021120
+            },
+            {
+                "wiki_skill_id": "skill_000329",
+                "skill_id": 7021130
+            },
+            {
+                "wiki_skill_id": "skill_000376",
+                "skill_id": 7030620
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000288",
+                "skill_id": 7020790
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000340",
+                "skill_id": 7030170
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000392",
+                "skill_id": 7040300
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000430",
+                "skill_id": 7050270
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000499",
+                "skill_id": 7080120
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000554",
+                "skill_id": 7090350
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000592",
+                "skill_id": 7110280
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000621",
+                "skill_id": 7120190
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000645",
+                "skill_id": 7130220
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000665",
+                "skill_id": 7140100
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000707",
+                "skill_id": 7150310
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000758",
+                "skill_id": 7170260
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000786",
+                "skill_id": 7180270
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000478",
+                "skill_id": 7070110
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000822",
+                "skill_id": 7190400
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "form": "果壳铃的样子",
+                    "head": "PetAvatar_3875.png",
+                    "id": "pet_000634",
+                    "illustration": "PetPortrait_HuaYuanMan1Ar.png",
+                    "name": "花怨鳗",
+                    "stage": 1,
+                    "title": "花怨鳗（果壳铃的样子）",
+                    "types": [
+                        "地系",
+                        "草系"
+                    ]
+                },
+                {
+                    "form": "果壳铃的样子",
+                    "head": "PetAvatar_3876.png",
+                    "id": "pet_000635",
+                    "illustration": "PetPortrait_HuaYuanMan3Ar.png",
+                    "level": 26,
+                    "name": "鳗尾兽",
+                    "stage": 2,
+                    "title": "鳗尾兽（果壳铃的样子）",
+                    "types": [
+                        "地系",
+                        "草系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "花怨鳗进化链（果壳铃的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000634",
+                    "to_wiki_id": "pet_000635",
+                    "from_pet_id": 3875,
+                    "to_pet_id": 3876,
+                    "conditions": {
+                        "level": 26
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "洛克里安图鉴"
+        ],
+        "entry_name": "花怨鳗",
+        "habitat": "常见于田地、河岸",
+        "title": "花精灵",
+        "topics": [
+            {
+                "id": "topic_001052",
+                "progress_id": "pt_000201_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_001053",
+                "progress_id": "pt_000201_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_001054",
+                "progress_id": "pt_000201_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.25,
+                "type": "电系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "普通系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "光系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "地系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 3,
+                "type": "冰系"
+            },
+            {
+                "multiplier": 2,
+                "type": "草系"
+            },
+            {
+                "multiplier": 2,
+                "type": "虫系"
+            },
+            {
+                "multiplier": 2,
+                "type": "武系"
+            },
+            {
+                "multiplier": 2,
+                "type": "机械系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "花怨鳗"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s4-2026-10-15"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

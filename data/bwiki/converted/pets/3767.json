@@ -1,0 +1,515 @@
+{
+    "pet_id": 3767,
+    "wiki_id": "pet_000612",
+    "name": "章脑丸",
+    "title": "章脑丸",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "章脑丸思考的时候，半透明的身体里会有一小串光顺着神经一节一节亮过去，它们总是成群漂在近岸的浅水里，小脑袋一起明明灭灭，那是它们在聊天。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "在「月涌狂想」赛季的代币商店内购得的珍贵精灵蛋，经过孵化可以得到“完美无瑕”、且支持自选性格与个体资质的章脑丸。",
+                    "icon": "Item_150836.png",
+                    "name": "章脑丸的蛋"
+                },
+                {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的章脑丸。",
+                    "icon": "Item_150853.png",
+                    "is_shiny": true,
+                    "name": "异色章脑丸的蛋"
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是章脑丸的果实。",
+                    "icon": "Item_108205.png",
+                    "name": "章脑丸的果实",
+                    "sources": [
+                        "完成赛季作业挑战课题"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            7,
+            10
+        ],
+        "egg_size": {
+            "huge_min": 1245,
+            "max": 1260,
+            "min": 525,
+            "mini_max": 540,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_b13349d01c38",
+        "feature_skill_id": "skill_000200",
+        "game_id": 3767,
+        "handbook_id": "handbook_000452",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "0.59~0.9M",
+        "id": "pet_000612",
+        "image": {
+            "egg": "Item_107245.png",
+            "fruits": [
+                "Item_108205.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3767.png",
+            "illustration": "PetPortrait_ZhangNaoWan1.png",
+            "shiny": "PetPortrait_ZhangNaoWan1_yise.png",
+            "shiny_head": "PetAvatar_3767_1.png"
+        },
+        "learnset_id": "learnset_b3c6b827ce26",
+        "move_type": "地面",
+        "name": "章脑丸",
+        "number": "452",
+        "perception_range": 40,
+        "relation_key": "光系|水系",
+        "release": {
+            "date": "2026-09-10",
+            "version": "1.1.1"
+        },
+        "review_gold": 1600,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 32,
+        "stats": {
+            "atk": 42,
+            "def": 69,
+            "hp": 89,
+            "spa": 99,
+            "spd": 99,
+            "spe": 80
+        },
+        "submit_reward": 3000,
+        "talent_pool_id": 1001,
+        "title": "章脑丸",
+        "types": [
+            "光系",
+            "水系"
+        ],
+        "weight": "1.5~3.15KG"
+    },
+    "feature_id": 200318,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000419",
+                "skill_id": 7050160
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000273",
+                "skill_id": 7020630
+            },
+            {
+                "level": 4,
+                "stage": 1,
+                "wiki_skill_id": "skill_000455",
+                "skill_id": 7060160
+            },
+            {
+                "level": 7,
+                "stage": 1,
+                "wiki_skill_id": "skill_000421",
+                "skill_id": 7050180
+            },
+            {
+                "level": 12,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 20,
+                "stage": 1,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "level": 26,
+                "stage": 1,
+                "wiki_skill_id": "skill_000284",
+                "skill_id": 7020740
+            },
+            {
+                "level": 30,
+                "stage": 1,
+                "wiki_skill_id": "skill_000444",
+                "skill_id": 7050420
+            },
+            {
+                "level": 32,
+                "stage": 1,
+                "wiki_skill_id": "skill_000441",
+                "skill_id": 7050390
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000467",
+                "skill_id": 7060280
+            },
+            {
+                "level": 37,
+                "stage": 1,
+                "wiki_skill_id": "skill_000463",
+                "skill_id": 7060240
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000452",
+                "skill_id": 7060130
+            },
+            {
+                "level": 42,
+                "stage": 1,
+                "wiki_skill_id": "skill_000448",
+                "skill_id": 7050530
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000432",
+                "skill_id": 7050290
+            },
+            {
+                "wiki_skill_id": "skill_000589",
+                "skill_id": 7110250
+            },
+            {
+                "wiki_skill_id": "skill_000600",
+                "skill_id": 7110360
+            },
+            {
+                "wiki_skill_id": "skill_000591",
+                "skill_id": 7110270
+            },
+            {
+                "wiki_skill_id": "skill_000602",
+                "skill_id": 7110380
+            },
+            {
+                "wiki_skill_id": "skill_000428",
+                "skill_id": 7050250
+            },
+            {
+                "wiki_skill_id": "skill_000427",
+                "skill_id": 7050240
+            },
+            {
+                "wiki_skill_id": "skill_000464",
+                "skill_id": 7060250
+            },
+            {
+                "wiki_skill_id": "skill_000329",
+                "skill_id": 7021130
+            },
+            {
+                "wiki_skill_id": "skill_000281",
+                "skill_id": 7020710
+            },
+            {
+                "wiki_skill_id": "skill_000283",
+                "skill_id": 7020730
+            },
+            {
+                "wiki_skill_id": "skill_000332",
+                "skill_id": 7021160
+            },
+            {
+                "wiki_skill_id": "skill_000299",
+                "skill_id": 7020860
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000288",
+                "skill_id": 7020790
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000359",
+                "skill_id": 7030430
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000388",
+                "skill_id": 7040260
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000426",
+                "skill_id": 7050230
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000460",
+                "skill_id": 7060210
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000525",
+                "skill_id": 7080400
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000554",
+                "skill_id": 7090350
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000592",
+                "skill_id": 7110280
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000621",
+                "skill_id": 7120190
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000648",
+                "skill_id": 7130260
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000757",
+                "skill_id": 7170250
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000480",
+                "skill_id": 7070130
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000804",
+                "skill_id": 7190210
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3767.png",
+                    "id": "pet_000612",
+                    "illustration": "PetPortrait_ZhangNaoWan1.png",
+                    "name": "章脑丸",
+                    "stage": 1,
+                    "title": "章脑丸",
+                    "types": [
+                        "光系",
+                        "水系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3768.png",
+                    "id": "pet_000613",
+                    "illustration": "PetPortrait_ZhangNaoWan3.png",
+                    "level": 42,
+                    "name": "智辉章脑",
+                    "stage": 2,
+                    "title": "智辉章脑",
+                    "types": [
+                        "光系",
+                        "水系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "章脑丸进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000612",
+                    "to_wiki_id": "pet_000613",
+                    "from_pet_id": 3767,
+                    "to_pet_id": 3768,
+                    "conditions": {
+                        "level": 42
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "章脑丸",
+        "habitat": "行踪神秘",
+        "title": "大脑精灵",
+        "topics": [
+            {
+                "id": "topic_002275",
+                "progress_id": "pt_000452_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002276",
+                "progress_id": "pt_000452_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002277",
+                "progress_id": "pt_000452_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "火系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "恶系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "机械系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "幻系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 3,
+                "type": "草系"
+            },
+            {
+                "multiplier": 2,
+                "type": "电系"
+            },
+            {
+                "multiplier": 2,
+                "type": "幽系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "章脑丸"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s4-2026-09-10"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

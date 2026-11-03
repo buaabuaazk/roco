@@ -1,0 +1,511 @@
+{
+    "pet_id": 3775,
+    "wiki_id": "pet_000618",
+    "name": "布灵",
+    "title": "布灵",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "布灵的样子是一只手工缝的小熊，真正的它其实是从熊头顶露出来的那一小团黄色能量，布偶只是它给自己找的一个不那么显眼的壳。据说它的家乡是一片被黑暗吃掉过的星空，所以它到现在都怕黑。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "在「月涌狂想」赛季的代币商店内购得的珍贵精灵蛋，经过孵化可以得到“完美无瑕”、且支持自选性格与个体资质的布灵。",
+                    "icon": "Item_150839.png",
+                    "name": "布灵的蛋"
+                },
+                {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的布灵。",
+                    "icon": "Item_150856.png",
+                    "is_shiny": true,
+                    "name": "异色布灵的蛋"
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是布灵的果实。",
+                    "icon": "Item_108241.png",
+                    "name": "布灵的果实",
+                    "sources": [
+                        "完成赛季作业挑战课题"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            7
+        ],
+        "egg_size": {
+            "huge_min": 1144,
+            "max": 1160,
+            "min": 350,
+            "mini_max": 366,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_16cfea3594a0",
+        "feature_skill_id": "skill_000207",
+        "game_id": 3775,
+        "handbook_id": "handbook_000464",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "0.38~0.51M",
+        "id": "pet_000618",
+        "image": {
+            "egg": "Item_107248.png",
+            "fruits": [
+                "Item_108241.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3775.png",
+            "illustration": "PetPortrait_BuLing1.png",
+            "shiny": "PetPortrait_BuLing1_yise.png",
+            "shiny_head": "PetAvatar_3775_1.png"
+        },
+        "learnset_id": "learnset_b9edf935cc95",
+        "move_type": "地面",
+        "name": "布灵",
+        "number": "464",
+        "perception_range": 40,
+        "relation_key": "幻系|光系",
+        "release": {
+            "date": "2026-09-10",
+            "version": "1.1.1"
+        },
+        "review_gold": 1200,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 24,
+        "stats": {
+            "atk": 92,
+            "def": 98,
+            "hp": 66,
+            "spa": 32,
+            "spd": 77,
+            "spe": 100
+        },
+        "submit_reward": 3000,
+        "talent_pool_id": 1001,
+        "title": "布灵",
+        "types": [
+            "幻系",
+            "光系"
+        ],
+        "weight": "1~2.9KG"
+    },
+    "feature_id": 200325,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000248",
+                "skill_id": 7020370
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000462",
+                "skill_id": 7060230
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000278",
+                "skill_id": 7020680
+            },
+            {
+                "level": 8,
+                "stage": 1,
+                "wiki_skill_id": "skill_000819",
+                "skill_id": 7190370
+            },
+            {
+                "level": 12,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 16,
+                "stage": 1,
+                "wiki_skill_id": "skill_000453",
+                "skill_id": 7060140
+            },
+            {
+                "level": 24,
+                "stage": 1,
+                "wiki_skill_id": "skill_000457",
+                "skill_id": 7060180
+            },
+            {
+                "level": 27,
+                "stage": 1,
+                "wiki_skill_id": "skill_000825",
+                "skill_id": 7190430
+            },
+            {
+                "level": 29,
+                "stage": 1,
+                "wiki_skill_id": "skill_000826",
+                "skill_id": 7190440
+            },
+            {
+                "level": 35,
+                "stage": 1,
+                "wiki_skill_id": "skill_000468",
+                "skill_id": 7060290
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000463",
+                "skill_id": 7060240
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000465",
+                "skill_id": 7060260
+            },
+            {
+                "level": 46,
+                "stage": 1,
+                "wiki_skill_id": "skill_000832",
+                "skill_id": 7190500
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000719",
+                "skill_id": 7160150
+            },
+            {
+                "wiki_skill_id": "skill_000730",
+                "skill_id": 7160260
+            },
+            {
+                "wiki_skill_id": "skill_000721",
+                "skill_id": 7160170
+            },
+            {
+                "wiki_skill_id": "skill_000720",
+                "skill_id": 7160160
+            },
+            {
+                "wiki_skill_id": "skill_000260",
+                "skill_id": 7020490
+            },
+            {
+                "wiki_skill_id": "skill_000669",
+                "skill_id": 7140150
+            },
+            {
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            },
+            {
+                "wiki_skill_id": "skill_000661",
+                "skill_id": 7140060
+            },
+            {
+                "wiki_skill_id": "skill_000667",
+                "skill_id": 7140130
+            },
+            {
+                "wiki_skill_id": "skill_000678",
+                "skill_id": 7140250
+            },
+            {
+                "wiki_skill_id": "skill_000811",
+                "skill_id": 7190280
+            },
+            {
+                "wiki_skill_id": "skill_000828",
+                "skill_id": 7190460
+            },
+            {
+                "wiki_skill_id": "skill_000295",
+                "skill_id": 7020850
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000307",
+                "skill_id": 7020910
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000340",
+                "skill_id": 7030170
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000397",
+                "skill_id": 7040360
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000435",
+                "skill_id": 7050330
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000499",
+                "skill_id": 7080120
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000544",
+                "skill_id": 7090250
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000594",
+                "skill_id": 7110300
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000621",
+                "skill_id": 7120190
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000648",
+                "skill_id": 7130260
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000676",
+                "skill_id": 7140230
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000728",
+                "skill_id": 7160240
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000748",
+                "skill_id": 7170150
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000469",
+                "skill_id": 7070010
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000804",
+                "skill_id": 7190210
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3775.png",
+                    "id": "pet_000618",
+                    "illustration": "PetPortrait_BuLing1.png",
+                    "name": "布灵",
+                    "stage": 1,
+                    "title": "布灵",
+                    "types": [
+                        "幻系",
+                        "光系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3776.png",
+                    "id": "pet_000619",
+                    "illustration": "PetPortrait_BuLing2.png",
+                    "level": 42,
+                    "name": "布灵布灵",
+                    "stage": 2,
+                    "title": "布灵布灵",
+                    "types": [
+                        "幻系",
+                        "光系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "布灵进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000618",
+                    "to_wiki_id": "pet_000619",
+                    "from_pet_id": 3775,
+                    "to_pet_id": 3776,
+                    "conditions": {
+                        "level": 42,
+                        "special": "位于魔法师之家/商店街/彼得大道/国王城堡附近"
+                    },
+                    "special_condition_source": "manual"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "布灵",
+        "habitat": "行踪神秘",
+        "title": "能量体精灵",
+        "topics": [
+            {
+                "id": "topic_002339",
+                "progress_id": "pt_000464_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002340",
+                "progress_id": "pt_000464_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002341",
+                "progress_id": "pt_000464_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.25,
+                "type": "幻系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "武系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "恶系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 3,
+                "type": "幽系"
+            },
+            {
+                "multiplier": 2,
+                "type": "草系"
+            },
+            {
+                "multiplier": 2,
+                "type": "虫系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "布灵"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s4-2026-09-10"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

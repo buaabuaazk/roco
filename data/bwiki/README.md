@@ -1,74 +1,90 @@
-# BWIKI 试采
+# BWIKI 采集与转换
 
 来源：新版洛克王国世界 BWIKI，`https://wiki.biligame.com/nrc/`。
-通过公开 MediaWiki `action=parse` 接口读取渲染页面，使用 Python 标准库解析，保存中文 JSON。
+采集公开 MediaWiki revisions 接口中的 Lua 数据表，再按游戏 ID 转换成独立 JSON。
+使用 Conda `hello-agents` 中的 Python 标准库及系统 curl。
 
-运行环境为 Conda `hello-agents`，在项目根目录执行：
+## 运行
+
+在 `roco` 根目录执行：
+
+```sh
+conda activate hello-agents
+
+# 首次采集全部模块并转换；后续默认复用已保存的模块响应
+python scripts/collect_bwiki_modules.py --all
+
+# 请求最新模块，再转换全部数据
+python scripts/collect_bwiki_modules.py --all --refresh
+
+# 指定完整页面标题或游戏 ID
+python scripts/collect_bwiki_modules.py 喵喵 机械方方
+python scripts/collect_bwiki_modules.py --ids 3001 3200
+
+# 转换前十个精灵及其关联技能、特性
+python scripts/collect_bwiki_modules.py --all --limit 10
+
+# 离线转换已有快照，输出到独立目录
+python scripts/collect_bwiki_modules.py --all \
+    --from-response data/bwiki/modules/response.json \
+    --output /tmp/roco-bwiki-check
+```
+
+网络请求失败或接口返回限流、maxlag 等临时错误时最多尝试三次，间隔递增。
+一次请求批量获取模块，精灵条目复用同一批数据。`--refresh` 控制网络更新；转换时重新生成所选 JSON。
+名称使用完整页面标题以区分形态，`--ids` 使用游戏 ID，`--limit` 按游戏 ID 排序后截取。
+
+## 文件与字段
+
+| 文件 | 内容 |
+|---|---|
+| `modules/response.json` | 接口原始响应：模块标题、修订 ID、修订时间、Lua 原文 |
+| `modules/fetch.json` | 模块请求地址和实际采集时间 |
+| `converted/pets/<游戏ID>.json` | 精灵属性、特性 ID、技能学习关系、进化链、图鉴课题、属性克制、培养参考与历史记录 |
+| `converted/skills/<游戏ID>.json` | 独立战斗技能，保留来源字段，并关联术语说明及技能石课题 |
+| `converted/features/<游戏ID>.json` | 独立特性资料 |
+| `converted/reference.json` | 术语、历史版本信息、培养参考标签与统计赛季 |
+| `converted/manifest.json` | 本批次数量、有效文件列表、来源修订、转换时间、缺失引用和状态 |
+
+精灵的 `pet_id`、技能及特性的 `skill_id` 使用游戏 ID；`wiki_id` 和 `wiki_skill_id` 保留 Wiki 内部稳定 ID。
+精灵的 `skills` 分为 `level`、`machine`、`blood`、`legendary`，关系记录保留等级、血脉和传说技能要求，详情由独立文件关联。
+`profile` 保留精灵原始属性及生态获取字段；种族值键为 `hp/atk/def/spa/spd/spe`，其中 `spd` 为魔防，`spe` 为速度。
+培养参考保留来源的 `[标签ID, 原始统计值]`，通过 `reference.json` 的标签解释；历史字段与当前资料独立保存。
+`evolution_branches` 保留原始分支和成员字段，并生成有方向的 `transitions`：等级为 `level`，特殊条件为 `special`，首领信物为 `item`。
+人工补充条件按游戏 ID、Wiki ID、页面标题顺序匹配，覆盖原特殊条件；空字符串表示明确没有额外特殊条件，等级独立保留。
+
+每个 JSON 使用 UTF-8、4 空格缩进和可读中文。缺失技能引用标记为 `detail_missing`，批次标记为 `partial`。
+文件逐个原子替换，转换完成后写入 manifest。增量选择不会删除其他条目的旧文件，当前批次范围以 manifest 的 `files` 为准。
+
+## 赛季规则与完整性
+
+当前已核对 S5 隐藏策略下的基础表和修订表合并、异色与图鉴课题过滤、历史版本过滤。
+脚本检查 SeasonData、ContentVisibility 的已核验修订 ID，以及当前赛季开关；规则改变时停止并提示重新核验。
+Lua 只解析数据字面量；不支持的语法会明确报错。空 Lua 表转换为 JSON 空数组。
+未知学习来源明确报错，缺失技能引用明确列出。模块中提供的信息按原字段保存，其内容完整性仍依赖 BWIKI。
+
+本次快照已完成转换：633 个精灵条目（含形态）、579 个战斗技能、246 个特性、31,303 条学习关系；技能引用均能关联。
+机械方方的进化条件为等级 28 且“需在他人世界”；喵喵两段普通进化分别记录等级 16、32，首领分支记录阳光罐头或月光罐头。
+原始响应、模块修订时间、实际采集时间、转换时间分别保留。
+来源数据使用及后续分发按 BWIKI 相应授权说明执行。
+
+## 页面核验样本
+
+`喵喵/` 和 `机械方方/` 中的 `page.json`、`extracted.json` 是先前保存的页面响应及正文提取；`structured.json` 是先前 Lua 试点输出。
+当前批量转换的正式输出位于 `converted/`，精灵与技能分开保存。
+需要补采页面以对比模块结果时可执行：
 
 ```sh
 python scripts/collect_bwiki.py 喵喵 机械方方
 ```
 
-每个精灵目录保存：
+所有 BWIKI 输出独立保存在本目录。SQLite 与现有 Agent 继续沿用原有资料。
 
-- `page.json`：接口原始响应，包括页面标题、页面 ID、修订 ID、wikitext 和渲染后的 HTML。
-- `extracted.json`：来源链接、采集时间、进化链各分支的名称与条件原文、页面分区文本及正文文本。正文过滤 style/script。
-
-页面模板的 wikitext 可能仅为 `{{精灵}}`，实际数据在渲染后的 HTML 中；本次提取使用 HTML。
-`evolution_branches.steps` 按页面顺序保留精灵及连接条件，保留分支边界和条件措辞。
-分区正文目前为文本，技能、特性等尚需后续按各自结构解析。
-页面修订 ID 用于定位页面版本；模板和数据模块的更新可能独立于页面修订 ID，原始渲染响应与采集时间一起保留供复核。
-来源数据使用及后续分发需核对 BWIKI 当时的授权说明。
-
-## 2026-11-02 对比结果
-
-| 关系 | 本地原有 091p 接口资料 | BWIKI 页面原文 |
-|---|---|---|
-| 喵喵 → 喵呜 | 等级达到 16，另带 items、money 字段 | LV16 进化 |
-| 喵呜 → 魔力猫 | 等级达到 32，另带 items、money 字段 | LV32 进化 |
-| 魔力猫 → 叶冕魔力猫 | 首领化 | 通过阳光罐头首领化 |
-| 魔力猫 → 武斗酷猫 | 首领化 | 通过月光罐头首领化 |
-| 机械方方 → 多彩方方 | 等级达到 28 | LV28 需在他人世界 |
-| 多彩方方 → 立方人 | 等级达到 40 | LV40 进化 |
-
-BWIKI 补充了机械方方的他人世界条件以及魔力猫首领化的具体道具。
-多彩方方 → 立方人仍仅写等级，是否另有条件需继续核验。
-两只样本说明 BWIKI 可作为补充来源，其全量准确性与完整性仍需更多样本验证。
-试采结果独立存储于本目录；当前 SQLite 导入器及 Agent 沿用 `data/pets`，本次结果尚未合并到查询库。
-
-提取回归检查：
+## 验证
 
 ```sh
-python -m unittest discover -s scripts -p test_collect_bwiki.py -v
+python -m unittest discover -s scripts -p 'test_collect*.py' -v
 ```
 
-## Lua 结构化试采
-
-```sh
-python scripts/collect_bwiki_modules.py 喵喵 机械方方
-```
-
-新增文件：
-
-- `modules/response.json`：从公开 MediaWiki revisions 接口读取的原始模块响应，含模块修订 ID、修订时间及 Lua 原文。
-- `<名称>/structured.json`：结构化精灵数据。`pet` 包含种族值、生态获取、蛋组等；`feature` 为关联特性；`learnset` 保留等级、血脉及技能详情；`evolutions` 保留分支和条件；`handbook` 为图鉴课题；`manual_evolution_conditions` 为适用的人工条件补充。
-
-数据读取 Catalog、Skills、Learnsets、Evolutions、Handbooks 表，按 Wiki 稳定 ID 关联；`game_id` 是游戏 ID，`pet_000177` 等是 Wiki 稳定 ID，两者分别保留。
-Lua 只解析数据字面量，遇到可执行代码或不支持语法会报错；空表统一表示为 JSON 空数组。原始 Lua 响应可供复核。
-`--from-response data/bwiki/modules/response.json` 可复用本地模块响应进行离线转换，输出时间标记为采集或转换时间，来源修订时间独立保存。
-
-当前页面通过 SeasonData 和 ContentVisibility 适配器使用基础表及修订表。本脚本已核对并实现当前 S5 隐藏策略下、所采字段使用的 Catalog/Skills/Learnsets 修订、异色与课题过滤；当该赛季开关切换时显式停止，需重新核验新版聚合规则。
-人工进化条件补充表单独保留：渲染页面的规则是等级保留，人工条件（含空字符串）优先于成员 `cond`，首领分支另用 `item` 描述信物。本试采保留这些原始字段供核对。
-
-样本验证：
-
-- 喵喵：自学 16、技能石 17、血脉 18，共 51；机械方方：自学 13、技能石 18、血脉 18，共 49，与已采页面数量一致。
-- 两只样本的种族值与本地原接口资料一致。
-- 机械方方进化链中，多彩方方节点明确含 `level: 28` 和 `cond: "需在他人世界"`。
-- 喵喵两段普通进化仅有等级，首领分支另含 `item`，不把所有材料字段自动归类为条件。
-
-这是关联数据模块的试点，培养参考、变动历史等模块尚未纳入结构化输出；现有页面快照继续保留。结果仍独立保存，尚未接入 SQLite/Agent。
-
-```sh
-python -m unittest discover -s scripts -p 'test_collect_bwiki*.py' -v
-```
+回归检查覆盖数据解析、赛季修订、条件覆盖优先级及空条件、分支边界、技能来源、传说要求和批量选择。
+本次还逐一检查了全部学习关系、特性文件和进化两端的游戏 ID，并完成指定 ID 的离线转换验证。

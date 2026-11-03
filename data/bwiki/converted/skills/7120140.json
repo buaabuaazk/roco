@@ -1,0 +1,37 @@
+{
+    "category": "状态",
+    "desc": "敌方获得3层中毒，应对防御：改为获得8层。",
+    "desc_notes": [
+        1001,
+        1017
+    ],
+    "element": "毒系",
+    "energy": 2,
+    "flavor": "中毒之后，你能做的还有祈祷。",
+    "game_id": 7120140,
+    "icon": "Skill_712004.png",
+    "name": "剧毒",
+    "skill_id": 7120140,
+    "wiki_id": "skill_000617",
+    "terms": {
+        "1001": {
+            "desc": "回合结束时，造成3%生命的毒系伤害。（毒系精灵免疫此效果）",
+            "note": "中毒"
+        },
+        "1017": {
+            "desc": "若敌方使用防御技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对防御"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000053",
+            "head": "PetAvatar_3368.png",
+            "pet_id": "pet_000295",
+            "pet_name": "嘟嘟锅",
+            "stone_icon": "Item_241001.png",
+            "topic": "使用2次剧毒",
+            "topic_id": "topic_000282"
+        }
+    ]
+}

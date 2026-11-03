@@ -1,0 +1,37 @@
+{
+    "category": "防御",
+    "desc": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。",
+    "desc_notes": [
+        1036,
+        1016
+    ],
+    "element": "毒系",
+    "energy": 1,
+    "flavor": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
+    "game_id": 7120250,
+    "icon": "Skill_111022.png",
+    "name": "不可接触",
+    "skill_id": 7120250,
+    "wiki_id": "skill_000627",
+    "terms": {
+        "1036": {
+            "desc": "包括中毒和中毒印记。",
+            "note": "中毒效果"
+        },
+        "1016": {
+            "desc": "若敌方使用攻击技能，则本技能应对成功，本次行动必定先手，且触发应对效果。使用后，携带的防御技能进入1回合冷却。",
+            "note": "应对攻击"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000127",
+            "head": "PetAvatar_3153.png",
+            "pet_id": "pet_000139",
+            "pet_name": "古啦多",
+            "stone_icon": "Item_241001.png",
+            "topic": "使用1次不可接触",
+            "topic_id": "topic_000674"
+        }
+    ]
+}

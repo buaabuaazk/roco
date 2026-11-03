@@ -1,0 +1,384 @@
+{
+    "category": "特性",
+    "desc": "根据捕捉所用的咕噜球，入场时获得不同效果。",
+    "effect_details": {
+        "extra": {
+            "rows": [
+                {
+                    "effects": [
+                        {
+                            "label": "技能威力",
+                            "target": "自身",
+                            "value": "+20"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "回复生命",
+                            "target": "自身",
+                            "value": "10%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "灼烧",
+                            "target": "对手",
+                            "value": "4层"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "所有技能能耗",
+                            "target": "自身",
+                            "value": "−1"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "魔攻",
+                            "target": "自身",
+                            "value": "+40%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "速度",
+                            "target": "对手",
+                            "value": "−40"
+                        },
+                        {
+                            "label": "连击次数",
+                            "target": "对手",
+                            "value": "−2"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "速度",
+                            "target": "自身",
+                            "value": "+50"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "中毒",
+                            "target": "对手",
+                            "value": "1层"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "物防",
+                            "target": "对手",
+                            "value": "−40%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "物攻",
+                            "target": "自身",
+                            "value": "+40%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "连击次数",
+                            "target": "自身",
+                            "value": "+1"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "双攻",
+                            "target": "对手",
+                            "value": "−30%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "双防",
+                            "target": "自身",
+                            "value": "+30%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "星陨印记",
+                            "target": "对手",
+                            "value": "1层"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "冻结",
+                            "target": "对手",
+                            "value": "1层"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "魔防",
+                            "target": "对手",
+                            "value": "−40%"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "能量",
+                            "target": "对手",
+                            "value": "−1"
+                        }
+                    ]
+                },
+                {
+                    "effects": [
+                        {
+                            "label": "吸血",
+                            "target": "自身",
+                            "value": "30%"
+                        }
+                    ]
+                }
+            ],
+            "title": "柔软咕噜球 · 可能效果"
+        },
+        "intro": "以捕捉这只精灵时使用的咕噜球为准。",
+        "rows": [
+            {
+                "effects": [
+                    {
+                        "label": "双攻、双防、速度",
+                        "target": "自身",
+                        "value": "+5%"
+                    }
+                ],
+                "icon": "Item_100002.png",
+                "label": "普通咕噜球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "双攻、双防、速度",
+                        "target": "自身",
+                        "value": "+10%"
+                    }
+                ],
+                "icon": "Item_100003.png",
+                "label": "高级咕噜球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "双攻、双防、速度",
+                        "target": "自身",
+                        "value": "+15%"
+                    }
+                ],
+                "icon": "Item_100255.png",
+                "label": "国王球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "技能威力",
+                        "target": "自身",
+                        "value": "+20"
+                    },
+                    {
+                        "label": "双攻",
+                        "target": "对手",
+                        "value": "−30%"
+                    }
+                ],
+                "icon": "Item_100262.png",
+                "label": "美妙球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "物攻",
+                        "target": "自身",
+                        "value": "+40%"
+                    },
+                    {
+                        "label": "魔防",
+                        "target": "对手",
+                        "value": "−40%"
+                    }
+                ],
+                "icon": "Item_100263.png",
+                "label": "好战球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "回复生命",
+                        "target": "自身",
+                        "value": "10%"
+                    },
+                    {
+                        "label": "魔攻",
+                        "target": "自身",
+                        "value": "+40%"
+                    }
+                ],
+                "icon": "Item_100271.png",
+                "label": "光合球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "连击次数",
+                        "target": "自身",
+                        "value": "+1"
+                    },
+                    {
+                        "label": "所有技能能耗",
+                        "target": "自身",
+                        "value": "−1"
+                    }
+                ],
+                "icon": "Item_100272.png",
+                "label": "网兜球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "能量",
+                        "target": "对手",
+                        "value": "−1"
+                    },
+                    {
+                        "label": "吸血",
+                        "target": "自身",
+                        "value": "30%"
+                    }
+                ],
+                "icon": "Item_100273.png",
+                "label": "暗星球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "冻结",
+                        "target": "对手",
+                        "value": "1层"
+                    },
+                    {
+                        "label": "灼烧",
+                        "target": "对手",
+                        "value": "4层"
+                    }
+                ],
+                "icon": "Item_100274.png",
+                "label": "调温球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "中毒",
+                        "target": "对手",
+                        "value": "1层"
+                    },
+                    {
+                        "label": "速度",
+                        "target": "自身",
+                        "value": "+50"
+                    }
+                ],
+                "icon": "Item_100275.png",
+                "label": "绝缘球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "速度",
+                        "target": "对手",
+                        "value": "−40"
+                    },
+                    {
+                        "label": "连击次数",
+                        "target": "对手",
+                        "value": "−2"
+                    },
+                    {
+                        "label": "物防",
+                        "target": "对手",
+                        "value": "−40%"
+                    }
+                ],
+                "icon": "Item_100283.png",
+                "label": "淘沙球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "双防",
+                        "target": "自身",
+                        "value": "+30%"
+                    },
+                    {
+                        "label": "星陨印记",
+                        "target": "对手",
+                        "value": "1层"
+                    }
+                ],
+                "icon": "Item_100284.png",
+                "label": "变幻球"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "随机获得",
+                        "value": "1 种效果"
+                    }
+                ],
+                "icon": "Item_280001.png",
+                "label": "柔软咕噜球",
+                "note": "特殊对战用球"
+            }
+        ],
+        "title": "咕噜球与入场效果"
+    },
+    "element": "无系别",
+    "energy": 0,
+    "game_id": 200137,
+    "icon": "Feature_200137.png",
+    "name": "契约的形状",
+    "skill_id": 200137,
+    "wiki_id": "skill_000056",
+    "terms": {},
+    "stone_topics": []
+}

@@ -1,0 +1,38 @@
+{
+    "category": "攻击",
+    "damage_class": "魔攻",
+    "desc": "造成魔伤，若击败敌方则将中毒转化为中毒印记。",
+    "desc_notes": [
+        1001,
+        1014
+    ],
+    "element": "毒系",
+    "energy": 4,
+    "game_id": 7120110,
+    "icon": "Skill_712008.png",
+    "name": "感染病",
+    "power": 110,
+    "skill_id": 7120110,
+    "wiki_id": "skill_000614",
+    "terms": {
+        "1001": {
+            "desc": "回合结束时，造成3%生命的毒系伤害。（毒系精灵免疫此效果）",
+            "note": "中毒"
+        },
+        "1014": {
+            "desc": "印记效果，回合结束造成3%生命的毒系伤害。",
+            "note": "中毒印记"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000248",
+            "head": "PetAvatar_3156.png",
+            "pet_id": "pet_000142",
+            "pet_name": "裘卡",
+            "stone_icon": "Item_241001.png",
+            "topic": "使用2次感染病",
+            "topic_id": "topic_001306"
+        }
+    ]
+}

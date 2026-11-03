@@ -1,0 +1,39 @@
+{
+    "category": "攻击",
+    "damage_class": "魔攻",
+    "desc": "造成魔伤，敌方每有1层中毒效果，本次技能威力+10，应对状态：改为本次威力+40。",
+    "desc_notes": [
+        1036,
+        1015
+    ],
+    "element": "毒系",
+    "energy": 3,
+    "flavor": "一种从黄金时代遗迹中挖掘到的炼金药剂。",
+    "game_id": 7120220,
+    "icon": "Skill_111019.png",
+    "name": "鸩毒",
+    "power": 75,
+    "skill_id": 7120220,
+    "wiki_id": "skill_000624",
+    "terms": {
+        "1036": {
+            "desc": "包括中毒和中毒印记。",
+            "note": "中毒效果"
+        },
+        "1015": {
+            "desc": "若敌方使用状态技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对状态"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000245",
+            "head": "PetAvatar_3120.png",
+            "pet_id": "pet_000109",
+            "pet_name": "琉璃水母",
+            "stone_icon": "Item_241001.png",
+            "topic": "使用1次鸩毒",
+            "topic_id": "topic_001293"
+        }
+    ]
+}

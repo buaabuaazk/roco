@@ -1,0 +1,38 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物伤，应对状态：本次攻击吸血100%。",
+    "desc_notes": [
+        1015,
+        1029
+    ],
+    "element": "恶系",
+    "energy": 3,
+    "game_id": 7180100,
+    "icon": "Skill_718008.png",
+    "name": "撕裂",
+    "power": 85,
+    "skill_id": 7180100,
+    "wiki_id": "skill_000770",
+    "terms": {
+        "1015": {
+            "desc": "若敌方使用状态技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对状态"
+        },
+        "1029": {
+            "desc": "造成伤害时，根据吸血比例和造成伤害值，回复生命。",
+            "note": "吸血"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000131",
+            "head": "PetAvatar_3011.png",
+            "pet_id": "pet_000010",
+            "pet_name": "恶魔狼",
+            "stone_icon": "Item_247001.png",
+            "topic": "使用2次撕裂",
+            "topic_id": "topic_000698"
+        }
+    ]
+}

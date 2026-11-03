@@ -1,0 +1,38 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物理伤害，先手+1，迸发：本次技能威力+30。",
+    "desc_notes": [
+        1020,
+        1010
+    ],
+    "element": "普通系",
+    "energy": 3,
+    "game_id": 7020980,
+    "icon": "Skill_101080.png",
+    "name": "天旋地转",
+    "power": 60,
+    "skill_id": 7020980,
+    "wiki_id": "skill_000314",
+    "terms": {
+        "1020": {
+            "desc": "技能行动的优先级，先手度更高的技能忽略双方精灵速度差异，优先释放，先手度可叠加。",
+            "note": "先手"
+        },
+        "1010": {
+            "desc": "入场后的首次行动，会获得额外效果。",
+            "note": "迸发"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000162",
+            "head": "PetAvatar_3499.png",
+            "pet_id": "pet_000397",
+            "pet_name": "公平鸽",
+            "stone_icon": "Item_231001.png",
+            "topic": "使用1次天旋地转",
+            "topic_id": "topic_000842"
+        }
+    ]
+}

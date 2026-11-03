@@ -1,6 +1,7 @@
 import unittest
 
-from collect_bwiki_modules import parse_lua, visible_tables
+from collect_bwiki_modules import (parse_lua, visible_tables, evolution_edges, convert_pet,
+                                  select_pets, validate_rules, RULE_REVISIONS)
 
 
 class LuaDataTest(unittest.TestCase):
@@ -43,6 +44,58 @@ class LuaDataTest(unittest.TestCase):
         raw['VisibilityConfig']['hidden_seasons']['S5'] = False
         with self.assertRaises(ValueError):
             visible_tables(raw)
+
+    def test_manual_condition_priority_and_empty_override(self):
+        start = {'id': 'a', 'title': '甲'}
+        end = {'id': 'b', 'title': '乙', 'level': 28, 'cond': '旧条件'}
+        tables = {'Catalog': {'a': {'game_id': 1}, 'b': {'game_id': 2}},
+                  'EvolutionConditions': {'1': {'2': ''}, 'a': {'b': '低优先级'}}}
+        branches = [{'name': '分支', 'chain': [start, end], 'lord_branches': [
+            {'id': 'c', 'title': '丙', 'cond': '首领化', 'item': '信物'}]}]
+        edges = evolution_edges(tables, branches)[0]['transitions']
+        self.assertEqual(edges[0]['conditions'], {'level': 28, 'special': ''})
+        self.assertEqual(edges[0]['special_condition_source'], 'manual')
+        self.assertEqual(edges[1]['from_wiki_id'], 'b')
+        self.assertEqual(edges[1]['conditions']['item'], '信物')
+        self.assertIsNone(edges[1]['to_pet_id'])
+        tables['EvolutionConditions'] = {}
+        self.assertEqual(evolution_edges(tables, branches)[0]['transitions'][0]['conditions']['special'], '旧条件')
+
+    def test_separate_skill_references_preserve_legendary_requirement(self):
+        pet = {'id': 'pet', 'game_id': 3200, 'name': '甲', 'title': '甲',
+               'learnset_id': 'learn', 'feature_skill_id': 'feature',
+               'evolution_id': 'family', 'handbook_id': 'book'}
+        tables = {'Catalog': {'pet': pet}, 'Skills': {'feature': {'game_id': 10},
+                   'attack': {'game_id': 20}}, 'Learnsets': {'learn': {
+                       'feature_skill': 'feature', 'native_skills': [{'level': 5, 'skill': 'attack'}],
+                       'skill_stones': ['missing'], 'blood_skills': [],
+                       'legendary': {'skill': 'attack', 'requires': '指定形态'}}},
+                  'Evolutions': {'family': []}, 'EvolutionConditions': {}, 'Handbooks': {'book': {}},
+                  'Types': {}, 'TrainingReference': {'pets': {}}, 'History': {'pets': {}}}
+        result = convert_pet(tables, pet)
+        self.assertEqual(result['skills']['level'][0]['skill_id'], 20)
+        self.assertEqual(result['skills']['level'][0]['level'], 5)
+        self.assertNotIn('skill_detail', result['skills']['level'][0])
+        self.assertEqual(result['skills']['legendary'][0]['requires'], '指定形态')
+        self.assertEqual(result['status'], 'partial')
+        self.assertEqual(result['missing_skill_references'], ['missing'])
+
+    def test_batch_selection_uses_game_ids_and_full_titles(self):
+        catalog = {'a': {'game_id': 2, 'name': '甲', 'title': '甲（特殊形态）'},
+                   'b': {'game_id': 1, 'name': '甲', 'title': '甲'}}
+        self.assertEqual([p['game_id'] for p in select_pets(catalog, ['甲'], [2])], [1, 2])
+        self.assertEqual(select_pets(catalog, [], [], True, 1)[0]['game_id'], 1)
+        with self.assertRaises(ValueError):
+            select_pets(catalog, [], [99])
+
+    def test_rule_revision_change_requires_review(self):
+        rows = [{'title': title, 'revision_id': revision} for title, revision in RULE_REVISIONS.items()]
+        validate_rules(rows)
+        rows[0]['revision_id'] += 1
+        with self.assertRaises(ValueError):
+            validate_rules(rows)
+        with self.assertRaises(ValueError):
+            validate_rules([])
 
 
 if __name__ == '__main__':

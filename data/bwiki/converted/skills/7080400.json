@@ -1,0 +1,36 @@
+{
+    "category": "防御",
+    "desc": "减伤80%，应对攻击：敌方获得连击数-3。",
+    "desc_notes": [
+        1016,
+        3005
+    ],
+    "element": "地系",
+    "energy": 2,
+    "game_id": 7080400,
+    "icon": "Skill_107036.png",
+    "name": "淤泥表皮",
+    "skill_id": 7080400,
+    "wiki_id": "skill_000525",
+    "terms": {
+        "1016": {
+            "desc": "若敌方使用攻击技能，则本技能应对成功，本次行动必定先手，且触发应对效果。使用后，携带的防御技能进入1回合冷却。",
+            "note": "应对攻击"
+        },
+        "3005": {
+            "desc": "改变连击次数，仅对有连击的技能生效。",
+            "note": "连击数"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000202",
+            "head": "PetAvatar_3507.png",
+            "pet_id": "pet_000402",
+            "pet_name": "鳗尾兽",
+            "stone_icon": "Item_237001.png",
+            "topic": "使用1次淤泥表皮",
+            "topic_id": "topic_001060"
+        }
+    ]
+}

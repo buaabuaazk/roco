@@ -1,0 +1,37 @@
+{
+    "category": "状态",
+    "desc": "雨天的回合数延长4回合，应对防御：改为延长8回合。",
+    "desc_notes": [
+        3008,
+        1017
+    ],
+    "element": "水系",
+    "energy": 1,
+    "flavor": "每一条滴水都记得回家的路。",
+    "game_id": 7050530,
+    "icon": "Skill_104038.png",
+    "name": "汇流",
+    "skill_id": 7050530,
+    "wiki_id": "skill_000448",
+    "terms": {
+        "3008": {
+            "desc": "天气为雨天时，双方的水系技能威力+75%。",
+            "note": "雨天"
+        },
+        "1017": {
+            "desc": "若敌方使用防御技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对防御"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000453",
+            "head": "PetAvatar_3768.png",
+            "pet_id": "pet_000613",
+            "pet_name": "智辉章脑",
+            "stone_icon": "Item_105000.png",
+            "topic": "使用1次汇流",
+            "topic_id": "topic_002284"
+        }
+    ]
+}

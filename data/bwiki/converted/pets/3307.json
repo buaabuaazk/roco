@@ -1,0 +1,1760 @@
+{
+    "pet_id": 3307,
+    "wiki_id": "pet_000256",
+    "name": "矿晶虫",
+    "title": "矿晶虫",
+    "profile": {
+        "affinity": {
+            "enjoy": [
+                "火系",
+                "地系",
+                "冰系"
+            ],
+            "hate": [
+                "草系",
+                "水系"
+            ]
+        },
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "喜欢攀附于潮湿的岩层，以土壤中的矿粒为食，常被用作衡量矿产资源丰富度的标志。身上的晶体可以将细小的光线通过折射放大数倍，四只矿晶虫便能照亮一整个矿洞，是备受矿工喜爱的精灵。",
+        "ecology": {
+            "areas": [
+                "商店街周边",
+                "岚语峰西侧",
+                "沉船漩涡",
+                "港口驻地",
+                "拾荒港口",
+                "信仰者村落",
+                "望风半岛",
+                "结晶森林",
+                "仪式镇",
+                "巨人裂谷南",
+                "巨人裂谷北"
+            ],
+            "eggs": [
+                {
+                    "description": "在晶石蜗的守护地发现的珍贵精灵蛋，经过孵化可以得到“了不起”天分、且拥有量身定制资质、“灵巧”特长的矿晶虫。",
+                    "dungeon": "dg_000019",
+                    "fixed_aptitudes": [
+                        {
+                            "stat": "生命",
+                            "value": 8
+                        },
+                        {
+                            "stat": "物攻",
+                            "value": 8
+                        },
+                        {
+                            "stat": "魔防",
+                            "value": 8
+                        }
+                    ],
+                    "fixed_nature": "固执",
+                    "fixed_nature_negative": "魔攻",
+                    "fixed_nature_positive": "物攻",
+                    "fixed_talent": "灵巧",
+                    "fixed_talent_description": "本精灵的采集范围更大。",
+                    "icon": "Item_150077.png",
+                    "name": "矿晶虫的蛋",
+                    "sources": [
+                        "晶石蜗的守护地"
+                    ]
+                },
+                {
+                    "description": "击败精灵首领·钻石蜗后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“了不起”天分的精灵。",
+                    "icon": "Item_150516.png",
+                    "name": "矿晶虫的蛋",
+                    "sources": [
+                        "精灵首领·钻石蜗掉落"
+                    ]
+                },
+                {
+                    "description": "击败精灵首领·钻石蜗后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“相当好”天分的精灵。",
+                    "icon": "Item_150616.png",
+                    "name": "矿晶虫的蛋",
+                    "sources": [
+                        "精灵首领·钻石蜗掉落"
+                    ]
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是矿晶虫的果实。",
+                    "icon": "Item_108115.png",
+                    "name": "矿晶虫的果实",
+                    "sources": [
+                        "完成晶石蜗的图鉴课题获得"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            10,
+            11
+        ],
+        "egg_size": {
+            "huge_min": 2510,
+            "max": 2520,
+            "min": 2030,
+            "mini_max": 2040,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_a419605ef100",
+        "feature_skill_id": "skill_000001",
+        "game_id": 3307,
+        "gender_ratio": {
+            "female": 5,
+            "male": 5
+        },
+        "handbook_id": "handbook_000039",
+        "handbook_show_topics": true,
+        "has_shiny": false,
+        "height": "0.54~0.77M",
+        "id": "pet_000256",
+        "image": {
+            "egg": "Item_107115.png",
+            "fruits": [
+                "Item_108115.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3307.png",
+            "illustration": "PetPortrait_kuangjingchong.png"
+        },
+        "learnset_id": "learnset_d27694b51c01",
+        "move_type": "地面",
+        "name": "矿晶虫",
+        "number": "039",
+        "perception_range": 40,
+        "relation_key": "光系|地系",
+        "release": {
+            "date": "2026-03-26",
+            "version": "1.0.0"
+        },
+        "review_gold": 800,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 16,
+        "stats": {
+            "atk": 77,
+            "def": 102,
+            "hp": 79,
+            "spa": 81,
+            "spd": 75,
+            "spe": 52
+        },
+        "submit_reward": 800,
+        "talent_pool_id": 1001,
+        "title": "矿晶虫",
+        "types": [
+            "光系",
+            "地系"
+        ],
+        "weight": "5.8~10.53KG"
+    },
+    "feature_id": 200074,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000273",
+                "skill_id": 7020630
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000458",
+                "skill_id": 7060190
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000525",
+                "skill_id": 7080400
+            },
+            {
+                "level": 12,
+                "stage": 1,
+                "wiki_skill_id": "skill_000513",
+                "skill_id": 7080270
+            },
+            {
+                "level": 17,
+                "stage": 1,
+                "wiki_skill_id": "skill_000453",
+                "skill_id": 7060140
+            },
+            {
+                "level": 25,
+                "stage": 1,
+                "wiki_skill_id": "skill_000462",
+                "skill_id": 7060230
+            },
+            {
+                "level": 26,
+                "stage": 1,
+                "wiki_skill_id": "skill_000524",
+                "skill_id": 7080380
+            },
+            {
+                "level": 33,
+                "stage": 1,
+                "wiki_skill_id": "skill_000511",
+                "skill_id": 7080240
+            },
+            {
+                "level": 34,
+                "stage": 1,
+                "wiki_skill_id": "skill_000498",
+                "skill_id": 7080110
+            },
+            {
+                "level": 38,
+                "stage": 1,
+                "wiki_skill_id": "skill_000499",
+                "skill_id": 7080120
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000454",
+                "skill_id": 7060150
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000305",
+                "skill_id": 7020890
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000450",
+                "skill_id": 7060100
+            },
+            {
+                "level": 49,
+                "stage": 1,
+                "wiki_skill_id": "skill_000500",
+                "skill_id": 7080130
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000512",
+                "skill_id": 7080250
+            },
+            {
+                "wiki_skill_id": "skill_000521",
+                "skill_id": 7080350
+            },
+            {
+                "wiki_skill_id": "skill_000461",
+                "skill_id": 7060220
+            },
+            {
+                "wiki_skill_id": "skill_000318",
+                "skill_id": 7021020
+            },
+            {
+                "wiki_skill_id": "skill_000331",
+                "skill_id": 7021150
+            },
+            {
+                "wiki_skill_id": "skill_000260",
+                "skill_id": 7020490
+            },
+            {
+                "wiki_skill_id": "skill_000321",
+                "skill_id": 7021050
+            },
+            {
+                "wiki_skill_id": "skill_000278",
+                "skill_id": 7020680
+            },
+            {
+                "wiki_skill_id": "skill_000299",
+                "skill_id": 7020860
+            },
+            {
+                "wiki_skill_id": "skill_000289",
+                "skill_id": 7020800
+            },
+            {
+                "wiki_skill_id": "skill_000328",
+                "skill_id": 7021120
+            },
+            {
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000307",
+                "skill_id": 7020910
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000355",
+                "skill_id": 7030330
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000392",
+                "skill_id": 7040300
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000430",
+                "skill_id": 7050270
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000460",
+                "skill_id": 7060210
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000514",
+                "skill_id": 7080280
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000554",
+                "skill_id": 7090350
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000592",
+                "skill_id": 7110280
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000621",
+                "skill_id": 7120190
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000649",
+                "skill_id": 7130270
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000665",
+                "skill_id": 7140100
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000695",
+                "skill_id": 7150150
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000727",
+                "skill_id": 7160230
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000758",
+                "skill_id": 7170260
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000781",
+                "skill_id": 7180210
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000478",
+                "skill_id": 7070110
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000822",
+                "skill_id": 7190400
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3307.png",
+                    "id": "pet_000256",
+                    "illustration": "PetPortrait_kuangjingchong.png",
+                    "name": "矿晶虫",
+                    "stage": 1,
+                    "title": "矿晶虫",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "与任意蓝晶碧玺累计交互3次",
+                    "form": "西瓜碧玺的样子",
+                    "head": "PetAvatar_3243.png",
+                    "id": "pet_000257",
+                    "illustration": "PetPortrait_jingshiwo.png",
+                    "level": 40,
+                    "name": "晶石蜗",
+                    "stage": 2,
+                    "title": "晶石蜗（西瓜碧玺的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "西瓜碧玺的样子",
+                    "head": "PetAvatar_4079.png",
+                    "id": "pet_000534",
+                    "illustration": "PetPortrait_jingshiwo_shouling.png",
+                    "item": "钻石蜗的信物",
+                    "name": "钻石蜗",
+                    "stage": 4,
+                    "title": "钻石蜗（西瓜碧玺的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "矿晶虫进化链（西瓜碧玺的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000256",
+                    "to_wiki_id": "pet_000257",
+                    "from_pet_id": 3307,
+                    "to_pet_id": 3308,
+                    "conditions": {
+                        "level": 40,
+                        "special": "与任意蓝晶碧玺累计交互3次"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000257",
+                    "to_wiki_id": "pet_000534",
+                    "from_pet_id": 3308,
+                    "to_pet_id": 5001,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "钻石蜗的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3307.png",
+                    "id": "pet_000256",
+                    "illustration": "PetPortrait_kuangjingchong.png",
+                    "name": "矿晶虫",
+                    "stage": 1,
+                    "title": "矿晶虫",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "与任意紫莲刚玉累计交互3次",
+                    "form": "莲花刚玉的样子",
+                    "head": "PetAvatar_3448.png",
+                    "id": "pet_000349",
+                    "illustration": "PetPortrait_jingshiwo_yidi3.png",
+                    "level": 40,
+                    "name": "晶石蜗",
+                    "stage": 2,
+                    "title": "晶石蜗（莲花刚玉的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "莲花刚玉的样子",
+                    "head": "PetAvatar_4079.png",
+                    "id": "pet_000580",
+                    "illustration": "PetPortrait_jingshiwo_shouling.png",
+                    "item": "钻石蜗的信物",
+                    "name": "钻石蜗",
+                    "stage": 4,
+                    "title": "钻石蜗（莲花刚玉的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "矿晶虫进化链（莲花刚玉的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000256",
+                    "to_wiki_id": "pet_000349",
+                    "from_pet_id": 3307,
+                    "to_pet_id": 3448,
+                    "conditions": {
+                        "level": 40,
+                        "special": "与任意紫莲刚玉累计交互3次"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000349",
+                    "to_wiki_id": "pet_000580",
+                    "from_pet_id": 3448,
+                    "to_pet_id": 5047,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "钻石蜗的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3307.png",
+                    "id": "pet_000256",
+                    "illustration": "PetPortrait_kuangjingchong.png",
+                    "name": "矿晶虫",
+                    "stage": 1,
+                    "title": "矿晶虫",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "与任意黄石榴石累计交互3次",
+                    "form": "星彩榴石的样子",
+                    "head": "PetAvatar_3449.png",
+                    "id": "pet_000350",
+                    "illustration": "PetPortrait_jingshiwo_yidi5.png",
+                    "level": 40,
+                    "name": "晶石蜗",
+                    "stage": 2,
+                    "title": "晶石蜗（星彩榴石的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "星彩榴石的样子",
+                    "head": "PetAvatar_4079.png",
+                    "id": "pet_000581",
+                    "illustration": "PetPortrait_jingshiwo_shouling.png",
+                    "item": "钻石蜗的信物",
+                    "name": "钻石蜗",
+                    "stage": 4,
+                    "title": "钻石蜗（星彩榴石的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "矿晶虫进化链（星彩榴石的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000256",
+                    "to_wiki_id": "pet_000350",
+                    "from_pet_id": 3307,
+                    "to_pet_id": 3449,
+                    "conditions": {
+                        "level": 40,
+                        "special": "与任意黄石榴石累计交互3次"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000350",
+                    "to_wiki_id": "pet_000581",
+                    "from_pet_id": 3449,
+                    "to_pet_id": 5048,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "钻石蜗的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3307.png",
+                    "id": "pet_000256",
+                    "illustration": "PetPortrait_kuangjingchong.png",
+                    "name": "矿晶虫",
+                    "stage": 1,
+                    "title": "矿晶虫",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "与任意黑晶琉璃累计交互3次",
+                    "form": "火山琉璃的样子",
+                    "head": "PetAvatar_3450.png",
+                    "id": "pet_000351",
+                    "illustration": "PetPortrait_jingshiwo_yidi1.png",
+                    "level": 40,
+                    "name": "晶石蜗",
+                    "stage": 2,
+                    "title": "晶石蜗（火山琉璃的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "火山琉璃的样子",
+                    "head": "PetAvatar_4079.png",
+                    "id": "pet_000582",
+                    "illustration": "PetPortrait_jingshiwo_shouling.png",
+                    "item": "钻石蜗的信物",
+                    "name": "钻石蜗",
+                    "stage": 4,
+                    "title": "钻石蜗（火山琉璃的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "矿晶虫进化链（火山琉璃的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000256",
+                    "to_wiki_id": "pet_000351",
+                    "from_pet_id": 3307,
+                    "to_pet_id": 3450,
+                    "conditions": {
+                        "level": 40,
+                        "special": "与任意黑晶琉璃累计交互3次"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000351",
+                    "to_wiki_id": "pet_000582",
+                    "from_pet_id": 3450,
+                    "to_pet_id": 5049,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "钻石蜗的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3307.png",
+                    "id": "pet_000256",
+                    "illustration": "PetPortrait_kuangjingchong.png",
+                    "name": "矿晶虫",
+                    "stage": 1,
+                    "title": "矿晶虫",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "与蓝晶碧玺/紫莲刚玉/黄石榴石/黑晶琉璃中的任意一种累计交互6次",
+                    "form": "蓝锥矿的样子",
+                    "head": "PetAvatar_3451.png",
+                    "id": "pet_000352",
+                    "illustration": "PetPortrait_jingshiwo_yidi2.png",
+                    "level": 40,
+                    "name": "晶石蜗",
+                    "stage": 2,
+                    "title": "晶石蜗（蓝锥矿的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "蓝锥矿的样子",
+                    "head": "PetAvatar_4079.png",
+                    "id": "pet_000583",
+                    "illustration": "PetPortrait_jingshiwo_shouling.png",
+                    "item": "钻石蜗的信物",
+                    "name": "钻石蜗",
+                    "stage": 4,
+                    "title": "钻石蜗（蓝锥矿的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "矿晶虫进化链（蓝锥矿的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000256",
+                    "to_wiki_id": "pet_000352",
+                    "from_pet_id": 3307,
+                    "to_pet_id": 3451,
+                    "conditions": {
+                        "level": 40,
+                        "special": "与蓝晶碧玺/紫莲刚玉/黄石榴石/黑晶琉璃中的任意一种累计交互6次"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000352",
+                    "to_wiki_id": "pet_000583",
+                    "from_pet_id": 3451,
+                    "to_pet_id": 5050,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "钻石蜗的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        },
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3307.png",
+                    "id": "pet_000256",
+                    "illustration": "PetPortrait_kuangjingchong.png",
+                    "name": "矿晶虫",
+                    "stage": 1,
+                    "title": "矿晶虫",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                },
+                {
+                    "cond": "与蓝晶碧玺/紫莲刚玉/黄石榴石/黑晶琉璃中的任意一种累计交互9次",
+                    "form": "烧蓝黄金的样子",
+                    "head": "PetAvatar_3486.png",
+                    "id": "pet_000386",
+                    "illustration": "PetPortrait_jingshiwo_yidi4.png",
+                    "level": 40,
+                    "name": "晶石蜗",
+                    "stage": 2,
+                    "title": "晶石蜗（烧蓝黄金的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "烧蓝黄金的样子",
+                    "head": "PetAvatar_4079.png",
+                    "id": "pet_000584",
+                    "illustration": "PetPortrait_jingshiwo_shouling.png",
+                    "item": "钻石蜗的信物",
+                    "name": "钻石蜗",
+                    "stage": 4,
+                    "title": "钻石蜗（烧蓝黄金的样子）",
+                    "types": [
+                        "光系",
+                        "地系"
+                    ]
+                }
+            ],
+            "name": "矿晶虫进化链（烧蓝黄金的样子）",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000256",
+                    "to_wiki_id": "pet_000386",
+                    "from_pet_id": 3307,
+                    "to_pet_id": 3486,
+                    "conditions": {
+                        "level": 40,
+                        "special": "与蓝晶碧玺/紫莲刚玉/黄石榴石/黑晶琉璃中的任意一种累计交互9次"
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000386",
+                    "to_wiki_id": "pet_000584",
+                    "from_pet_id": 3486,
+                    "to_pet_id": 5051,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "钻石蜗的信物"
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴",
+            "风眠省图鉴",
+            "洛克里安图鉴"
+        ],
+        "entry_name": "矿晶虫",
+        "habitat": "常见于矿石群旁",
+        "title": "矿石精灵",
+        "topics": [
+            {
+                "id": "topic_000201",
+                "progress_id": "pt_000039_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_000202",
+                "progress_id": "pt_000039_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_000203",
+                "progress_id": "pt_000039_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "普通系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "火系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "电系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "毒系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "翼系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "恶系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "幻系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 3,
+                "type": "草系"
+            },
+            {
+                "multiplier": 2,
+                "type": "水系"
+            },
+            {
+                "multiplier": 2,
+                "type": "冰系"
+            },
+            {
+                "multiplier": 2,
+                "type": "武系"
+            },
+            {
+                "multiplier": 2,
+                "type": "幽系"
+            },
+            {
+                "multiplier": 2,
+                "type": "机械系"
+            }
+        ]
+    },
+    "training_reference": {
+        "pvp": {
+            "blood": [
+                [
+                    5,
+                    4037
+                ],
+                [
+                    6,
+                    3899
+                ],
+                [
+                    19,
+                    1079
+                ],
+                [
+                    23,
+                    156
+                ],
+                [
+                    4,
+                    103
+                ],
+                [
+                    2,
+                    92
+                ],
+                [
+                    16,
+                    74
+                ],
+                [
+                    24,
+                    73
+                ],
+                [
+                    8,
+                    70
+                ],
+                [
+                    13,
+                    62
+                ],
+                [
+                    15,
+                    51
+                ],
+                [
+                    3,
+                    49
+                ],
+                [
+                    1,
+                    46
+                ],
+                [
+                    7,
+                    40
+                ],
+                [
+                    17,
+                    35
+                ],
+                [
+                    9,
+                    34
+                ],
+                [
+                    14,
+                    25
+                ],
+                [
+                    10,
+                    25
+                ],
+                [
+                    11,
+                    20
+                ],
+                [
+                    12,
+                    16
+                ],
+                [
+                    18,
+                    14
+                ]
+            ],
+            "nature": [
+                [
+                    2,
+                    2141
+                ],
+                [
+                    28,
+                    399
+                ],
+                [
+                    30,
+                    373
+                ],
+                [
+                    3,
+                    316
+                ],
+                [
+                    12,
+                    309
+                ],
+                [
+                    18,
+                    307
+                ],
+                [
+                    26,
+                    299
+                ],
+                [
+                    10,
+                    288
+                ],
+                [
+                    9,
+                    287
+                ],
+                [
+                    13,
+                    284
+                ],
+                [
+                    19,
+                    283
+                ],
+                [
+                    22,
+                    277
+                ],
+                [
+                    6,
+                    276
+                ],
+                [
+                    1,
+                    276
+                ],
+                [
+                    16,
+                    272
+                ],
+                [
+                    15,
+                    271
+                ],
+                [
+                    27,
+                    264
+                ],
+                [
+                    4,
+                    262
+                ],
+                [
+                    8,
+                    261
+                ],
+                [
+                    29,
+                    261
+                ],
+                [
+                    7,
+                    257
+                ],
+                [
+                    5,
+                    257
+                ],
+                [
+                    11,
+                    256
+                ],
+                [
+                    23,
+                    254
+                ],
+                [
+                    17,
+                    235
+                ],
+                [
+                    14,
+                    218
+                ],
+                [
+                    24,
+                    209
+                ],
+                [
+                    20,
+                    207
+                ],
+                [
+                    21,
+                    204
+                ],
+                [
+                    25,
+                    197
+                ]
+            ],
+            "skill": [
+                [
+                    7060190,
+                    6397
+                ],
+                [
+                    7020630,
+                    6266
+                ],
+                [
+                    7080400,
+                    4060
+                ],
+                [
+                    7080270,
+                    3078
+                ],
+                [
+                    7060140,
+                    1611
+                ],
+                [
+                    7060210,
+                    1590
+                ],
+                [
+                    7060230,
+                    1500
+                ],
+                [
+                    7080380,
+                    1415
+                ],
+                [
+                    7080240,
+                    1318
+                ],
+                [
+                    7080280,
+                    1286
+                ],
+                [
+                    7080120,
+                    1201
+                ],
+                [
+                    7080130,
+                    1091
+                ],
+                [
+                    7060100,
+                    927
+                ],
+                [
+                    7080110,
+                    720
+                ],
+                [
+                    7060150,
+                    534
+                ],
+                [
+                    7020890,
+                    282
+                ],
+                [
+                    7030330,
+                    72
+                ],
+                [
+                    7050270,
+                    65
+                ],
+                [
+                    7100150,
+                    65
+                ],
+                [
+                    7080350,
+                    62
+                ],
+                [
+                    7060220,
+                    54
+                ],
+                [
+                    7020860,
+                    51
+                ],
+                [
+                    7020800,
+                    49
+                ],
+                [
+                    7180210,
+                    44
+                ],
+                [
+                    7150150,
+                    35
+                ],
+                [
+                    7040300,
+                    34
+                ],
+                [
+                    7021120,
+                    32
+                ],
+                [
+                    7170260,
+                    31
+                ],
+                [
+                    7020910,
+                    29
+                ],
+                [
+                    7090350,
+                    29
+                ]
+            ],
+            "talent": [
+                [
+                    1,
+                    5538
+                ],
+                [
+                    5,
+                    5245
+                ],
+                [
+                    2,
+                    5205
+                ],
+                [
+                    4,
+                    4300
+                ],
+                [
+                    3,
+                    3485
+                ],
+                [
+                    6,
+                    2433
+                ]
+            ]
+        },
+        "world": {
+            "blood": [
+                [
+                    6,
+                    4386
+                ],
+                [
+                    5,
+                    4342
+                ],
+                [
+                    19,
+                    748
+                ],
+                [
+                    23,
+                    105
+                ],
+                [
+                    16,
+                    94
+                ],
+                [
+                    24,
+                    43
+                ],
+                [
+                    4,
+                    37
+                ],
+                [
+                    2,
+                    27
+                ],
+                [
+                    10,
+                    21
+                ],
+                [
+                    9,
+                    21
+                ],
+                [
+                    8,
+                    20
+                ],
+                [
+                    3,
+                    20
+                ],
+                [
+                    12,
+                    20
+                ],
+                [
+                    14,
+                    19
+                ],
+                [
+                    15,
+                    17
+                ],
+                [
+                    11,
+                    16
+                ],
+                [
+                    17,
+                    16
+                ],
+                [
+                    7,
+                    15
+                ],
+                [
+                    13,
+                    14
+                ],
+                [
+                    1,
+                    10
+                ],
+                [
+                    18,
+                    9
+                ]
+            ],
+            "nature": [
+                [
+                    2,
+                    691
+                ],
+                [
+                    11,
+                    337
+                ],
+                [
+                    23,
+                    333
+                ],
+                [
+                    28,
+                    333
+                ],
+                [
+                    19,
+                    331
+                ],
+                [
+                    26,
+                    328
+                ],
+                [
+                    14,
+                    328
+                ],
+                [
+                    13,
+                    326
+                ],
+                [
+                    1,
+                    326
+                ],
+                [
+                    27,
+                    325
+                ],
+                [
+                    15,
+                    325
+                ],
+                [
+                    9,
+                    325
+                ],
+                [
+                    30,
+                    324
+                ],
+                [
+                    22,
+                    324
+                ],
+                [
+                    24,
+                    324
+                ],
+                [
+                    21,
+                    321
+                ],
+                [
+                    17,
+                    321
+                ],
+                [
+                    10,
+                    320
+                ],
+                [
+                    5,
+                    320
+                ],
+                [
+                    4,
+                    320
+                ],
+                [
+                    3,
+                    316
+                ],
+                [
+                    18,
+                    316
+                ],
+                [
+                    29,
+                    314
+                ],
+                [
+                    8,
+                    314
+                ],
+                [
+                    6,
+                    313
+                ],
+                [
+                    25,
+                    312
+                ],
+                [
+                    7,
+                    312
+                ],
+                [
+                    12,
+                    309
+                ],
+                [
+                    16,
+                    307
+                ],
+                [
+                    20,
+                    305
+                ]
+            ],
+            "skill": [
+                [
+                    7060190,
+                    8274
+                ],
+                [
+                    7020630,
+                    7982
+                ],
+                [
+                    7080400,
+                    7160
+                ],
+                [
+                    7080270,
+                    5010
+                ],
+                [
+                    7060140,
+                    1372
+                ],
+                [
+                    7080280,
+                    1186
+                ],
+                [
+                    7060210,
+                    1158
+                ],
+                [
+                    7080380,
+                    1094
+                ],
+                [
+                    7060230,
+                    1085
+                ],
+                [
+                    7080240,
+                    748
+                ],
+                [
+                    7080110,
+                    676
+                ],
+                [
+                    7080120,
+                    480
+                ],
+                [
+                    7060150,
+                    196
+                ],
+                [
+                    7080130,
+                    117
+                ],
+                [
+                    7060100,
+                    106
+                ],
+                [
+                    7180210,
+                    87
+                ],
+                [
+                    7080350,
+                    32
+                ],
+                [
+                    7020890,
+                    31
+                ],
+                [
+                    7060220,
+                    30
+                ],
+                [
+                    7020780,
+                    22
+                ],
+                [
+                    7021120,
+                    19
+                ],
+                [
+                    7050270,
+                    17
+                ],
+                [
+                    7080250,
+                    16
+                ],
+                [
+                    7030330,
+                    16
+                ],
+                [
+                    7140100,
+                    16
+                ],
+                [
+                    7100150,
+                    16
+                ],
+                [
+                    7040300,
+                    15
+                ],
+                [
+                    7020680,
+                    15
+                ],
+                [
+                    7020490,
+                    14
+                ],
+                [
+                    7021150,
+                    14
+                ]
+            ],
+            "talent": [
+                [
+                    4,
+                    3938
+                ],
+                [
+                    1,
+                    3684
+                ],
+                [
+                    2,
+                    3644
+                ],
+                [
+                    5,
+                    3542
+                ],
+                [
+                    3,
+                    3317
+                ],
+                [
+                    6,
+                    2436
+                ]
+            ]
+        }
+    },
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "防反",
+                    "source": "技能书"
+                },
+                {
+                    "after": 90,
+                    "before": 95,
+                    "delta": -5,
+                    "field": "地刺威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成物伤，敌方获得连击数-3。",
+                    "before": "造成伤害，敌方获得连击数-3。",
+                    "field": "震击说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s2-2026-05-21"
+        },
+        {
+            "changes": [
+                {
+                    "after": "减伤80%，应对攻击：期间自己每受到1次攻击伤害，获得双攻+40%。",
+                    "before": "减伤80%，应对攻击：期间自己每次受到伤害，获得双攻+40%。",
+                    "field": "嗜痛说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 55,
+                    "before": 100,
+                    "delta": -45,
+                    "field": "逆袭威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 1,
+                    "before": 3,
+                    "delta": -2,
+                    "field": "逆袭能耗",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s3-2026-07-17"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

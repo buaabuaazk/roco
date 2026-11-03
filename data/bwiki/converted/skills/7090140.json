@@ -1,0 +1,40 @@
+{
+    "category": "攻击",
+    "damage_class": "魔攻",
+    "desc": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
+    "desc_notes": [
+        1004,
+        1015,
+        1004
+    ],
+    "element": "冰系",
+    "energy": 6,
+    "flavor": "“雪人里面怎么有人啊！”",
+    "game_id": 7090140,
+    "icon": "Skill_709001.png",
+    "name": "极寒领域",
+    "power": 105,
+    "skill_id": 7090140,
+    "wiki_id": "skill_000534",
+    "terms": {
+        "1004": {
+            "desc": "冻结5%生命，若当前生命低于冻结比例，则力竭。（冰系精灵免疫此效果）",
+            "note": "冻结"
+        },
+        "1015": {
+            "desc": "若敌方使用状态技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对状态"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000133",
+            "head": "PetAvatar_3435.png",
+            "pet_id": "pet_000339",
+            "pet_name": "电企鹅",
+            "stone_icon": "Item_238001.png",
+            "topic": "使用3次极寒领域",
+            "topic_id": "topic_000709"
+        }
+    ]
+}

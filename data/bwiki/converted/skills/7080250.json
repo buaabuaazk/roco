@@ -1,0 +1,36 @@
+{
+    "category": "防御",
+    "desc": "减伤50%并脱离，应对攻击。",
+    "desc_notes": [
+        1003,
+        1016
+    ],
+    "element": "地系",
+    "energy": 3,
+    "game_id": 7080250,
+    "icon": "Skill_708016.png",
+    "name": "遁地",
+    "skill_id": 7080250,
+    "wiki_id": "skill_000512",
+    "terms": {
+        "1003": {
+            "desc": "精灵离场，并选择队伍里一只其他精灵替换入场。本回合入场的精灵免疫此效果。",
+            "note": "脱离"
+        },
+        "1016": {
+            "desc": "若敌方使用攻击技能，则本技能应对成功，本次行动必定先手，且触发应对效果。使用后，携带的防御技能进入1回合冷却。",
+            "note": "应对攻击"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000202",
+            "head": "PetAvatar_3507.png",
+            "pet_id": "pet_000402",
+            "pet_name": "鳗尾兽",
+            "stone_icon": "Item_237001.png",
+            "topic": "使用1次遁地",
+            "topic_id": "topic_001061"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物伤，位于1号位时，先手+1。传动1。",
+    "desc_notes": [
+        1020,
+        1033
+    ],
+    "element": "机械系",
+    "energy": 3,
+    "flavor": "黄金时代初期是农用机械发展的巅峰，可惜那不是玛丽女王想要的巅峰。",
+    "game_id": 7070340,
+    "icon": "Skill_106032.png",
+    "name": "拖拉机",
+    "power": 85,
+    "skill_id": 7070340,
+    "wiki_id": "skill_000497",
+    "terms": {
+        "1020": {
+            "desc": "技能行动的优先级，先手度更高的技能忽略双方精灵速度差异，优先释放，先手度可叠加。",
+            "note": "先手"
+        },
+        "1033": {
+            "desc": "回合开始时，带有“传动X”的技能会向下移动X个位置，该效果可叠加。",
+            "note": "传动"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000466",
+            "head": "PetAvatar_3796.png",
+            "pet_id": "pet_000622",
+            "pet_name": "果实立方人",
+            "stone_icon": "Item_236001.png",
+            "topic": "使用1次拖拉机",
+            "topic_id": "topic_002352"
+        }
+    ]
+}

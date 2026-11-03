@@ -1,0 +1,499 @@
+{
+    "pet_id": 3589,
+    "wiki_id": "pet_000602",
+    "name": "玳龟",
+    "title": "玳龟",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "玳龟自己也搞不懂头骨里的球体是什么，魔法学院图书馆里有本旧书写过一句话：这世界被一只很大的龟驮着，那只龟又被更大的龟驮着，一路往下，数不到头。玳龟不识字，它只是每天慢慢地驮着自己的小球晃悠。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "在「月涌狂想」赛季的代币商店内购得的珍贵精灵蛋，经过孵化可以得到“完美无瑕”、且支持自选性格与个体资质的玳龟。",
+                    "icon": "Item_150834.png",
+                    "name": "玳龟的蛋"
+                },
+                {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的玳龟。",
+                    "icon": "Item_150850.png",
+                    "is_shiny": true,
+                    "name": "异色玳龟的蛋"
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是玳龟的果实。",
+                    "icon": "Item_108226.png",
+                    "name": "玳龟的果实",
+                    "sources": [
+                        "完成赛季作业挑战课题"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            2,
+            3
+        ],
+        "egg_size": {
+            "huge_min": 8517,
+            "max": 8600,
+            "min": 4445,
+            "mini_max": 4528,
+            "unit": "g"
+        },
+        "evolution_id": "evolution_e5e9584a28c9",
+        "feature_skill_id": "skill_000206",
+        "game_id": 3589,
+        "handbook_id": "handbook_000455",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "0.37~0.6M",
+        "id": "pet_000602",
+        "image": {
+            "egg": "Item_107243.png",
+            "fruits": [
+                "Item_108226.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3589.png",
+            "illustration": "PetPortrait_DaiGui1.png",
+            "shiny": "PetPortrait_DaiGui1_yise.png",
+            "shiny_head": "PetAvatar_3589_1.png"
+        },
+        "learnset_id": "learnset_2a5fd788e638",
+        "move_type": "浮游",
+        "name": "玳龟",
+        "number": "455",
+        "perception_range": 40,
+        "relation_key": "幻系",
+        "release": {
+            "date": "2026-09-10",
+            "version": "1.1.1"
+        },
+        "review_gold": 1200,
+        "siblings": [],
+        "stage": 1,
+        "starlight": 24,
+        "stats": {
+            "atk": 37,
+            "def": 58,
+            "hp": 101,
+            "spa": 85,
+            "spd": 93,
+            "spe": 40
+        },
+        "talent_pool_id": 1001,
+        "title": "玳龟",
+        "types": [
+            "幻系"
+        ],
+        "weight": "12.7~21.5KG"
+    },
+    "feature_id": 200324,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000304",
+                "skill_id": 7020880
+            },
+            {
+                "level": 5,
+                "stage": 1,
+                "wiki_skill_id": "skill_000820",
+                "skill_id": 7190380
+            },
+            {
+                "level": 8,
+                "stage": 1,
+                "wiki_skill_id": "skill_000821",
+                "skill_id": 7190390
+            },
+            {
+                "level": 11,
+                "stage": 1,
+                "wiki_skill_id": "skill_000273",
+                "skill_id": 7020630
+            },
+            {
+                "level": 19,
+                "stage": 1,
+                "wiki_skill_id": "skill_000822",
+                "skill_id": 7190400
+            },
+            {
+                "level": 22,
+                "stage": 1,
+                "wiki_skill_id": "skill_000809",
+                "skill_id": 7190260
+            },
+            {
+                "level": 30,
+                "stage": 1,
+                "wiki_skill_id": "skill_000811",
+                "skill_id": 7190280
+            },
+            {
+                "level": 38,
+                "stage": 1,
+                "wiki_skill_id": "skill_000289",
+                "skill_id": 7020800
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000833",
+                "skill_id": 7190510
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000815",
+                "skill_id": 7190320
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000834",
+                "skill_id": 7190520
+            },
+            {
+                "level": 50,
+                "stage": 1,
+                "wiki_skill_id": "skill_000810",
+                "skill_id": 7190270
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000653",
+                "skill_id": 7130310
+            },
+            {
+                "wiki_skill_id": "skill_000650",
+                "skill_id": 7130280
+            },
+            {
+                "wiki_skill_id": "skill_000656",
+                "skill_id": 7130340
+            },
+            {
+                "wiki_skill_id": "skill_000645",
+                "skill_id": 7130220
+            },
+            {
+                "wiki_skill_id": "skill_000323",
+                "skill_id": 7021070
+            },
+            {
+                "wiki_skill_id": "skill_000338",
+                "skill_id": 7021280
+            },
+            {
+                "wiki_skill_id": "skill_000266",
+                "skill_id": 7020550
+            },
+            {
+                "wiki_skill_id": "skill_000313",
+                "skill_id": 7020970
+            },
+            {
+                "wiki_skill_id": "skill_000256",
+                "skill_id": 7020450
+            },
+            {
+                "wiki_skill_id": "skill_000454",
+                "skill_id": 7060150
+            },
+            {
+                "wiki_skill_id": "skill_000461",
+                "skill_id": 7060220
+            },
+            {
+                "wiki_skill_id": "skill_000328",
+                "skill_id": 7021120
+            },
+            {
+                "wiki_skill_id": "skill_000295",
+                "skill_id": 7020850
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000274",
+                "skill_id": 7020640
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000355",
+                "skill_id": 7030330
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000392",
+                "skill_id": 7040300
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000436",
+                "skill_id": 7050340
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000460",
+                "skill_id": 7060210
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000507",
+                "skill_id": 7080200
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000554",
+                "skill_id": 7090350
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000592",
+                "skill_id": 7110280
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000707",
+                "skill_id": 7150310
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000724",
+                "skill_id": 7160200
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000748",
+                "skill_id": 7170150
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000469",
+                "skill_id": 7070010
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000818",
+                "skill_id": 7190360
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3589.png",
+                    "id": "pet_000602",
+                    "illustration": "PetPortrait_DaiGui1.png",
+                    "name": "玳龟",
+                    "stage": 1,
+                    "title": "玳龟",
+                    "types": [
+                        "幻系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3590.png",
+                    "id": "pet_000603",
+                    "illustration": "PetPortrait_DaiGui2.png",
+                    "level": 42,
+                    "name": "玳塔",
+                    "stage": 2,
+                    "title": "玳塔",
+                    "types": [
+                        "幻系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "玳龟进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000602",
+                    "to_wiki_id": "pet_000603",
+                    "from_pet_id": 3589,
+                    "to_pet_id": 3590,
+                    "conditions": {
+                        "level": 42
+                    },
+                    "special_condition_source": "member"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "玳龟",
+        "habitat": "行踪神秘",
+        "title": "海龟精灵",
+        "topics": [
+            {
+                "id": "topic_002292",
+                "progress_id": "pt_000455_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002293",
+                "progress_id": "pt_000455_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002294",
+                "progress_id": "pt_000455_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "武系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "幻系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "虫系"
+            },
+            {
+                "multiplier": 2,
+                "type": "幽系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "玳龟"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s4-2026-09-10"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

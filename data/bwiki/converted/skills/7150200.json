@@ -1,0 +1,38 @@
+{
+    "category": "攻击",
+    "damage_class": "物攻",
+    "desc": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+    "desc_notes": [
+        1015,
+        1026
+    ],
+    "element": "翼系",
+    "energy": 2,
+    "game_id": 7150200,
+    "icon": "Skill_114015.png",
+    "name": "羽刃",
+    "power": 75,
+    "skill_id": 7150200,
+    "wiki_id": "skill_000699",
+    "terms": {
+        "1015": {
+            "desc": "若敌方使用状态技能，则本技能应对成功，本次行动必定先手，且触发应对效果。",
+            "note": "应对状态"
+        },
+        "1026": {
+            "desc": "精灵离场，并随机选择队伍里一只其他精灵替换入场。本回合入场的精灵免疫此效果。",
+            "note": "紧急脱离"
+        }
+    },
+    "stone_topics": [
+        {
+            "handbook_id": "handbook_000152",
+            "head": "PetAvatar_3397.png",
+            "pet_id": "pet_000319",
+            "pet_name": "圣羽翼王",
+            "stone_icon": "Item_244001.png",
+            "topic": "使用2次羽刃",
+            "topic_id": "topic_000800"
+        }
+    ]
+}
