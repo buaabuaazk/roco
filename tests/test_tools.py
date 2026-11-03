@@ -36,6 +36,8 @@ class ToolTests(unittest.TestCase):
                    ('get_pet', {'identifier': 2**80}),
                    ('get_pet', {'identifier': 3001, 'sql': 'DROP TABLE pets'}),
                    ('get_pet', {'identifier': 3001, 'section': 'unknown'}),
+                   *[('get_pet', {'identifier': 3001, 'section': section})
+                     for section in ('appearance', 'talents', 'natures', 'stories')],
                    ('search_pets', {'limit': 101}),
                    ('get_pet_skills', {'identifier': 3001, 'source': 'unknown'}),
                    ('compare_pets', {'identifiers': [3001]}),

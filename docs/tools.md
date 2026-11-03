@@ -13,6 +13,8 @@
 
 `identifier` 为准确名称或正整数 ID。JSON 查询的 `source` 使用 `level`、`machine`、`blood`、`legendary`。
 `section` 与 `stat` 的可选值由工具规格明确列出，模型可依据描述选择。
+`section` 的枚举和逐项中文用途由同一份分区说明生成：base、profile、features、family、acquisition、ecology、egg、fruit、handbook、ride、skills、history、training_reference。
+当前工具只开放这些 JSON 查询分区；appearance、talents、natures、stories 已从工具选项移除。
 
 `search_pets` 优先匹配完整页面名称，再匹配精灵名称；均未命中时进行关键词搜索。属性筛选始终生效，空关键词用于列举；同名多候选保留供确认。数量限制在选择匹配方式后应用。
 

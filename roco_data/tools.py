@@ -10,9 +10,22 @@ from .json_queries import GROUPS
 IDENTIFIER = {'type': ['string', 'integer'], 'minLength': 1,
               'minimum': 1, 'maximum': 9223372036854775807,
               'description': '对象的准确名称或数据源 ID；使用精灵 pet_id 或技能 skill_id。'}
-SECTIONS = ('base', 'appearance', 'profile', 'features', 'family', 'acquisition', 'egg',
-            'talents', 'ride', 'fruit', 'handbook', 'ecology', 'natures', 'stories', 'skills',
-            'history', 'training_reference')
+SECTION_DESCRIPTIONS = {
+    'base': '基础描述和属性',
+    'profile': '种族值、身高体重、蛋组和属性克制',
+    'features': '特性名称与效果',
+    'family': '进化链、等级、特殊条件及首领信物',
+    'acquisition': '获取途径、果实来源和活动记录',
+    'ecology': '生态与获取资料，当前内容与 acquisition 相同',
+    'egg': '性别比例、蛋重范围和特殊精灵蛋',
+    'fruit': '精灵果实及其获取来源',
+    'handbook': '所属图鉴、图鉴课题及奖励',
+    'ride': '骑乘和同乘能力',
+    'skills': '技能 ID 与学习条件；查询具体效果或学习资格用 get_pet_skills',
+    'history': '历次版本中的资料变化',
+    'training_reference': '玩家在大世界和 PVP 中的技能、性格、血脉及天分使用统计',
+}
+SECTIONS = tuple(SECTION_DESCRIPTIONS)
 
 
 def specification(name, description, properties, required=()):
@@ -31,11 +44,12 @@ TOOL_DEFINITIONS = [
                    'limit': {'type': 'integer', 'minimum': 1, 'maximum': 100,
                              'description': '最多返回数量，默认20。'}}),
     specification('get_pet',
-                  '查询精灵概览或指定分区：profile种族值，family进化，features特性，acquisition获取，egg孵蛋。'
-                  'skills分区提供学习关联，技能效果通过get_pet_skills或get_skill查询。',
+                  '查询精灵概览或指定资料分区，依据 section 的用途说明选择。',
                   {'identifier': IDENTIFIER,
                    'section': {'type': 'string', 'enum': list(SECTIONS),
-                               'description': '省略时返回概览，指定时读取对应分区。'}}, ('identifier',)),
+                               'description': '省略时返回名称、属性、种族值和特性概览。分区用途：'
+                                   + '；'.join(f'{key}：{value}' for key, value in SECTION_DESCRIPTIONS.items())
+                                   + '。'}}, ('identifier',)),
     specification('get_skill',
                   '按技能准确名称或skill_id查询属性、威力、能耗及效果。详情缺失时返回detail_missing。',
                   {'identifier': IDENTIFIER}, ('identifier',)),
