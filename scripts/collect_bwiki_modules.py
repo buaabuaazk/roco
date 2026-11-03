@@ -9,7 +9,16 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlencode
 
-from collect_bwiki import ROOT, API, save
+API = 'https://wiki.biligame.com/nrc/api.php'
+ROOT = Path(__file__).resolve().parents[1] / 'data' / 'bwiki'
+
+
+def save(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix('.tmp')
+    temporary.write_text(json.dumps(data, ensure_ascii=False, indent=4) + '\n', encoding='utf-8')
+    temporary.replace(path)
+
 
 TABLES = ('Catalog', 'Skills', 'Learnsets', 'Evolutions', 'Handbooks',
           'Types', 'Terms', 'History', 'TrainingReference', 'SkillStoneTopics')
