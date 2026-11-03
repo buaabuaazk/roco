@@ -73,6 +73,8 @@ def game_view(value):
 
 
 def family_view(family):
+    if 'branches' in family:
+        return game_view(family)
     members, features = [], {}
     names = {m.get('pet_id'): m.get('name') for m in family.get('members', [])}
     for member in family.get('members', []):
@@ -120,7 +122,10 @@ def learning_view(data):
         detail.setdefault('skill_id', item['skill_id'])
         row = skill_view(detail)
         source = item.get('source')
-        row['学习方式'] = {'level': '升级', 'machine': '技能石', 'blood': '血脉'}.get(source, source)
+        row['学习方式'] = {'level': '升级', 'machine': '技能石', 'blood': '血脉',
+                           'legendary': '传说技能'}.get(source, source)
+        if item.get('requires'):
+            row['学习条件'] = item['requires']
         if source in ('level', 'blood'):
             row['学习等级'] = item.get('level')
         if source == 'blood':

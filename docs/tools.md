@@ -11,7 +11,7 @@
 | `get_pet_skills` | 可学习技能、来源和学习条件，关联独立技能详情 | 必填 `identifier`；可选 `source`、`max_level`、`skill` |
 | `compare_pets` | 比较或排序一项种族值 | 必填 `identifiers`（2～10 个对象）；可选 `stat` |
 
-`identifier` 为准确名称或正整数 ID。`source` 使用 `level`、`machine`、`blood`。
+`identifier` 为准确名称或正整数 ID。JSON 查询的 `source` 使用 `level`、`machine`、`blood`、`legendary`。
 `section` 与 `stat` 的可选值由工具规格明确列出，模型可依据描述选择。
 
 Agent 向模型回传 `search_pets` 结果时采用精简格式：唯一匹配为 ID（如 `3001`），多匹配为名称和 ID 列表，无匹配为“未找到”。数量截断时返回 `candidates` 和 `has_more: true`，供模型继续搜索。底层查询结果与调试状态仍保持结构化格式。
@@ -19,7 +19,7 @@ Agent 向模型回传 `search_pets` 结果时采用精简格式：唯一匹配�
 
 模型结果另由 `roco_agent/presentation.py` 整理：
 
-- `get_pet`：属性等名称引用直接返回名称；移除重复的类别编号和分区列表。进化条件合并为等级、材料、费用及其他条件，保留形态分支关联与额外前提；相同特性效果共用一份记录。
+- `get_pet`：属性等名称引用直接返回名称；移除重复的类别编号和分区列表。JSON 进化分支直接提供起点、终点和明确的等级、特殊条件、首领信物。
 - `get_skill`：用名称、属性、类型、威力、能耗、效果表达核心资料。相同的属性及类型只出现一次；类型确有差异时保留伤害类型。额外规则保存在补充信息中。
 - `get_pet_skills`：技能详情与学习方式合并为一个条目；升级、血脉条目保留学习等级，血脉保留名称或 ID；技能石条目省去无关的空血脉字段。详情缺失状态与查询范围内的学习资格继续明确返回。
 - `compare_pets`：保留比较项、排序、数值和两只精灵的差值。
@@ -32,9 +32,9 @@ Agent 向模型回传 `search_pets` 结果时采用精简格式：唯一匹配�
 在项目目录激活 `hello-agents` 环境后：
 
 ```python
-from roco_data import RocoQueries, RocoTools
+from roco_data import JsonQueries, RocoTools
 
-with RocoQueries() as queries:
+with JsonQueries() as queries:
     tools = RocoTools(queries)
     schemas = tools.definitions
     answer = tools.execute(

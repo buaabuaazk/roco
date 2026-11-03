@@ -1,5 +1,7 @@
 # SQLite 查询层
 
+开发阶段 CLI 与 Agent 默认使用 BWIKI JSON。本页介绍保留的 SQLite 功能；执行本页的查询示例时，在子命令前添加 `--db data/roco.db`。导入功能仍读取原有采集目录。
+
 ## 环境与快速使用
 
 使用 Conda 环境 `hello-agents`，依赖 Python 标准库 `sqlite3`。在 `roco` 目录执行：

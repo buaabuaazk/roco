@@ -9,24 +9,25 @@ python -m roco_agent
 ```
 
 模型使用本机 `ZZZ_API_KEY` 环境变量通过智增增调用，默认使用 `deepseek-v4.1-flash`；可用 `--model` 或 `LLM_MODEL_ID` 覆盖。
-支持多轮追问、五个查询工具，以及 `--trace` 查看工具调用。首次使用请先按下节导入 SQLite。
+支持多轮追问、五个查询工具，以及 `--trace` 查看工具调用。开发阶段直接读取 BWIKI 正式 JSON。
 命令行默认将问题、工具参数、完整查询结果、模型收到的结果和最终回答保存至本地 `logs/*.jsonl`，日志由 Git 忽略。
 完整配置与限制见 [Agent 使用说明](docs/agent.md)。
 
-## SQLite 查询
+## JSON 查询
 
 在项目目录运行：
 
 ```sh
 conda activate hello-agents
-python -m roco_data import
+python -m roco_data stats
 python -m roco_data pet 喵喵
 python -m roco_data pet-skills 喵喵 --source machine --skill 毒沼
 python -m roco_data compare 喵喵 迪莫 --stat speed
 ```
 
-查询库位于 `data/roco.db`，支持精灵与技能名称检索、资料分区查询、技能关联、学习等级筛选和种族值比较。
-每次采集更新后重新运行导入命令，数据库会从当前 JSON 重建。完整用法见 [SQLite 查询层说明](docs/sqlite.md)。
+默认读取 `data/bwiki/converted` 中的精灵、技能和特性 JSON，支持名称检索、资料分区、技能关联、学习等级筛选和种族值比较。
+Agent 启动时载入资料，采集更新后重启生效。`roco_agent --data-dir` 和 `roco_data --json-dir` 可指定目录。
+原有 SQLite 保留为可选查询快照，显式指定 `--db data/roco.db` 时使用，见 [SQLite 查询层说明](docs/sqlite.md)。
 
 第一版提供五个 Agent 工具：搜索精灵、查精灵、查技能、查学习关系、比较种族值。
 工具定义、参数校验和固定执行入口已实现，见 [工具说明](docs/tools.md)。

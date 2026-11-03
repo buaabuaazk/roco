@@ -4,13 +4,15 @@ import sqlite3
 from copy import deepcopy
 
 from .database import STATS
-from .queries import GROUPS, result
+from .queries import result
+from .json_queries import GROUPS
 
 IDENTIFIER = {'type': ['string', 'integer'], 'minLength': 1,
               'minimum': 1, 'maximum': 9223372036854775807,
               'description': '对象的准确名称或数据源 ID；使用精灵 pet_id 或技能 skill_id。'}
 SECTIONS = ('base', 'appearance', 'profile', 'features', 'family', 'acquisition', 'egg',
-            'talents', 'ride', 'fruit', 'handbook', 'ecology', 'natures', 'stories', 'skills')
+            'talents', 'ride', 'fruit', 'handbook', 'ecology', 'natures', 'stories', 'skills',
+            'history', 'training_reference')
 
 
 def specification(name, description, properties, required=()):
@@ -38,10 +40,10 @@ TOOL_DEFINITIONS = [
                   '按技能准确名称或skill_id查询属性、威力、能耗及效果。详情缺失时返回detail_missing。',
                   {'identifier': IDENTIFIER}, ('identifier',)),
     specification('get_pet_skills',
-                  '查询精灵可学习技能并关联详情，或核对能否学会某技能。level为升级，machine为技能石，blood为血脉。'
+                  '查询精灵可学习技能并关联详情，或核对能否学会某技能。level为升级，machine为技能石，blood为血脉，legendary为传说技能。'
                   '保留学习等级及血脉条件；null表示该项条件缺少记录。详情缺失仍保留已知学习关系。',
                   {'identifier': IDENTIFIER,
-                   'source': {'type': 'string', 'enum': list(GROUPS), 'description': '省略时查询三类来源。'},
+                   'source': {'type': 'string', 'enum': list(GROUPS), 'description': '省略时查询全部学习来源。'},
                    'max_level': {'type': 'integer', 'minimum': 1, 'maximum': 9223372036854775807,
                                  'description': '学习等级上限（含该等级），单独使用时筛选升级技能。'},
                    'skill': {**IDENTIFIER, 'description': '指定技能名称或ID核对学习资格；省略时列出技能。'}},
@@ -113,4 +115,4 @@ class RocoTools:
         try:
             return self._handlers[name](**arguments)
         except (sqlite3.Error, OSError, ValueError):
-            return result('tool_error', message='查询执行失败，请检查本地数据库状态')
+            return result('tool_error', message='查询执行失败，请检查本地资料文件')

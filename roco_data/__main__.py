@@ -4,12 +4,14 @@ import json
 import sqlite3
 
 from .database import DATA_DIR, DEFAULT_DB, STATS, import_data
-from .queries import GROUPS, RocoQueries, result
+from .queries import RocoQueries, result
+from .json_queries import GROUPS, JsonQueries, DEFAULT_JSON_DIR
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Roco SQLite 建库与只读查询')
-    parser.add_argument('--db', default=str(DEFAULT_DB), help='SQLite 文件路径')
+    parser = argparse.ArgumentParser(description='Roco JSON 只读查询与可选 SQLite 建库')
+    parser.add_argument('--db', help='显式指定时使用 SQLite 查询库')
+    parser.add_argument('--json-dir', default=str(DEFAULT_JSON_DIR), help='BWIKI 正式 JSON 目录')
     commands = parser.add_subparsers(dest='command', required=True)
     importer = commands.add_parser('import', help='从现有 JSON 导入或更新查询快照')
     importer.add_argument('--data-dir', default=str(DATA_DIR), help='采集数据目录')
@@ -36,9 +38,9 @@ def main():
     args = parser.parse_args()
     try:
         if args.command == 'import':
-            answer = result('ok', import_data(args.data_dir, args.db))
+            answer = result('ok', import_data(args.data_dir, args.db or DEFAULT_DB))
         else:
-            with RocoQueries(args.db) as queries:
+            with (RocoQueries(args.db) if args.db else JsonQueries(args.json_dir)) as queries:
                 if args.command == 'stats':
                     answer = queries.statistics()
                 elif args.command == 'pets':

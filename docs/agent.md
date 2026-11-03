@@ -7,7 +7,6 @@
 ```sh
 conda activate hello-agents
 python -m pip install -r requirements.txt
-python -m roco_data import
 
 # 使用默认模型，进入多轮聊天
 python -m roco_agent
@@ -21,6 +20,8 @@ python -m roco_agent "喵喵和迪莫谁速度种族值高？" --json
 
 密钥读取本机环境变量 `ZZZ_API_KEY`。模型按 `--model`、`LLM_MODEL_ID`、默认 `deepseek-v4.1-flash` 的顺序选择。
 如需清除当前终端之前的模型设置，可执行 `unset LLM_MODEL_ID` 后使用默认值。
+查询默认直接读取 `data/bwiki/converted` 下的精灵、技能、特性 JSON，启动时载入内存；采集更新后重启 Agent 生效。
+可用 `--data-dir` 指定其他正式 JSON 目录；显式 `--db data/roco.db` 切回原有 SQLite 查询快照。
 本机环境中已安装 OpenAI Python SDK 3.41.0，依赖版本记录在 `requirements.txt`。
 
 多轮模式中输入 `/reset` 清空上下文，`/exit` 退出；Ctrl+C 也可退出。最近四轮成功对话保存在本次进程内存中。
@@ -55,13 +56,13 @@ agent = RocoAgent(model, queries, logger=SessionLog())
 
 Python 接口默认 `logger=None`；命令行会自动创建日志。此前运行的历史记录无法追溯恢复，新启动的命令开始记录。
 
-另一台电脑拉取代码后，配置该电脑的环境变量、安装依赖并导入 JSON，即可使用。
+另一台电脑拉取代码及正式 JSON 后，配置环境变量、安装依赖即可使用。
 
 ## 执行过程
 
 1. 把用户问题、短期历史和五个工具的规格发送给模型。
 2. 模型返回工具名称、参数和调用 ID。
-3. 本地工具注册表校验参数，执行 SQLite 只读查询。
+3. 本地工具注册表校验参数，执行 JSON 只读查询。
 4. 查询结果使用对应 `tool_call_id` 回传给模型。
 5. 模型继续选择工具或生成最终回答。
 
@@ -90,11 +91,11 @@ Python 接口默认 `logger=None`；命令行会自动创建日志。此前运�
 ```python
 from roco_agent import RocoAgent
 from roco_agent.llm import ChatModel
-from roco_data import RocoQueries
+from roco_data import JsonQueries
 
 model = ChatModel()  # 从环境变量读取密钥和模型 ID
 try:
-    with RocoQueries() as queries:
+    with JsonQueries() as queries:
         agent = RocoAgent(model, queries)
         first = agent.ask("喵喵能学毒沼吗？")
         follow_up = agent.ask("它的特性呢？")
