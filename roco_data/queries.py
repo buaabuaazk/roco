@@ -72,7 +72,12 @@ class RocoQueries:
         if type_name is not None:
             sql += ' AND EXISTS (SELECT 1 FROM pet_types t WHERE t.pet_id=p.pet_id AND t.name=?)'
             params.append(type_name)
-        rows = self.conn.execute(sql + ' ORDER BY p.pet_id LIMIT ?', (*params, limit + 1)).fetchall()
+        rows = []
+        if query.strip():
+            rows = self.conn.execute(sql + ' AND lower(p.name)=lower(?) ORDER BY p.pet_id LIMIT ?',
+                                     (*params, query.strip(), limit + 1)).fetchall()
+        if not rows:
+            rows = self.conn.execute(sql + ' ORDER BY p.pet_id LIMIT ?', (*params, limit + 1)).fetchall()
         return result('ok', {'items': [dict(r) for r in rows[:limit]], 'limit': limit,
                              'has_more': len(rows) > limit})
 

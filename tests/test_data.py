@@ -110,6 +110,17 @@ class DataTests(unittest.TestCase):
             self.assertEqual(q.get_pet_skills(3001, source='unknown')['status'], 'invalid_argument')
             self.assertEqual(q.get_pet_skills(3001, 'machine', max_level=1)['status'], 'invalid_argument')
 
+    def test_search_prefers_exact_name_before_keyword_and_limit(self):
+        with sqlite3.connect(self.db) as conn:
+            conn.execute('INSERT INTO pets (pet_id, name, sections_json, sources_json) VALUES (?, ?, ?, ?)',
+                         (3471, '化蝶（喵喵的样子）', '{}', '[]'))
+        with RocoQueries(self.db) as q:
+            exact = q.search_pets(' 喵喵 ', limit=1)['data']
+            self.assertEqual([row['pet_id'] for row in exact['items']], [3001])
+            self.assertFalse(exact['has_more'])
+            self.assertEqual(len(q.search_pets('喵')['data']['items']), 2)
+            self.assertTrue(q.search_pets('喵', limit=1)['data']['has_more'])
+
     def test_compare_and_read_only(self):
         with RocoQueries(self.db) as q:
             answer = q.compare_pets(['喵喵', 3004])

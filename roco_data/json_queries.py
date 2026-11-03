@@ -80,6 +80,10 @@ class JsonQueries:
                 if query.strip().lower() in pet['title'].lower()
                 and (type_name is None or type_name.removesuffix('系') in
                      [value.removesuffix('系') for value in pet['profile']['types']])]
+        term = query.strip().lower()
+        if term:
+            rows = ([pet for pet in rows if pet['title'].lower() == term]
+                    or [pet for pet in rows if pet['name'].lower() == term] or rows)
         rows.sort(key=lambda pet: pet['pet_id'])
         return result('ok', {'items': [{'pet_id': pet['pet_id'], 'name': pet['title'],
             'handbook_no': pet['profile']['number']} for pet in rows[:limit]],

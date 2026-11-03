@@ -16,7 +16,7 @@ class JsonQueryTests(unittest.TestCase):
 
     def test_all_five_tools_and_current_skill_data(self):
         answer = self.tools.execute('search_pets', {'query': '喵喵'})
-        self.assertIn({'pet_id': 3001, 'name': '喵喵'}, model_result('search_pets', answer))
+        self.assertEqual(model_result('search_pets', answer), 3001)
         skill = self.tools.execute('get_skill', {'identifier': '轴承支撑'})
         self.assertEqual(skill['data']['cost'], 6)
         learned = self.tools.execute('get_pet_skills', {'identifier': 3001, 'skill': '毒沼'})
@@ -56,6 +56,22 @@ class JsonQueryTests(unittest.TestCase):
         search = self.queries.search_pets('', limit=1)
         self.assertTrue(search['data']['has_more'])
         self.assertIsInstance(model_result('search_pets', search), dict)
+
+    def test_search_exact_fallback_filters_and_duplicate_names(self):
+        q = self.queries
+        exact = q.search_pets(' 喵喵 ', limit=1)
+        self.assertEqual(model_result('search_pets', exact), 3001)
+        self.assertFalse(exact['data']['has_more'])
+        self.assertGreater(len(q.search_pets('喵')['data']['items']), 1)
+        self.assertEqual(q.search_pets('喵喵', type_name='水')['data']['items'], [])
+        self.assertEqual(model_result('search_pets', q.search_pets('不存在XYZ')), '未找到')
+        rows = {i: {'pet_id': i, 'name': '同名', 'title': f'同名（形态{i}）',
+                    'profile': {'number': '001', 'types': ['草系']}} for i in (1, 2)}
+        with patch.object(q, 'pets', rows):
+            self.assertEqual(len(q.search_pets('同名')['data']['items']), 2)
+            truncated = q.search_pets('同名', limit=1)
+            self.assertTrue(truncated['data']['has_more'])
+            self.assertEqual(model_result('search_pets', q.search_pets('同名（形态2）')), 2)
 
     def test_agent_cli_defaults_to_json(self):
         from roco_agent.__main__ import main
