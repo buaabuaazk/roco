@@ -4,6 +4,9 @@
 采集公开 MediaWiki revisions 接口中的 Lua 数据表，再按游戏 ID 转换成独立 JSON。
 使用 Conda `hello-agents` 中的 Python 标准库及系统 curl。
 
+另一台电脑可直接解压 `exports/roco-bwiki-collector.zip` 使用独立采集包，运行和回传方式见 [独立采集说明](../../docs/collector_portable.md)。
+开发电脑执行 `python scripts/package_bwiki_collector.py` 可用当前脚本重新构建压缩包。
+
 ## 运行
 
 在 `roco` 根目录执行：
