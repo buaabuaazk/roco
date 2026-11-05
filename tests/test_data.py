@@ -121,6 +121,20 @@ class DataTests(unittest.TestCase):
             self.assertEqual(len(q.search_pets('喵')['data']['items']), 2)
             self.assertTrue(q.search_pets('喵', limit=1)['data']['has_more'])
 
+    def test_skill_pets_sqlite_groups_and_filters(self):
+        with RocoQueries(self.db) as q:
+            data = q.get_skill_pets('星星撞击', limit=1)['data']
+            self.assertEqual(data['total'], 2)
+            self.assertEqual(len(data['items'][0]['learning']), 2)
+            self.assertTrue(data['has_more'])
+            self.assertEqual(data['next_offset'], 1)
+            second = q.get_skill_pets(8, offset=1, source='blood')['data']
+            self.assertEqual(len(second['items']), 1)
+            self.assertEqual(second['items'][0]['learning'][0]['bloodline_name'], '普通系血脉')
+            self.assertFalse(second['has_more'])
+            self.assertEqual(q.get_skill_pets(9)['status'], 'ok')
+            self.assertEqual(q.get_skill_pets(999)['status'], 'not_found')
+
     def test_compare_and_read_only(self):
         with RocoQueries(self.db) as q:
             answer = q.compare_pets(['喵喵', 3004])

@@ -16,14 +16,15 @@ class ToolTests(unittest.TestCase):
                 return {'status': 'ok', 'data': kwargs, 'sources': []}
             return execute
 
-        self.names = ['search_pets', 'get_pet', 'get_skill', 'get_pet_skills', 'compare_pets']
+        self.names = ['search_pets', 'get_pet', 'get_skill', 'get_pet_skills', 'get_skill_pets', 'compare_pets']
         self.tools = RocoTools(SimpleNamespace(**{name: handler(name) for name in self.names}))
 
-    def test_exactly_five_definitions_and_fixed_dispatch(self):
+    def test_registered_definitions_and_fixed_dispatch(self):
         self.assertEqual([t['function']['name'] for t in self.tools.definitions], self.names)
         calls = [('search_pets', {'query': '喵'}), ('get_pet', {'identifier': 3001, 'section': 'family'}),
                  ('get_skill', {'identifier': '抓挠'}),
                  ('get_pet_skills', {'identifier': '喵喵', 'source': 'blood', 'skill': 7020910}),
+                 ('get_skill_pets', {'identifier': '丰饶'}),
                  ('compare_pets', {'identifiers': [3001, '迪莫'], 'stat': 'speed'})]
         for name, arguments in calls:
             self.assertEqual(self.tools.execute(name, json.dumps(arguments))['status'], 'ok')
@@ -40,6 +41,9 @@ class ToolTests(unittest.TestCase):
                      for section in ('appearance', 'talents', 'natures', 'stories')],
                    ('search_pets', {'limit': 101}),
                    ('get_pet_skills', {'identifier': 3001, 'source': 'unknown'}),
+                   ('get_skill_pets', {}),
+                   ('get_skill_pets', {'identifier': '丰饶', 'limit': 0}),
+                   ('get_skill_pets', {'identifier': '丰饶', 'offset': -1}),
                    ('compare_pets', {'identifiers': [3001]}),
                    ('compare_pets', {'identifiers': [3001, '迪莫'], 'stat': 'invalid'}),
                    ('get_pet', 'bad JSON'), ('get_pet', '[]'), ('get_pet', None)]

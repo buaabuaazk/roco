@@ -60,13 +60,13 @@ Python 接口默认 `logger=None`；命令行会自动创建日志。此前运�
 
 ## 执行过程
 
-1. 把用户问题、短期历史和五个工具的规格发送给模型。
+1. 把用户问题、短期历史和查询工具的规格发送给模型。
 2. 模型返回工具名称、参数和调用 ID。
 3. 本地工具注册表校验参数，执行 JSON 只读查询。
 4. 查询结果使用对应 `tool_call_id` 回传给模型。
 5. 模型继续选择工具或生成最终回答。
 
-查询工具为 `search_pets`、`get_pet`、`get_skill`、`get_pet_skills`、`compare_pets`。
+查询工具为 `search_pets`、`get_pet`、`get_skill`、`get_pet_skills`、`get_skill_pets`、`compare_pets`。
 模型调用采用智增增的 OpenAI 兼容 Chat Completions 接口：`https://api.zhizengzeng.com/v1`。
 消息结构参考 [OpenAI 官方 Function Calling 文档](https://developers.openai.com/api/docs/guides/function-calling)。
 智增增的模型支持和鉴权行为以实际接入为准。

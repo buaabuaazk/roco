@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from .database import STATS
-from .queries import result
+from .queries import result, skill_pets_result
 
 DEFAULT_JSON_DIR = Path(__file__).resolve().parents[1] / 'data/bwiki/converted'
 GROUPS = ('level', 'machine', 'blood', 'legendary')
@@ -199,6 +199,31 @@ class JsonQueries:
             data['can_learn_in_selected_scope'] = bool(items)
         return result('partial' if any(row['detail_status'] != 'ok' for row in items) else 'ok',
                       data, self._sources(pet))
+
+    def get_skill_pets(self, identifier, source=None, limit=100, offset=0):
+        if (source is not None and source not in GROUPS
+                or type(limit) is not int or not 1 <= limit <= 100
+                or type(offset) is not int or offset < 0):
+            return result('invalid_argument', message='请使用有效学习来源、1～100 的 limit 和非负 offset')
+        skill, error = self._resolve(self.skills, identifier, 'skill_id')
+        if error:
+            return error
+        pets = []
+        for pet in sorted(self.pets.values(), key=lambda row: row['pet_id']):
+            learning = []
+            for group in ((source,) if source else GROUPS):
+                for relation in pet['skills'].get(group, []):
+                    if relation['skill_id'] != skill['skill_id']:
+                        continue
+                    condition = {'source': group}
+                    condition.update({key: relation[key] for key in ('level', 'requires', 'stage') if key in relation})
+                    if 'blood' in relation:
+                        condition['bloodline_name'] = relation['blood']
+                    learning.append(condition)
+            if learning:
+                pets.append({'pet_id': pet['pet_id'], 'name': pet['title'], 'learning': learning})
+        return skill_pets_result(skill, pets, limit, offset,
+                                 [{'file': str(self.root / 'skills' / f"{skill['skill_id']}.json")}])
 
     def compare_pets(self, identifiers, stat='speed'):
         if stat not in STATS or not isinstance(identifiers, (tuple, list)) or not 2 <= len(identifiers) <= 10:

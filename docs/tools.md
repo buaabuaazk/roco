@@ -1,4 +1,4 @@
-# 第一版五个查询工具
+# 查询工具
 
 工具代码位于 `roco_data/tools.py`，执行入口为 `RocoTools.execute(name, arguments)`。
 `definitions` 提供 Chat Completions 风格的函数工具规格，模型接入时可作为 `tools` 参数。
@@ -9,6 +9,7 @@
 | `get_pet` | 精灵概览或指定资料分区 | 必填 `identifier`；可选 `section` |
 | `get_skill` | 技能的威力、能耗、属性和效果 | 必填 `identifier` |
 | `get_pet_skills` | 可学习技能、来源和学习条件，关联独立技能详情 | 必填 `identifier`；可选 `source`、`max_level`、`skill` |
+| `get_skill_pets` | 按技能反查可学习的精灵，合并各自学习条件 | 必填技能 `identifier`；可选 `source`、`limit`、`offset` |
 | `compare_pets` | 比较或排序一项种族值 | 必填 `identifiers`（2～10 个对象）；可选 `stat` |
 
 `identifier` 为准确名称或正整数 ID。JSON 查询的 `source` 使用 `level`、`machine`、`blood`、`legendary`。
@@ -26,6 +27,7 @@ Agent 向模型回传 `search_pets` 结果时采用精简格式：唯一匹配�
 - `get_pet`：属性等名称引用直接返回名称；移除重复的类别编号和分区列表。JSON 进化分支直接提供起点、终点和明确的等级、特殊条件、首领信物。
 - `get_skill`：用名称、属性、类型、威力、能耗、效果表达核心资料。相同的属性及类型只出现一次；类型确有差异时保留伤害类型。额外规则保存在补充信息中。
 - `get_pet_skills`：技能详情与学习方式合并为一个条目；升级、血脉条目保留学习等级，血脉保留名称或 ID；技能石条目省去无关的空血脉字段。详情缺失状态与查询范围内的学习资格继续明确返回。
+- `get_skill_pets`：返回技能名称、精灵名称及学习方式、等级、血脉或传说要求；保留总数、has_more 和下一页 next_offset。同一精灵的多种学习方式合并，分页按精灵条目（含形态）计数。
 - `compare_pets`：保留比较项、排序、数值和两只精灵的差值。
 
 数字字符串中的整数转为数值，零能耗保留为 0；变威力等表达沿用来源文字。
@@ -55,4 +57,15 @@ with JsonQueries() as queries:
 ## 扩展与后续接入
 
 新增工具时，补充查询函数、工具规格和固定执行注册表，并增加对应验证。
-五个工具已接入模型请求、工具调用结果回传及多轮执行限制，见 [Agent 使用说明](agent.md)。完整自然语言验收继续按验收用例执行。
+六个工具已接入模型请求、工具调用结果回传及多轮执行限制，见 [Agent 使用说明](agent.md)。完整自然语言验收继续按验收用例执行。
+
+## 技能反查精灵
+
+“哪些精灵可以学习丰饶”使用 `get_skill_pets({"identifier": "丰饶"})`，查询遍历本地学习关系后一次返回结果。
+工具默认 `limit=100`、`offset=0`；`source` 可限制为升级、技能石、血脉或传说技能。SQLite 兼容查询使用其已有的三类来源。
+底层 `data` 中 `items` 按精灵分组，`learning` 保留各条学习条件，`total` 是当前筛选条件下的精灵总数。已知技能的空列表表示当前资料没有匹配关系，未知或同名技能使用标准状态返回。
+
+```sh
+python -m roco_data skill-pets 丰饶
+python -m roco_data skill-pets 徒长 --source blood --limit 100 --offset 100
+```

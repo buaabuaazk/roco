@@ -20,7 +20,7 @@ class LogTests(unittest.TestCase):
         self.payload = {'status': 'ok', 'data': {'items': [{'pet_id': 3001, 'name': '喵喵'}]},
                         'sources': [{'file': 'pets/3001/combined.json'}]}
         self.queries = SimpleNamespace(**{name: lambda **kwargs: self.payload for name in (
-            'search_pets', 'get_pet', 'get_skill', 'get_pet_skills', 'compare_pets')})
+            'search_pets', 'get_pet', 'get_skill', 'get_pet_skills', 'get_skill_pets', 'compare_pets')})
 
     def model(self, final='可以。'):
         class FakeModel:

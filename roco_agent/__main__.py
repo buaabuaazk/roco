@@ -11,7 +11,7 @@ from .session_log import SessionLog
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Roco 精灵助手：智增增模型与五个本地查询工具')
+    parser = argparse.ArgumentParser(description='Roco 精灵助手：智增增模型与本地查询工具')
     parser.add_argument('question', nargs='?', help='省略时进入多轮聊天')
     parser.add_argument('--model', help=f'覆盖 LLM_MODEL_ID；两者均未指定时使用 {DEFAULT_MODEL}')
     parser.add_argument('--data-dir', default=str(DEFAULT_JSON_DIR), help='BWIKI 正式 JSON 目录')

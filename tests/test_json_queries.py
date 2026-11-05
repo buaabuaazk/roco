@@ -84,6 +84,40 @@ class JsonQueryTests(unittest.TestCase):
             self.assertEqual(main(), 0)
             self.assertIsInstance(agent.call_args.args[1], JsonQueries)
 
+    def test_skill_pets_real_data_and_pagination_preserve_learning_conditions(self):
+        answer = self.tools.execute('get_skill_pets', {'identifier': '丰饶'})
+        self.assertEqual(answer['status'], 'ok')
+        data = answer['data']
+        cat = next(pet for pet in data['items'] if pet['pet_id'] == 3001)
+        self.assertIn({'source': 'level', 'level': 48, 'stage': 1}, cat['learning'])
+        self.assertEqual(data['total'], len(data['items']))
+        self.assertFalse(data['has_more'])
+        skill_id = data['skill_id']
+        pets = {1: {'pet_id': 1, 'title': '甲', 'skills': {
+                    'level': [{'skill_id': skill_id, 'level': 10}],
+                    'machine': [{'skill_id': skill_id}],
+                    'blood': [{'skill_id': skill_id, 'level': 15, 'blood': '草'}],
+                    'legendary': [{'skill_id': skill_id, 'requires': '指定形态'}]}},
+                2: {'pet_id': 2, 'title': '乙', 'skills': {
+                    'level': [{'skill_id': skill_id, 'level': 20}]}}}
+        with patch.object(self.queries, 'pets', pets):
+            first = self.queries.get_skill_pets(skill_id, limit=1)
+            self.assertEqual(first['data']['total'], 2)
+            self.assertEqual(len(first['data']['items'][0]['learning']), 4)
+            self.assertEqual(first['data']['next_offset'], 1)
+            second = self.queries.get_skill_pets(skill_id, limit=1, offset=1)
+            self.assertEqual(second['data']['items'][0]['name'], '乙')
+            self.assertFalse(second['data']['has_more'])
+            blood = self.queries.get_skill_pets(skill_id, source='blood')
+            self.assertEqual(blood['data']['total'], 1)
+            self.assertEqual(blood['data']['items'][0]['learning'][0]['bloodline_name'], '草')
+            view = model_result('get_skill_pets', first)['data']
+            self.assertEqual(view['精灵'][0]['学习条件'][-1]['学习条件'], '指定形态')
+            self.assertNotIn('pet_id', str(view))
+            self.assertEqual(self.queries.get_skill_pets(skill_id, offset=99)['data']['items'], [])
+        self.assertEqual(self.queries.get_skill_pets('不存在XYZ')['status'], 'not_found')
+        self.assertEqual(self.queries.get_skill_pets(skill_id, limit=0)['status'], 'invalid_argument')
+
 
 if __name__ == '__main__':
     unittest.main()

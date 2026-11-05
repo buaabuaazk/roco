@@ -1,4 +1,4 @@
-"""第一版五个只读工具：规格、参数校验及固定注册表执行。"""
+"""只读工具：规格、参数校验及固定注册表执行。"""
 import json
 import sqlite3
 from copy import deepcopy
@@ -62,6 +62,16 @@ TOOL_DEFINITIONS = [
                                  'description': '学习等级上限（含该等级），单独使用时筛选升级技能。'},
                    'skill': {**IDENTIFIER, 'description': '指定技能名称或ID核对学习资格；省略时列出技能。'}},
                   ('identifier',)),
+    specification('get_skill_pets',
+                  '按技能名称或skill_id反查哪些精灵能学会该技能，一次返回精灵列表及各自的学习来源、等级和条件。'
+                  '用于“哪些精灵能学丰饶”等问题。has_more为true时用next_offset继续查询。',
+                  {'identifier': {**IDENTIFIER, 'description': '技能准确名称或游戏技能 ID，例如丰饶。'},
+                   'source': {'type': 'string', 'enum': list(GROUPS),
+                              'description': '可选学习来源：level升级、machine技能石、blood血脉、legendary传说；省略查询全部。'},
+                   'limit': {'type': 'integer', 'minimum': 1, 'maximum': 100,
+                             'description': '每页精灵数量，默认100；同一精灵的多种学习方式合并返回。'},
+                   'offset': {'type': 'integer', 'minimum': 0,
+                              'description': '分页起点，默认0；下一页使用返回的next_offset。'}}, ('identifier',)),
     specification('compare_pets',
                   '比较2至10只精灵的一项种族值并降序排序；两只时同时返回差值。结果描述种族值层面的差异。',
                   {'identifiers': {'type': 'array', 'items': IDENTIFIER, 'minItems': 2, 'maxItems': 10},
@@ -107,6 +117,7 @@ class RocoTools:
             'get_pet': queries.get_pet,
             'get_skill': queries.get_skill,
             'get_pet_skills': queries.get_pet_skills,
+            'get_skill_pets': queries.get_skill_pets,
             'compare_pets': queries.compare_pets,
         }
         self._schemas = {t['function']['name']: t['function']['parameters'] for t in TOOL_DEFINITIONS}
@@ -119,7 +130,7 @@ class RocoTools:
     def execute(self, name, arguments):
         """接收模型的工具名称及 JSON 参数字符串/字典，返回结构化查询结果。"""
         if not isinstance(name, str) or name not in self._handlers:
-            return result('unknown_tool', message='请使用已注册的五个查询工具')
+            return result('unknown_tool', message='请使用已注册的查询工具')
         try:
             if isinstance(arguments, str):
                 arguments = json.loads(arguments)

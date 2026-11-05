@@ -22,7 +22,7 @@ class FakeModel:
 
     def complete(self, messages, tools, timeout):
         self.requests.append(deepcopy(messages))
-        assert len(tools) == 5 and timeout > 0
+        assert len(tools) == 6 and timeout > 0
         reply = self.replies.pop(0)
         if isinstance(reply, Exception):
             raise reply
@@ -40,7 +40,7 @@ class AgentTests(unittest.TestCase):
             return deepcopy(self.payload)
 
         self.queries = SimpleNamespace(**{name: query for name in (
-            'search_pets', 'get_pet', 'get_skill', 'get_pet_skills', 'compare_pets')})
+            'search_pets', 'get_pet', 'get_skill', 'get_pet_skills', 'get_skill_pets', 'compare_pets')})
 
     def test_tool_result_round_trip_and_follow_up(self):
         model = FakeModel([message([call()]), message(text='喵喵是草属性。'),
@@ -67,6 +67,19 @@ class AgentTests(unittest.TestCase):
         answer = RocoAgent(model, self.queries).ask('查询喵喵和抓挠')
         self.assertEqual(answer['status'], 'ok')
         self.assertEqual([m['tool_call_id'] for m in model.requests[1] if m['role'] == 'tool'], ['a', 'b'])
+
+    def test_reverse_skill_question_uses_one_tool_call(self):
+        from roco_data import JsonQueries
+        queries = JsonQueries()
+        model = FakeModel([message([call('get_skill_pets', '{"identifier":"丰饶"}')]),
+                           message(text='喵喵等精灵可以学习丰饶。')])
+        answer = RocoAgent(model, queries).ask('哪些精灵可以学习丰饶？')
+        self.assertEqual(answer['status'], 'ok')
+        self.assertEqual(len(answer['tool_calls']), 1)
+        data = json.loads(model.requests[1][-1]['content'])['data']
+        self.assertEqual(data['技能'], '丰饶')
+        self.assertIn('喵喵', [pet['名称'] for pet in data['精灵']])
+        self.assertFalse(data['has_more'])
 
     def test_search_model_payload_preserves_ambiguity_and_backend_metadata(self):
         candidates = [{'pet_id': 3001, 'name': '喵喵', 'handbook_no': '002'},

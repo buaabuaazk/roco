@@ -15,6 +15,16 @@ def result(status, data=None, sources=None, message=None):
     return answer
 
 
+def skill_pets_result(skill, pets, limit, offset, sources=None):
+    page = pets[offset:offset + limit]
+    more = offset + len(page) < len(pets)
+    data = {'skill_id': skill['skill_id'], 'name': skill['name'], 'items': page,
+            'total': len(pets), 'limit': limit, 'offset': offset, 'has_more': more}
+    if more:
+        data['next_offset'] = offset + len(page)
+    return result('ok', data, sources)
+
+
 def pet_sources(sources, section):
     specific = [s for s in sources if s.get('section') == 'pet-' + section]
     return specific or [s for s in sources if s.get('section') == 'pet-detail'] or sources
@@ -169,6 +179,28 @@ class RocoQueries:
         missing = any(item['detail_status'] == 'detail_missing' for item in items)
         return result('partial' if missing else 'ok', data, sources,
                       '学习关系已获取，部分技能详情待补齐' if missing else None)
+
+    def get_skill_pets(self, identifier, source=None, limit=100, offset=0):
+        if (source is not None and source not in GROUPS
+                or type(limit) is not int or not 1 <= limit <= 100
+                or type(offset) is not int or offset < 0):
+            return result('invalid_argument', message='请使用有效学习来源、1～100 的 limit 和非负 offset')
+        skill, error = self._resolve('skills', identifier)
+        if error:
+            return error
+        sql = '''SELECT p.pet_id, p.name, r.source, r.level, r.bloodline_id, r.bloodline_name
+                 FROM pet_skills r JOIN pets p ON p.pet_id=r.pet_id WHERE r.skill_id=?'''
+        params = [skill['skill_id']]
+        if source:
+            sql += ' AND r.source=?'
+            params.append(source)
+        rows = self.conn.execute(sql + ' ORDER BY p.pet_id, r.source, r.position', params).fetchall()
+        pets = {}
+        for row in rows:
+            pet = pets.setdefault(row['pet_id'], {'pet_id': row['pet_id'], 'name': row['name'], 'learning': []})
+            pet['learning'].append({key: row[key] for key in
+                                   ('source', 'level', 'bloodline_id', 'bloodline_name')})
+        return skill_pets_result(skill, list(pets.values()), limit, offset, json.loads(skill['sources_json']))
 
     def compare_pets(self, identifiers, stat='speed'):
         if stat not in STATS or not isinstance(identifiers, (list, tuple)) or not 2 <= len(identifiers) <= 10:

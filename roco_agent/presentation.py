@@ -114,6 +114,36 @@ def family_view(family):
     return result
 
 
+def learning_condition(item):
+    source = item.get('source')
+    row = {'学习方式': {'level': '升级', 'machine': '技能石', 'blood': '血脉',
+                         'legendary': '传说技能'}.get(source, source)}
+    if item.get('requires'):
+        row['学习条件'] = item['requires']
+    if source in ('level', 'blood'):
+        row['学习等级'] = item.get('level')
+    if source == 'blood':
+        if item.get('bloodline_name'):
+            row['血脉'] = item['bloodline_name']
+        elif item.get('bloodline_id') is not None:
+            row['血脉ID'] = item['bloodline_id']
+    return row
+
+
+def skill_pets_view(data):
+    pets = []
+    for pet in data['items']:
+        conditions = []
+        for relation in pet['learning']:
+            condition = learning_condition(relation)
+            conditions.append(condition)
+        pets.append({'名称': pet['name'], '学习条件': conditions})
+    view = {'技能': data['name'], '精灵': pets, '总数': data['total'], 'has_more': data['has_more']}
+    if data.get('has_more'):
+        view['next_offset'] = data['next_offset']
+    return view
+
+
 def learning_view(data):
     items = []
     for item in data.get('items', []):
@@ -121,18 +151,7 @@ def learning_view(data):
         detail.setdefault('name', item.get('name'))
         detail.setdefault('skill_id', item['skill_id'])
         row = skill_view(detail)
-        source = item.get('source')
-        row['学习方式'] = {'level': '升级', 'machine': '技能石', 'blood': '血脉',
-                           'legendary': '传说技能'}.get(source, source)
-        if item.get('requires'):
-            row['学习条件'] = item['requires']
-        if source in ('level', 'blood'):
-            row['学习等级'] = item.get('level')
-        if source == 'blood':
-            if item.get('bloodline_name'):
-                row['血脉'] = item['bloodline_name']
-            elif item.get('bloodline_id') is not None:
-                row['血脉ID'] = item['bloodline_id']
+        row.update(learning_condition(item))
         detail_status = item.get('detail_status', 'ok' if item.get('detail') is not None else 'detail_missing')
         if detail_status != 'ok':
             row['详情状态'] = detail_status
@@ -162,6 +181,8 @@ def model_result(name, answer):
         answer['data'] = skill_view(data)
     elif name == 'get_pet_skills' and answer['status'] in ('ok', 'partial'):
         answer['data'] = learning_view(data)
+    elif name == 'get_skill_pets' and answer['status'] == 'ok':
+        answer['data'] = skill_pets_view(data)
     elif name == 'get_pet' and answer['status'] == 'ok':
         if data.get('section') == 'family' and isinstance(data.get('value'), dict):
             answer['data'] = {k: v for k, v in data.items() if k != 'value'}

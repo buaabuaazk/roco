@@ -32,6 +32,11 @@ def main():
     relations.add_argument('--source', choices=GROUPS)
     relations.add_argument('--max-level', type=int)
     relations.add_argument('--skill', help='指定技能名称或 ID，检查学习关系')
+    reverse = commands.add_parser('skill-pets', help='按技能反查可学习的精灵及条件')
+    reverse.add_argument('identifier')
+    reverse.add_argument('--source', choices=GROUPS)
+    reverse.add_argument('--limit', type=int, default=100)
+    reverse.add_argument('--offset', type=int, default=0)
     compare = commands.add_parser('compare', help='按指定种族值比较精灵')
     compare.add_argument('identifiers', nargs='+')
     compare.add_argument('--stat', choices=STATS, default='speed')
@@ -53,6 +58,8 @@ def main():
                     answer = queries.get_skill(args.identifier)
                 elif args.command == 'pet-skills':
                     answer = queries.get_pet_skills(args.identifier, args.source, args.max_level, args.skill)
+                elif args.command == 'skill-pets':
+                    answer = queries.get_skill_pets(args.identifier, args.source, args.limit, args.offset)
                 else:
                     answer = queries.compare_pets(args.identifiers, args.stat)
     except (OSError, ValueError, sqlite3.Error) as exc:
