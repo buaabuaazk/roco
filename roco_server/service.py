@@ -116,6 +116,7 @@ class SessionManager:
         self.data_dir, self.log_dir, self.model_factory = data_dir, log_dir, model_factory
         self.queries = JsonQueries(data_dir)
         self.sessions = {}
+        self.data_updating = False
 
     def config(self):
         return {'default_model': os.environ.get('LLM_MODEL_ID', '').strip() or DEFAULT_MODEL,
@@ -140,6 +141,8 @@ class SessionManager:
 
     def start(self, session_id, question):
         with self.lock:
+            if self.data_updating:
+                raise BusyError('数据正在更新，请完成后再提问')
             return self.get(session_id).start(question)
 
     def reload_data(self):

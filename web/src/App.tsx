@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import DataPage from './DataPage'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -86,6 +87,7 @@ function Inspector({ run }: { run?: Run }) {
 }
 
 export default function App() {
+  const [page, setPage] = useState(() => window.location.hash === '#data' ? 'data' : 'chat')
   const [config, setConfig] = useState<Config>()
   const [sessions, setSessions] = useState<Session[]>([])
   const [selected, setSelected] = useState('')
@@ -107,6 +109,18 @@ export default function App() {
   const latestRun = runs.at(-1)
   const activeRun = runs.find(run => run.id === runId) || latestRun
   const busy = detail?.busy || sending
+
+  const dataUpdated = useCallback(() => {
+    api<Config>('/config').then(setConfig).catch(e => setError(e.message))
+    api<Session[]>('/sessions').then(setSessions).catch(() => {})
+    if (selectedRef.current) api<Session>(`/sessions/${selectedRef.current}`).then(setDetail).catch(() => {})
+    setRunId('')
+  }, [])
+  useEffect(() => {
+    const change = () => setPage(window.location.hash === '#data' ? 'data' : 'chat')
+    window.addEventListener('hashchange', change)
+    return () => window.removeEventListener('hashchange', change)
+  }, [])
 
   async function refreshList() { setSessions(await api<Session[]>('/sessions')) }
 
@@ -209,15 +223,16 @@ export default function App() {
   return <div className="workbench">
     <aside className="sidebar">
       <a className="brand" href="/" aria-label="Roco 调试台首页"><span className="brand-mark">R</span><div><strong>Roco<span> / </span></strong><small>AGENT WORKBENCH</small></div></a>
-      <button className="new-session" onClick={newSession}><Icon name="plus" size={17} />新建会话<span>＋</span></button>
+      <nav className="page-nav" aria-label="功能导航"><a href="#chat" aria-label="对话调试" className={page === 'chat' ? 'active' : ''}><Icon name="chat" /><span>对话调试</span></a><a href="#data" aria-label="数据检测" className={page === 'data' ? 'active' : ''}><Icon name="refresh" /><span>数据检测</span></a></nav>
+      <button className="new-session" onClick={() => {window.location.hash = 'chat'; newSession()}}><Icon name="plus" size={17} />新建会话<span>＋</span></button>
       <div className="sidebar-section-label">调试会话 <span>{sessions.length}</span></div>
-      <nav className="sessions" aria-label="会话列表">{!sessions.length && <p className="sidebar-empty">你的调试记录会出现在这里</p>}{sessions.map(session => <button key={session.id} className={'session-link ' + (session.id === selected ? 'active' : '')} onClick={() => { setSelected(session.id); setError(''); setNotice('') }}><Icon name="chat" size={15} /><span>{session.title}</span>{session.busy && <i className="status-dot pending" />}</button>)}</nav>
+      <nav className="sessions" aria-label="会话列表">{!sessions.length && <p className="sidebar-empty">你的调试记录会出现在这里</p>}{sessions.map(session => <button key={session.id} className={'session-link ' + (session.id === selected ? 'active' : '')} onClick={() => { window.location.hash = 'chat'; setSelected(session.id); setError(''); setNotice('') }}><Icon name="chat" size={15} /><span>{session.title}</span>{session.busy && <i className="status-dot pending" />}</button>)}</nav>
       <div className="model-card"><label htmlFor="model">新会话模型 <span>MODEL</span></label><input id="model" value={model} onChange={e => setModel(e.target.value)} list="models" autoComplete="off" /><datalist id="models"><option value="deepseek-v4.1-flash" /><option value="deepseek-v4.1-flash-1017" /></datalist><p><span className={'status-dot ' + (config?.key_configured ? 'success' : 'warning')} />{config?.key_configured ? '服务端密钥已配置' : '请在服务端设置 ZZZ_API_KEY'}</p></div>
       <div className="sidebar-footer"><span className="local-symbol">⌘</span><div>本地开发环境<small>JSON 数据 · 127.0.0.1</small></div><span className="version">v0.1</span></div>
     </aside>
     <section className="workspace">
-      <header className="topbar"><div className="breadcrumb">工作台 <span>/</span> <strong>对话调试</strong><span className="local-badge">LOCAL</span></div><div className="header-actions"><span className="data-count">{config ? `${config.data.pets} 精灵 · ${config.data.skills_with_details} 技能 · ${config.data.features} 特性` : '连接服务中…'}</span><button className={'icon-button ' + (loading ? 'spinning' : '')} disabled={loading || busy} onClick={reloadData} title="重新加载 JSON 并清空会话上下文" aria-label="重新加载数据"><Icon name="refresh" /></button><span className="header-divider" /><button className={'icon-button ' + (showInspector ? 'is-on' : '')} onClick={() => setShowInspector(!showInspector)} title="显示或隐藏执行轨迹" aria-label="切换执行轨迹"><Icon name="panel" /></button></div></header>
-      <div className={'main-grid ' + (!showInspector ? 'inspector-hidden' : '')}>
+      <header className="topbar"><div className="breadcrumb">工作台 <span>/</span> <strong>{page === 'data' ? '数据检测' : '对话调试'}</strong><span className="local-badge">LOCAL</span></div><div className="header-actions"><span className="data-count">{config ? `${config.data.pets} 精灵 · ${config.data.skills_with_details} 技能 · ${config.data.features} 特性` : '连接服务中…'}</span>{page === 'chat' && <><button className={'icon-button ' + (loading ? 'spinning' : '')} disabled={loading || busy} onClick={reloadData} title="重新加载 JSON 并清空会话上下文" aria-label="重新加载数据"><Icon name="refresh" /></button><span className="header-divider" /><button className={'icon-button ' + (showInspector ? 'is-on' : '')} onClick={() => setShowInspector(!showInspector)} title="显示或隐藏执行轨迹" aria-label="切换执行轨迹"><Icon name="panel" /></button></>}</div></header>
+      {page === 'data' ? <DataPage onUpdated={dataUpdated} /> : <div className={'main-grid ' + (!showInspector ? 'inspector-hidden' : '')}>
         <main className="chat-panel">
           <div className="chat-heading"><div><span className="section-kicker">PLAYGROUND</span><h1>对话调试</h1></div><button className="text-button" disabled={!runs.length || busy} onClick={reset}><Icon name="trash" size={14} />清空上下文</button></div>
           {(error || notice) && <div role={error ? 'alert' : 'status'} className={'banner ' + (error ? 'error' : '')}><Icon name="info" size={15} /><span>{error || notice}</span><button onClick={() => { setError(''); setNotice('') }} aria-label="关闭提示">×</button></div>}
@@ -229,7 +244,7 @@ export default function App() {
           <div className="composer-area"><div className={'composer ' + (busy ? 'is-busy' : '')}><textarea ref={input} aria-label="输入调试问题" placeholder="输入问题，看看 Agent 会如何调用工具…" value={question} maxLength={4000} disabled={busy} rows={2} onChange={e => setQuestion(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send() } }} /><div className="composer-bottom"><span><span className="status-dot success" />{detail?.model || model}</span><button className="send-button" onClick={send} disabled={!question.trim() || busy || loading} aria-label="发送问题" title="发送问题">{busy ? <span className="spinner" /> : <Icon name="send" size={17} />}</button></div></div><div className="composer-hint"><span>Enter 发送 · Shift + Enter 换行</span><span>记录保存在本地 · 密钥由后端管理</span></div></div>
         </main>
         {showInspector && <Inspector run={activeRun} />}
-      </div>
+      </div>}
     </section>
   </div>
 }

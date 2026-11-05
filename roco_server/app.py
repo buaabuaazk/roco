@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field, field_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .service import BusyError, SessionManager
+from .data_updates import DataUpdates
 
 
 class SessionInput(BaseModel):
@@ -32,6 +33,7 @@ def create_app(manager=None):
     @asynccontextmanager
     async def lifespan(app):
         app.state.manager = manager or SessionManager()
+        app.state.updates = DataUpdates(app.state.manager)
         yield
         app.state.manager.close()
 
@@ -82,7 +84,21 @@ def create_app(manager=None):
 
     @app.post('/api/data/reload')
     def reload_data(request: Request):
+        if request.app.state.manager.data_updating:
+            raise BusyError('数据正在更新，请等待完成')
         return request.app.state.manager.reload_data()
+
+    @app.get('/api/data/status')
+    def data_status(request: Request):
+        return request.app.state.updates.snapshot()
+
+    @app.post('/api/data/check')
+    def data_check(request: Request):
+        return request.app.state.updates.start('check')
+
+    @app.post('/api/data/update')
+    def data_update(request: Request):
+        return request.app.state.updates.start('update')
 
     @app.get('/api/sessions/{session_id}/runs/{run_id}/events')
     async def events(session_id: str, run_id: str, request: Request):

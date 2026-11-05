@@ -98,5 +98,46 @@ class LuaDataTest(unittest.TestCase):
             validate_rules([])
 
 
+
+class SeasonShardTest(unittest.TestCase):
+    def test_decode_and_restored_merge_without_legacy_patch(self):
+        from collect_bwiki_modules import decode_shard, season_tables
+        season = {'codec': 'dragon-tuples-1', 'namespace': 'test'}
+        def pack(value):
+            fields = []
+            def encode(row):
+                if isinstance(row, dict):
+                    pairs = []
+                    for key, item in row.items():
+                        if key not in fields: fields.append(key)
+                        pairs.append([fields.index(key) + 1, encode(item)])
+                    return [1, pairs]
+                if isinstance(row, list): return [2, [encode(item) for item in row]]
+                return row
+            payload = encode(value)
+            return ['dragon-tuples-1', fields, payload]
+        sample = {'a': {'nested': [1, '值', False]}}
+        self.assertEqual(decode_shard(pack(sample), season), sample)
+        with self.assertRaises(ValueError): decode_shard(['other', [], []], season)
+        tables = {'SeasonConfig': {'view_namespace': '精灵图鉴/S5'},
+                  'SeasonManifest': {'seasons': [season]},
+                  'VisibilityConfig': {'withheld_titles': {'撤下': True}},
+                  'Catalog': {'old': {'title': '原有', 'siblings': []}},
+                  'Skills': {}, 'Evolutions': {'new': [1]}, 'SkillStoneTopics': {'x': [1]},
+                  'History': {'versions': {'old': 1}, 'pets': {}}}
+        shards = {'Roster': {'new': {'title': '新增', 'siblings': ['old', 'hidden']}, 'hidden': {'title': '撤下'}},
+                  'Arts': {'a': 1}, 'Gifts': {'b': 2},
+                  'Aux': {'History': {'versions': {'new': 2}}, 'LegacyEvolutionAliases': {'old': 'new'},
+                          'LegacyStoneTopics': {'x': [2]}}, 'Links': {}}
+        for name, value in shards.items(): tables['SeasonShard:模块:test/' + name] = pack(value)
+        result = season_tables(tables)
+        self.assertEqual(set(result['Catalog']), {'old', 'new'})
+        self.assertEqual(result['Catalog']['new']['siblings'], ['old'])
+        self.assertEqual(result['History']['versions'], {'old': 1, 'new': 2})
+        self.assertEqual(result['SkillStoneTopics']['x'], [1, 2])
+        self.assertEqual(result['Evolutions']['old'], [1])
+        self.assertNotIn('new', tables['Catalog'])
+
+
 if __name__ == '__main__':
     unittest.main()

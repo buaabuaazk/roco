@@ -26,7 +26,15 @@ TITLES = ['Module:Pets/data/' + name for name in TABLES] + [
     'Module:Pets/EvolutionConditions', 'Module:Pets/SeasonData', 'Module:ContentVisibility',
     'Module:ContentVisibility/Config'] + [
     'Module:ContentVisibility/S5Legacy/' + name for name in ('Catalog', 'Skills', 'Learnsets')]
+SEASON_NAMESPACE = '精灵图鉴/S5'
+SEASON_SHARDS = ('精灵', '技能', '特性', '辅助', '关联')
+TITLES += ['Module:Pets/SeasonConfig', 'Module:' + SEASON_NAMESPACE,
+           'Module:' + SEASON_NAMESPACE + '/配置'] + [
+           'Module:' + SEASON_NAMESPACE + '/数据/' + name for name in SEASON_SHARDS]
 RULE_REVISIONS = {'模块:Pets/SeasonData': 20687, '模块:ContentVisibility': 20611}
+# 已逐行核对的恢复展示版本；保留旧快照的离线转换能力。
+RULE_ALTERNATIVES = {'模块:ContentVisibility': {20611, 20829},
+                     '模块:精灵图鉴/S5': {20637}}
 TOKEN = re.compile(r'\s+|--[^\n]*|"(?:\\.|[^"\\])*"|[A-Za-z_][A-Za-z_0-9]*|'
                    r'-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|[{}\[\]=,;]')
 
@@ -110,7 +118,11 @@ def unpack(response):
             name = 'VisibilityConfig'
         provenance.append({'title': page['title'], 'revision_id': revision['revid'],
                            'revision_timestamp': revision['timestamp']})
-        if name != 'SeasonData' and not page['title'].endswith(':ContentVisibility'):
+        if page['title'].startswith('模块:' + SEASON_NAMESPACE + '/数据/'):
+            name = 'SeasonShard:' + page['title']
+        elif page['title'] == '模块:' + SEASON_NAMESPACE + '/配置':
+            name = 'SeasonManifest'
+        if name not in ('SeasonData', 'S5') and not page['title'].endswith(':ContentVisibility'):
             try:
                 tables[name] = parse_lua(revision['slots']['main']['content'])
             except ValueError as exc:
@@ -122,7 +134,7 @@ def visible_tables(tables):
     """复现已核对的当前展示投影；规则切换时显式停止并重新核验。"""
     config = tables['VisibilityConfig']
     if not config.get('hidden_seasons', {}).get('S5'):
-        raise ValueError('BWIKI 已切换赛季展示规则，须重新核验 SeasonData 适配器')
+        return season_tables(tables)
     result = deepcopy(tables)
     for name in ('Catalog', 'Skills', 'Learnsets'):
         for key, fields in tables[name + 'Patch'].items():
@@ -152,11 +164,64 @@ def visible_tables(tables):
     return result
 
 
+def decode_shard(packed, season):
+    if not isinstance(packed, list) or len(packed) != 3 or packed[0] != season['codec']:
+        raise ValueError('不支持的赛季资料格式')
+    fields = packed[1]
+    def decode(value):
+        if not isinstance(value, list):
+            return value
+        if len(value) != 2:
+            raise ValueError('无效的赛季资料节点')
+        tag, children = value
+        if tag == season.get('object_tag', 1):
+            return {fields[key - 1]: decode(child) for key, child in children}
+        if tag == season.get('array_tag', 2):
+            return [decode(child) for child in children]
+        raise ValueError('未知的赛季资料标签')
+    return decode(packed[2])
+
+
+def season_tables(tables):
+    """复现已核对的 S5 聚合模块：整行覆盖，History/Config 合并子表。"""
+    if tables.get('SeasonConfig', {}).get('view_namespace') != SEASON_NAMESPACE:
+        raise ValueError('赛季数据入口已变化，须重新核验转换器')
+    result = deepcopy(tables)
+    for season in tables['SeasonManifest']['seasons']:
+        decoded = {}
+        for name in ('Roster', 'Arts', 'Gifts', 'Aux', 'Links'):
+            title = '模块:' + season['namespace'] + '/' + season.get('modules', {}).get(name, name)
+            decoded[name] = decode_shard(tables['SeasonShard:' + title], season)
+        patches = [('Catalog', decoded['Roster']), ('Skills', decoded['Arts']),
+                   ('Skills', decoded['Gifts']), *decoded['Aux'].items()]
+        for name, values in patches:
+            target = result.setdefault(name, {})
+            for key, value in values.items():
+                if name in ('History', 'Config') and isinstance(value, dict):
+                    target.setdefault(key, {}).update(value)
+                else:
+                    target[key] = value
+    for old, new in result.get('LegacyEvolutionAliases', {}).items():
+        result['Evolutions'][old] = result['Evolutions'][new]
+    for key, rows in result.get('LegacyStoneTopics', {}).items():
+        result['SkillStoneTopics'].setdefault(key, []).extend(rows)
+    # 与 ContentVisibility.title 一致，当前被撤下的条目不进入正式目录。
+    withheld = tables['VisibilityConfig'].get('withheld_titles', {})
+    result['Catalog'] = {key: row for key, row in result['Catalog'].items()
+                         if not withheld.get(row['title'])}
+    for row in result['Catalog'].values():
+        row['siblings'] = [key for key in row.get('siblings', []) if key in result['Catalog']]
+    return result
+
+
 def validate_rules(provenance):
     revisions = {row['title']: row['revision_id'] for row in provenance}
     for title, expected in RULE_REVISIONS.items():
-        if revisions.get(title) != expected:
+        if revisions.get(title) not in RULE_ALTERNATIVES.get(title, {expected}):
             raise ValueError(f'{title} 展示规则修订已变化或缺失，须重新核验转换逻辑')
+
+    if '模块:' + SEASON_NAMESPACE in revisions and revisions['模块:' + SEASON_NAMESPACE] not in RULE_ALTERNATIVES['模块:' + SEASON_NAMESPACE]:
+        raise ValueError('赛季聚合规则已变化，须重新核验转换器')
 
 
 def skill_record(tables, wiki_id):
@@ -346,7 +411,8 @@ def main():
         missing = sorted({key for pet in pets for key in pet['missing_skill_references']})
         manifest = dict(schema_version=1, converted_at=datetime.now().astimezone().isoformat(),
             source=source, reused_local=not network, modules=provenance,
-            visibility_policy='S5 hidden: legacy patches applied',
+            visibility_policy=('S5 hidden: legacy patches applied' if tables['VisibilityConfig']['hidden_seasons'].get('S5')
+                               else 'S5 restored: season shards merged; withheld titles filtered'),
             pets=len(pets), skills=sum(s['category'] != '特性' for s in skills),
             features=sum(s['category'] == '特性' for s in skills),
             learning_relations=sum(len(rows) for pet in pets for rows in pet['skills'].values()),

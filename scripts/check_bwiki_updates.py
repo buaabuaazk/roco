@@ -34,26 +34,31 @@ def compare_revisions(local, remote):
             'changed_modules': changed, 'unavailable_modules': unavailable}
 
 
+def check_updates(snapshot):
+    local = json.loads(snapshot.read_text(encoding='utf-8'))
+    ids = [str(page['pageid']) for page in local['query']['pages']]
+    if not ids or len(ids) > 50:
+        raise ValueError('本检查支持包含 1～50 个模块的本地快照')
+    url = API + '?' + urlencode(dict(action='query', pageids='|'.join(ids), prop='revisions',
+        rvprop='ids|timestamp', format='json', formatversion=2, maxlag=5))
+    response = subprocess.run(['curl', '-fsSL', '--max-time', '45', '--retry', '2',
+                               '--retry-delay', '2', url], capture_output=True, check=True)
+    remote = json.loads(response.stdout)
+    report = compare_revisions(local, remote)
+    report.update(checked_at=datetime.now().astimezone().isoformat(),
+                  local_snapshot=str(snapshot.resolve()), request_url=url,
+                  response_bytes=len(response.stdout),
+                  scope='本地快照中的模块修订检查；正文及未纳入快照的页面未请求')
+    return report
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--snapshot', type=Path, default=ROOT / 'modules/response.json')
     parser.add_argument('--output', type=Path, help='可选：另存检查报告，采集数据保持原样')
     args = parser.parse_args()
     try:
-        local = json.loads(args.snapshot.read_text(encoding='utf-8'))
-        ids = [str(page['pageid']) for page in local['query']['pages']]
-        if not ids or len(ids) > 50:
-            raise ValueError('本检查支持包含 1～50 个模块的本地快照')
-        url = API + '?' + urlencode(dict(action='query', pageids='|'.join(ids), prop='revisions',
-            rvprop='ids|timestamp', format='json', formatversion=2, maxlag=5))
-        response = subprocess.run(['curl', '-fsSL', '--max-time', '45', '--retry', '2',
-                                   '--retry-delay', '2', url], capture_output=True, check=True)
-        remote = json.loads(response.stdout)
-        report = compare_revisions(local, remote)
-        report.update(checked_at=datetime.now().astimezone().isoformat(),
-                      local_snapshot=str(args.snapshot.resolve()), request_url=url,
-                      response_bytes=len(response.stdout),
-                      scope='本地快照中的模块修订检查；正文及未纳入快照的页面未请求')
+        report = check_updates(args.snapshot)
         if args.output:
             save(args.output, report)
         print(json.dumps(report, ensure_ascii=False, indent=4))
