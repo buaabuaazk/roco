@@ -11,8 +11,9 @@ SENSITIVE_FIELDS = {'api_key', 'zzz_api_key', 'authorization', 'access_token', '
 
 
 class SessionLog:
-    def __init__(self, directory=LOG_DIR):
+    def __init__(self, directory=LOG_DIR, on_event=None):
         self.session_id = uuid4().hex
+        self.on_event = on_event
         self._key = os.environ.get('ZZZ_API_KEY', '').strip()
         directory = Path(directory)
         directory.mkdir(parents=True, exist_ok=True, mode=0o700)
@@ -37,3 +38,5 @@ class SessionLog:
                           default=lambda value: f'<{type(value).__name__}>')
         with self.path.open('a', encoding='utf-8') as stream:
             stream.write(line + '\n')
+        if self.on_event is not None:
+            self.on_event(json.loads(line))
