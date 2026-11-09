@@ -253,6 +253,10 @@
             {
                 "wiki_skill_id": "skill_000582",
                 "skill_id": 7110180
+            },
+            {
+                "wiki_skill_id": "dc5a_6a123db69f1f8f",
+                "skill_id": 7110480
             }
         ],
         "blood": [
@@ -1441,6 +1445,25 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "重启",
+                    "source": "技能书"
+                },
+                {
+                    "after": 100,
+                    "before": 115,
+                    "delta": -15,
+                    "field": "透镜实验威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

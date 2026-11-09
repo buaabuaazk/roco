@@ -19,8 +19,7 @@
                 "黑水峡",
                 "甜水农庄",
                 "咕嘟咕嘟浅滩"
-            ],
-            "eggs": []
+            ]
         },
         "egg_group": [
             13,
@@ -43,7 +42,7 @@
         },
         "handbook_id": "handbook_000202",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.79~0.92M",
         "id": "pet_000402",
         "image": {
@@ -54,7 +53,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3507.png",
-            "illustration": "PetPortrait_manweishou.png"
+            "illustration": "PetPortrait_manweishou.png",
+            "shiny": "PetPortrait_HuaYuanMan2_yise.png",
+            "shiny_head": "PetAvatar_3507_1.png"
         },
         "learnset_id": "learnset_17c502e931f0",
         "move_type": "步行",
@@ -566,6 +567,26 @@
                 ],
                 "target": 1,
                 "text": "使用1次遁地"
+            },
+            {
+                "id": "topic_001062",
+                "progress_id": "pt_000202_000008",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

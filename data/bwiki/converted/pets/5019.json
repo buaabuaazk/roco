@@ -67,11 +67,11 @@
         ],
         "stage": 4,
         "stats": {
-            "atk": 96,
-            "def": 66,
-            "hp": 113,
-            "spa": 96,
-            "spd": 125,
+            "atk": 117,
+            "def": 68,
+            "hp": 117,
+            "spa": 116,
+            "spd": 128,
             "spe": 80
         },
         "title": "幻影荆棘",
@@ -1344,6 +1344,47 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 117,
+                    "before": 113,
+                    "delta": 4,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 117,
+                    "before": 96,
+                    "delta": 21,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 68,
+                    "before": 66,
+                    "delta": 2,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 116,
+                    "before": 96,
+                    "delta": 20,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 128,
+                    "before": 125,
+                    "delta": 3,
+                    "field": "魔防",
+                    "group": "stats"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

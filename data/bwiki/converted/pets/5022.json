@@ -9,8 +9,7 @@
         "class": "自然类精灵",
         "description": "当它舒展躯体时，水流沿鳞片纹路均匀铺展，使其外形兼具威慑力与神圣感，威严而不可侵犯。“在龙系精灵的历史中起到了关键的作用，一直默默地付出，很少有人知道它的存在。”",
         "ecology": {
-            "acquisition_pet_id": "pet_000188",
-            "eggs": []
+            "acquisition_pet_id": "pet_000188"
         },
         "egg_group": [
             14
@@ -31,7 +30,7 @@
             "male": 5
         },
         "handbook_id": "handbook_000204",
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "5.5~7M",
         "id": "pet_000555",
         "image": {
@@ -39,7 +38,9 @@
             "has_egg": true,
             "has_fruit": false,
             "head": "PetAvatar_4090.png",
-            "illustration": "PetPortrait_yilanyalong_shouling.png"
+            "illustration": "PetPortrait_yilanyalong_shouling.png",
+            "shiny": "PetPortrait_YiLanBo_yise.png",
+            "shiny_head": "PetAvatar_4090_1.png"
         },
         "is_lord_evolution": true,
         "learnset_id": "learnset_47a34269c892",
@@ -219,6 +220,10 @@
             {
                 "wiki_skill_id": "skill_000579",
                 "skill_id": 7100300
+            },
+            {
+                "wiki_skill_id": "dc5a_f9e3c54bcfe08d",
+                "skill_id": 7100380
             }
         ],
         "blood": [
@@ -583,6 +588,26 @@
                 ],
                 "target": 1,
                 "text": "使用1次升龙咆哮"
+            },
+            {
+                "id": "topic_001074",
+                "progress_id": "pt_000204_000009",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },
@@ -1267,6 +1292,18 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "画龙点睛",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

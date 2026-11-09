@@ -1,0 +1,527 @@
+{
+    "pet_id": 3816,
+    "wiki_id": "pet_000657",
+    "name": "西瓜虫",
+    "title": "西瓜虫",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "背上的果肉富有营养，饱含甜丝丝的果汁。西瓜虫趴在地上休息时，常常因为不起眼的体型而被忽略。洛克们不小心踩到的话很容易滑倒，千万要注意。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "在「圣龙宝藏」赛季的代币商店内购得的珍贵精灵蛋，经过孵化可以得到“完美无瑕”、且支持自选性格与个体资质的西瓜虫。",
+                    "icon": "Item_150882.png",
+                    "name": "西瓜虫的蛋"
+                },
+                {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的西瓜虫。",
+                    "icon": "Item_150899.png",
+                    "is_shiny": true,
+                    "name": "异色西瓜虫的蛋"
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是西瓜虫的果实。",
+                    "icon": "Item_108265.png",
+                    "name": "西瓜虫的果实",
+                    "sources": [
+                        "完成赛季作业挑战课题"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            4,
+            8
+        ],
+        "egg_size": {
+            "huge_min": 592,
+            "max": 600,
+            "min": 210,
+            "mini_max": 218,
+            "unit": "g"
+        },
+        "evolution_id": "dc5e_7bede4dbd340d7",
+        "feature_skill_id": "dc5g_17a2b9c92c32da",
+        "game_id": 3816,
+        "handbook_id": "dc5h_d3e2d4331dd578",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "0.21~0.33M",
+        "id": "pet_000657",
+        "image": {
+            "egg": "Item_107256.png",
+            "fruits": [
+                "Item_108265.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3816.png",
+            "illustration": "PetPortrait_XiGuaChong1.png",
+            "shiny": "PetPortrait_XiGuaChong1_yise.png",
+            "shiny_head": "PetAvatar_3816_1.png"
+        },
+        "learnset_id": "dc5l_37ced87185820c",
+        "move_type": "地面",
+        "name": "西瓜虫",
+        "number": "487",
+        "perception_range": 40,
+        "relation_key": "虫系|草系",
+        "release": {
+            "date": "2026-11-05"
+        },
+        "siblings": [],
+        "stage": 1,
+        "stats": {
+            "atk": 50,
+            "def": 61,
+            "hp": 86,
+            "spa": 100,
+            "spd": 103,
+            "spe": 64
+        },
+        "title": "西瓜虫",
+        "types": [
+            "虫系",
+            "草系"
+        ],
+        "weight": "0.6~1.5KG"
+    },
+    "feature_id": 200336,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000647",
+                "skill_id": 7130250
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000347",
+                "skill_id": 7030240
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 5,
+                "stage": 1,
+                "wiki_skill_id": "skill_000356",
+                "skill_id": 7030340
+            },
+            {
+                "level": 10,
+                "stage": 1,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "level": 18,
+                "stage": 1,
+                "wiki_skill_id": "skill_000639",
+                "skill_id": 7130160
+            },
+            {
+                "level": 20,
+                "stage": 1,
+                "wiki_skill_id": "skill_000368",
+                "skill_id": 7030520
+            },
+            {
+                "level": 21,
+                "stage": 1,
+                "wiki_skill_id": "skill_000367",
+                "skill_id": 7030510
+            },
+            {
+                "level": 23,
+                "stage": 1,
+                "wiki_skill_id": "dc5a_42bd41984f65ba",
+                "skill_id": 7030640
+            },
+            {
+                "level": 31,
+                "stage": 1,
+                "wiki_skill_id": "skill_000350",
+                "skill_id": 7030270
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000653",
+                "skill_id": 7130310
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000344",
+                "skill_id": 7030210
+            },
+            {
+                "level": 50,
+                "stage": 1,
+                "wiki_skill_id": "dc5a_8ba45041ddc821",
+                "skill_id": 7130380
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000643",
+                "skill_id": 7130200
+            },
+            {
+                "wiki_skill_id": "skill_000650",
+                "skill_id": 7130280
+            },
+            {
+                "wiki_skill_id": "skill_000654",
+                "skill_id": 7130320
+            },
+            {
+                "wiki_skill_id": "skill_000362",
+                "skill_id": 7030460
+            },
+            {
+                "wiki_skill_id": "skill_000349",
+                "skill_id": 7030260
+            },
+            {
+                "wiki_skill_id": "skill_000352",
+                "skill_id": 7030290
+            },
+            {
+                "wiki_skill_id": "skill_000370",
+                "skill_id": 7030560
+            },
+            {
+                "wiki_skill_id": "skill_000308",
+                "skill_id": 7020920
+            },
+            {
+                "wiki_skill_id": "skill_000279",
+                "skill_id": 7020690
+            },
+            {
+                "wiki_skill_id": "skill_000291",
+                "skill_id": 7020840
+            },
+            {
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            },
+            {
+                "wiki_skill_id": "skill_000447",
+                "skill_id": 7050510
+            },
+            {
+                "wiki_skill_id": "skill_000437",
+                "skill_id": 7050350
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000304",
+                "skill_id": 7020880
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000345",
+                "skill_id": 7030220
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000397",
+                "skill_id": 7040360
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000436",
+                "skill_id": 7050340
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000525",
+                "skill_id": 7080400
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000536",
+                "skill_id": 7090160
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000595",
+                "skill_id": 7110310
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000645",
+                "skill_id": 7130220
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000677",
+                "skill_id": 7140240
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000700",
+                "skill_id": 7150210
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000724",
+                "skill_id": 7160200
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000754",
+                "skill_id": 7170220
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000488",
+                "skill_id": 7070230
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000811",
+                "skill_id": 7190280
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3816.png",
+                    "id": "pet_000657",
+                    "illustration": "PetPortrait_XiGuaChong1.png",
+                    "name": "西瓜虫",
+                    "stage": 1,
+                    "title": "西瓜虫",
+                    "types": [
+                        "虫系",
+                        "草系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3817.png",
+                    "id": "pet_000658",
+                    "illustration": "PetPortrait_XiGuaChong2.png",
+                    "level": 33,
+                    "name": "冬虫夏瓜",
+                    "stage": 2,
+                    "title": "冬虫夏瓜",
+                    "types": [
+                        "虫系",
+                        "草系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "西瓜虫进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000657",
+                    "to_wiki_id": "pet_000658",
+                    "from_pet_id": 3816,
+                    "to_pet_id": 3817,
+                    "conditions": {
+                        "level": 33,
+                        "special": ""
+                    },
+                    "special_condition_source": "manual"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "西瓜虫",
+        "habitat": "行踪神秘",
+        "title": "果肉精灵",
+        "topics": [
+            {
+                "id": "topic_002448",
+                "progress_id": "pt_000487_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002449",
+                "progress_id": "pt_000487_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002450",
+                "progress_id": "pt_000487_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "草系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "水系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "光系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "地系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "电系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "武系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 3,
+                "type": "火系"
+            },
+            {
+                "multiplier": 3,
+                "type": "翼系"
+            },
+            {
+                "multiplier": 2,
+                "type": "冰系"
+            },
+            {
+                "multiplier": 2,
+                "type": "毒系"
+            },
+            {
+                "multiplier": 2,
+                "type": "虫系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "西瓜虫"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s5-2026-10-31"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

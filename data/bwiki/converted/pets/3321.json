@@ -96,10 +96,10 @@
         "starlight": 16,
         "stats": {
             "atk": 62,
-            "def": 60,
+            "def": 51,
             "hp": 79,
             "spa": 61,
-            "spd": 76,
+            "spd": 67,
             "spe": 33
         },
         "submit_reward": 800,
@@ -1286,6 +1286,32 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 51,
+                    "before": 60,
+                    "delta": -9,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 67,
+                    "before": 76,
+                    "delta": -9,
+                    "field": "魔防",
+                    "group": "stats"
+                },
+                {
+                    "after": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
+                    "before": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+                    "field": "特性说明",
+                    "group": "feature"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

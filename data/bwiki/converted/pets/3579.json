@@ -70,10 +70,10 @@
         "starlight": 60,
         "stats": {
             "atk": 120,
-            "def": 124,
-            "hp": 78,
-            "spa": 39,
-            "spd": 113,
+            "def": 117,
+            "hp": 96,
+            "spa": 40,
+            "spd": 106,
             "spe": 130
         },
         "submit_reward": 3000,
@@ -253,6 +253,14 @@
             {
                 "wiki_skill_id": "skill_000765",
                 "skill_id": 7170350
+            },
+            {
+                "wiki_skill_id": "dc5a_0c61eb64fa7cd5",
+                "skill_id": 7160440
+            },
+            {
+                "wiki_skill_id": "dc5a_3583379d35a0b4",
+                "skill_id": 7190540
             }
         ],
         "blood": [
@@ -1329,6 +1337,52 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 96,
+                    "before": 78,
+                    "delta": 18,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 117,
+                    "before": 124,
+                    "delta": -7,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 40,
+                    "before": 39,
+                    "delta": 1,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 106,
+                    "before": 113,
+                    "delta": -7,
+                    "field": "魔防",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "恋恋不舍",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "混合态",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -28,6 +28,12 @@
             ],
             "eggs": [
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的锤头鹳。",
+                    "icon": "Item_150886.png",
+                    "is_shiny": true,
+                    "name": "异色锤头鹳的蛋"
+                },
+                {
                     "description": "参与活动「锤头鹳大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的锤头鹳。",
                     "icon": "Item_151048.png",
                     "name": "锤头鹳的蛋",
@@ -68,7 +74,7 @@
         },
         "handbook_id": "handbook_000092",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "1.09~1.56M",
         "id": "pet_000060",
         "image": {
@@ -79,7 +85,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3069.png",
-            "illustration": "PetPortrait_chuitouguan.png"
+            "illustration": "PetPortrait_chuitouguan.png",
+            "shiny": "PetPortrait_ChuiTouNiao1_yise.png",
+            "shiny_head": "PetAvatar_3069_1.png"
         },
         "learnset_id": "learnset_97cd1dcccda1",
         "move_type": "步行",
@@ -590,6 +598,26 @@
                 ],
                 "target": 2,
                 "text": "使用2次乘胜追击"
+            },
+            {
+                "id": "topic_000495",
+                "progress_id": "pt_000092_000009",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

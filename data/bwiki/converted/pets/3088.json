@@ -273,6 +273,10 @@
             {
                 "wiki_skill_id": "skill_000680",
                 "skill_id": 7140270
+            },
+            {
+                "wiki_skill_id": "skill_000384",
+                "skill_id": 7040220
             }
         ],
         "blood": [
@@ -1455,6 +1459,18 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "持续高温",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

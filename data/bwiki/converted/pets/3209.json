@@ -15,6 +15,12 @@
         "ecology": {
             "eggs": [
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的小翼龙。",
+                    "icon": "Item_150888.png",
+                    "is_shiny": true,
+                    "name": "异色小翼龙的蛋"
+                },
+                {
                     "description": "参与活动「小翼龙大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的小翼龙。",
                     "icon": "Item_151053.png",
                     "name": "小翼龙的蛋",
@@ -55,7 +61,7 @@
         },
         "handbook_id": "handbook_000224",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.61~0.87M",
         "id": "pet_000186",
         "image": {
@@ -66,7 +72,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3209.png",
-            "illustration": "PetPortrait_xiaoyilong.png"
+            "illustration": "PetPortrait_xiaoyilong.png",
+            "shiny": "PetPortrait_YiLong1_yise.png",
+            "shiny_head": "PetAvatar_3209_1.png"
         },
         "learnset_id": "learnset_099ab00a9fbe",
         "move_type": "浮游",
@@ -241,6 +249,10 @@
             {
                 "wiki_skill_id": "skill_000579",
                 "skill_id": 7100300
+            },
+            {
+                "wiki_skill_id": "dc5a_f18af6019d34e7",
+                "skill_id": 7100390
             }
         ],
         "blood": [
@@ -1237,6 +1249,18 @@
             ],
             "kind": "changed",
             "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "龙之爪牙",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

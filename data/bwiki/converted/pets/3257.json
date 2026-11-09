@@ -72,10 +72,10 @@
         "stage": 1,
         "starlight": 32,
         "stats": {
-            "atk": 60,
+            "atk": 54,
             "def": 68,
             "hp": 44,
-            "spa": 16,
+            "spa": 13,
             "spd": 53,
             "spe": 54
         },
@@ -269,8 +269,8 @@
             {
                 "blood": "地",
                 "level": 15,
-                "wiki_skill_id": "skill_000499",
-                "skill_id": 7080120
+                "wiki_skill_id": "skill_000498",
+                "skill_id": 7080110
             },
             {
                 "blood": "冰",
@@ -386,7 +386,22 @@
                     ]
                 }
             ],
-            "lord_branches": [],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "首领形态",
+                    "head": "PetAvatar_4110.png",
+                    "id": "pet_000706",
+                    "illustration": "PetPortrait_BuLuSiBo.png",
+                    "item": "圣冠布鲁斯的信物",
+                    "name": "圣冠布鲁斯",
+                    "stage": 4,
+                    "title": "圣冠布鲁斯",
+                    "types": [
+                        "冰系"
+                    ]
+                }
+            ],
             "name": "布鲁斯进化链",
             "transitions": [
                 {
@@ -406,6 +421,18 @@
                     "to_pet_id": 3259,
                     "conditions": {
                         "level": 42
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000217",
+                    "to_wiki_id": "pet_000706",
+                    "from_pet_id": 3259,
+                    "to_pet_id": 5067,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "圣冠布鲁斯的信物"
                     },
                     "special_condition_source": "member"
                 }
@@ -1254,6 +1281,45 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 54,
+                    "before": 60,
+                    "delta": -6,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 13,
+                    "before": 16,
+                    "delta": -3,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "扬沙",
+                    "qualifier": "地血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "跺地",
+                    "qualifier": "地血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "lord_added",
+                    "group": "lord",
+                    "value": "圣冠布鲁斯"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

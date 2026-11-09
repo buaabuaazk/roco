@@ -22,8 +22,7 @@
         "class": "自然类精灵",
         "description": "哪怕是休息的时候，也像沉睡的火山一样危险。岩浆涌动的身体需要经常添加燃料，偶尔会把吃不完的食物丢到头顶的火山口里燃尽。",
         "ecology": {
-            "acquisition_pet_id": "pet_000074",
-            "eggs": []
+            "acquisition_pet_id": "pet_000074"
         },
         "egg_group": [
             2,
@@ -45,7 +44,7 @@
         },
         "handbook_id": "handbook_000251",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "1.68~1.9M",
         "id": "pet_000076",
         "image": {
@@ -56,7 +55,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3085.png",
-            "illustration": "PetPortrait_huoyanyuan.png"
+            "illustration": "PetPortrait_huoyanyuan.png",
+            "shiny": "PetPortrait_HuoYuan3_yise.png",
+            "shiny_head": "PetAvatar_3085_1.png"
         },
         "learnset_id": "learnset_65b25e24521c",
         "move_type": "步行",
@@ -551,6 +552,26 @@
                 ],
                 "target": 1,
                 "text": "使用1次热身"
+            },
+            {
+                "id": "topic_001319",
+                "progress_id": "pt_000251_000007",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

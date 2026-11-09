@@ -241,6 +241,10 @@
             {
                 "wiki_skill_id": "skill_000799",
                 "skill_id": 7180420
+            },
+            {
+                "wiki_skill_id": "dc5a_6229141f8122ad",
+                "skill_id": 7110470
             }
         ],
         "blood": [
@@ -1280,6 +1284,25 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "过充电",
+                    "source": "技能书"
+                },
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "通电威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

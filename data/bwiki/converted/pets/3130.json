@@ -87,10 +87,10 @@
         "starlight": 24,
         "stats": {
             "atk": 53,
-            "def": 55,
-            "hp": 55,
+            "def": 59,
+            "hp": 60,
             "spa": 53,
-            "spd": 55,
+            "spd": 59,
             "spe": 66
         },
         "submit_reward": 1200,
@@ -263,6 +263,10 @@
             {
                 "wiki_skill_id": "skill_000659",
                 "skill_id": 7130370
+            },
+            {
+                "wiki_skill_id": "dc5a_06ba86418113b5",
+                "skill_id": 7120310
             }
         ],
         "blood": [
@@ -1287,6 +1291,39 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 60,
+                    "before": 55,
+                    "delta": 5,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 59,
+                    "before": 55,
+                    "delta": 4,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 59,
+                    "before": 55,
+                    "delta": 4,
+                    "field": "魔防",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "投毒",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

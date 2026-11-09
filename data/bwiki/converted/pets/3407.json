@@ -18,8 +18,7 @@
                 "彼得大道",
                 "月兔暗港",
                 "望风半岛"
-            ],
-            "eggs": []
+            ]
         },
         "egg_group": [
             15
@@ -40,7 +39,7 @@
         },
         "handbook_id": "handbook_000230",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "1.05~1.2M",
         "id": "pet_000328",
         "image": {
@@ -51,7 +50,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3407.png",
-            "illustration": "PetPortrait_shengbotita.png"
+            "illustration": "PetPortrait_shengbotita.png",
+            "shiny": "PetPortrait_TiTa2_yise.png",
+            "shiny_head": "PetAvatar_3407_1.png"
         },
         "learnset_id": "learnset_eb66c792193c",
         "move_type": "步行",
@@ -576,6 +577,26 @@
                 ],
                 "target": 1,
                 "text": "使用1次主轴"
+            },
+            {
+                "id": "topic_001213",
+                "progress_id": "pt_000230_000009",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

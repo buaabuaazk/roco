@@ -271,6 +271,10 @@
             {
                 "wiki_skill_id": "skill_000562",
                 "skill_id": 7090460
+            },
+            {
+                "wiki_skill_id": "dc5a_e3ef7437aea793",
+                "skill_id": 7090500
             }
         ],
         "blood": [
@@ -423,9 +427,9 @@
                     "to_pet_id": 3532,
                     "conditions": {
                         "level": 40,
-                        "special": "生涯使用[滚雪球]15次"
+                        "special": "生涯使用[滚雪球]6次"
                     },
-                    "special_condition_source": "member"
+                    "special_condition_source": "manual"
                 }
             ]
         }
@@ -1312,6 +1316,18 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冷冻",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

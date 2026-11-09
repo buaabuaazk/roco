@@ -257,6 +257,14 @@
             {
                 "wiki_skill_id": "skill_000446",
                 "skill_id": 7050490
+            },
+            {
+                "wiki_skill_id": "dc5a_fbdaae42ca6b2d",
+                "skill_id": 7050560
+            },
+            {
+                "wiki_skill_id": "skill_000671",
+                "skill_id": 7140170
             }
         ],
         "blood": [
@@ -299,8 +307,8 @@
             {
                 "blood": "冰",
                 "level": 15,
-                "wiki_skill_id": "skill_000543",
-                "skill_id": 7090240
+                "wiki_skill_id": "skill_000544",
+                "skill_id": 7090250
             },
             {
                 "blood": "龙",
@@ -1274,6 +1282,38 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "气沉丹田",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "续杯",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冰爪",
+                    "qualifier": "冰血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "冷风",
+                    "qualifier": "冰血脉 Lv.15",
+                    "source": "血脉技能"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

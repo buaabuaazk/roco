@@ -1362,6 +1362,25 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": "减伤80%，应对攻击：下一次攻击时，技能威力+50。",
+                    "before": "减伤70%，应对攻击：下一次攻击时，技能威力+50。",
+                    "field": "暖气说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 100,
+                    "before": 115,
+                    "delta": -15,
+                    "field": "透镜实验威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

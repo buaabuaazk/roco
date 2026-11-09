@@ -178,6 +178,12 @@
                 "skill_id": 7140260
             },
             {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000686",
+                "skill_id": 7140360
+            },
+            {
                 "level": 49,
                 "stage": 1,
                 "wiki_skill_id": "skill_000662",
@@ -1418,6 +1424,19 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "回旋踢",
+                    "qualifier": "Lv.48",
+                    "source": "等级技能"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

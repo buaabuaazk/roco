@@ -234,6 +234,10 @@
             {
                 "wiki_skill_id": "skill_000830",
                 "skill_id": 7190480
+            },
+            {
+                "wiki_skill_id": "dc5a_dbd6637831b924",
+                "skill_id": 7170370
             }
         ],
         "blood": [
@@ -306,8 +310,8 @@
             {
                 "blood": "武",
                 "level": 15,
-                "wiki_skill_id": "skill_000676",
-                "skill_id": 7140230
+                "wiki_skill_id": "skill_000677",
+                "skill_id": 7140240
             },
             {
                 "blood": "翼",
@@ -1230,6 +1234,32 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冥暗诅咒",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "贯手",
+                    "qualifier": "武血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "缠丝劲",
+                    "qualifier": "武血脉 Lv.15",
+                    "source": "血脉技能"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

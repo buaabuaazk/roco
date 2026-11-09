@@ -237,6 +237,10 @@
             {
                 "wiki_skill_id": "skill_000281",
                 "skill_id": 7020710
+            },
+            {
+                "wiki_skill_id": "dc5a_4d57cc90d796c5",
+                "skill_id": 7160430
             }
         ],
         "blood": [
@@ -1414,6 +1418,31 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "筑梦",
+                    "source": "技能书"
+                },
+                {
+                    "after": 1,
+                    "before": 2,
+                    "delta": -1,
+                    "field": "破防能耗",
+                    "group": "skill"
+                },
+                {
+                    "after": "敌方获得双防-80%，应对防御：额外使被应对技能冷却2回合。",
+                    "before": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+                    "field": "破防说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

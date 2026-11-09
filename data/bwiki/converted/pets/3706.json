@@ -266,6 +266,10 @@
             {
                 "wiki_skill_id": "skill_000761",
                 "skill_id": 7170300
+            },
+            {
+                "wiki_skill_id": "skill_000744",
+                "skill_id": 7170110
             }
         ],
         "blood": [
@@ -1321,6 +1325,25 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "背袭",
+                    "source": "技能书"
+                },
+                {
+                    "after": 60,
+                    "before": 50,
+                    "delta": 10,
+                    "field": "甜蜜陷阱威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

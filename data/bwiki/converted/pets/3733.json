@@ -42,6 +42,12 @@
                     "sources": [
                         "参与「机幕方舟再临」"
                     ]
+                },
+                {
+                    "description": "完成「狂欢怪谈」赛季图鉴任务获得的异色精灵蛋，经过孵化可以得到“异色”外观、“完美无瑕”、且支持自选性格与个体资质、“同乘”特长的钨丝贝贝。",
+                    "icon": "Item_150904.png",
+                    "is_shiny": true,
+                    "name": "异色钨丝贝贝的蛋"
                 }
             ]
         },
@@ -57,7 +63,7 @@
         },
         "handbook_id": "handbook_000348",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.54~0.73M",
         "id": "pet_000508",
         "image": {
@@ -65,7 +71,9 @@
             "has_egg": true,
             "has_fruit": false,
             "head": "PetAvatar_3733.png",
-            "illustration": "PetPortrait_wusibeibei.png"
+            "illustration": "PetPortrait_wusibeibei.png",
+            "shiny": "PetPortrait_WuSiBB1_yise.png",
+            "shiny_head": "PetAvatar_3733_1.png"
         },
         "learnset_id": "learnset_d1d59b0f9420",
         "move_type": "地面",
@@ -1249,6 +1257,19 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "微型斥候威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

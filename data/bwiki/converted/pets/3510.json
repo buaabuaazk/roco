@@ -75,7 +75,7 @@
         "stats": {
             "atk": 98,
             "def": 146,
-            "hp": 112,
+            "hp": 123,
             "spa": 98,
             "spd": 110,
             "spe": 70
@@ -1446,6 +1446,26 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 123,
+                    "before": 112,
+                    "delta": 11,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "微型斥候威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

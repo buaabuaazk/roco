@@ -231,6 +231,10 @@
             {
                 "wiki_skill_id": "skill_000802",
                 "skill_id": 7180450
+            },
+            {
+                "wiki_skill_id": "dc5a_22f232c8e058b4",
+                "skill_id": 7170380
             }
         ],
         "blood": [
@@ -1418,6 +1422,18 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "灵扰",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

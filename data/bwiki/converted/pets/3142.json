@@ -162,10 +162,10 @@
         "stage": 1,
         "starlight": 32,
         "stats": {
-            "atk": 69,
+            "atk": 74,
             "def": 62,
             "hp": 60,
-            "spa": 63,
+            "spa": 68,
             "spd": 51,
             "spe": 69
         },
@@ -1423,6 +1423,26 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 74,
+                    "before": 69,
+                    "delta": 5,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 68,
+                    "before": 63,
+                    "delta": 5,
+                    "field": "魔攻",
+                    "group": "stats"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

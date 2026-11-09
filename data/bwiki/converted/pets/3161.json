@@ -284,6 +284,14 @@
             {
                 "wiki_skill_id": "skill_000338",
                 "skill_id": 7021280
+            },
+            {
+                "wiki_skill_id": "dc5a_2a70f33f215ec1",
+                "skill_id": 7030630
+            },
+            {
+                "wiki_skill_id": "dc5a_e5bab8d07ad41e",
+                "skill_id": 7030650
             }
         ],
         "blood": [
@@ -1408,6 +1416,24 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "外附传播",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "维管束重构",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

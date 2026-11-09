@@ -24,6 +24,12 @@
         "ecology": {
             "eggs": [
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的可爱猿。",
+                    "icon": "Item_150887.png",
+                    "is_shiny": true,
+                    "name": "异色可爱猿的蛋"
+                },
+                {
                     "description": "参与活动「可爱猿大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的可爱猿。",
                     "icon": "Item_151052.png",
                     "name": "可爱猿的蛋",
@@ -64,7 +70,7 @@
         },
         "handbook_id": "handbook_000249",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.69~0.98M",
         "id": "pet_000074",
         "image": {
@@ -75,7 +81,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3083.png",
-            "illustration": "PetPortrait_keaiyuan.png"
+            "illustration": "PetPortrait_keaiyuan.png",
+            "shiny": "PetPortrait_HuoYuan1_yise.png",
+            "shiny_head": "PetAvatar_3083_1.png"
         },
         "learnset_id": "learnset_65b25e24521c",
         "move_type": "步行",

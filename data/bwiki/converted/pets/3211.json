@@ -14,6 +14,15 @@
         "ecology": {
             "eggs": [
                 {
+                    "description": "击败精灵首领·伊兰龙后，发现的珍贵精灵蛋，经过孵化可以得到“异色”外观、“了不起”天分的伊雷龙。",
+                    "icon": "Item_150411.png",
+                    "is_shiny": true,
+                    "name": "异色伊雷龙的蛋",
+                    "sources": [
+                        "挑战精灵首领·伊兰龙获得"
+                    ]
+                },
+                {
                     "description": "击败精灵首领·伊兰龙后，发现的珍贵精灵蛋，通过观察其花纹可以获得一些头绪，经过孵化可以得到“了不起”天分的精灵。",
                     "icon": "Item_150509.png",
                     "name": "伊雷龙的蛋",
@@ -57,6 +66,12 @@
                     ]
                 },
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的伊雷龙。",
+                    "icon": "Item_150889.png",
+                    "is_shiny": true,
+                    "name": "异色伊雷龙的蛋"
+                },
+                {
                     "description": "参与活动「伊雷龙大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的伊雷龙。",
                     "icon": "Item_151049.png",
                     "name": "伊雷龙的蛋",
@@ -96,7 +111,7 @@
         },
         "handbook_id": "handbook_000203",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.72~0.94M",
         "id": "pet_000188",
         "image": {
@@ -107,7 +122,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3211.png",
-            "illustration": "PetPortrait_yileilong.png"
+            "illustration": "PetPortrait_yileilong.png",
+            "shiny": "PetPortrait_YiLan1_yise.png",
+            "shiny_head": "PetAvatar_3211_1.png"
         },
         "learnset_id": "learnset_3315f99c387d",
         "move_type": "浮游",
@@ -289,6 +306,10 @@
             {
                 "wiki_skill_id": "skill_000579",
                 "skill_id": 7100300
+            },
+            {
+                "wiki_skill_id": "dc5a_f9e3c54bcfe08d",
+                "skill_id": 7100380
             }
         ],
         "blood": [
@@ -1369,6 +1390,18 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "画龙点睛",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

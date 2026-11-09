@@ -9,8 +9,7 @@
         "class": "自然类精灵",
         "description": "经常对着空气练习，有洛克靠近时会立刻启动表演程序。有时显得笨拙不够善解人意，如果小洛克曾因为它的笑话而微笑，它可以不眠不休追着小洛克讲三天三夜的笑话，然后直接昏倒。",
         "ecology": {
-            "acquisition_pet_id": "pet_000508",
-            "eggs": []
+            "acquisition_pet_id": "pet_000508"
         },
         "egg_group": [
             1
@@ -24,14 +23,16 @@
         },
         "handbook_id": "handbook_000349",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "1.03~1.41M",
         "id": "pet_000509",
         "image": {
             "has_egg": false,
             "has_fruit": false,
             "head": "PetAvatar_3734.png",
-            "illustration": "PetPortrait_huiguangmuji.png"
+            "illustration": "PetPortrait_huiguangmuji.png",
+            "shiny": "PetPortrait_WuSiBB2_yise.png",
+            "shiny_head": "PetAvatar_3734_1.png"
         },
         "learnset_id": "learnset_d1d59b0f9420",
         "move_type": "地面",
@@ -1283,6 +1284,19 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "微型斥候威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

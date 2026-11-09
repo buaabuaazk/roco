@@ -219,6 +219,10 @@
             {
                 "wiki_skill_id": "skill_000265",
                 "skill_id": 7020540
+            },
+            {
+                "wiki_skill_id": "skill_000421",
+                "skill_id": 7050180
             }
         ],
         "blood": [
@@ -1325,6 +1329,18 @@
             ],
             "kind": "changed",
             "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "气泡",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -1337,6 +1337,32 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 1,
+                    "before": 2,
+                    "delta": -1,
+                    "field": "破防能耗",
+                    "group": "skill"
+                },
+                {
+                    "after": "敌方获得双防-80%，应对防御：额外使被应对技能冷却2回合。",
+                    "before": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+                    "field": "破防说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "通电威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

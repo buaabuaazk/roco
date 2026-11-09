@@ -1,0 +1,81 @@
+{
+    "category": "特性",
+    "desc": "入场时随机获得1~6点，在场时双方根据点数获得不同效果。",
+    "effect_details": {
+        "intro": "入场时随机获得1～6点，在场时双方根据点数获得以下效果。",
+        "note": "速度以固定数值增加。",
+        "rows": [
+            {
+                "effects": [
+                    {
+                        "label": "回复生命",
+                        "target": "场上所有精灵",
+                        "value": "10%"
+                    }
+                ],
+                "label": "1 点 · 草",
+                "note": "回合结束"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "物攻",
+                        "target": "场上所有精灵",
+                        "value": "+50%"
+                    }
+                ],
+                "label": "2 点 · 武"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "魔攻",
+                        "target": "场上所有精灵",
+                        "value": "+50%"
+                    }
+                ],
+                "label": "3 点 · 光"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "物防",
+                        "target": "场上所有精灵",
+                        "value": "−80%"
+                    }
+                ],
+                "label": "4 点 · 虫"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "魔防",
+                        "target": "场上所有精灵",
+                        "value": "−80%"
+                    }
+                ],
+                "label": "5 点 · 龙"
+            },
+            {
+                "effects": [
+                    {
+                        "label": "速度",
+                        "target": "场上所有精灵",
+                        "value": "+50"
+                    }
+                ],
+                "label": "6 点 · 电"
+            }
+        ],
+        "title": "滴溜豚 · 点数与效果"
+    },
+    "element": "无系别",
+    "energy": 0,
+    "game_id": 200340,
+    "icon": "Feature_200338.png",
+    "name": "游戏的本质",
+    "skill_id": 200340,
+    "wiki_id": "dc5g_b94c4ce38083a1",
+    "terms": {},
+    "stone_topics": []
+}

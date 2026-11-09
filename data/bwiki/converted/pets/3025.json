@@ -256,6 +256,10 @@
             {
                 "wiki_skill_id": "skill_000664",
                 "skill_id": 7140090
+            },
+            {
+                "wiki_skill_id": "dc5a_e5bab8d07ad41e",
+                "skill_id": 7030650
             }
         ],
         "blood": [
@@ -1437,6 +1441,18 @@
             ],
             "kind": "changed",
             "version": "s3-2026-08-18"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "维管束重构",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

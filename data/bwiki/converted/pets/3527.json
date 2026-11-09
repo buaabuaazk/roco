@@ -15,7 +15,8 @@
             "acquisition_pet_id": "pet_000107"
         },
         "egg_group": [
-            13
+            13,
+            12
         ],
         "egg_size": {
             "huge_min": 2226,
@@ -228,6 +229,10 @@
             {
                 "wiki_skill_id": "skill_000736",
                 "skill_id": 7160350
+            },
+            {
+                "wiki_skill_id": "dc5a_9285990b5ae2c0",
+                "skill_id": 7090490
             }
         ],
         "blood": [
@@ -1317,6 +1322,29 @@
             ],
             "kind": "changed",
             "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "热桥",
+                    "source": "技能书"
+                },
+                {
+                    "after": [
+                        "海洋组",
+                        "魔力组"
+                    ],
+                    "before": [
+                        "海洋组"
+                    ],
+                    "field": "蛋组",
+                    "group": "breeding"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

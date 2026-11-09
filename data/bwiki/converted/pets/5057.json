@@ -9,8 +9,7 @@
         "class": "自然类精灵",
         "description": "它是这片泥地里体型最大、吃得最多、活得最久的个体，是整片泥地的管理者。摄取了大量的矿物后，骨骼密度是同族的数倍，干裂的泥甲覆盖全身像一层天然盔甲。",
         "ecology": {
-            "acquisition_pet_id": "pet_000390",
-            "eggs": []
+            "acquisition_pet_id": "pet_000390"
         },
         "egg_group": [
             5,
@@ -32,7 +31,7 @@
             "male": 5
         },
         "handbook_id": "handbook_000288",
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "1.63~1.9M",
         "id": "pet_000590",
         "image": {
@@ -40,7 +39,9 @@
             "has_egg": true,
             "has_fruit": false,
             "head": "PetAvatar_4102.png",
-            "illustration": "PetPortrait_nihouya_shouling.png"
+            "illustration": "PetPortrait_nihouya_shouling.png",
+            "shiny": "PetPortrait_XiNiOuBo_yise.png",
+            "shiny_head": "PetAvatar_4102_1.png"
         },
         "is_lord_evolution": true,
         "learnset_id": "learnset_b49019fbdc23",
@@ -575,6 +576,26 @@
                 ],
                 "target": 1,
                 "text": "使用进化之力，将精灵进化为首领"
+            },
+            {
+                "id": "topic_001513",
+                "progress_id": "pt_000288_000009",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

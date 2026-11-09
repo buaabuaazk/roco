@@ -58,14 +58,16 @@
             "version": "1.0.0"
         },
         "review_gold": 4000,
-        "siblings": [],
+        "siblings": [
+            "pet_000706"
+        ],
         "stage": 3,
         "starlight": 80,
         "stats": {
-            "atk": 101,
+            "atk": 90,
             "def": 114,
             "hp": 73,
-            "spa": 27,
+            "spa": 21,
             "spd": 88,
             "spe": 90
         },
@@ -259,8 +261,8 @@
             {
                 "blood": "地",
                 "level": 15,
-                "wiki_skill_id": "skill_000499",
-                "skill_id": 7080120
+                "wiki_skill_id": "skill_000498",
+                "skill_id": 7080110
             },
             {
                 "blood": "冰",
@@ -376,7 +378,22 @@
                     ]
                 }
             ],
-            "lord_branches": [],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "首领形态",
+                    "head": "PetAvatar_4110.png",
+                    "id": "pet_000706",
+                    "illustration": "PetPortrait_BuLuSiBo.png",
+                    "item": "圣冠布鲁斯的信物",
+                    "name": "圣冠布鲁斯",
+                    "stage": 4,
+                    "title": "圣冠布鲁斯",
+                    "types": [
+                        "冰系"
+                    ]
+                }
+            ],
             "name": "布鲁斯进化链",
             "transitions": [
                 {
@@ -396,6 +413,18 @@
                     "to_pet_id": 3259,
                     "conditions": {
                         "level": 42
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000217",
+                    "to_wiki_id": "pet_000706",
+                    "from_pet_id": 3259,
+                    "to_pet_id": 5067,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "圣冠布鲁斯的信物"
                     },
                     "special_condition_source": "member"
                 }
@@ -562,6 +591,26 @@
                 ],
                 "target": 2,
                 "text": "使用2次速冻"
+            },
+            {
+                "id": "topic_001333",
+                "progress_id": "pt_000254_000008",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_3.png",
+                        "kind": "资源",
+                        "name": "许愿星"
+                    },
+                    {
+                        "count": 30,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使用进化之力，将精灵进化为首领"
             }
         ]
     },
@@ -1340,6 +1389,45 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 90,
+                    "before": 101,
+                    "delta": -11,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 21,
+                    "before": 27,
+                    "delta": -6,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "扬沙",
+                    "qualifier": "地血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "跺地",
+                    "qualifier": "地血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "lord_added",
+                    "group": "lord",
+                    "value": "圣冠布鲁斯"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

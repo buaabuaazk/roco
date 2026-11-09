@@ -196,6 +196,10 @@
             {
                 "wiki_skill_id": "skill_000299",
                 "skill_id": 7020860
+            },
+            {
+                "wiki_skill_id": "dc5a_8ba45041ddc821",
+                "skill_id": 7130380
             }
         ],
         "blood": [
@@ -508,6 +512,31 @@
             ],
             "kind": "introduced",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "夏蛰",
+                    "source": "技能书"
+                },
+                {
+                    "after": 65,
+                    "before": 70,
+                    "delta": -5,
+                    "field": "暖阳威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成物伤，每使用1次其他火系技能，威力永久+60，使用本技能后重置。",
+                    "before": "造成物伤，每使用1次其他火系技能，威力永久+40，使用本技能后重置。",
+                    "field": "暖阳说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

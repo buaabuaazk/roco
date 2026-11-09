@@ -296,6 +296,10 @@
             {
                 "wiki_skill_id": "skill_000287",
                 "skill_id": 7020780
+            },
+            {
+                "wiki_skill_id": "dc5a_0c61eb64fa7cd5",
+                "skill_id": 7160440
             }
         ],
         "blood": [
@@ -439,7 +443,23 @@
                     ]
                 }
             ],
-            "lord_branches": [],
+            "lord_branches": [
+                {
+                    "cond": "首领化",
+                    "form": "首领形态",
+                    "head": "PetAvatar_4094.png",
+                    "id": "pet_000705",
+                    "illustration": "PetPortrait_ShuiMuBo.png",
+                    "item": "琉璃君主的信物",
+                    "name": "琉璃君主",
+                    "stage": 4,
+                    "title": "琉璃君主",
+                    "types": [
+                        "水系",
+                        "毒系"
+                    ]
+                }
+            ],
             "name": "翡翠水母进化链",
             "transitions": [
                 {
@@ -449,6 +469,18 @@
                     "to_pet_id": 3120,
                     "conditions": {
                         "level": 26
+                    },
+                    "special_condition_source": "member"
+                },
+                {
+                    "from_wiki_id": "pet_000109",
+                    "to_wiki_id": "pet_000705",
+                    "from_pet_id": 3120,
+                    "to_pet_id": 5066,
+                    "conditions": {
+                        "special": "首领化",
+                        "method": "首领化",
+                        "item": "琉璃君主的信物"
                     },
                     "special_condition_source": "member"
                 }
@@ -1302,6 +1334,23 @@
             ],
             "kind": "changed",
             "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "恋恋不舍",
+                    "source": "技能书"
+                },
+                {
+                    "action": "lord_added",
+                    "group": "lord",
+                    "value": "琉璃君主"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

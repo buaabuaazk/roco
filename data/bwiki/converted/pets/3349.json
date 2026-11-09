@@ -70,10 +70,10 @@
         "starlight": 60,
         "stats": {
             "atk": 103,
-            "def": 96,
-            "hp": 134,
+            "def": 88,
+            "hp": 120,
             "spa": 98,
-            "spd": 110,
+            "spd": 102,
             "spe": 75
         },
         "submit_reward": 3000,
@@ -1426,6 +1426,39 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 120,
+                    "before": 134,
+                    "delta": -14,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 88,
+                    "before": 96,
+                    "delta": -8,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 102,
+                    "before": 110,
+                    "delta": -8,
+                    "field": "魔防",
+                    "group": "stats"
+                },
+                {
+                    "after": "天气为雨天时，使用水系攻击技能时吸血100%。",
+                    "before": "天气为雨天时，使用水系攻击技能时吸血50%。",
+                    "field": "特性说明",
+                    "group": "feature"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

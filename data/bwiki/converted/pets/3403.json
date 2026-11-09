@@ -65,10 +65,10 @@
         "stage": 2,
         "starlight": 42,
         "stats": {
-            "atk": 101,
-            "def": 95,
-            "hp": 86,
-            "spa": 94,
+            "atk": 117,
+            "def": 87,
+            "hp": 74,
+            "spa": 111,
             "spd": 63,
             "spe": 76
         },
@@ -255,6 +255,10 @@
             {
                 "wiki_skill_id": "skill_000500",
                 "skill_id": 7080130
+            },
+            {
+                "wiki_skill_id": "dc5a_3aba1f06440a4d",
+                "skill_id": 7080480
             }
         ],
         "blood": [
@@ -949,6 +953,46 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 74,
+                    "before": 86,
+                    "delta": -12,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 117,
+                    "before": 101,
+                    "delta": 16,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 87,
+                    "before": 95,
+                    "delta": -8,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 111,
+                    "before": 94,
+                    "delta": 17,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "碎银",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

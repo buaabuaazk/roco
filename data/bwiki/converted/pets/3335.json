@@ -258,6 +258,14 @@
             {
                 "wiki_skill_id": "skill_000540",
                 "skill_id": 7090200
+            },
+            {
+                "wiki_skill_id": "dc5a_9285990b5ae2c0",
+                "skill_id": 7090490
+            },
+            {
+                "wiki_skill_id": "dc5a_e3ef7437aea793",
+                "skill_id": 7090500
             }
         ],
         "blood": [
@@ -1437,6 +1445,24 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冷冻",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "热桥",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

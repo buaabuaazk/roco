@@ -255,8 +255,8 @@
             {
                 "blood": "冰",
                 "level": 15,
-                "wiki_skill_id": "skill_000544",
-                "skill_id": 7090250
+                "wiki_skill_id": "skill_000542",
+                "skill_id": 7090230
             },
             {
                 "blood": "龙",
@@ -1307,6 +1307,26 @@
             ],
             "kind": "changed",
             "version": "s2-2026-05-21"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冰锥",
+                    "qualifier": "冰血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "冰爪",
+                    "qualifier": "冰血脉 Lv.15",
+                    "source": "血脉技能"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -1,0 +1,596 @@
+{
+    "pet_id": 3811,
+    "wiki_id": "pet_000652",
+    "name": "沙咔蟹",
+    "title": "沙咔蟹",
+    "profile": {
+        "can_double_ride": true,
+        "can_ride": true,
+        "catch_threshold": [
+            250
+        ],
+        "class": "自然类精灵",
+        "description": "喜欢在钳子中装满沙石，随着音乐的节奏不断摇晃，发出“沙咔沙咔”的声音。在许多洛克心中，这种声响便是海滩与假日的旋律。",
+        "ecology": {
+            "acquisition_pet_id": "pet_000651",
+            "activities": [
+                {
+                    "name": "命定花种",
+                    "note": "花种出没·战斗后可捕捉",
+                    "window": "2026-11-20 ~ 2026-12-04"
+                }
+            ],
+            "destined_flower": {
+                "nature": "固执"
+            }
+        },
+        "egg_group": [
+            7,
+            3
+        ],
+        "egg_size": {
+            "huge_min": 553,
+            "max": 560,
+            "min": 210,
+            "mini_max": 217,
+            "unit": "g"
+        },
+        "evolution_id": "dc5e_fcd6f3acd80b87",
+        "feature_skill_id": "dc5g_7a381e26cb5589",
+        "game_id": 3811,
+        "handbook_id": "dc5h_bc63f682f247e0",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "1.32~1.75M",
+        "id": "pet_000652",
+        "image": {
+            "egg": "Item_107253.png",
+            "fruits": [
+                "Item_108262.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3811.png",
+            "illustration": "PetPortrait_YeMiaoXie3.png",
+            "shiny": "PetPortrait_YeMiaoXie3_yise.png",
+            "shiny_head": "PetAvatar_3811_1.png"
+        },
+        "learnset_id": "dc5l_f9ef77bfa2561b",
+        "move_type": "地面",
+        "name": "沙咔蟹",
+        "number": "482",
+        "perception_range": 40,
+        "relation_key": "水系|草系",
+        "release": {
+            "date": "2026-11-05"
+        },
+        "siblings": [],
+        "stage": 2,
+        "stats": {
+            "atk": 128,
+            "def": 137,
+            "hp": 135,
+            "spa": 54,
+            "spd": 101,
+            "spe": 85
+        },
+        "title": "沙咔蟹",
+        "types": [
+            "水系",
+            "草系"
+        ],
+        "weight": "67~120KG"
+    },
+    "feature_id": 200333,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000357",
+                "skill_id": 7030410
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000247",
+                "skill_id": 7020360
+            },
+            {
+                "level": 6,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 9,
+                "stage": 1,
+                "wiki_skill_id": "skill_000277",
+                "skill_id": 7020670
+            },
+            {
+                "level": 13,
+                "stage": 1,
+                "wiki_skill_id": "skill_000438",
+                "skill_id": 7050360
+            },
+            {
+                "level": 16,
+                "stage": 1,
+                "wiki_skill_id": "dc5a_2a70f33f215ec1",
+                "skill_id": 7030630
+            },
+            {
+                "level": 21,
+                "stage": 1,
+                "wiki_skill_id": "skill_000375",
+                "skill_id": 7030610
+            },
+            {
+                "level": 25,
+                "stage": 1,
+                "wiki_skill_id": "skill_000431",
+                "skill_id": 7050280
+            },
+            {
+                "level": 32,
+                "stage": 1,
+                "wiki_skill_id": "skill_000272",
+                "skill_id": 7020620
+            },
+            {
+                "level": 34,
+                "stage": 1,
+                "wiki_skill_id": "dc5a_b4c3d3283f6708",
+                "skill_id": 7050570
+            },
+            {
+                "level": 37,
+                "stage": 1,
+                "wiki_skill_id": "skill_000442",
+                "skill_id": 7050400
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000368",
+                "skill_id": 7030520
+            },
+            {
+                "level": 47,
+                "stage": 1,
+                "wiki_skill_id": "skill_000341",
+                "skill_id": 7030180
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000439",
+                "skill_id": 7050370
+            },
+            {
+                "wiki_skill_id": "skill_000444",
+                "skill_id": 7050420
+            },
+            {
+                "wiki_skill_id": "skill_000423",
+                "skill_id": 7050200
+            },
+            {
+                "wiki_skill_id": "skill_000343",
+                "skill_id": 7030200
+            },
+            {
+                "wiki_skill_id": "skill_000367",
+                "skill_id": 7030510
+            },
+            {
+                "wiki_skill_id": "skill_000683",
+                "skill_id": 7140300
+            },
+            {
+                "wiki_skill_id": "skill_000665",
+                "skill_id": 7140100
+            },
+            {
+                "wiki_skill_id": "skill_000664",
+                "skill_id": 7140090
+            },
+            {
+                "wiki_skill_id": "skill_000257",
+                "skill_id": 7020460
+            },
+            {
+                "wiki_skill_id": "skill_000318",
+                "skill_id": 7021020
+            },
+            {
+                "wiki_skill_id": "skill_000291",
+                "skill_id": 7020840
+            },
+            {
+                "wiki_skill_id": "skill_000288",
+                "skill_id": 7020790
+            },
+            {
+                "wiki_skill_id": "skill_000327",
+                "skill_id": 7021110
+            },
+            {
+                "wiki_skill_id": "dc5a_6c11e27543c29e",
+                "skill_id": 7050550
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000248",
+                "skill_id": 7020370
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000355",
+                "skill_id": 7030330
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000392",
+                "skill_id": 7040300
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000426",
+                "skill_id": 7050230
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000462",
+                "skill_id": 7060230
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000525",
+                "skill_id": 7080400
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000554",
+                "skill_id": 7090350
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000592",
+                "skill_id": 7110280
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000645",
+                "skill_id": 7130220
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000676",
+                "skill_id": 7140230
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000724",
+                "skill_id": 7160200
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000748",
+                "skill_id": 7170150
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000781",
+                "skill_id": 7180210
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000469",
+                "skill_id": 7070010
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000822",
+                "skill_id": 7190400
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3810.png",
+                    "id": "pet_000651",
+                    "illustration": "PetPortrait_YeMiaoXie1.png",
+                    "name": "蟹蟹椰",
+                    "stage": 1,
+                    "title": "蟹蟹椰",
+                    "types": [
+                        "水系",
+                        "草系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3811.png",
+                    "id": "pet_000652",
+                    "illustration": "PetPortrait_YeMiaoXie3.png",
+                    "level": 35,
+                    "name": "沙咔蟹",
+                    "stage": 2,
+                    "title": "沙咔蟹",
+                    "types": [
+                        "水系",
+                        "草系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "蟹蟹椰进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000651",
+                    "to_wiki_id": "pet_000652",
+                    "from_pet_id": 3810,
+                    "to_pet_id": 3811,
+                    "conditions": {
+                        "level": 35,
+                        "special": "晴天，位于商店街周边/咸水湾/拾荒港口/彼得大道/向日葵海岸"
+                    },
+                    "special_condition_source": "manual"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "沙咔蟹",
+        "habitat": "行踪神秘",
+        "title": "螃蟹精灵",
+        "topics": [
+            {
+                "id": "topic_002421",
+                "progress_id": "pt_000482_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002422",
+                "progress_id": "pt_000482_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002423",
+                "progress_id": "pt_000482_000003",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 30,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只炫彩突变的精灵"
+            },
+            {
+                "id": "topic_002424",
+                "progress_id": "pt_000482_000004",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
+            },
+            {
+                "id": "topic_002425",
+                "progress_id": "pt_000482_000005",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "获得「命定勇者」奖牌"
+            },
+            {
+                "id": "topic_002426",
+                "progress_id": "pt_000482_000006",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_232001.png",
+                        "kind": "道具",
+                        "name": "外附传播"
+                    },
+                    {
+                        "count": 1,
+                        "icon": "Item_212001.png",
+                        "kind": "道具",
+                        "name": "配方-外附传播"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使用1次外附传播"
+            },
+            {
+                "id": "topic_002427",
+                "progress_id": "pt_000482_000007",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_105000.png",
+                        "kind": "道具",
+                        "name": "间歇泉"
+                    },
+                    {
+                        "count": 1,
+                        "icon": "Item_214001.png",
+                        "kind": "道具",
+                        "name": "配方-间歇泉"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使用1次间歇泉"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.5,
+                "type": "水系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "光系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "地系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "机械系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "草系"
+            },
+            {
+                "multiplier": 2,
+                "type": "冰系"
+            },
+            {
+                "multiplier": 2,
+                "type": "毒系"
+            },
+            {
+                "multiplier": 2,
+                "type": "虫系"
+            },
+            {
+                "multiplier": 2,
+                "type": "翼系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "沙咔蟹"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s5-2026-10-31"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

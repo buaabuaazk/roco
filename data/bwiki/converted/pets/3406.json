@@ -20,6 +20,12 @@
             ],
             "eggs": [
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的缇塔。",
+                    "icon": "Item_150891.png",
+                    "is_shiny": true,
+                    "name": "异色缇塔的蛋"
+                },
+                {
                     "description": "参与活动「缇塔大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的缇塔。",
                     "icon": "Item_151047.png",
                     "name": "缇塔的蛋",
@@ -59,7 +65,7 @@
         },
         "handbook_id": "handbook_000229",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.65~0.75M",
         "id": "pet_000327",
         "image": {
@@ -70,7 +76,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3406.png",
-            "illustration": "PetPortrait_tita.png"
+            "illustration": "PetPortrait_tita.png",
+            "shiny": "PetPortrait_TiTa1_yise.png",
+            "shiny_head": "PetAvatar_3406_1.png"
         },
         "learnset_id": "learnset_eb66c792193c",
         "move_type": "步行",

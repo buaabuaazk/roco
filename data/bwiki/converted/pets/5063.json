@@ -48,10 +48,10 @@
         ],
         "stage": 4,
         "stats": {
-            "atk": 79,
+            "atk": 92,
             "def": 110,
             "hp": 105,
-            "spa": 13,
+            "spa": 21,
             "spd": 93,
             "spe": 65
         },
@@ -632,6 +632,26 @@
             ],
             "kind": "introduced",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 92,
+                    "before": 79,
+                    "delta": 13,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 21,
+                    "before": 13,
+                    "delta": 8,
+                    "field": "魔攻",
+                    "group": "stats"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

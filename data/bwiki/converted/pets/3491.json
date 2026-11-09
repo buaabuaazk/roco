@@ -20,8 +20,7 @@
                 "威廉古堡",
                 "迷雾之森",
                 "淘晶镇"
-            ],
-            "eggs": []
+            ]
         },
         "egg_group": [
             5,
@@ -43,7 +42,7 @@
         },
         "handbook_id": "handbook_000288",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "1.05~1.45M",
         "id": "pet_000391",
         "image": {
@@ -54,7 +53,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3491.png",
-            "illustration": "PetPortrait_nihouya.png"
+            "illustration": "PetPortrait_nihouya.png",
+            "shiny": "PetPortrait_XiNiOu2_yise.png",
+            "shiny_head": "PetAvatar_3491_1.png"
         },
         "learnset_id": "learnset_7a9d130c57d1",
         "move_type": "地面",
@@ -592,6 +593,26 @@
                 ],
                 "target": 1,
                 "text": "使用进化之力，将精灵进化为首领"
+            },
+            {
+                "id": "topic_001513",
+                "progress_id": "pt_000288_000009",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

@@ -23,8 +23,7 @@
         "class": "自然类精灵",
         "description": "会从头上喷出烟来彰显气势，普遍好斗。打喷嚏的时候，背上也会跟着喷出巨大的浓烟，还会洒出一些岩浆。",
         "ecology": {
-            "acquisition_pet_id": "pet_000074",
-            "eggs": []
+            "acquisition_pet_id": "pet_000074"
         },
         "egg_group": [
             2,
@@ -46,7 +45,7 @@
         },
         "handbook_id": "handbook_000250",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.71~1.02M",
         "id": "pet_000075",
         "image": {
@@ -57,7 +56,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3084.png",
-            "illustration": "PetPortrait_zhireyuan.png"
+            "illustration": "PetPortrait_zhireyuan.png",
+            "shiny": "PetPortrait_HuoYuan2_yise.png",
+            "shiny_head": "PetAvatar_3084_1.png"
         },
         "learnset_id": "learnset_65b25e24521c",
         "move_type": "步行",

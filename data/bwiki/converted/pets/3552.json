@@ -272,6 +272,14 @@
             {
                 "wiki_skill_id": "skill_000250",
                 "skill_id": 7020390
+            },
+            {
+                "wiki_skill_id": "dc5a_3aba1f06440a4d",
+                "skill_id": 7080480
+            },
+            {
+                "wiki_skill_id": "dc5a_96eb089b03c4e3",
+                "skill_id": 7080490
             }
         ],
         "blood": [
@@ -1477,6 +1485,24 @@
             ],
             "kind": "changed",
             "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "矿物置换",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "碎银",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

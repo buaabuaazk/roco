@@ -105,11 +105,11 @@
         "stage": 1,
         "starlight": 16,
         "stats": {
-            "atk": 93,
-            "def": 79,
-            "hp": 87,
+            "atk": 96,
+            "def": 85,
+            "hp": 98,
             "spa": 42,
-            "spd": 53,
+            "spd": 59,
             "spe": 42
         },
         "submit_reward": 800,
@@ -342,8 +342,8 @@
             {
                 "blood": "武",
                 "level": 15,
-                "wiki_skill_id": "skill_000677",
-                "skill_id": 7140240
+                "wiki_skill_id": "skill_000665",
+                "skill_id": 7140100
             },
             {
                 "blood": "翼",
@@ -1220,6 +1220,54 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 98,
+                    "before": 87,
+                    "delta": 11,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 96,
+                    "before": 93,
+                    "delta": 3,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 85,
+                    "before": 79,
+                    "delta": 6,
+                    "field": "物防",
+                    "group": "stats"
+                },
+                {
+                    "after": 59,
+                    "before": 53,
+                    "delta": 6,
+                    "field": "魔防",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "反击拳",
+                    "qualifier": "武血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "贯手",
+                    "qualifier": "武血脉 Lv.15",
+                    "source": "血脉技能"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -15,6 +15,12 @@
         "ecology": {
             "eggs": [
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的深蓝鲸。",
+                    "icon": "Item_150890.png",
+                    "is_shiny": true,
+                    "name": "异色深蓝鲸的蛋"
+                },
+                {
                     "description": "参与活动「深蓝鲸大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的深蓝鲸。",
                     "icon": "Item_151046.png",
                     "name": "深蓝鲸的蛋",
@@ -55,7 +61,7 @@
         },
         "handbook_id": "handbook_000273",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "2~2.65M",
         "id": "pet_000308",
         "image": {
@@ -66,7 +72,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3381.png",
-            "illustration": "PetPortrait_shenlanjing.png"
+            "illustration": "PetPortrait_shenlanjing.png",
+            "shiny": "PetPortrait_ShenLanJing1_yise.png",
+            "shiny_head": "PetAvatar_3381_1.png"
         },
         "learnset_id": "learnset_36d9603d4cfb",
         "move_type": "浮游",
@@ -516,6 +524,26 @@
                 ],
                 "target": 2,
                 "text": "使用2次水环"
+            },
+            {
+                "id": "topic_001433",
+                "progress_id": "pt_000273_000007",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },

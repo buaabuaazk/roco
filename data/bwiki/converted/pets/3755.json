@@ -1132,6 +1132,32 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 65,
+                    "before": 70,
+                    "delta": -5,
+                    "field": "暖阳威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成物伤，每使用1次其他火系技能，威力永久+60，使用本技能后重置。",
+                    "before": "造成物伤，每使用1次其他火系技能，威力永久+40，使用本技能后重置。",
+                    "field": "暖阳说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 100,
+                    "before": 115,
+                    "delta": -15,
+                    "field": "透镜实验威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -13,8 +13,7 @@
         "class": "自然类精灵",
         "description": "修长的尾鳍在空气中划过会留下水雾的痕迹，水雾持续存在形成云朵。观测显示，伊兰亚龙停留超过半小时的区域，降雨概率提升67%。干旱季节时，它们会主动迁往缺水的农田上空。",
         "ecology": {
-            "acquisition_pet_id": "pet_000188",
-            "eggs": []
+            "acquisition_pet_id": "pet_000188"
         },
         "egg_group": [
             14
@@ -35,7 +34,7 @@
         },
         "handbook_id": "handbook_000204",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "3.65~4M",
         "id": "pet_000331",
         "image": {
@@ -46,7 +45,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3412.png",
-            "illustration": "PetPortrait_yinlanyalong.png"
+            "illustration": "PetPortrait_yinlanyalong.png",
+            "shiny": "PetPortrait_YiLan3_yise.png",
+            "shiny_head": "PetAvatar_3412_1.png"
         },
         "learnset_id": "learnset_3315f99c387d",
         "move_type": "浮游",
@@ -230,6 +231,10 @@
             {
                 "wiki_skill_id": "skill_000579",
                 "skill_id": 7100300
+            },
+            {
+                "wiki_skill_id": "dc5a_f9e3c54bcfe08d",
+                "skill_id": 7100380
             }
         ],
         "blood": [
@@ -594,6 +599,26 @@
                 ],
                 "target": 1,
                 "text": "使用1次升龙咆哮"
+            },
+            {
+                "id": "topic_001074",
+                "progress_id": "pt_000204_000009",
+                "rewards": [
+                    {
+                        "count": 1,
+                        "icon": "Item_100205.png",
+                        "kind": "道具",
+                        "name": "灵魂环印"
+                    },
+                    {
+                        "count": 50,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只异色突变的精灵"
             }
         ]
     },
@@ -1434,6 +1459,18 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "画龙点睛",
+                    "source": "技能书"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

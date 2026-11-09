@@ -1281,6 +1281,58 @@
             {
                 "wiki_skill_id": "skill_000833",
                 "skill_id": 7190510
+            },
+            {
+                "wiki_skill_id": "dc5a_42bd41984f65ba",
+                "skill_id": 7030640
+            },
+            {
+                "wiki_skill_id": "dc5a_e5bab8d07ad41e",
+                "skill_id": 7030650
+            },
+            {
+                "wiki_skill_id": "dc5a_6c11e27543c29e",
+                "skill_id": 7050550
+            },
+            {
+                "wiki_skill_id": "dc5a_b4c3d3283f6708",
+                "skill_id": 7050570
+            },
+            {
+                "wiki_skill_id": "dc5a_3aba1f06440a4d",
+                "skill_id": 7080480
+            },
+            {
+                "wiki_skill_id": "dc5a_e3ef7437aea793",
+                "skill_id": 7090500
+            },
+            {
+                "wiki_skill_id": "dc5a_351c2b1adb8231",
+                "skill_id": 7100350
+            },
+            {
+                "wiki_skill_id": "dc5a_f18af6019d34e7",
+                "skill_id": 7100390
+            },
+            {
+                "wiki_skill_id": "dc5a_6229141f8122ad",
+                "skill_id": 7110470
+            },
+            {
+                "wiki_skill_id": "dc5a_06ba86418113b5",
+                "skill_id": 7120310
+            },
+            {
+                "wiki_skill_id": "dc5a_0c61eb64fa7cd5",
+                "skill_id": 7160440
+            },
+            {
+                "wiki_skill_id": "dc5a_22f232c8e058b4",
+                "skill_id": 7170380
+            },
+            {
+                "wiki_skill_id": "dc5a_aa622d33f8d935",
+                "skill_id": 7190530
             }
         ],
         "blood": [
@@ -2597,6 +2649,145 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "冷冻",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "恋恋不舍",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "投毒",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "果粒",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "深红龙击",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "灵扰",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "碎银",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "离岸流",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "维管束重构",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "蓝移",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "过充电",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "间歇泉",
+                    "source": "技能书"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "龙之爪牙",
+                    "source": "技能书"
+                },
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "微型斥候威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 65,
+                    "before": 70,
+                    "delta": -5,
+                    "field": "暖阳威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成物伤，每使用1次其他火系技能，威力永久+60，使用本技能后重置。",
+                    "before": "造成物伤，每使用1次其他火系技能，威力永久+40，使用本技能后重置。",
+                    "field": "暖阳说明",
+                    "group": "skill"
+                },
+                {
+                    "after": 60,
+                    "before": 50,
+                    "delta": 10,
+                    "field": "甜蜜陷阱威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 95,
+                    "before": 110,
+                    "delta": -15,
+                    "field": "蹦跶威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 40,
+                    "before": 35,
+                    "delta": 5,
+                    "field": "过敏原威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 100,
+                    "before": 115,
+                    "delta": -15,
+                    "field": "透镜实验威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "通电威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -1,0 +1,534 @@
+{
+    "pet_id": 3820,
+    "wiki_id": "pet_000661",
+    "name": "滴溜豚",
+    "title": "滴溜豚",
+    "profile": {
+        "can_double_ride": false,
+        "can_ride": true,
+        "catch_threshold": [
+            1000
+        ],
+        "class": "自然类精灵",
+        "description": "魔法学院的期末到来时，有些小洛克会借助它们旋转时出现的斑点数量来做出命运的抉择——但其实滴溜豚们大多有着严重的选择困难症，连它们自己都不知道该选什么。",
+        "ecology": {
+            "eggs": [
+                {
+                    "description": "在「圣龙宝藏」赛季的代币商店内购得的珍贵精灵蛋，经过孵化可以得到“完美无瑕”、且支持自选性格与个体资质的滴溜豚。",
+                    "icon": "Item_150884.png",
+                    "name": "滴溜豚的蛋"
+                },
+                {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的滴溜豚。",
+                    "icon": "Item_150901.png",
+                    "is_shiny": true,
+                    "name": "异色滴溜豚的蛋"
+                }
+            ],
+            "fruits": [
+                {
+                    "description": "通过观察其花纹可以看出，这是滴溜豚的果实。",
+                    "icon": "Item_108267.png",
+                    "name": "滴溜豚的果实",
+                    "sources": [
+                        "完成赛季作业挑战课题"
+                    ],
+                    "wisdom_tree": false
+                }
+            ]
+        },
+        "egg_group": [
+            13
+        ],
+        "egg_size": {
+            "huge_min": 1187,
+            "max": 1200,
+            "min": 525,
+            "mini_max": 539,
+            "unit": "g"
+        },
+        "evolution_id": "dc5e_358574fd0eaab8",
+        "feature_skill_id": "dc5g_b94c4ce38083a1",
+        "game_id": 3820,
+        "handbook_id": "dc5h_f824226a9f86d9",
+        "handbook_show_topics": true,
+        "has_shiny": true,
+        "height": "0.15~0.3M",
+        "id": "pet_000661",
+        "image": {
+            "egg": "Item_107258.png",
+            "fruits": [
+                "Item_108267.png"
+            ],
+            "has_egg": true,
+            "has_fruit": true,
+            "head": "PetAvatar_3820.png",
+            "illustration": "PetPortrait_DiLiuTun1.png",
+            "shiny": "PetPortrait_DiLiuTun1_yise.png",
+            "shiny_head": "PetAvatar_3820_1.png"
+        },
+        "learnset_id": "dc5l_2bb858d471c8a5",
+        "move_type": "地面",
+        "name": "滴溜豚",
+        "number": "491",
+        "perception_range": 40,
+        "relation_key": "毒系|幻系",
+        "release": {
+            "date": "2026-11-05"
+        },
+        "siblings": [],
+        "stage": 1,
+        "stats": {
+            "atk": 89,
+            "def": 73,
+            "hp": 91,
+            "spa": 89,
+            "spd": 98,
+            "spe": 80
+        },
+        "title": "滴溜豚",
+        "types": [
+            "毒系",
+            "幻系"
+        ],
+        "weight": "1.5~3KG"
+    },
+    "feature_id": 200340,
+    "skills": {
+        "level": [
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000609",
+                "skill_id": 7120060
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000303",
+                "skill_id": 7020870
+            },
+            {
+                "level": 1,
+                "stage": 1,
+                "wiki_skill_id": "skill_000287",
+                "skill_id": 7020780
+            },
+            {
+                "level": 5,
+                "stage": 1,
+                "wiki_skill_id": "skill_000610",
+                "skill_id": 7120070
+            },
+            {
+                "level": 10,
+                "stage": 1,
+                "wiki_skill_id": "skill_000812",
+                "skill_id": 7190290
+            },
+            {
+                "level": 16,
+                "stage": 1,
+                "wiki_skill_id": "dc5a_3583379d35a0b4",
+                "skill_id": 7190540
+            },
+            {
+                "level": 24,
+                "stage": 1,
+                "wiki_skill_id": "skill_000824",
+                "skill_id": 7190420
+            },
+            {
+                "level": 32,
+                "stage": 1,
+                "wiki_skill_id": "skill_000326",
+                "skill_id": 7021100
+            },
+            {
+                "level": 36,
+                "stage": 1,
+                "wiki_skill_id": "dc5a_06ba86418113b5",
+                "skill_id": 7120310
+            },
+            {
+                "level": 38,
+                "stage": 1,
+                "wiki_skill_id": "skill_000283",
+                "skill_id": 7020730
+            },
+            {
+                "level": 40,
+                "stage": 1,
+                "wiki_skill_id": "skill_000629",
+                "skill_id": 7120270
+            },
+            {
+                "level": 42,
+                "stage": 1,
+                "wiki_skill_id": "skill_000623",
+                "skill_id": 7120210
+            },
+            {
+                "level": 44,
+                "stage": 1,
+                "wiki_skill_id": "skill_000827",
+                "skill_id": 7190450
+            },
+            {
+                "level": 46,
+                "stage": 1,
+                "wiki_skill_id": "skill_000259",
+                "skill_id": 7020480
+            },
+            {
+                "level": 48,
+                "stage": 1,
+                "wiki_skill_id": "skill_000821",
+                "skill_id": 7190390
+            }
+        ],
+        "machine": [
+            {
+                "wiki_skill_id": "skill_000622",
+                "skill_id": 7120200
+            },
+            {
+                "wiki_skill_id": "skill_000625",
+                "skill_id": 7120230
+            },
+            {
+                "wiki_skill_id": "skill_000617",
+                "skill_id": 7120140
+            },
+            {
+                "wiki_skill_id": "skill_000627",
+                "skill_id": 7120250
+            },
+            {
+                "wiki_skill_id": "skill_000833",
+                "skill_id": 7190510
+            },
+            {
+                "wiki_skill_id": "skill_000813",
+                "skill_id": 7190300
+            },
+            {
+                "wiki_skill_id": "skill_000830",
+                "skill_id": 7190480
+            },
+            {
+                "wiki_skill_id": "skill_000816",
+                "skill_id": 7190330
+            },
+            {
+                "wiki_skill_id": "skill_000819",
+                "skill_id": 7190370
+            },
+            {
+                "wiki_skill_id": "skill_000438",
+                "skill_id": 7050360
+            },
+            {
+                "wiki_skill_id": "skill_000442",
+                "skill_id": 7050400
+            },
+            {
+                "wiki_skill_id": "skill_000431",
+                "skill_id": 7050280
+            },
+            {
+                "wiki_skill_id": "skill_000336",
+                "skill_id": 7021220
+            },
+            {
+                "wiki_skill_id": "skill_000611",
+                "skill_id": 7120080
+            },
+            {
+                "wiki_skill_id": "skill_000282",
+                "skill_id": 7020720
+            },
+            {
+                "wiki_skill_id": "skill_000299",
+                "skill_id": 7020860
+            }
+        ],
+        "blood": [
+            {
+                "blood": "普通",
+                "level": 15,
+                "wiki_skill_id": "skill_000274",
+                "skill_id": 7020640
+            },
+            {
+                "blood": "草",
+                "level": 15,
+                "wiki_skill_id": "skill_000355",
+                "skill_id": 7030330
+            },
+            {
+                "blood": "火",
+                "level": 15,
+                "wiki_skill_id": "skill_000388",
+                "skill_id": 7040260
+            },
+            {
+                "blood": "水",
+                "level": 15,
+                "wiki_skill_id": "skill_000426",
+                "skill_id": 7050230
+            },
+            {
+                "blood": "光",
+                "level": 15,
+                "wiki_skill_id": "skill_000459",
+                "skill_id": 7060200
+            },
+            {
+                "blood": "地",
+                "level": 15,
+                "wiki_skill_id": "skill_000514",
+                "skill_id": 7080280
+            },
+            {
+                "blood": "冰",
+                "level": 15,
+                "wiki_skill_id": "skill_000536",
+                "skill_id": 7090160
+            },
+            {
+                "blood": "龙",
+                "level": 15,
+                "wiki_skill_id": "skill_000567",
+                "skill_id": 7100150
+            },
+            {
+                "blood": "电",
+                "level": 15,
+                "wiki_skill_id": "skill_000589",
+                "skill_id": 7110250
+            },
+            {
+                "blood": "毒",
+                "level": 15,
+                "wiki_skill_id": "skill_000615",
+                "skill_id": 7120120
+            },
+            {
+                "blood": "虫",
+                "level": 15,
+                "wiki_skill_id": "skill_000641",
+                "skill_id": 7130180
+            },
+            {
+                "blood": "武",
+                "level": 15,
+                "wiki_skill_id": "skill_000668",
+                "skill_id": 7140140
+            },
+            {
+                "blood": "翼",
+                "level": 15,
+                "wiki_skill_id": "skill_000706",
+                "skill_id": 7150300
+            },
+            {
+                "blood": "萌",
+                "level": 15,
+                "wiki_skill_id": "skill_000724",
+                "skill_id": 7160200
+            },
+            {
+                "blood": "幽",
+                "level": 15,
+                "wiki_skill_id": "skill_000757",
+                "skill_id": 7170250
+            },
+            {
+                "blood": "恶",
+                "level": 15,
+                "wiki_skill_id": "skill_000776",
+                "skill_id": 7180160
+            },
+            {
+                "blood": "机械",
+                "level": 15,
+                "wiki_skill_id": "skill_000484",
+                "skill_id": 7070170
+            },
+            {
+                "blood": "幻",
+                "level": 15,
+                "wiki_skill_id": "skill_000811",
+                "skill_id": 7190280
+            }
+        ],
+        "legendary": []
+    },
+    "evolution_branches": [
+        {
+            "chain": [
+                {
+                    "head": "PetAvatar_3820.png",
+                    "id": "pet_000661",
+                    "illustration": "PetPortrait_DiLiuTun1.png",
+                    "name": "滴溜豚",
+                    "stage": 1,
+                    "title": "滴溜豚",
+                    "types": [
+                        "毒系",
+                        "幻系"
+                    ]
+                },
+                {
+                    "head": "PetAvatar_3821.png",
+                    "id": "pet_000662",
+                    "illustration": "PetPortrait_DiLiuTun2.png",
+                    "level": 36,
+                    "name": "滴廿豚",
+                    "stage": 2,
+                    "title": "滴廿豚",
+                    "types": [
+                        "毒系",
+                        "幻系"
+                    ]
+                }
+            ],
+            "lord_branches": [],
+            "name": "滴溜豚进化链",
+            "transitions": [
+                {
+                    "from_wiki_id": "pet_000661",
+                    "to_wiki_id": "pet_000662",
+                    "from_pet_id": 3820,
+                    "to_pet_id": 3821,
+                    "conditions": {
+                        "level": 36,
+                        "special": ""
+                    },
+                    "special_condition_source": "manual"
+                }
+            ]
+        }
+    ],
+    "handbook": {
+        "areas": [
+            "世界图鉴"
+        ],
+        "entry_name": "滴溜豚",
+        "habitat": "行踪神秘",
+        "title": "点数精灵",
+        "topics": [
+            {
+                "id": "topic_002468",
+                "progress_id": "pt_000491_000001",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 5,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只精灵"
+            },
+            {
+                "id": "topic_002469",
+                "progress_id": "pt_000491_000002",
+                "rewards": [
+                    {
+                        "count": 150,
+                        "icon": "Item_7.png",
+                        "kind": "资源",
+                        "name": "魔法经验"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "捕捉1只了不起天分的精灵"
+            },
+            {
+                "id": "topic_002470",
+                "progress_id": "pt_000491_000003",
+                "rewards": [
+                    {
+                        "count": 50,
+                        "icon": "Item_100699.png",
+                        "kind": "道具",
+                        "name": "分光水晶"
+                    },
+                    {
+                        "count": 10,
+                        "icon": "Item_17.png",
+                        "kind": "资源",
+                        "name": "课题研究点"
+                    }
+                ],
+                "target": 1,
+                "text": "使精灵成功进化1次"
+            }
+        ]
+    },
+    "type_effectiveness": {
+        "resist": [
+            {
+                "multiplier": 0.25,
+                "type": "武系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "草系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "毒系"
+            },
+            {
+                "multiplier": 0.5,
+                "type": "萌系"
+            }
+        ],
+        "weak": [
+            {
+                "multiplier": 2,
+                "type": "地系"
+            },
+            {
+                "multiplier": 2,
+                "type": "幽系"
+            },
+            {
+                "multiplier": 2,
+                "type": "恶系"
+            }
+        ]
+    },
+    "training_reference": {},
+    "history": [
+        {
+            "changes": [
+                {
+                    "action": "introduced",
+                    "group": "identity",
+                    "value": "滴溜豚"
+                }
+            ],
+            "kind": "introduced",
+            "version": "s5-2026-10-31"
+        }
+    ],
+    "status": "ok",
+    "missing_skill_references": []
+}

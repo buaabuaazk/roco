@@ -15,7 +15,8 @@
             "acquisition_pet_id": "pet_000107"
         },
         "egg_group": [
-            13
+            13,
+            12
         ],
         "egg_size": {
             "huge_min": 2226,
@@ -232,6 +233,10 @@
             {
                 "wiki_skill_id": "skill_000417",
                 "skill_id": 7040690
+            },
+            {
+                "wiki_skill_id": "dc5a_b4c3d3283f6708",
+                "skill_id": 7050570
             }
         ],
         "blood": [
@@ -1328,6 +1333,42 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "间歇泉",
+                    "source": "技能书"
+                },
+                {
+                    "after": 65,
+                    "before": 70,
+                    "delta": -5,
+                    "field": "暖阳威力",
+                    "group": "skill"
+                },
+                {
+                    "after": "造成物伤，每使用1次其他火系技能，威力永久+60，使用本技能后重置。",
+                    "before": "造成物伤，每使用1次其他火系技能，威力永久+40，使用本技能后重置。",
+                    "field": "暖阳说明",
+                    "group": "skill"
+                },
+                {
+                    "after": [
+                        "海洋组",
+                        "魔力组"
+                    ],
+                    "before": [
+                        "海洋组"
+                    ],
+                    "field": "蛋组",
+                    "group": "breeding"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -265,8 +265,8 @@
             {
                 "blood": "地",
                 "level": 15,
-                "wiki_skill_id": "skill_000499",
-                "skill_id": 7080120
+                "wiki_skill_id": "skill_000498",
+                "skill_id": 7080110
             },
             {
                 "blood": "冰",
@@ -1277,6 +1277,26 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "扬沙",
+                    "qualifier": "地血脉 Lv.15",
+                    "source": "血脉技能"
+                },
+                {
+                    "action": "removed",
+                    "group": "learnset",
+                    "name": "跺地",
+                    "qualifier": "地血脉 Lv.15",
+                    "source": "血脉技能"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

@@ -282,6 +282,10 @@
             {
                 "wiki_skill_id": "skill_000335",
                 "skill_id": 7021210
+            },
+            {
+                "wiki_skill_id": "dc5a_42bd41984f65ba",
+                "skill_id": 7030640
             }
         ],
         "blood": [
@@ -1327,6 +1331,24 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "果粒",
+                    "source": "技能书"
+                },
+                {
+                    "after": "减伤80%，应对攻击：下一次攻击时，技能威力+50。",
+                    "before": "减伤70%，应对攻击：下一次攻击时，技能威力+50。",
+                    "field": "暖气说明",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

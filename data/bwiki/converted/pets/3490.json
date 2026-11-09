@@ -38,6 +38,12 @@
                     ]
                 },
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的吸泥鸥。",
+                    "icon": "Item_150892.png",
+                    "is_shiny": true,
+                    "name": "异色吸泥鸥的蛋"
+                },
+                {
                     "description": "参与活动「吸泥鸥大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的吸泥鸥。",
                     "icon": "Item_151051.png",
                     "name": "吸泥鸥的蛋",
@@ -78,7 +84,7 @@
         },
         "handbook_id": "handbook_000287",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.55~0.71M",
         "id": "pet_000390",
         "image": {
@@ -89,7 +95,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3490.png",
-            "illustration": "PetPortrait_xiniou.png"
+            "illustration": "PetPortrait_xiniou.png",
+            "shiny": "PetPortrait_XiNiOu1_yise.png",
+            "shiny_head": "PetAvatar_3490_1.png"
         },
         "learnset_id": "learnset_7a9d130c57d1",
         "move_type": "地面",

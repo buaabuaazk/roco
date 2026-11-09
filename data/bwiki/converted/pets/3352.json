@@ -66,10 +66,10 @@
         "stage": 2,
         "starlight": 42,
         "stats": {
-            "atk": 88,
+            "atk": 73,
             "def": 90,
-            "hp": 72,
-            "spa": 88,
+            "hp": 91,
+            "spa": 73,
             "spd": 74,
             "spe": 96
         },
@@ -215,6 +215,10 @@
             {
                 "wiki_skill_id": "skill_000295",
                 "skill_id": 7020850
+            },
+            {
+                "wiki_skill_id": "skill_000599",
+                "skill_id": 7110350
             }
         ],
         "blood": [
@@ -1060,6 +1064,53 @@
             ],
             "kind": "introduced",
             "version": "s3-2026-07-17"
+        },
+        {
+            "changes": [
+                {
+                    "after": 91,
+                    "before": 72,
+                    "delta": 19,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 73,
+                    "before": 88,
+                    "delta": -15,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 73,
+                    "before": 88,
+                    "delta": -15,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "双联脉冲",
+                    "source": "技能书"
+                },
+                {
+                    "after": 100,
+                    "before": 115,
+                    "delta": -15,
+                    "field": "透镜实验威力",
+                    "group": "skill"
+                },
+                {
+                    "after": 85,
+                    "before": 75,
+                    "delta": 10,
+                    "field": "通电威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

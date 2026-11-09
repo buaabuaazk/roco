@@ -65,10 +65,10 @@
         "stage": 2,
         "starlight": 80,
         "stats": {
-            "atk": 51,
+            "atk": 65,
             "def": 69,
-            "hp": 117,
-            "spa": 105,
+            "hp": 131,
+            "spa": 124,
             "spd": 117,
             "spe": 100
         },
@@ -226,6 +226,10 @@
             {
                 "wiki_skill_id": "skill_000739",
                 "skill_id": 7160380
+            },
+            {
+                "wiki_skill_id": "dc5a_4d57cc90d796c5",
+                "skill_id": 7160430
             }
         ],
         "blood": [
@@ -1324,6 +1328,46 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 131,
+                    "before": 117,
+                    "delta": 14,
+                    "field": "生命",
+                    "group": "stats"
+                },
+                {
+                    "after": 65,
+                    "before": 51,
+                    "delta": 14,
+                    "field": "物攻",
+                    "group": "stats"
+                },
+                {
+                    "after": 124,
+                    "before": 105,
+                    "delta": 19,
+                    "field": "魔攻",
+                    "group": "stats"
+                },
+                {
+                    "action": "added",
+                    "group": "learnset",
+                    "name": "筑梦",
+                    "source": "技能书"
+                },
+                {
+                    "after": 95,
+                    "before": 110,
+                    "delta": -15,
+                    "field": "蹦跶威力",
+                    "group": "skill"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",

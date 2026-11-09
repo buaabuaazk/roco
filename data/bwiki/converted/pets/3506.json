@@ -49,6 +49,12 @@
                     ]
                 },
                 {
+                    "description": "经过孵化可以得到“异色”外观、“了不起”天分的花怨鳗。",
+                    "icon": "Item_150893.png",
+                    "is_shiny": true,
+                    "name": "异色花怨鳗的蛋"
+                },
+                {
                     "description": "参与活动「花怨鳗大量出没」获得的珍贵精灵蛋，经过孵化可以得到“炫彩”外观、“了不起”天分的花怨鳗。",
                     "icon": "Item_151050.png",
                     "name": "花怨鳗的蛋",
@@ -90,7 +96,7 @@
         },
         "handbook_id": "handbook_000201",
         "handbook_show_topics": true,
-        "has_shiny": false,
+        "has_shiny": true,
         "height": "0.58~0.68M",
         "id": "pet_000401",
         "image": {
@@ -101,7 +107,9 @@
             "has_egg": true,
             "has_fruit": true,
             "head": "PetAvatar_3506.png",
-            "illustration": "PetPortrait_huayuanman.png"
+            "illustration": "PetPortrait_huayuanman.png",
+            "shiny": "PetPortrait_HuaYuanMan1_yise.png",
+            "shiny_head": "PetAvatar_3506_1.png"
         },
         "learnset_id": "learnset_17c502e931f0",
         "move_type": "地面",

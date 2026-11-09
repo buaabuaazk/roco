@@ -97,7 +97,7 @@
         "starlight": 16,
         "stats": {
             "atk": 45,
-            "def": 75,
+            "def": 63,
             "hp": 117,
             "spa": 81,
             "spd": 136,
@@ -1263,6 +1263,19 @@
             ],
             "kind": "changed",
             "version": "s4-2026-09-10"
+        },
+        {
+            "changes": [
+                {
+                    "after": 63,
+                    "before": 75,
+                    "delta": -12,
+                    "field": "物防",
+                    "group": "stats"
+                }
+            ],
+            "kind": "changed",
+            "version": "s5-2026-10-31"
         }
     ],
     "status": "ok",
