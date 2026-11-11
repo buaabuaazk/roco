@@ -1,0 +1,76 @@
+from copy import deepcopy
+from types import SimpleNamespace
+import unittest
+
+from pydantic import ValidationError
+from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup
+
+
+class BattleSetupTests(unittest.TestCase):
+    def setUp(self):
+        base = dict(hp=100, atk=128, spa=170, **{'def': 121}, spd=200, spe=100)
+        self.queries = SimpleNamespace(features={}, skills={
+            701: dict(skill_id=701, name='翼招式', category='攻击', damage_class='物攻', power=75, element='翼系', desc='造成物伤'),
+            702: dict(skill_id=702, name='魔攻招式', category='攻击', damage_class='魔攻', power=100, element='草系', desc='造成魔伤'),
+            703: dict(skill_id=703, name='非本宠技能', category='攻击', damage_class='物攻', power=50, element='火系')}, pets={})
+        for key in (1, 2):
+            self.queries.pets[key] = {'pet_id': key, 'title': f'精灵{key}', 'feature_id': 0,
+                'profile': {'stats': deepcopy(base), 'types': ['翼系'] if key == 1 else ['草系']},
+                'type_effectiveness': {'weak': [{'type': '翼系', 'multiplier': 2}], 'resist': []},
+                'skills': {'level': [{'skill_id': 701, 'level': 1}], 'machine': [{'skill_id': 702}]}}
+
+    def test_panel_formula_natures_and_current_hp(self):
+        result = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 10}, hp_percent=50))
+        self.assertEqual(result['stats']['atk'], 234)
+        self.assertEqual(result['stats']['hp'], 340)
+        self.assertEqual(result['current_hp'], 170)
+        raised = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 10}, nature_plus='atk', nature_minus='spa'))
+        self.assertEqual(raised['stats']['atk'], 271)
+        self.assertEqual(raised['stats']['spa'], 227)
+        self.assertEqual(result['ivs']['spe'], 0)
+
+    def test_example_and_auto_physical_channel(self):
+        body = MatchupInput(attacker=PetSetup(pet_id=1, ivs={'atk': 10}),
+                            defender=PetSetup(pet_id=2, ivs={'def': 10}), skill_id=701,
+                            modifiers={'flat_power_bonus': 20, 'power_percent_bonus': .5})
+        result = matchup(self.queries, body)
+        self.assertEqual(result['estimated_damage'], 332)
+        self.assertEqual(result['inputs']['attack'], 234)
+        self.assertEqual(result['inputs']['defense'], 226)
+        self.assertEqual(result['inputs']['stab_multiplier'], 1.25)
+        self.assertEqual(result['inputs']['type_multiplier'], 2)
+        self.assertEqual(result['matchup']['channel'], '物攻 → 物防')
+
+    def test_magic_channel_combined_type_chart_and_override(self):
+        self.queries.pets[2]['type_effectiveness']['weak'] = [{'type': '草系', 'multiplier': 3}]
+        body = MatchupInput(attacker=PetSetup(pet_id=1), defender=PetSetup(pet_id=2),
+                            skill_id=702, power_override=120)
+        result = matchup(self.queries, body)
+        self.assertEqual(result['inputs']['attack'], 247)
+        self.assertEqual(result['inputs']['defense'], 280)
+        self.assertEqual(result['inputs']['type_multiplier'], 3)
+        self.assertEqual(result['inputs']['stab_multiplier'], 1)
+        self.assertEqual(result['inputs']['base_power'], 120)
+        self.assertTrue(result['matchup']['power_overridden'])
+        self.queries.pets[1]['skills']['level'].append({'skill_id': 703, 'level': 61})
+        self.assertNotIn(703, [row['skill_id'] for row in pet_skills(self.queries, 1)])
+        with self.assertRaises(ValueError):
+            matchup(self.queries, body.model_copy(update={'skill_id': 703}))
+        with self.assertRaises(ValueError):
+            matchup(self.queries, body.model_copy(update={'modifiers': {'attack': 999}}))
+
+    def test_build_constraints_and_missing_data(self):
+        for fields in ({'pet_id': True}, {'ivs': {'atk': True}}, {'ivs': {'atk': 11}},
+                       {'ivs': {'atk': .5}}, {'ivs': {'bad': 1}},
+                       {'ivs': {'hp': 1, 'atk': 1, 'def': 1, 'spa': 1}},
+                       {'nature_plus': 'atk', 'nature_minus': 'atk'}, {'nature_plus': 'atk'},
+                       {'hp_percent': 0}, {'hp_percent': float('nan')}, {'unknown': 1}):
+            with self.subTest(fields=fields), self.assertRaises(ValidationError):
+                PetSetup(**({'pet_id': 1} | fields))
+        with self.assertRaises(ValueError): panel(self.queries, PetSetup(pet_id=999))
+        del self.queries.pets[1]['profile']['stats']['hp']
+        with self.assertRaises(ValueError): panel(self.queries, PetSetup(pet_id=1))
+
+
+if __name__ == '__main__':
+    unittest.main()

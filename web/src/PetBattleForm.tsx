@@ -1,0 +1,116 @@
+import { useEffect, useState } from 'react'
+import DamageResult, {type DamageAnswer} from './DamageResult'
+
+type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
+const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
+type Pet = {pet_id: number; name: string; types: string[]}
+type Build = {pet_id?: number; name: string; nature: string; ivs: Record<Stat, string>; hp_percent: string}
+type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
+type Learning = {source: string; level?: number; blood?: string; requires?: string}
+type Skill = {skill_id: number; name: string; power: number; element: string; damage_class: string; description: string; learning: Learning[]}
+const emptyBuild = (): Build => ({name: '', nature: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, hp_percent: '100'})
+const modifiers = [
+  ['flat_power_bonus', '固定威力加成', '', -100000, 100000], ['power_percent_bonus', '本次威力加成合计', '%', -100, 1000],
+  ['attack_boost', '攻击提升', '%', 0, 1000], ['attack_reduction', '攻击降低', '%', 0, 1000],
+  ['defense_boost', '防御提升', '%', 0, 1000], ['defense_reduction', '防御降低', '%', 0, 1000],
+  ['other_power_multiplier', '其他威力倍率', '×', 0, 100], ['final_damage_multiplier', '最终伤害倍率', '×', 0, 100],
+] as const
+const defaultModifiers: Record<string, string> = Object.fromEntries(modifiers.map(([key, , unit]) => [key, unit === '×' ? '1' : '0']))
+async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
+  const response = await fetch('/api/damage/' + path, {method: body === undefined ? 'GET' : 'POST', signal, headers: body === undefined ? {} : {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)})
+  const value = await response.json()
+  if (!response.ok) throw new Error(typeof value.detail === 'string' ? value.detail : Array.isArray(value.detail) ? value.detail.map((item: {msg: string}) => item.msg).join('；') : '请求失败，请检查配置。')
+  return value
+}
+function buildError(build: Build) {
+  if (Object.values(build.ivs).some(value => value === '' || !Number.isInteger(Number(value)) || Number(value) < 0 || Number(value) > 10)) return '个体值请填0～10的整数。'
+  if (Object.values(build.ivs).filter(value => Number(value) > 0).length > 3) return '当前社区规则最多设置3项非零个体。'
+  if (build.hp_percent === '' || Number(build.hp_percent) < 1 || Number(build.hp_percent) > 100) return '当前生命比例请填1～100%。'
+  return ''
+}
+function payload(build: Build) {
+  const [plus, minus] = build.nature.split(':')
+  return {pet_id: build.pet_id, ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: plus || null, nature_minus: minus || null, hp_percent: Number(build.hp_percent)}
+}
+function usePanel(build: Build) {
+  const [state, setState] = useState<{panel?: Panel; error: string; loading: boolean}>({error: '', loading: false})
+  useEffect(() => {
+    const error = buildError(build)
+    if (!build.pet_id || error) {setState({error: build.pet_id ? error : '', loading: false}); return}
+    const controller = new AbortController()
+    setState({error: '', loading: true})
+    const timer = setTimeout(() => request<Panel>('panel', payload(build), controller.signal).then(panel => setState({panel, error: '', loading: false})).catch(e => {if (!controller.signal.aborted) setState({error: e.message, loading: false})}), 150)
+    return () => {clearTimeout(timer); controller.abort()}
+  }, [build])
+  return state
+}
+function CreatureCard({side, pets, build, onChange, preview}: {side: string; pets: Pet[]; build: Build; onChange: (value: Build) => void; preview: ReturnType<typeof usePanel>}) {
+  const count = Object.values(build.ivs).filter(value => Number(value) > 0).length
+  const pet = pets.find(row => row.pet_id === build.pet_id)
+  return <section className="damage-card creature-card"><div className="damage-card-heading"><h2>{side}</h2><span>统一60级</span></div>
+    <label className="damage-skill-label" htmlFor={`${side}-pet`}>选择{side}精灵</label><input id={`${side}-pet`} className="pet-search-input" aria-label={`${side}精灵`} list={`${side}-pets`} placeholder="输入精灵名称并从列表选择" value={build.name} onChange={e => onChange({...build, name: e.target.value, pet_id: pets.find(row => row.name === e.target.value)?.pet_id})} autoComplete="off" /><datalist id={`${side}-pets`}>{pets.map(row => <option value={row.name} key={row.pet_id}>{row.types.join(' / ')}</option>)}</datalist>
+    {pet && <div className="creature-identity"><strong>{pet.name}</strong><span>{pet.types.join(' / ')}</span></div>}
+    {!pet && <p className="damage-input-note">选择具体精灵后，读取种族值并换算面板。</p>}
+    <label className="damage-skill-label" htmlFor={`${side}-nature`}>性格修正</label><select id={`${side}-nature`} value={build.nature} onChange={e => onChange({...build, nature: e.target.value})}><option value="">无修正</option>{stats.flatMap(([plus, pLabel]) => stats.filter(([minus]) => minus !== plus).map(([minus, mLabel]) => <option key={plus+minus} value={`${plus}:${minus}`}>{pLabel}↑20% / {mLabel}↓10%</option>))}</select>
+    <div className="iv-table"><div className="iv-row iv-head"><span>能力</span><span>种族</span><span>个体</span><span>估算面板</span></div>{stats.map(([key, title]) => <div className="iv-row" key={key}><span>{title}</span><span>{preview.panel?.base_stats[key] ?? '—'}</span><input aria-label={`${side}${title}个体`} type="number" min={0} max={10} step={1} required value={build.ivs[key]} onChange={e => onChange({...build, ivs: {...build.ivs, [key]: e.target.value}})} /><strong>{preview.loading ? '…' : preview.panel?.stats[key] ?? '—'}</strong></div>)}</div>
+    <p className="damage-input-note">个体采用0～10刻度 · 已设置 {count}/3 项 · 性格按所选增减项换算</p>
+    {side === '受击方' && <label className="damage-field current-hp-field"><span>当前生命比例</span><div><input aria-label="受击方当前生命比例" type="number" min={1} max={100} step={1} required value={build.hp_percent} onChange={e => onChange({...build, hp_percent: e.target.value})} /><em>%</em></div><small>{preview.panel ? `${preview.panel.current_hp} / ${preview.panel.stats.hp} 点生命` : '根据估算最大生命换算当前生命'}</small></label>}
+    {preview.panel?.feature.name && <details className="creature-feature"><summary>特性：{preview.panel.feature.name}</summary><p>{preview.panel.feature.description}</p><small>本次生效效果通过下方修正项填写。</small></details>}
+    {preview.error && <div className="data-error" role="alert">{preview.error}</div>}
+  </section>
+}
+export default function PetBattleForm() {
+  const [pets, setPets] = useState<Pet[]>([])
+  const [attacker, setAttacker] = useState(emptyBuild)
+  const [defender, setDefender] = useState(emptyBuild)
+  const attackPanel = usePanel(attacker), defensePanel = usePanel(defender)
+  const [skills, setSkills] = useState<Skill[]>([])
+  const [skillsLoading, setSkillsLoading] = useState(false)
+  const [skillId, setSkillId] = useState('')
+  const [customPower, setCustomPower] = useState('')
+  const [overridePower, setOverridePower] = useState(false)
+  const [values, setValues] = useState(defaultModifiers)
+  const [error, setError] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [answer, setAnswer] = useState<DamageAnswer>()
+  const skill = skills.find(row => String(row.skill_id) === skillId)
+  useEffect(() => {
+    const controller = new AbortController()
+    request<Pet[]>('pets', undefined, controller.signal).then(setPets).catch(e => {if (!controller.signal.aborted) setError(e.message)})
+    return () => controller.abort()
+  }, [])
+  useEffect(() => {
+    setSkills([]); setSkillId(''); setSkillsLoading(false)
+    if (!attacker.pet_id) return
+    const controller = new AbortController()
+    setSkillsLoading(true)
+    request<Skill[]>(`pets/${attacker.pet_id}/skills`, undefined, controller.signal).then(setSkills).catch(e => {if (!controller.signal.aborted) setError(e.message)}).finally(() => {if (!controller.signal.aborted) setSkillsLoading(false)})
+    return () => controller.abort()
+  }, [attacker.pet_id])
+  useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill])
+  useEffect(() => {setAnswer(undefined)}, [attacker, defender, skillId, customPower, overridePower, values])
+  const ready = !!(skill && attackPanel.panel && defensePanel.panel && !attackPanel.loading && !defensePanel.loading && !attackPanel.error && !defensePanel.error)
+  const attackKey = skill?.damage_class === '物攻' ? 'atk' : 'spa', defenseKey = skill?.damage_class === '物攻' ? 'def' : 'spd'
+  const stab = skill && attackPanel.panel?.types.includes(skill.element) ? 1.25 : 1
+  const type = skill && defensePanel.panel ? Object.values(defensePanel.panel.type_effectiveness).flat().find(row => row.type === skill.element)?.multiplier ?? 1 : 1
+  async function calculate(event: React.FormEvent) {
+    event.preventDefault()
+    if (!ready) return
+    setBusy(true); setError(''); setAnswer(undefined)
+    try {
+      const result = await request<DamageAnswer>('matchup', {attacker: payload(attacker), defender: payload(defender), skill_id: Number(skillId), power_override: overridePower ? Number(customPower) : null, modifiers: Object.fromEntries(modifiers.map(([key, , unit]) => [key, Number(values[key]) / (unit === '%' ? 100 : 1)]))})
+      setAnswer(result)
+    } catch(e) {setError((e as Error).message)} finally {setBusy(false)}
+  }
+  function learning(row: Learning) {return [({level: '升级', machine: '技能石', blood: '血脉', legendary: '传说'} as Record<string,string>)[row.source] || row.source, row.level != null ? `Lv.${row.level}` : '', row.blood || '', row.requires || ''].filter(Boolean).join(' · ')}
+  return <div className="damage-layout pet-battle-layout"><form onSubmit={calculate}><fieldset disabled={busy}>
+    <div className="creature-grid"><CreatureCard side="攻击方" pets={pets} build={attacker} onChange={setAttacker} preview={attackPanel} /><CreatureCard side="受击方" pets={pets} build={defender} onChange={setDefender} preview={defensePanel} /></div>
+    <section className="damage-card"><div className="damage-card-heading"><h2>攻击技能</h2><span>{skillsLoading ? '读取技能池…' : `${skills.length} 个可选攻击技能`}</span></div><label className="damage-skill-label" htmlFor="battle-skill">从攻击方技能池选择</label><select id="battle-skill" value={skillId} disabled={!attacker.pet_id || skillsLoading} required onChange={e => setSkillId(e.target.value)}><option value="">{attacker.pet_id ? '选择本次攻击技能' : '先选择攻击方精灵'}</option>{skills.map(row => <option key={row.skill_id} value={row.skill_id}>{row.name} · {row.element} · {row.damage_class} · 威力{row.power}</option>)}</select>
+      {skill && <><div className="damage-skill-note"><strong>{skill.name} · {skill.element} · {skill.damage_class}</strong><p>{skill.description}</p><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small></div><div className="matchup-auto"><div><span>{skill.damage_class === '物攻' ? '物攻 → 物防' : '魔攻 → 魔防'}</span><strong>{attackPanel.panel?.stats[attackKey] ?? '—'} → {defensePanel.panel?.stats[defenseKey] ?? '—'}</strong></div><div><span>本系倍率</span><strong>×{stab}</strong></div><div><span>克制倍率</span><strong>×{type}</strong></div></div><label className="power-override"><input type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件手动调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label="本次技能基础威力" type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}<p className="damage-input-note">本系与克制读取双方属性及本地克制表。血脉、传说学习条件和条件变威力请按本次对战确认。</p></>}
+    </section>
+    <details className="damage-card damage-advanced"><summary>战斗修正<span>强化、威力、减伤等额外效果</span></summary><div className="damage-field-grid">{modifiers.map(([key, label, unit, min, max]) => <label className="damage-field" key={key}><span>{label}</span><div><input aria-label={`精灵配置${label}`} type="number" step="any" min={min} max={max} required value={values[key]} onChange={e => setValues({...values, [key]: e.target.value})} />{unit && <em>{unit}</em>}</div></label>)}</div><p className="damage-input-note">如减伤70%，最终伤害倍率填0.3。特性、天气等效果按本次条件折算为修正。</p></details>
+    {error && <div className="data-error" role="alert">{error}</div>}
+    <button type="submit" className="damage-submit" disabled={busy || !ready}>{busy ? '正在计算…' : '计算预计伤害'}<span>↗</span></button>
+    {!ready && <p className="damage-input-note">请完成双方精灵、个体与性格配置，并选择一个攻击技能。</p>}
+  </fieldset></form><DamageResult answer={answer} /></div>
+}

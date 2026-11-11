@@ -13,6 +13,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from .service import BusyError, SessionManager
 from .data_updates import DataUpdates
 from roco_data import RocoTools
+from .battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup
 
 
 class SessionInput(BaseModel):
@@ -68,6 +69,23 @@ def create_app(manager=None):
                  'damage_class': skill.get('damage_class'), 'power': skill['power'], 'description': skill.get('desc', '')}
                 for skill in sorted(queries.skills.values(), key=lambda row: (row['name'], row['skill_id']))
                 if skill.get('category') == '攻击' and type(skill.get('power')) in (int, float)]
+
+    @app.get('/api/damage/pets')
+    def damage_pets(request: Request):
+        return [{'pet_id': pet['pet_id'], 'name': pet['title'], 'types': pet['profile']['types']}
+                for pet in sorted(request.app.state.manager.queries.pets.values(), key=lambda row: (row['title'], row['pet_id']))]
+
+    @app.get('/api/damage/pets/{pet_id}/skills')
+    def damage_pet_skills(pet_id: int, request: Request):
+        return pet_skills(request.app.state.manager.queries, pet_id)
+
+    @app.post('/api/damage/panel')
+    def damage_panel(body: PetSetup, request: Request):
+        return panel(request.app.state.manager.queries, body)
+
+    @app.post('/api/damage/matchup')
+    def damage_matchup(body: MatchupInput, request: Request):
+        return matchup(request.app.state.manager.queries, body)
 
     @app.post('/api/damage/calculate')
     def damage_calculate(body: dict, request: Request):

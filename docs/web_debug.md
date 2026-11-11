@@ -91,4 +91,4 @@ API：`GET /api/data/status`、`POST /api/data/check`、`POST /api/data/update`�
 
 ## 伤害计算页面
 
-左侧「伤害计算」或 `/#damage` 可进入社区估算计算器，支持技能威力填入、实际攻防输入、倍率修正和七步过程展示。使用条件及接口见 [伤害计算器说明](damage_calculator.md)。
+左侧「伤害计算」或 `/#damage` 可进入社区估算计算器，默认支持双方精灵、个体、性格、技能与战斗修正的手动配置，自动生成60级PVP社区面板、本系和克制倍率；另提供直接输入数值模式。两种模式均展示七步过程。使用条件及接口见 [伤害计算器说明](damage_calculator.md)。

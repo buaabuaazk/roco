@@ -59,6 +59,20 @@
         "stat_stage_multiplier": "(1 + attack_boost + defense_reduction) / (1 + attack_reduction + defense_boost)",
         "intermediate_rounding": "decimal_half_up",
         "final_rounding": "保留小数，待实测最终取整规则",
-        "scope": "玩家提供强化前实际能力值，按单次伤害估算；特殊效果通过已确认的输入调整。"
+        "scope": "玩家提供强化前实际能力值，按单次伤害估算；特殊效果通过已确认的输入调整。",
+        "panel_model": {
+            "scope": "level_60_pvp_community_estimate",
+            "hp": "round((round(1.7 * (base + 3 * iv)) + 70) * nature) + 100",
+            "other_stats": "round((round(1.1 * (base + 3 * iv)) + 10) * nature) + 50",
+            "iv_scale": "整数0～10；最多3项非零",
+            "nature_multipliers": {
+                "plus": 1.2,
+                "neutral": 1,
+                "minus": 0.9
+            },
+            "rounding": "decimal_half_up",
+            "source_url": "https://roco-showdown.com/battle-use-guide",
+            "comparison_implementation": "https://github.com/zyx20180209/roco-claude/tree/main/apps/damage_calculator"
+        }
     }
 }
