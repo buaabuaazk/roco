@@ -41,6 +41,29 @@ class BattleSetupTests(unittest.TestCase):
         self.assertEqual(result['inputs']['type_multiplier'], 2)
         self.assertEqual(result['matchup']['channel'], '物攻 → 物防')
 
+    def test_stars_growth_nature_and_float32_rounding(self):
+        defaults = panel(self.queries, PetSetup(pet_id=1))
+        self.assertEqual((defaults['level'], defaults['stars'], defaults['growth']), (60, 5, 50))
+        setup = dict(pet_id=1, ivs={'atk': 10}, nature_plus='atk', nature_minus='spa')
+        low = panel(self.queries, PetSetup(**setup, stars=0, growth=0))
+        grown = panel(self.queries, PetSetup(**setup, stars=0, growth=50))
+        raised = panel(self.queries, PetSetup(**setup, stars=5, growth=50))
+        self.assertEqual(low['stats']['atk'], 172)
+        self.assertEqual(grown['stats']['atk'], 222)
+        self.assertEqual(raised['stats']['atk'], 271)
+        self.assertEqual(grown['stats']['hp'] - low['stats']['hp'], 100)
+        # 社区对拍的半点边界：core=210向下，core=230向上。
+        self.queries.pets[1]['profile']['stats'].update(atk=105, spa=115)
+        boundary = panel(self.queries, PetSetup(pet_id=1, stars=0, growth=0))
+        self.assertEqual(boundary['stats']['atk'], 125)
+        self.assertEqual(boundary['stats']['spa'], 137)
+        standard = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, ivs={'atk': 10}),
+                          defender=PetSetup(pet_id=2), skill_id=701))
+        weaker = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, stars=0, growth=0, ivs={'atk': 10}),
+                        defender=PetSetup(pet_id=2), skill_id=701))
+        self.assertLess(weaker['estimated_damage'], standard['estimated_damage'])
+        self.assertEqual(weaker['matchup']['attacker']['stars'], 0)
+
     def test_magic_channel_combined_type_chart_and_override(self):
         self.queries.pets[2]['type_effectiveness']['weak'] = [{'type': '草系', 'multiplier': 3}]
         body = MatchupInput(attacker=PetSetup(pet_id=1), defender=PetSetup(pet_id=2),
@@ -64,7 +87,10 @@ class BattleSetupTests(unittest.TestCase):
                        {'ivs': {'atk': .5}}, {'ivs': {'bad': 1}},
                        {'ivs': {'hp': 1, 'atk': 1, 'def': 1, 'spa': 1}},
                        {'nature_plus': 'atk', 'nature_minus': 'atk'}, {'nature_plus': 'atk'},
-                       {'hp_percent': 0}, {'hp_percent': float('nan')}, {'unknown': 1}):
+                       {'hp_percent': 0}, {'hp_percent': float('nan')}, {'unknown': 1},
+                       {'stars': -1}, {'stars': 11}, {'stars': True}, {'stars': 5.5},
+                       {'growth': -1}, {'growth': 101}, {'growth': True}, {'growth': 50.5},
+                       {'stars': 6, 'growth': 50}, {'growth': 49}):
             with self.subTest(fields=fields), self.assertRaises(ValidationError):
                 PetSetup(**({'pet_id': 1} | fields))
         with self.assertRaises(ValueError): panel(self.queries, PetSetup(pet_id=999))

@@ -62,17 +62,29 @@
         "scope": "玩家提供强化前实际能力值，按单次伤害估算；特殊效果通过已确认的输入调整。",
         "panel_model": {
             "scope": "level_60_pvp_community_estimate",
-            "hp": "round((round(1.7 * (base + 3 * iv)) + 70) * nature) + 100",
-            "other_stats": "round((round(1.1 * (base + 3 * iv)) + 10) * nature) + 50",
+            "hp": "RoundToInt(RoundToInt((core / 100f) * 85 + 60 + 10) * nature) + 2 * growth",
+            "other_stats": "RoundToInt(RoundToInt((core / 200f) * 110 + 10) * nature) + growth",
             "iv_scale": "整数0～10；最多3项非零",
             "nature_multipliers": {
-                "plus": 1.2,
+                "plus": "1.1 + 0.02 * stars",
                 "neutral": 1,
                 "minus": 0.9
             },
-            "rounding": "decimal_half_up",
-            "source_url": "https://roco-showdown.com/battle-use-guide",
-            "comparison_implementation": "https://github.com/zyx20180209/roco-claude/tree/main/apps/damage_calculator"
+            "rounding": "每次面板运算落为float32；RoundToInt=floor(x+0.5)；先除后乘",
+            "source_url": "https://loyshowdown.com/app/articles/54192c55-0c93-4cd4-926c-027174b807d5",
+            "comparison_implementation": "https://github.com/zyx20180209/roco-claude/tree/main/apps/damage_calculator",
+            "defaults": {
+                "level": 60,
+                "stars": 5,
+                "growth": 50
+            },
+            "formula_iv": "iv * (stars + 1)",
+            "core": "2 * base + formula_iv",
+            "reviewed_on": "2026-11-11",
+            "constraints": {
+                "stars": "整数0～10",
+                "growth": "整数0～100，且growth >= stars * 10"
+            }
         }
     }
 }
