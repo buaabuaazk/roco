@@ -3,7 +3,14 @@
     "converted_at": "2026-11-09T15:09:14.255431+08:00",
     "source": {
         "request_url": "https://wiki.biligame.com/nrc/api.php?action=query&titles=Module%3APets%2Fdata%2FCatalog%7CModule%3APets%2Fdata%2FSkills%7CModule%3APets%2Fdata%2FLearnsets%7CModule%3APets%2Fdata%2FEvolutions%7CModule%3APets%2Fdata%2FHandbooks%7CModule%3APets%2Fdata%2FTypes%7CModule%3APets%2Fdata%2FTerms%7CModule%3APets%2Fdata%2FHistory%7CModule%3APets%2Fdata%2FTrainingReference%7CModule%3APets%2Fdata%2FSkillStoneTopics%7CModule%3APets%2FEvolutionConditions%7CModule%3APets%2FSeasonData%7CModule%3AContentVisibility%7CModule%3AContentVisibility%2FConfig%7CModule%3AContentVisibility%2FS5Legacy%2FCatalog%7CModule%3AContentVisibility%2FS5Legacy%2FSkills%7CModule%3AContentVisibility%2FS5Legacy%2FLearnsets%7CModule%3APets%2FSeasonConfig%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%2F%E9%85%8D%E7%BD%AE%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%2F%E6%95%B0%E6%8D%AE%2F%E7%B2%BE%E7%81%B5%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%2F%E6%95%B0%E6%8D%AE%2F%E6%8A%80%E8%83%BD%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%2F%E6%95%B0%E6%8D%AE%2F%E7%89%B9%E6%80%A7%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%2F%E6%95%B0%E6%8D%AE%2F%E8%BE%85%E5%8A%A9%7CModule%3A%E7%B2%BE%E7%81%B5%E5%9B%BE%E9%89%B4%2FS5%2F%E6%95%B0%E6%8D%AE%2F%E5%85%B3%E8%81%94&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&format=json&formatversion=2&maxlag=5",
-        "fetched_at": "2026-11-09T15:09:12.624986+08:00"
+        "fetched_at": "2026-11-09T15:09:12.624986+08:00",
+        "supplemental_requests": [
+            {
+                "title": "模块:Pets",
+                "fetched_at": "2026-11-11T09:43:21.896487+08:00",
+                "request_url": "https://wiki.biligame.com/nrc/api.php?action=query&titles=Module%3APets&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&format=json&formatversion=2"
+            }
+        ]
     },
     "reused_local": false,
     "modules": [
@@ -131,6 +138,11 @@
             "title": "模块:ContentVisibility",
             "revision_id": 20829,
             "revision_timestamp": "2026-11-04T09:32:30Z"
+        },
+        {
+            "title": "模块:Pets",
+            "revision_id": 20688,
+            "revision_timestamp": "2026-11-02T15:53:41Z"
         }
     ],
     "visibility_policy": "S5 restored: season shards merged; withheld titles filtered",
@@ -1673,6 +1685,7 @@
         "skills/7190500.json",
         "skills/7190510.json",
         "skills/7190520.json",
-        "reference.json"
+        "reference.json",
+        "dictionaries.json"
     ]
 }

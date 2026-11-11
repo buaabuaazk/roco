@@ -14,6 +14,20 @@ class JsonQueryTests(unittest.TestCase):
             cls.queries = JsonQueries()
         cls.tools = RocoTools(cls.queries)
 
+    def test_egg_groups_reach_model_as_names_and_unknown_ids_are_explicit(self):
+        for section in ('profile', 'egg'):
+            answer = self.tools.execute('get_pet', {'identifier': '深蓝鲸', 'section': section})
+            self.assertEqual(answer['data']['value']['egg_groups'], ['海洋组', '巨灵组'])
+            self.assertEqual(model_result('get_pet', answer)['data']['value']['egg_groups'],
+                             ['海洋组', '巨灵组'])
+        self.assertEqual(self.queries.pets[3381]['profile']['egg_group'], [13, 2])
+        with patch.object(self.queries, 'egg_group_names', {'13': '海洋组'}):
+            groups = self.queries.get_pet(3381, 'profile')['data']['value']['egg_groups']
+            self.assertEqual(groups[0], '海洋组')
+            self.assertIn('名称待补齐', groups[1])
+        self.assertIsNone(self.queries._egg_groups(None))
+        self.assertEqual(self.queries._egg_groups([]), [])
+
     def test_all_five_tools_and_current_skill_data(self):
         answer = self.tools.execute('search_pets', {'query': '喵喵'})
         self.assertEqual(model_result('search_pets', answer), 3001)

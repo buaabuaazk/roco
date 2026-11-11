@@ -69,3 +69,8 @@ with JsonQueries() as queries:
 python -m roco_data skill-pets 丰饶
 python -m roco_data skill-pets 徒长 --source blood --limit 100 --offset 100
 ```
+
+蛋组名称统一读取 `data/bwiki/converted/dictionaries.json` 的 `egg_groups` 映射。
+采集器从 BWIKI `模块:Pets` 中的 `EGG_GROUP_NAMES` 自动提取名称，保存来源修订信息；该模块参与后续更新检测，字典随采集批次和打包结果导出。
+精灵原始 JSON 保留 `profile.egg_group` 编号，`get_pet` 的 `profile`、`egg` 分区向模型返回蛋组名称。
+例如深蓝鲸的 `[13, 2]` 转为 `["海洋组", "巨灵组"]`。字典缺失或存在未知编号时查询明确标记名称待补齐；采集转换时发现编号缺少名称则中止写出，补全映射后重试。

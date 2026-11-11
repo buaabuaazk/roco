@@ -17,7 +17,7 @@ SECTION_DESCRIPTIONS = {
     'family': '进化链、等级、特殊条件及首领信物',
     'acquisition': '获取途径、果实来源和活动记录',
     'ecology': '生态与获取资料，当前内容与 acquisition 相同',
-    'egg': '性别比例、蛋重范围和特殊精灵蛋',
+    'egg': '蛋组名称、性别比例、蛋重范围和特殊精灵蛋',
     'fruit': '精灵果实及其获取来源',
     'handbook': '所属图鉴、图鉴课题及奖励',
     'ride': '骑乘和同乘能力',

@@ -16,6 +16,13 @@ STAT_FIELDS = {'hp': 'hp', 'physical_attack': 'atk', 'physical_defense': 'def',
 class JsonQueries:
     def __init__(self, data_dir=DEFAULT_JSON_DIR):
         self.root = Path(data_dir).resolve()
+        dictionary_path = self.root / 'dictionaries.json'
+        self.egg_group_names = (json.loads(dictionary_path.read_text(encoding='utf-8')).get('egg_groups', {})
+                                if dictionary_path.exists() else {})
+        if not isinstance(self.egg_group_names, dict) or any(
+                not isinstance(name, str) or not name.strip()
+                for name in self.egg_group_names.values()):
+            raise ValueError(f'蛋组名称字典格式无效：{dictionary_path}')
         self.pets = self._load('pets', 'pet_id')
         self.skills = self._load('skills', 'skill_id')
         self.features = self._load('features', 'skill_id')
@@ -127,6 +134,12 @@ class JsonQueries:
             branches.append({'name': branch['name'], 'transitions': edges})
         return {'branches': branches}
 
+    def _egg_groups(self, groups):
+        if groups is None:
+            return None
+        return [self.egg_group_names.get(str(group), f'未知蛋组（编号 {group}，名称待补齐）')
+                for group in groups]
+
     def get_pet(self, identifier, section=None):
         pet, error = self._resolve(self.pets, identifier, 'pet_id')
         if error:
@@ -141,9 +154,10 @@ class JsonQueries:
             'base': {'description': profile.get('description'), 'types': profile.get('types')},
             'profile': {'attributes': self._stats(pet), 'height': profile.get('height'),
                         'weight': profile.get('weight'), 'types': profile.get('types'),
-                        'egg_groups': profile.get('egg_group'), 'type_effectiveness': pet['type_effectiveness']},
+                        'egg_groups': self._egg_groups(profile.get('egg_group')), 'type_effectiveness': pet['type_effectiveness']},
             'features': features, 'family': self._family(pet), 'acquisition': ecology,
-            'ecology': ecology, 'egg': {'gender_ratio': profile.get('gender_ratio'),
+            'ecology': ecology, 'egg': {'egg_groups': self._egg_groups(profile.get('egg_group')),
+                                      'gender_ratio': profile.get('gender_ratio'),
                                       'egg_size': profile.get('egg_size'), 'eggs': ecology.get('eggs', [])},
             'fruit': ecology.get('fruits'), 'handbook': pet.get('handbook'),
             'ride': {'can_ride': profile.get('can_ride'), 'can_double_ride': profile.get('can_double_ride')},

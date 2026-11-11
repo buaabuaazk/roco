@@ -138,6 +138,22 @@ class SeasonShardTest(unittest.TestCase):
         self.assertEqual(result['Evolutions']['old'], [1])
         self.assertNotIn('new', tables['Catalog'])
 
+    def test_egg_dictionary_is_extracted_and_missing_ids_block_conversion(self):
+        from collect_bwiki_modules import unpack, dictionary_record
+        page = {'title': '模块:Pets', 'revisions': [{'revid': 123, 'timestamp': 'test',
+                'slots': {'main': {'content': 'local EGG_GROUP_NAMES = {[2] = "巨灵组", [13] = "海洋组"}\nreturn p'}}}]}
+        tables, provenance = unpack({'query': {'pages': [page]}})
+        tables['Catalog'] = {'pet': {'egg_group': [13, 2]}}
+        record = dictionary_record(tables, provenance)
+        self.assertEqual(record['egg_groups'], {'2': '巨灵组', '13': '海洋组'})
+        self.assertEqual(record['source']['revision_id'], 123)
+        tables['Catalog']['pet']['egg_group'].append(99)
+        with self.assertRaisesRegex(ValueError, '99'):
+            dictionary_record(tables, provenance)
+        page['revisions'][0]['slots']['main']['content'] = 'return {}'
+        with self.assertRaisesRegex(ValueError, '字典格式已变化'):
+            unpack({'query': {'pages': [page]}})
+
 
 if __name__ == '__main__':
     unittest.main()

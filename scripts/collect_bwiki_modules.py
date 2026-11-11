@@ -23,7 +23,7 @@ def save(path, data):
 TABLES = ('Catalog', 'Skills', 'Learnsets', 'Evolutions', 'Handbooks',
           'Types', 'Terms', 'History', 'TrainingReference', 'SkillStoneTopics')
 TITLES = ['Module:Pets/data/' + name for name in TABLES] + [
-    'Module:Pets/EvolutionConditions', 'Module:Pets/SeasonData', 'Module:ContentVisibility',
+    'Module:Pets', 'Module:Pets/EvolutionConditions', 'Module:Pets/SeasonData', 'Module:ContentVisibility',
     'Module:ContentVisibility/Config'] + [
     'Module:ContentVisibility/S5Legacy/' + name for name in ('Catalog', 'Skills', 'Learnsets')]
 SEASON_NAMESPACE = '精灵图鉴/S5'
@@ -118,6 +118,13 @@ def unpack(response):
             name = 'VisibilityConfig'
         provenance.append({'title': page['title'], 'revision_id': revision['revid'],
                            'revision_timestamp': revision['timestamp']})
+        if page['title'] == '模块:Pets':
+            content = revision['slots']['main']['content']
+            match = re.search(r'local\s+EGG_GROUP_NAMES\s*=\s*(\{[^{}]*\})', content)
+            if not match:
+                raise ValueError('BWIKI 蛋组字典格式已变化，须核验转换器')
+            tables['EggGroupNames'] = parse_lua('return ' + match[1])
+            continue
         if page['title'].startswith('模块:' + SEASON_NAMESPACE + '/数据/'):
             name = 'SeasonShard:' + page['title']
         elif page['title'] == '模块:' + SEASON_NAMESPACE + '/配置':
@@ -222,6 +229,20 @@ def validate_rules(provenance):
 
     if '模块:' + SEASON_NAMESPACE in revisions and revisions['模块:' + SEASON_NAMESPACE] not in RULE_ALTERNATIVES['模块:' + SEASON_NAMESPACE]:
         raise ValueError('赛季聚合规则已变化，须重新核验转换器')
+
+
+def dictionary_record(tables, provenance):
+    names = tables['EggGroupNames']
+    if not isinstance(names, dict) or not names or any(
+            not key.isdecimal() or int(key) < 1 or not isinstance(value, str) or not value.strip()
+            for key, value in names.items()):
+        raise ValueError('BWIKI 蛋组名称字典无效')
+    missing = {str(group) for pet in tables['Catalog'].values()
+               for group in pet.get('egg_group', [])} - names.keys()
+    if missing:
+        raise ValueError('蛋组名称缺少编号：' + ', '.join(sorted(missing)))
+    source = next(row for row in provenance if row['title'] == '模块:Pets')
+    return {'egg_groups': names, 'source': source}
 
 
 def skill_record(tables, wiki_id):
@@ -373,11 +394,12 @@ def main():
                       if not args.from_response and metadata.exists() else {})
         tables, provenance = unpack(raw)
         validate_rules(provenance)
-        required = set(TABLES) | {'VisibilityConfig', 'EvolutionConditions',
+        required = set(TABLES) | {'VisibilityConfig', 'EvolutionConditions', 'EggGroupNames',
                                  'CatalogPatch', 'SkillsPatch', 'LearnsetsPatch'}
         if required - tables.keys():
             raise ValueError('模块缓存缺少 ' + ', '.join(sorted(required - tables.keys())) + '；请使用 --refresh')
         tables = visible_tables(tables)
+        dictionaries = dictionary_record(tables, provenance)
         selected = select_pets(tables['Catalog'], args.titles, args.ids, args.all, args.limit)
         pets = [convert_pet(tables, pet) for pet in selected]
         skill_keys = set(tables['Skills']) if args.all and not args.limit else {
@@ -403,6 +425,7 @@ def main():
             file = f"{directory}/{skill['skill_id']}.json"
             save(args.output / file, skill)
             files.append(file)
+        save(args.output / 'dictionaries.json', dictionaries)
         save(args.output / 'reference.json', {
             'terms': tables['Terms'], 'history_versions': tables['History']['versions'],
             'training_labels': tables['TrainingReference']['labels'],
@@ -417,7 +440,7 @@ def main():
             features=sum(s['category'] == '特性' for s in skills),
             learning_relations=sum(len(rows) for pet in pets for rows in pet['skills'].values()),
             status='partial' if missing else 'complete', missing_skill_references=missing,
-            files=files + ['reference.json'])
+            files=files + ['reference.json', 'dictionaries.json'])
         save(args.output / 'manifest.json', manifest)
         print(json.dumps({key: manifest[key] for key in (
             'pets', 'skills', 'features', 'learning_relations', 'status', 'missing_skill_references')},
