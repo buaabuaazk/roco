@@ -51,5 +51,14 @@
         "攻防强化、弱化与特殊技能的处理。",
         "最终乘区、减伤、连击与特性的顺序。",
         "固定伤害、异常状态、免疫和最低伤害规则。"
-    ]
+    ],
+    "implementation": {
+        "formula_id": "community_showdown_v1",
+        "reviewed_on": "2026-11-11",
+        "verification_status": "pending_in_game_validation",
+        "stat_stage_multiplier": "(1 + attack_boost + defense_reduction) / (1 + attack_reduction + defense_boost)",
+        "intermediate_rounding": "decimal_half_up",
+        "final_rounding": "保留小数，待实测最终取整规则",
+        "scope": "玩家提供强化前实际能力值，按单次伤害估算；特殊效果通过已确认的输入调整。"
+    }
 }

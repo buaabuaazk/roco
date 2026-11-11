@@ -20,7 +20,7 @@ class ToolTests(unittest.TestCase):
         self.tools = RocoTools(SimpleNamespace(**{name: handler(name) for name in self.names}))
 
     def test_registered_definitions_and_fixed_dispatch(self):
-        self.assertEqual([t['function']['name'] for t in self.tools.definitions], self.names)
+        self.assertEqual([t['function']['name'] for t in self.tools.definitions], [*self.names, 'calculate_damage'])
         calls = [('search_pets', {'query': '喵'}), ('get_pet', {'identifier': 3001, 'section': 'family'}),
                  ('get_skill', {'identifier': '抓挠'}),
                  ('get_pet_skills', {'identifier': '喵喵', 'source': 'blood', 'skill': 7020910}),

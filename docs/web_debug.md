@@ -1,6 +1,6 @@
 # 本地 Agent 调试台
 
-React + TypeScript + Vite 前端，FastAPI 后端复用 `RocoAgent`、六个查询工具与 BWIKI JSON。
+React + TypeScript + Vite 前端，FastAPI 后端复用 `RocoAgent`、查询工具与伤害计算工具与 BWIKI JSON。
 服务地址为 `http://127.0.0.1:8765`，模型密钥由后端环境变量 `ZZZ_API_KEY` 读取。
 
 ## 启动
@@ -88,3 +88,7 @@ npm --prefix web run build
 - 检测结果保存在 `data/bwiki/update_status.json`（Git 忽略）；原始响应位于 `data/bwiki/modules`，正式 JSON 位于 `data/bwiki/converted`。
 
 API：`GET /api/data/status`、`POST /api/data/check`、`POST /api/data/update`。两个 POST 启动后台任务，GET 读取任务进度与报告。检测范围为已采集模块；页面正文与图片另行采集。
+
+## 伤害计算页面
+
+左侧「伤害计算」或 `/#damage` 可进入社区估算计算器，支持技能威力填入、实际攻防输入、倍率修正和七步过程展示。使用条件及接口见 [伤害计算器说明](damage_calculator.md)。

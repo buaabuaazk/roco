@@ -12,6 +12,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .service import BusyError, SessionManager
 from .data_updates import DataUpdates
+from roco_data import RocoTools
 
 
 class SessionInput(BaseModel):
@@ -59,6 +60,21 @@ def create_app(manager=None):
     @app.get('/api/config')
     def config(request: Request):
         return request.app.state.manager.config()
+
+    @app.get('/api/damage/skills')
+    def damage_skills(request: Request):
+        queries = request.app.state.manager.queries
+        return [{'skill_id': skill['skill_id'], 'name': skill['name'], 'element': skill.get('element'),
+                 'damage_class': skill.get('damage_class'), 'power': skill['power'], 'description': skill.get('desc', '')}
+                for skill in sorted(queries.skills.values(), key=lambda row: (row['name'], row['skill_id']))
+                if skill.get('category') == '攻击' and type(skill.get('power')) in (int, float)]
+
+    @app.post('/api/damage/calculate')
+    def damage_calculate(body: dict, request: Request):
+        answer = RocoTools(request.app.state.manager.queries).execute('calculate_damage', body)
+        if answer['status'] != 'ok':
+            return JSONResponse({'detail': answer.get('message', '伤害计算失败')}, status_code=422)
+        return answer['data']
 
     @app.get('/api/sessions')
     def sessions(request: Request):

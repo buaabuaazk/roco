@@ -1,7 +1,10 @@
 """只读工具：规格、参数校验及固定注册表执行。"""
 import json
 import sqlite3
+import math
 from copy import deepcopy
+
+from .damage import DAMAGE_PARAMETERS, DAMAGE_REQUIRED, damage_tool
 
 from .database import STATS
 from .queries import result
@@ -78,6 +81,12 @@ TOOL_DEFINITIONS = [
                    'stat': {'type': 'string', 'enum': list(STATS),
                             'description': 'hp生命、physical_attack物攻、physical_defense物防、magic_attack魔攻、'
                                            'magic_defense魔防、speed速度（默认）、sum总和。'}}, ('identifiers',)),
+    specification('calculate_damage',
+                  '按待实测验证的社区公式估算单次伤害并返回计算步骤。先确认玩家提供实际攻防能力值，'
+                  '不能以种族值代替；物理技能用物攻物防，魔法技能用魔攻魔防。'
+                  '基础威力可由get_skill核对，条件变威力需确认本次威力；倍率仅在资料或玩家输入明确时填写。'
+                  '结果为社区估算，说明最终取整和特殊效果的验证状态。',
+                  DAMAGE_PARAMETERS, DAMAGE_REQUIRED),
 ]
 
 
@@ -85,6 +94,8 @@ def validate_argument(value, schema, path='arguments'):
     """只校验本模块工具规格使用的 JSON Schema 子集。"""
     types = schema['type'] if isinstance(schema['type'], list) else [schema['type']]
     actual = {str: 'string', int: 'integer', dict: 'object', list: 'array'}.get(type(value))
+    if 'number' in types and type(value) in (int, float):
+        actual = 'number'
     if actual not in types:
         raise ValueError(f'{path} 类型应为 {"/".join(types)}')
     if 'enum' in schema and value not in schema['enum']:
@@ -97,7 +108,9 @@ def validate_argument(value, schema, path='arguments'):
             raise ValueError(f'{path} 缺少必填参数')
         for key, item in value.items():
             validate_argument(item, properties[key], f'{path}.{key}')
-    elif actual == 'integer':
+    elif actual in ('integer', 'number'):
+        if isinstance(value, float) and not math.isfinite(value):
+            raise ValueError(f'{path} 应为有限数值')
         if not schema.get('minimum', -9223372036854775808) <= value <= schema.get('maximum', 9223372036854775807):
             raise ValueError(f'{path} 数值超出范围')
     elif actual == 'string':
@@ -119,6 +132,7 @@ class RocoTools:
             'get_pet_skills': queries.get_pet_skills,
             'get_skill_pets': queries.get_skill_pets,
             'compare_pets': queries.compare_pets,
+            'calculate_damage': damage_tool,
         }
         self._schemas = {t['function']['name']: t['function']['parameters'] for t in TOOL_DEFINITIONS}
 

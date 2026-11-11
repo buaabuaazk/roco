@@ -10,6 +10,7 @@
 | `get_skill` | 技能的威力、能耗、属性和效果 | 必填 `identifier` |
 | `get_pet_skills` | 可学习技能、来源和学习条件，关联独立技能详情 | 必填 `identifier`；可选 `source`、`max_level`、`skill` |
 | `get_skill_pets` | 按技能反查可学习的精灵，合并各自学习条件 | 必填技能 `identifier`；可选 `source`、`limit`、`offset` |
+| `calculate_damage` | 社区公式单次伤害估算及步骤 | 必填实际 `attack`、`defense`、`base_power`；可选等级、加成与倍率、当前生命 |
 | `compare_pets` | 比较或排序一项种族值 | 必填 `identifiers`（2～10 个对象）；可选 `stat` |
 
 `identifier` 为准确名称或正整数 ID。JSON 查询的 `source` 使用 `level`、`machine`、`blood`、`legendary`。
@@ -74,3 +75,5 @@ python -m roco_data skill-pets 徒长 --source blood --limit 100 --offset 100
 采集器从 BWIKI `模块:Pets` 中的 `EGG_GROUP_NAMES` 自动提取名称，保存来源修订信息；该模块参与后续更新检测，字典随采集批次和打包结果导出。
 精灵原始 JSON 保留 `profile.egg_group` 编号，`get_pet` 的 `profile`、`egg` 分区向模型返回蛋组名称。
 例如深蓝鲸的 `[13, 2]` 转为 `["海洋组", "巨灵组"]`。字典缺失或存在未知编号时查询明确标记名称待补齐；采集转换时发现编号缺少名称则中止写出，补全映射后重试。
+
+伤害计算使用强化前实际能力值，字段和验证状态见 [伤害计算器说明](damage_calculator.md)。

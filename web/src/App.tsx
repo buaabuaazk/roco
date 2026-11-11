@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import DataPage from './DataPage'
+import DamagePage from './DamagePage'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+
+const pageFromHash = () => window.location.hash === '#data' ? 'data' : window.location.hash === '#damage' ? 'damage' : 'chat'
 
 type Trace = {
   sequence: number; event: string; timestamp: string; run_id: string; round?: number;
@@ -14,10 +17,11 @@ type Session = { id: string; title: string; model: string; created_at: string; b
 type Config = { default_model: string; key_configured: boolean; data: { pets: number; skills_with_details: number; features: number }; tools: string[] }
 
 const questions = ['哪些精灵可以学习丰饶？', '机械方方怎么进化？', '喵喵能学毒沼吗？']
-const labels: Record<string, string> = { search_pets: '搜索精灵', get_pet: '精灵资料', get_skill: '技能详情', get_pet_skills: '精灵可学技能', get_skill_pets: '技能反查精灵', compare_pets: '种族值比较' }
+const labels: Record<string, string> = { search_pets: '搜索精灵', get_pet: '精灵资料', get_skill: '技能详情', get_pet_skills: '精灵可学技能', get_skill_pets: '技能反查精灵', compare_pets: '种族值比较', calculate_damage: '伤害计算' }
 
 function Icon({ name, size = 18 }: { name: string; size?: number }) {
   const paths: Record<string, React.ReactNode> = {
+    calculator: <><rect x="4" y="2" width="16" height="20" rx="2" /><path d="M8 6h8M8 11h1m6 0h1m-8 5h1m6 0h1" /></>,
     plus: <path d="M12 5v14M5 12h14" />,
     chat: <path d="M20 11a8 8 0 0 1-8 8H5l-3 3V11a9 9 0 0 1 18 0Z" />,
     send: <><path d="m4 11 16-7-7 16-2-7-7-2Z" /><path d="m11 13 9-9" /></>,
@@ -87,7 +91,7 @@ function Inspector({ run }: { run?: Run }) {
 }
 
 export default function App() {
-  const [page, setPage] = useState(() => window.location.hash === '#data' ? 'data' : 'chat')
+  const [page, setPage] = useState(pageFromHash)
   const [config, setConfig] = useState<Config>()
   const [sessions, setSessions] = useState<Session[]>([])
   const [selected, setSelected] = useState('')
@@ -117,7 +121,7 @@ export default function App() {
     setRunId('')
   }, [])
   useEffect(() => {
-    const change = () => setPage(window.location.hash === '#data' ? 'data' : 'chat')
+    const change = () => setPage(pageFromHash())
     window.addEventListener('hashchange', change)
     return () => window.removeEventListener('hashchange', change)
   }, [])
@@ -223,7 +227,7 @@ export default function App() {
   return <div className="workbench">
     <aside className="sidebar">
       <a className="brand" href="/" aria-label="Roco 调试台首页"><span className="brand-mark">R</span><div><strong>Roco<span> / </span></strong><small>AGENT WORKBENCH</small></div></a>
-      <nav className="page-nav" aria-label="功能导航"><a href="#chat" aria-label="对话调试" className={page === 'chat' ? 'active' : ''}><Icon name="chat" /><span>对话调试</span></a><a href="#data" aria-label="数据检测" className={page === 'data' ? 'active' : ''}><Icon name="refresh" /><span>数据检测</span></a></nav>
+      <nav className="page-nav" aria-label="功能导航"><a href="#chat" aria-label="对话调试" className={page === 'chat' ? 'active' : ''}><Icon name="chat" /><span>对话调试</span></a><a href="#data" aria-label="数据检测" className={page === 'data' ? 'active' : ''}><Icon name="refresh" /><span>数据检测</span></a><a href="#damage" aria-label="伤害计算" className={page === 'damage' ? 'active' : ''}><Icon name="calculator" /><span>伤害计算</span></a></nav>
       <button className="new-session" onClick={() => {window.location.hash = 'chat'; newSession()}}><Icon name="plus" size={17} />新建会话<span>＋</span></button>
       <div className="sidebar-section-label">调试会话 <span>{sessions.length}</span></div>
       <nav className="sessions" aria-label="会话列表">{!sessions.length && <p className="sidebar-empty">你的调试记录会出现在这里</p>}{sessions.map(session => <button key={session.id} className={'session-link ' + (session.id === selected ? 'active' : '')} onClick={() => { window.location.hash = 'chat'; setSelected(session.id); setError(''); setNotice('') }}><Icon name="chat" size={15} /><span>{session.title}</span>{session.busy && <i className="status-dot pending" />}</button>)}</nav>
@@ -231,13 +235,13 @@ export default function App() {
       <div className="sidebar-footer"><span className="local-symbol">⌘</span><div>本地开发环境<small>JSON 数据 · 127.0.0.1</small></div><span className="version">v0.1</span></div>
     </aside>
     <section className="workspace">
-      <header className="topbar"><div className="breadcrumb">工作台 <span>/</span> <strong>{page === 'data' ? '数据检测' : '对话调试'}</strong><span className="local-badge">LOCAL</span></div><div className="header-actions"><span className="data-count">{config ? `${config.data.pets} 精灵 · ${config.data.skills_with_details} 技能 · ${config.data.features} 特性` : '连接服务中…'}</span>{page === 'chat' && <><button className={'icon-button ' + (loading ? 'spinning' : '')} disabled={loading || busy} onClick={reloadData} title="重新加载 JSON 并清空会话上下文" aria-label="重新加载数据"><Icon name="refresh" /></button><span className="header-divider" /><button className={'icon-button ' + (showInspector ? 'is-on' : '')} onClick={() => setShowInspector(!showInspector)} title="显示或隐藏执行轨迹" aria-label="切换执行轨迹"><Icon name="panel" /></button></>}</div></header>
-      {page === 'data' ? <DataPage onUpdated={dataUpdated} /> : <div className={'main-grid ' + (!showInspector ? 'inspector-hidden' : '')}>
+      <header className="topbar"><div className="breadcrumb">工作台 <span>/</span> <strong>{page === 'data' ? '数据检测' : page === 'damage' ? '伤害计算' : '对话调试'}</strong><span className="local-badge">LOCAL</span></div><div className="header-actions"><span className="data-count">{config ? `${config.data.pets} 精灵 · ${config.data.skills_with_details} 技能 · ${config.data.features} 特性` : '连接服务中…'}</span>{page === 'chat' && <><button className={'icon-button ' + (loading ? 'spinning' : '')} disabled={loading || busy} onClick={reloadData} title="重新加载 JSON 并清空会话上下文" aria-label="重新加载数据"><Icon name="refresh" /></button><span className="header-divider" /><button className={'icon-button ' + (showInspector ? 'is-on' : '')} onClick={() => setShowInspector(!showInspector)} title="显示或隐藏执行轨迹" aria-label="切换执行轨迹"><Icon name="panel" /></button></>}</div></header>
+      {page === 'data' ? <DataPage onUpdated={dataUpdated} /> : page === 'damage' ? <DamagePage /> : <div className={'main-grid ' + (!showInspector ? 'inspector-hidden' : '')}>
         <main className="chat-panel">
           <div className="chat-heading"><div><span className="section-kicker">PLAYGROUND</span><h1>对话调试</h1></div><button className="text-button" disabled={!runs.length || busy} onClick={reset}><Icon name="trash" size={14} />清空上下文</button></div>
           {(error || notice) && <div role={error ? 'alert' : 'status'} className={'banner ' + (error ? 'error' : '')}><Icon name="info" size={15} /><span>{error || notice}</span><button onClick={() => { setError(''); setNotice('') }} aria-label="关闭提示">×</button></div>}
           <div className="conversation">
-            {!runs.length && <div className="welcome"><div className="welcome-icon"><Icon name="chat" size={29} /><span>✦</span></div><span className="welcome-kicker">从一个好问题开始</span><h2>今天要验证哪个问题？</h2><p>和 Roco 助手聊聊，在右侧观察每一次工具调用。</p><div className="suggestions">{questions.map((value, index) => <button key={value} onClick={() => { setQuestion(value); input.current?.focus() }}><span className="suggestion-icon">{['↗', '⌘', '◇'][index]}</span><span>{value}</span><Icon name="arrow" size={13} /></button>)}</div><div className="welcome-foot"><Icon name="code" size={13} />{config?.tools.length || 6} 个查询工具<span>·</span>多轮上下文<span>·</span>实时轨迹</div></div>}
+            {!runs.length && <div className="welcome"><div className="welcome-icon"><Icon name="chat" size={29} /><span>✦</span></div><span className="welcome-kicker">从一个好问题开始</span><h2>今天要验证哪个问题？</h2><p>和 Roco 助手聊聊，在右侧观察每一次工具调用。</p><div className="suggestions">{questions.map((value, index) => <button key={value} onClick={() => { setQuestion(value); input.current?.focus() }}><span className="suggestion-icon">{['↗', '⌘', '◇'][index]}</span><span>{value}</span><Icon name="arrow" size={13} /></button>)}</div><div className="welcome-foot"><Icon name="code" size={13} />{config?.tools.length || 7} 个工具<span>·</span>多轮上下文<span>·</span>实时轨迹</div></div>}
             {runs.map((run, index) => <article className={'turn ' + (activeRun?.id === run.id ? 'active-turn' : '')} key={run.id} onClick={() => setRunId(run.id)}><div className="user-message"><span className="speaker-label">你</span><div>{run.question}</div></div><div className="assistant-message"><span className="assistant-avatar">R</span><div className="assistant-content"><div className="assistant-label"><strong>Roco</strong><span>{detail?.model}</span>{run.done && <button className="turn-trace" onClick={() => { setRunId(run.id); setShowInspector(true) }}><Icon name="bolt" size={11} />轨迹 #{index + 1}</button>}</div>{run.answer ? <div className={'markdown ' + (run.status !== 'ok' ? 'answer-error' : '')}><Markdown remarkPlugins={[remarkGfm]}>{run.answer}</Markdown></div> : <div className="thinking"><span /><span /><span /><small>{run.events.filter(event => event.event === 'tool_call').at(-1)?.name ? `正在查询 · ${labels[run.events.filter(event => event.event === 'tool_call').at(-1)!.name!] || '工具执行中'}` : '模型正在处理问题'}</small></div>}{run.done && <div className="answer-footer"><span className={'status-dot ' + (run.status === 'ok' ? 'success' : 'warning')} />{run.status === 'ok' ? '执行完成' : run.status}<span>·</span><Icon name="clock" size={11} />{run.elapsed_seconds.toFixed(1)}s<span>·</span>{run.events.filter(event => event.event === 'tool_call').length} 次工具调用</div>}</div></div></article>)}
             <div ref={bottom} />
           </div>

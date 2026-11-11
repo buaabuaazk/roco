@@ -14,7 +14,7 @@ python -m roco_agent
 ```
 
 模型使用本机 `ZZZ_API_KEY` 环境变量通过智增增调用，默认使用 `deepseek-v4.1-flash`；可用 `--model` 或 `LLM_MODEL_ID` 覆盖。
-支持多轮追问、六个查询工具，以及 `--trace` 查看工具调用。开发阶段直接读取 BWIKI 正式 JSON。
+支持多轮追问、六个查询工具和伤害估算工具，以及 `--trace` 查看工具调用。开发阶段直接读取 BWIKI 正式 JSON。
 命令行默认将问题、工具参数、完整查询结果、模型收到的结果和最终回答保存至本地 `logs/*.jsonl`，日志由 Git 忽略。
 完整配置与限制见 [Agent 使用说明](docs/agent.md)。
 
@@ -35,7 +35,9 @@ python -m roco_data compare 喵喵 迪莫 --stat speed
 Agent 启动时载入资料，采集更新后重启生效。`roco_agent --data-dir` 和 `roco_data --json-dir` 可指定目录。
 原有 SQLite 保留为可选查询快照，显式指定 `--db data/roco.db` 时使用，见 [SQLite 查询层说明](docs/sqlite.md)。
 
-目前提供六个 Agent 工具：搜索精灵、查精灵、查技能、查询精灵可学技能、反查技能可学精灵、比较种族值。
+目前提供七个 Agent 工具：搜索精灵、查精灵、查技能、查询精灵可学技能、反查技能可学精灵、比较种族值、社区公式伤害估算。
+
+伤害计算器网页入口为 `/#damage`，用法与公式验证状态见 [伤害计算器说明](docs/damage_calculator.md)。
 工具定义、参数校验和固定执行入口已实现，见 [工具说明](docs/tools.md)。
 
 ## 两台电脑之间同步

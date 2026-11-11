@@ -22,7 +22,7 @@ class FakeModel:
 
     def complete(self, messages, tools, timeout):
         self.requests.append(deepcopy(messages))
-        assert len(tools) == 6 and timeout > 0
+        assert len(tools) == 7 and timeout > 0
         reply = self.replies.pop(0)
         if isinstance(reply, Exception):
             raise reply
