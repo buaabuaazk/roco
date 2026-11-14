@@ -4,7 +4,7 @@ import BuffEditor, {buffPayload, emptyBuffs, type CombatBuffDraft} from './BuffE
 
 type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
 const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
-type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean}
+type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean; image_url?: string | null}
 type Build = {pet_id?: number; name: string; level: string; stars: string; growth: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
@@ -43,12 +43,17 @@ function usePanel(build: Build) {
   }, [build])
   return state
 }
+function PetAvatar({pet}: {pet: Pet}) {
+  const [failed, setFailed] = useState(false)
+  return <div className="creature-avatar">{pet.image_url && !failed ? <img src={pet.image_url} alt={pet.name} width={64} height={64} referrerPolicy="no-referrer" onError={() => setFailed(true)} /> : <b aria-label="暂无精灵图片">{pet.name.slice(0, 1)}</b>}</div>
+}
+
 function CreatureCard({side, pets, build, onChange, preview}: {side: string; pets: Pet[]; build: Build; onChange: (value: Build) => void; preview: ReturnType<typeof usePanel>}) {
   const count = Object.values(build.ivs).filter(value => Number(value) > 0).length
   const pet = pets.find(row => row.pet_id === build.pet_id)
   return <section className="damage-card creature-card"><div className="damage-card-heading"><h2>{side}</h2><span>{build.level || '—'}级 · {build.stars || '—'}星 · 成长{build.growth || '—'}</span></div>
     <label className="damage-skill-label" htmlFor={`${side}-pet`}>选择{side}精灵</label><input id={`${side}-pet`} className="pet-search-input" aria-label={`${side}精灵`} list={`${side}-pets`} placeholder="输入精灵名称并从列表选择" value={build.name} onChange={e => {const next = pets.find(row => row.name === e.target.value); onChange({...build, name: e.target.value, pet_id: next?.pet_id, level: next?.level_editable ? build.level : '60'})}} autoComplete="off" /><datalist id={`${side}-pets`}>{pets.map(row => <option value={row.name} key={row.pet_id}>{row.types.join(' / ')}</option>)}</datalist>
-    {pet && <div className="creature-identity"><strong>{pet.name}</strong><span>{pet.types.join(' / ')}</span></div>}
+    {pet && <div className="creature-identity"><div className="creature-name"><PetAvatar key={pet.pet_id} pet={pet} /><strong>{pet.name}</strong></div><span>{pet.types.join(' / ')}</span></div>}
     {!pet && <p className="damage-input-note">选择具体精灵后，读取种族值并换算面板。</p>}
     {pet?.level_editable && <label className="damage-field cultivation-fields"><span>实际入场等级</span><div><input aria-label={`${side}入场等级`} type="number" min={1} max={100} step={1} required value={build.level} onChange={e => onChange({...build, level: e.target.value})} /><em>级</em></div><small>按特性生效后的实际等级填写，用于换算面板。</small></label>}
     <div className="damage-field-grid cultivation-fields"><label className="damage-field"><span>星级</span><div><input aria-label={`${side}星级`} type="number" min={0} max={10} step={1} required value={build.stars} onChange={e => onChange({...build, stars: e.target.value})} /><em>星</em></div></label><label className="damage-field"><span>成长等级</span><div><input aria-label={`${side}成长等级`} type="number" min={0} max={100} step={1} required value={build.growth} onChange={e => onChange({...build, growth: e.target.value})} /></div></label></div>

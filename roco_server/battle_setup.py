@@ -4,6 +4,7 @@ from math import floor
 from struct import pack, unpack
 import re
 from typing import Annotated, Literal
+from urllib.parse import quote
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
@@ -70,6 +71,12 @@ def level_editable(pet):
         member.get('name') in names
         for branch in pet.get('evolution_branches', [])
         for member in branch.get('chain', []))
+
+
+def pet_image_url(pet):
+    images = pet['profile'].get('image') or {}
+    filename = images.get('head') or images.get('illustration')
+    return 'https://wiki.biligame.com/nrc/Special:Redirect/file/' + quote(filename, safe='') if filename else None
 
 
 def f32(value):
