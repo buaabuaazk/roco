@@ -68,6 +68,44 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
     {preview.error && <div className="data-error" role="alert">{preview.error}</div>}
   </section>
 }
+function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, attacker, defender}: {
+  index: number; skills: Skill[]; ids: string[]; onChange: (value: string) => void; loading: boolean;
+  hasAttacker: boolean; ready: boolean; attacker: Build; defender: Build
+}) {
+  const skill = skills.find(row => String(row.skill_id) === ids[index])
+  const [customPower, setCustomPower] = useState('')
+  const [overridePower, setOverridePower] = useState(false)
+  const [error, setError] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [answer, setAnswer] = useState<DamageAnswer>()
+  useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill?.skill_id, skill?.power])
+  const validPower = !overridePower || (customPower !== '' && Number.isFinite(Number(customPower)) && Number(customPower) >= 0 && Number(customPower) <= 100000)
+  const calculationKey = ready && skill && validPower ? JSON.stringify({attacker: payload(attacker), defender: payload(defender), skill_id: skill.skill_id, power_override: overridePower ? Number(customPower) : null}) : null
+  useEffect(() => {
+    setAnswer(undefined); setError(''); setBusy(calculationKey !== null)
+    if (calculationKey === null) return
+    const controller = new AbortController()
+    const timer = setTimeout(() => {
+      request<DamageAnswer>('matchup', JSON.parse(calculationKey), controller.signal)
+        .then(result => {if (!controller.signal.aborted) setAnswer(result)})
+        .catch(e => {if (!controller.signal.aborted) setError(e.message)})
+        .finally(() => {if (!controller.signal.aborted) setBusy(false)})
+    }, 200)
+    return () => {clearTimeout(timer); controller.abort()}
+  }, [calculationKey])
+  const label = `技能${index + 1}`
+  function learning(row: Learning) {return [({level: '升级', machine: '技能石', blood: '血脉', legendary: '传说'} as Record<string,string>)[row.source] || row.source, row.level != null ? `Lv.${row.level}` : '', row.blood || '', row.requires || ''].filter(Boolean).join(' · ')}
+  return <section className="skill-slot" aria-label={`${label}配置与伤害`}>
+    <label className="damage-skill-label" htmlFor={`battle-skill-${index}`}>{label}</label>
+    <select id={`battle-skill-${index}`} aria-label={label} value={ids[index]} disabled={!hasAttacker || loading} onChange={e => onChange(e.target.value)}><option value="">{hasAttacker ? '选择技能（可留空）' : '先选择攻击方精灵'}</option>{skills.map(row => <option key={row.skill_id} value={row.skill_id} disabled={ids.some((id, slot) => slot !== index && id === String(row.skill_id))}>{row.name} · {row.element} · {row.damage_class} · 威力{row.power}</option>)}</select>
+    {skill && <><div className="skill-meta">{skill.element} · {skill.damage_class} · 基础威力{skill.power}</div><label className="power-override"><input aria-label={`${label}调整基础威力`} type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label={`${label}本次基础威力`} type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}</>}
+    <div className="skill-damage" aria-live="polite" aria-busy={busy}>{answer ? <><small>{answer.combo && answer.combo.hits > 1 ? '连击总伤害' : '预计伤害'}</small><strong>{answer.estimated_damage.toLocaleString('zh-CN', {maximumFractionDigits: 6})}</strong><span>占满血 {answer.damage_percent?.toFixed(1)}% · {answer.estimated_ko ? '估算可击倒' : '估算未击倒'}</span>{answer.combo && answer.combo.hits > 1 && <span>单次{answer.combo.single_damage} × {answer.combo.hits}次连击</span>}</> : <p>{busy ? '正在自动计算…' : skill ? '完成双方配置后自动计算' : '选择技能后自动显示伤害'}</p>}</div>
+    {!validPower && <div className="data-error" role="alert">{label}基础威力请填0～100000的有效数值。</div>}
+    {error && <div className="data-error" role="alert">{label}：{error}</div>}
+    {skill && <details className="skill-calculation-details"><summary>技能效果与计算过程</summary><p>{skill.description}</p><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small>{answer && <DamageResult answer={answer} autoScroll={false} />}</details>}
+  </section>
+}
+
 export default function PetBattleForm() {
   const [pets, setPets] = useState<Pet[]>([])
   const [attacker, setAttacker] = useState(emptyBuild)
@@ -75,14 +113,8 @@ export default function PetBattleForm() {
   const attackPanel = usePanel(attacker), defensePanel = usePanel(defender)
   const [skills, setSkills] = useState<Skill[]>([])
   const [skillsLoading, setSkillsLoading] = useState(false)
-  const [skillId, setSkillId] = useState('')
-  const [customPower, setCustomPower] = useState('')
-  const [overridePower, setOverridePower] = useState(false)
+  const [skillIds, setSkillIds] = useState<string[]>(['', '', '', ''])
   const [error, setError] = useState('')
-  const [calculationError, setCalculationError] = useState('')
-  const [busy, setBusy] = useState(false)
-  const [answer, setAnswer] = useState<DamageAnswer>()
-  const skill = skills.find(row => String(row.skill_id) === skillId)
   useEffect(() => {
     const controller = new AbortController()
     request<Pet[]>('pets', undefined, controller.signal).then(setPets).catch(e => {if (!controller.signal.aborted) setError(e.message)})
@@ -96,39 +128,18 @@ export default function PetBattleForm() {
     request<Skill[]>(`pets/${attacker.pet_id}/skills`, undefined, controller.signal).then(rows => {
       if (controller.signal.aborted) return
       setSkills(rows)
-      setSkillId(previous => rows.some(row => String(row.skill_id) === previous) ? previous : '')
+      setSkillIds(previous => previous.map(id => rows.some(row => String(row.skill_id) === id) ? id : ''))
     }).catch(e => {if (!controller.signal.aborted) setError(e.message)}).finally(() => {if (!controller.signal.aborted) setSkillsLoading(false)})
     return () => controller.abort()
   }, [attacker.pet_id])
-  useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill])
-  const ready = !!(skill && attacker.pet_id && defender.pet_id && !skillsLoading && attackPanel.panel?.pet_id === attacker.pet_id && defensePanel.panel?.pet_id === defender.pet_id && !attackPanel.loading && !defensePanel.loading && !attackPanel.error && !defensePanel.error && !buildError(attacker) && !buildError(defender))
-  const validPower = !overridePower || (customPower !== '' && Number.isFinite(Number(customPower)) && Number(customPower) >= 0 && Number(customPower) <= 100000)
-  const calculationKey = ready && validPower ? JSON.stringify({attacker: payload(attacker), defender: payload(defender), skill_id: Number(skillId), power_override: overridePower ? Number(customPower) : null}) : null
-  useEffect(() => {
-    setAnswer(undefined); setCalculationError(''); setBusy(calculationKey !== null)
-    if (calculationKey === null) return
-    const controller = new AbortController()
-    const timer = setTimeout(() => {
-      request<DamageAnswer>('matchup', JSON.parse(calculationKey), controller.signal)
-        .then(result => {if (!controller.signal.aborted) setAnswer(result)})
-        .catch(e => {if (!controller.signal.aborted) setCalculationError(e.message)})
-        .finally(() => {if (!controller.signal.aborted) setBusy(false)})
-    }, 200)
-    return () => {clearTimeout(timer); controller.abort()}
-  }, [calculationKey])
-  const attackKey = skill?.damage_class === '物攻' ? 'atk' : 'spa', defenseKey = skill?.damage_class === '物攻' ? 'def' : 'spd'
-  const stab = skill && attackPanel.panel?.types.includes(skill.element) ? 1.25 : 1
-  const type = skill && defensePanel.panel ? Object.values(defensePanel.panel.type_effectiveness).flat().find(row => row.type === skill.element)?.multiplier ?? 1 : 1
-  function learning(row: Learning) {return [({level: '升级', machine: '技能石', blood: '血脉', legendary: '传说'} as Record<string,string>)[row.source] || row.source, row.level != null ? `Lv.${row.level}` : '', row.blood || '', row.requires || ''].filter(Boolean).join(' · ')}
-  return <div className="damage-layout pet-battle-layout"><form onSubmit={event => event.preventDefault()}><fieldset>
+  const ready = !!(attacker.pet_id && defender.pet_id && !skillsLoading && attackPanel.panel?.pet_id === attacker.pet_id && defensePanel.panel?.pet_id === defender.pet_id && !attackPanel.loading && !defensePanel.loading && !attackPanel.error && !defensePanel.error && !buildError(attacker) && !buildError(defender))
+  return <div className="damage-layout pet-battle-layout multi-skill-layout"><form onSubmit={event => event.preventDefault()}><fieldset>
     <div className="creature-grid"><CreatureCard side="攻击方" pets={pets} build={attacker} onChange={setAttacker} preview={attackPanel} /><CreatureCard side="受击方" pets={pets} build={defender} onChange={setDefender} preview={defensePanel} /></div>
-    <section className="damage-card"><div className="damage-card-heading"><h2>攻击技能</h2><span>{skillsLoading ? '读取技能池…' : `${skills.length} 个可选攻击技能`}</span></div><label className="damage-skill-label" htmlFor="battle-skill">从攻击方技能池选择</label><select id="battle-skill" value={skillId} disabled={!attacker.pet_id || skillsLoading} required onChange={e => setSkillId(e.target.value)}><option value="">{attacker.pet_id ? '选择本次攻击技能' : '先选择攻击方精灵'}</option>{skills.map(row => <option key={row.skill_id} value={row.skill_id}>{row.name} · {row.element} · {row.damage_class} · 威力{row.power}</option>)}</select>
-      {skill && <><div className="damage-skill-note"><strong>{skill.name} · {skill.element} · {skill.damage_class}</strong><p>{skill.description}</p><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small></div><div className="matchup-auto"><div><span>{skill.damage_class === '物攻' ? '物攻 → 物防' : '魔攻 → 魔防'}</span><strong>{attackPanel.panel?.stats[attackKey] ?? '—'} → {defensePanel.panel?.stats[defenseKey] ?? '—'}</strong></div><div><span>本系倍率</span><strong>×{stab}</strong></div><div><span>克制倍率</span><strong>×{type}</strong></div></div><label className="power-override"><input type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件手动调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label="本次技能基础威力" type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}<p className="damage-input-note">本系与克制读取双方属性及本地克制表。血脉、传说学习条件和条件变威力请按本次对战确认。</p></>}
+    <section className="damage-card"><div className="damage-card-heading"><h2>攻击技能对比</h2><span>{skillsLoading ? '读取技能池…' : `${skills.length} 个可选攻击技能 · 最多4个`}</span></div>
+      <div className="skill-comparison-grid">{skillIds.map((_, index) => <SkillSlot key={index} index={index} skills={skills} ids={skillIds} onChange={id => setSkillIds(previous => previous.map((value, slot) => slot === index ? id : value))} loading={skillsLoading} hasAttacker={!!attacker.pet_id} ready={ready} attacker={attacker} defender={defender} />)}</div>
+      <p className="damage-input-note">各技能按同一组双方配置独立计算。血脉、传说学习条件和变威力按本次对战确认。</p>
     </section>
     {error && <div className="data-error" role="alert">{error}</div>}
-    {calculationError && <div className="data-error" role="alert">{calculationError}</div>}
-    {!validPower && <div className="data-error" role="alert">本次基础威力请填0～100000的有效数值。</div>}
-    {busy && <p className="damage-input-note" role="status">正在自动计算…</p>}
-    {!ready && <p className="damage-input-note">请完成双方精灵、个体与性格配置，并选择一个攻击技能。</p>}
-  </fieldset></form><DamageResult answer={answer} busy={busy} autoScroll={false} /></div>
+    {!ready && <p className="damage-input-note">请完成双方精灵、个体与性格配置，选中的技能会自动显示伤害。</p>}
+  </fieldset></form></div>
 }
