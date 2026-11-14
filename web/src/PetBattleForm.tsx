@@ -5,11 +5,11 @@ import BuffEditor, {buffPayload, emptyBuffs, type CombatBuffDraft} from './BuffE
 type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
 const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
 type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean}
-type Build = {pet_id?: number; name: string; level: string; stars: string; growth: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; hp_percent: string; buffs: CombatBuffDraft}
+type Build = {pet_id?: number; name: string; level: string; stars: string; growth: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
 type Skill = {skill_id: number; name: string; power: number; element: string; damage_class: string; description: string; learning: Learning[]}
-const emptyBuild = (): Build => ({name: '', level: '60', stars: '5', growth: '50', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, hp_percent: '100', buffs: emptyBuffs()})
+const emptyBuild = (): Build => ({name: '', level: '60', stars: '5', growth: '50', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, buffs: emptyBuffs()})
 async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const response = await fetch('/api/damage/' + path, {method: body === undefined ? 'GET' : 'POST', signal, headers: body === undefined ? {} : {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)})
   const value = await response.json()
@@ -26,11 +26,10 @@ function buildError(build: Build) {
   if (build.nature_plus && build.nature_plus === build.nature_minus) return '性格的正面和负面能力需选择不同项。'
   if (Object.values(build.ivs).some(value => value === '' || !Number.isInteger(Number(value)) || Number(value) < 0 || Number(value) > 60)) return '个体值请填0～60的整数。'
   if (Object.values(build.ivs).filter(value => Number(value) > 0).length > 3) return '当前社区规则最多设置3项非零个体。'
-  if (build.hp_percent === '' || Number(build.hp_percent) < 1 || Number(build.hp_percent) > 100) return '当前生命比例请填1～100%。'
   return ''
 }
 function payload(build: Build) {
-  return {pet_id: build.pet_id, level: Number(build.level), stars: Number(build.stars), growth: Number(build.growth), ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: build.nature_plus || null, nature_minus: build.nature_minus || null, hp_percent: Number(build.hp_percent), buffs: buffPayload(build.buffs)}
+  return {pet_id: build.pet_id, level: Number(build.level), stars: Number(build.stars), growth: Number(build.growth), ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: build.nature_plus || null, nature_minus: build.nature_minus || null, buffs: buffPayload(build.buffs)}
 }
 function usePanel(build: Build) {
   const [state, setState] = useState<{panel?: Panel; error: string; loading: boolean}>({error: '', loading: false})
@@ -57,7 +56,6 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
     <div className="iv-table"><div className="iv-row iv-head"><span>能力</span><span>种族</span><span>个体</span><span>估算面板</span></div>{stats.map(([key, title]) => <div className="iv-row" key={key}><span>{title}</span><span>{preview.panel?.base_stats[key] ?? '—'}</span><div className="iv-control"><input aria-label={`${side}${title}个体`} type="number" min={0} max={60} step={1} required value={build.ivs[key]} onChange={e => onChange({...build, ivs: {...build.ivs, [key]: e.target.value}})} /><button type="button" className="iv-max" aria-label={`${side}${title}个体拉满`} title="填满60" disabled={count >= 3 && Number(build.ivs[key]) === 0} onClick={() => onChange({...build, ivs: {...build.ivs, [key]: '60'}})}>拉满</button></div><strong>{preview.loading ? '…' : preview.panel?.stats[key] ?? '—'}</strong></div>)}</div>
     <p className="damage-input-note">个体0～60整数 · 拉满填60 · 已设置 {count}/3 项 · 性格按所选增减项换算</p>
     <BuffEditor side={side} value={build.buffs} onChange={buffs => onChange({...build, buffs})} />
-    {side === '受击方' && <label className="damage-field current-hp-field"><span>当前生命比例</span><div><input aria-label="受击方当前生命比例" type="number" min={1} max={100} step={1} required value={build.hp_percent} onChange={e => onChange({...build, hp_percent: e.target.value})} /><em>%</em></div><small>{preview.panel ? `${preview.panel.current_hp} / ${preview.panel.stats.hp} 点生命` : '根据估算最大生命换算当前生命'}</small></label>}
     {preview.panel?.feature.name && <details className="creature-feature"><summary>特性：{preview.panel.feature.name}</summary><p>{preview.panel.feature.description}</p><small>本次生效效果通过下方战斗Buff填写。</small></details>}
     {preview.error && <div className="data-error" role="alert">{preview.error}</div>}
   </section>
