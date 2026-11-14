@@ -87,11 +87,15 @@ export default function PetBattleForm() {
     return () => controller.abort()
   }, [])
   useEffect(() => {
-    setSkills([]); setSkillId(''); setSkillsLoading(false)
+    setSkills([]); setSkillsLoading(false)
     if (!attacker.pet_id) return
     const controller = new AbortController()
     setSkillsLoading(true)
-    request<Skill[]>(`pets/${attacker.pet_id}/skills`, undefined, controller.signal).then(setSkills).catch(e => {if (!controller.signal.aborted) setError(e.message)}).finally(() => {if (!controller.signal.aborted) setSkillsLoading(false)})
+    request<Skill[]>(`pets/${attacker.pet_id}/skills`, undefined, controller.signal).then(rows => {
+      if (controller.signal.aborted) return
+      setSkills(rows)
+      setSkillId(previous => rows.some(row => String(row.skill_id) === previous) ? previous : '')
+    }).catch(e => {if (!controller.signal.aborted) setError(e.message)}).finally(() => {if (!controller.signal.aborted) setSkillsLoading(false)})
     return () => controller.abort()
   }, [attacker.pet_id])
   useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill])
