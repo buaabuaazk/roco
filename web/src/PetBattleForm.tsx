@@ -4,11 +4,11 @@ import DamageResult, {type DamageAnswer} from './DamageResult'
 type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
 const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
 type Pet = {pet_id: number; name: string; types: string[]}
-type Build = {pet_id?: number; name: string; stars: string; growth: string; nature: string; ivs: Record<Stat, string>; hp_percent: string}
+type Build = {pet_id?: number; name: string; stars: string; growth: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; hp_percent: string}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
 type Skill = {skill_id: number; name: string; power: number; element: string; damage_class: string; description: string; learning: Learning[]}
-const emptyBuild = (): Build => ({name: '', stars: '5', growth: '50', nature: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, hp_percent: '100'})
+const emptyBuild = (): Build => ({name: '', stars: '5', growth: '50', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, hp_percent: '100'})
 const modifiers = [
   ['flat_power_bonus', '固定威力加成', '', -100000, 100000], ['power_percent_bonus', '本次威力加成合计', '%', -100, 1000],
   ['attack_boost', '攻击提升', '%', 0, 1000], ['attack_reduction', '攻击降低', '%', 0, 1000],
@@ -26,14 +26,15 @@ function buildError(build: Build) {
   if (build.stars === '' || !Number.isInteger(Number(build.stars)) || Number(build.stars) < 0 || Number(build.stars) > 10) return '星级请填0～10的整数。'
   if (build.growth === '' || !Number.isInteger(Number(build.growth)) || Number(build.growth) < 0 || Number(build.growth) > 100) return '成长等级请填0～100的整数。'
   if (Number(build.growth) < Number(build.stars) * 10) return '成长等级需达到星级的10倍。'
+  if (!!build.nature_plus !== !!build.nature_minus) return '请选择性格的正面和负面能力，或两项均选无修正。'
+  if (build.nature_plus && build.nature_plus === build.nature_minus) return '性格的正面和负面能力需选择不同项。'
   if (Object.values(build.ivs).some(value => value === '' || !Number.isInteger(Number(value)) || Number(value) < 0 || Number(value) > 10)) return '个体值请填0～10的整数。'
   if (Object.values(build.ivs).filter(value => Number(value) > 0).length > 3) return '当前社区规则最多设置3项非零个体。'
   if (build.hp_percent === '' || Number(build.hp_percent) < 1 || Number(build.hp_percent) > 100) return '当前生命比例请填1～100%。'
   return ''
 }
 function payload(build: Build) {
-  const [plus, minus] = build.nature.split(':')
-  return {pet_id: build.pet_id, stars: Number(build.stars), growth: Number(build.growth), ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: plus || null, nature_minus: minus || null, hp_percent: Number(build.hp_percent)}
+  return {pet_id: build.pet_id, stars: Number(build.stars), growth: Number(build.growth), ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: build.nature_plus || null, nature_minus: build.nature_minus || null, hp_percent: Number(build.hp_percent)}
 }
 function usePanel(build: Build) {
   const [state, setState] = useState<{panel?: Panel; error: string; loading: boolean}>({error: '', loading: false})
@@ -55,7 +56,7 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
     {pet && <div className="creature-identity"><strong>{pet.name}</strong><span>{pet.types.join(' / ')}</span></div>}
     {!pet && <p className="damage-input-note">选择具体精灵后，读取种族值并换算面板。</p>}
     <div className="damage-field-grid cultivation-fields"><label className="damage-field"><span>星级</span><div><input aria-label={`${side}星级`} type="number" min={0} max={10} step={1} required value={build.stars} onChange={e => onChange({...build, stars: e.target.value})} /><em>星</em></div></label><label className="damage-field"><span>成长等级</span><div><input aria-label={`${side}成长等级`} type="number" min={0} max={100} step={1} required value={build.growth} onChange={e => onChange({...build, growth: e.target.value})} /></div></label></div>
-    <label className="damage-skill-label" htmlFor={`${side}-nature`}>性格修正</label><select id={`${side}-nature`} value={build.nature} onChange={e => onChange({...build, nature: e.target.value})}><option value="">无修正</option>{stats.flatMap(([plus, pLabel]) => stats.filter(([minus]) => minus !== plus).map(([minus, mLabel]) => <option key={plus+minus} value={`${plus}:${minus}`}>{pLabel}↑{10 + 2 * Number(build.stars)}% / {mLabel}↓10%</option>))}</select>
+    <div className="damage-field-grid cultivation-fields">{(['nature_plus', 'nature_minus'] as const).map(key => <label className="damage-field" key={key}><span>性格{key === 'nature_plus' ? '正面提升' : '负面降低'}</span><select aria-label={`${side}性格${key === 'nature_plus' ? '正面' : '负面'}`} value={build[key]} onChange={e => onChange({...build, [key]: e.target.value as Stat | ''})}><option value="">无修正</option>{stats.map(([stat, title]) => <option key={stat} value={stat} disabled={stat === build[key === 'nature_plus' ? 'nature_minus' : 'nature_plus']}>{title}{key === 'nature_plus' ? `↑${10 + 2 * Number(build.stars)}%` : '↓10%'}</option>)}</select></label>)}</div>
     <div className="iv-table"><div className="iv-row iv-head"><span>能力</span><span>种族</span><span>个体</span><span>估算面板</span></div>{stats.map(([key, title]) => <div className="iv-row" key={key}><span>{title}</span><span>{preview.panel?.base_stats[key] ?? '—'}</span><input aria-label={`${side}${title}个体`} type="number" min={0} max={10} step={1} required value={build.ivs[key]} onChange={e => onChange({...build, ivs: {...build.ivs, [key]: e.target.value}})} /><strong>{preview.loading ? '…' : preview.panel?.stats[key] ?? '—'}</strong></div>)}</div>
     <p className="damage-input-note">个体采用0～10刻度 · 已设置 {count}/3 项 · 性格按所选增减项换算</p>
     {side === '受击方' && <label className="damage-field current-hp-field"><span>当前生命比例</span><div><input aria-label="受击方当前生命比例" type="number" min={1} max={100} step={1} required value={build.hp_percent} onChange={e => onChange({...build, hp_percent: e.target.value})} /><em>%</em></div><small>{preview.panel ? `${preview.panel.current_hp} / ${preview.panel.stats.hp} 点生命` : '根据估算最大生命换算当前生命'}</small></label>}
