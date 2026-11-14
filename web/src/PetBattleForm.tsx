@@ -17,7 +17,7 @@ async function request<T>(path: string, body?: unknown, signal?: AbortSignal): P
   return value
 }
 function buildError(build: Build) {
-  if (Object.entries(build.buffs).some(([key, value]) => value === '' || !Number.isFinite(Number(value)) || (['attack', 'defense', 'combo'].includes(key) && !Number.isInteger(Number(value))))) return 'Buff层数和连击增减请填整数，威力请填有效数值。'
+  if (Object.values(build.buffs).some(value => value === '' || !Number.isInteger(Number(value)))) return 'Buff层数和连击增减请填整数。'
   if (build.level === '' || !Number.isInteger(Number(build.level)) || Number(build.level) < 1 || Number(build.level) > 100) return '入场等级请填1～100的整数。'
   if (build.stars === '' || !Number.isInteger(Number(build.stars)) || Number(build.stars) < 0 || Number(build.stars) > 10) return '星级请填0～10的整数。'
   if (build.growth === '' || !Number.isInteger(Number(build.growth)) || Number(build.growth) < 0 || Number(build.growth) > 100) return '成长等级请填0～100的整数。'

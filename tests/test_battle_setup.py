@@ -55,10 +55,11 @@ class BattleSetupTests(unittest.TestCase):
                          buffs=[{'kind': 'power_boost', 'side': 'attacker', 'value': 1}] * 33)
 
     def test_card_buffs_and_combo_only_on_combo_skills(self):
-        body = MatchupInput(attacker=PetSetup(pet_id=1, buffs={'attack': 3, 'combo': 2}),
+        body = MatchupInput(attacker=PetSetup(pet_id=1, buffs={'attack': 3, 'combo': 2, 'power': 3}),
                             defender=PetSetup(pet_id=2, buffs={'defense': -2, 'attack': 9, 'combo': 4}), skill_id=701)
         plain = matchup(self.queries, body)
-        self.assertEqual(plain['resolved_modifiers'], {'attack_boost': .3, 'defense_reduction': .2})
+        self.assertEqual(plain['resolved_modifiers'], {'attack_boost': .3, 'defense_reduction': .2, 'flat_power_bonus': 30})
+        self.assertEqual(plain['inputs']['flat_power_bonus'], 30)
         self.assertEqual(plain['combo']['hits'], 1)
         self.assertFalse(plain['buffs'][-2]['applied'])
         self.assertFalse(plain['buffs'][-1]['applied'])

@@ -10,18 +10,20 @@ def buff(kind, value, layers=1, side='attacker', **extra):
 
 class BuffTests(unittest.TestCase):
     def test_card_buffs_fixed_ten_percent_per_layer(self):
-        attack = CombatBuffs(attack=3, defense=-2, power_percent=25, power_flat=10)
+        attack = CombatBuffs(attack=3, defense=-2, power=3)
         defense = CombatBuffs(attack=5, defense=-4)
         totals, details = resolve_buffs(attack.effects('attacker') + defense.effects('defender'), 'spa', 'spd', {})
-        self.assertEqual(totals, {'attack_boost': .3, 'defense_reduction': .4,
-                                 'power_percent_bonus': .25, 'flat_power_bonus': 10})
+        self.assertEqual(totals, {'attack_boost': .3, 'defense_reduction': .4, 'flat_power_bonus': 30})
         self.assertEqual(details[0]['value'], 10)
         self.assertEqual(details[0]['layers'], 3)
         for fields in ({'attack': .5}, {'defense': True}, {'combo': 101}, {'attack': -101},
-                       {'power_percent': float('nan')}, {'power_flat': float('inf')},
-                       {'power_percent': -101}, {'attack_value': 20}):
+                       {'power': float('nan')}, {'power': float('inf')}, {'power': True}, {'power': 1.5},
+                       {'power': -101}, {'power': 101}, {'power_percent': 20}, {'attack_value': 20}):
             with self.subTest(fields=fields), self.assertRaises(ValidationError):
                 CombatBuffs(**fields)
+        negative, _ = resolve_buffs(CombatBuffs(power=-2).effects('attacker'), 'spa', 'spd', {})
+        self.assertEqual(negative['flat_power_bonus'], -20)
+        self.assertEqual(CombatBuffs(power=0).effects('attacker'), [])
 
     def test_stat_channels_sum_and_inactive_rows(self):
         rows = [buff('dual_attack_boost', 20, 3), buff('spa_boost', 10),

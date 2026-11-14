@@ -15,8 +15,7 @@ class CombatBuffs(BaseModel):
     attack: int = Field(default=0, strict=True, ge=-100, le=100)
     defense: int = Field(default=0, strict=True, ge=-100, le=100)
     combo: int = Field(default=0, strict=True, ge=-100, le=100)
-    power_percent: float = Field(default=0, strict=True, ge=-100, le=1000, allow_inf_nan=False)
-    power_flat: float = Field(default=0, strict=True, ge=-100000, le=100000, allow_inf_nan=False)
+    power: int = Field(default=0, strict=True, ge=-100, le=100)
 
     def effects(self, side):
         rows = []
@@ -25,11 +24,9 @@ class CombatBuffs(BaseModel):
             if layers:
                 rows.append(BuffInput(side=side, kind=kind + ('_boost' if layers > 0 else '_reduction'),
                                       value=10, layers=abs(layers)))
-        if self.power_percent:
-            rows.append(BuffInput(side=side, kind='power_boost' if self.power_percent > 0 else 'power_reduction',
-                                  value=abs(self.power_percent)))
-        if self.power_flat:
-            rows.append(BuffInput(side=side, kind='power_flat', value=self.power_flat))
+        if self.power:
+            rows.append(BuffInput(side=side, kind='power_flat', value=10 if self.power > 0 else -10,
+                                  layers=abs(self.power)))
         return rows
 
 
