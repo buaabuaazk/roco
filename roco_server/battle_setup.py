@@ -132,6 +132,7 @@ def pet_skills(queries, pet_id):
                 {'source': source, **{key: row[key] for key in ('level', 'blood', 'requires', 'stage') if key in row}})
     return [{'skill_id': row['skill_id'], 'name': row['name'], 'power': row['power'],
              'element': row.get('element'), 'damage_class': row.get('damage_class'),
+             'energy': row.get('energy'), 'image_url': IMAGE_URLS.get(row.get('icon')),
              'description': row.get('desc', ''), 'base_hits': base_hits(row), 'learning': learning[row['skill_id']]}
             for row in sorted(queries.skills.values(), key=lambda value: (value['name'], value['skill_id']))
             if row['skill_id'] in learning and row.get('category') == '攻击'

@@ -1,4 +1,4 @@
-"""解析本地精灵图片文件名为BWIKI图片直链，仅请求地址元数据。"""
+"""解析本地精灵、技能图片文件名为BWIKI图片直链，仅请求地址元数据。"""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -54,8 +54,11 @@ def main():
     fallback = {row['illustration'] for row in images
                 if row.get('head') not in urls and row.get('illustration') not in urls and row.get('illustration')}
     resolve(fallback, urls)
+    skill_icons = {json.loads(path.read_text(encoding='utf-8')).get('icon')
+                   for path in (args.data_dir / 'skills').glob('*.json')} - {None, ''}
+    resolve(skill_icons, urls)
     result = {'source': API, 'updated_at': datetime.now(timezone.utc).isoformat(),
-              'urls': dict(sorted(urls.items())), 'missing': sorted((primary | fallback) - urls.keys())}
+              'urls': dict(sorted(urls.items())), 'missing': sorted((primary | fallback | skill_icons) - urls.keys())}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.output.with_suffix('.tmp')
     temporary.write_text(json.dumps(result, ensure_ascii=False, indent=4) + '\n', encoding='utf-8')

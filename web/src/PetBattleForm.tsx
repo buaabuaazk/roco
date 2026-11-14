@@ -9,7 +9,7 @@ type Pet = {pet_id: number; name: string; types: string[]; level_editable: boole
 type Build = {pet_id?: number; name: string; level: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
-type Skill = {skill_id: number; name: string; power: number; element: string; damage_class: string; description: string; learning: Learning[]}
+type Skill = {skill_id: number; name: string; power: number; energy?: number | null; image_url?: string | null; element: string; damage_class: string; description: string; learning: Learning[]}
 const emptyBuild = (): Build => ({name: '', level: '60', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, buffs: emptyBuffs()})
 async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const response = await fetch('/api/damage/' + path, {method: body === undefined ? 'GET' : 'POST', signal, headers: body === undefined ? {} : {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)})
@@ -68,6 +68,10 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
     {preview.error && <div className="data-error" role="alert">{preview.error}</div>}
   </section>
 }
+function SkillIcon({skill}: {skill: Skill}) {
+  const [failed, setFailed] = useState(false)
+  return <div className="skill-icon">{skill.image_url && !failed ? <img src={skill.image_url} alt={`${skill.name}图标`} width={64} height={64} referrerPolicy="no-referrer" onError={() => setFailed(true)} /> : <span>{skill.name.slice(0, 1)}</span>}</div>
+}
 function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, attacker, defender}: {
   index: number; skills: Skill[]; ids: string[]; onChange: (value: string) => void; loading: boolean;
   hasAttacker: boolean; ready: boolean; attacker: Build; defender: Build
@@ -98,11 +102,15 @@ function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, a
   return <section className="skill-slot" aria-label={`${label}配置与伤害`}>
     <label className="damage-skill-label" htmlFor={`battle-skill-${index}`}>{label}</label>
     <select id={`battle-skill-${index}`} aria-label={label} value={ids[index]} disabled={!hasAttacker || loading} onChange={e => onChange(e.target.value)}><option value="">{hasAttacker ? '选择技能（可留空）' : '先选择攻击方精灵'}</option>{skills.map(row => <option key={row.skill_id} value={row.skill_id} disabled={ids.some((id, slot) => slot !== index && id === String(row.skill_id))}>{row.name} · {row.element} · {row.damage_class} · 威力{row.power}</option>)}</select>
-    {skill && <><div className="skill-meta">{skill.element} · {skill.damage_class} · 基础威力{skill.power}</div><label className="power-override"><input aria-label={`${label}调整基础威力`} type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label={`${label}本次基础威力`} type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}</>}
-    <div className="skill-damage" aria-live="polite" aria-busy={busy}>{answer ? <><small>{answer.combo && answer.combo.hits > 1 ? '连击总伤害' : '预计伤害'}</small><strong>{answer.estimated_damage.toLocaleString('zh-CN', {maximumFractionDigits: 6})}</strong><span>占满血 {answer.damage_percent?.toFixed(1)}% · {answer.estimated_ko ? '估算可击倒' : '估算未击倒'}</span>{answer.combo && answer.combo.hits > 1 && <span>单次{answer.combo.single_damage} × {answer.combo.hits}次连击</span>}</> : <p>{busy ? '正在自动计算…' : skill ? '完成双方配置后自动计算' : '选择技能后自动显示伤害'}</p>}</div>
+    {skill ? <div className="skill-summary">
+      <SkillIcon key={skill.skill_id} skill={skill} />
+      <div className="skill-summary-body"><div className="skill-summary-heading"><h3>{skill.name}</h3><span className="skill-element">{skill.element}</span></div><div className="skill-meta">{skill.energy != null && <span>能量: {skill.energy}</span>}<span>{skill.damage_class}</span><span>威力: {overridePower && validPower ? customPower : skill.power}</span></div><p className="skill-description">✦ {skill.description || '效果资料待补齐'}</p></div>
+      <div className="skill-damage" aria-live="polite" aria-busy={busy} aria-label={`${label}预计伤害`}>{answer ? <><strong>{answer.estimated_damage.toLocaleString('zh-CN', {maximumFractionDigits: 6})}</strong><span>{answer.damage_percent?.toFixed(1)}%</span></> : <span>{busy ? '计算中…' : '待配置'}</span>}</div>
+      {answer?.combo && answer.combo.hits > 1 && <small className="skill-combo-note">连击总伤害 · 单次{answer.combo.single_damage} × {answer.combo.hits}次</small>}
+    </div> : <p className="skill-empty">选择技能后自动显示伤害</p>}
     {!validPower && <div className="data-error" role="alert">{label}基础威力请填0～100000的有效数值。</div>}
     {error && <div className="data-error" role="alert">{label}：{error}</div>}
-    {skill && <details className="skill-calculation-details"><summary>技能效果与计算过程</summary><p>{skill.description}</p><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small>{answer && <DamageResult answer={answer} autoScroll={false} />}</details>}
+    {skill && <details className="skill-calculation-details"><summary>调整威力与计算详情</summary><label className="power-override"><input aria-label={`${label}调整基础威力`} type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label={`${label}本次基础威力`} type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}<small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small>{answer && <DamageResult answer={answer} autoScroll={false} />}</details>}
   </section>
 }
 
