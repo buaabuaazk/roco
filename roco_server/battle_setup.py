@@ -10,7 +10,7 @@ from roco_data.damage import calculate_damage
 
 STAT_LABELS = {'hp': '生命', 'atk': '物攻', 'def': '物防', 'spa': '魔攻', 'spd': '魔防', 'spe': '速度'}
 Stat = Literal['hp', 'atk', 'def', 'spa', 'spd', 'spe']
-IV = Annotated[int, Field(strict=True, ge=0, le=10)]
+IV = Annotated[int, Field(strict=True, ge=0, le=60)]
 MODIFIERS = {'flat_power_bonus', 'power_percent_bonus', 'attack_boost', 'attack_reduction',
              'defense_boost', 'defense_reduction', 'other_power_multiplier', 'final_damage_multiplier'}
 
@@ -72,7 +72,7 @@ def panel(queries, setup: PetSetup):
     for key in STAT_LABELS:
         # 社区面板规则：每步落为float32，先除后乘，再取整、乘性格、取整、加成长。
         hp = key == 'hp'
-        core = f32(2 * base[key] + ivs[key] * (setup.stars + 1))
+        core = f32(2 * base[key] + ivs[key])
         raw = f32(f32(core / (100 if hp else 200)) * (85 if hp else 110))
         raw = f32(f32(raw + 60) + 10) if hp else f32(raw + 10)
         nature = f32(1.1 + .02 * setup.stars if setup.nature_plus == key else .9 if setup.nature_minus == key else 1)
@@ -133,6 +133,6 @@ def matchup(queries, body: MatchupInput):
     result['matchup'] = {'attacker': attacker, 'defender': defender, 'skill': skill,
                          'channel': f'{STAT_LABELS[attack_key]} → {STAT_LABELS[defense_key]}',
                          'power_overridden': body.power_override is not None}
-    result['assumptions'].insert(1, f"面板采用60级PVP社区换算：攻击方{body.attacker.stars}星/成长{body.attacker.growth}，受击方{body.defender.stars}星/成长{body.defender.growth}；个体为0～10刻度，最多3项非零。")
+    result['assumptions'].insert(1, f"面板采用60级PVP社区换算：攻击方{body.attacker.stars}星/成长{body.attacker.growth}，受击方{body.defender.stars}星/成长{body.defender.growth}；个体为0～60整数，最多3项非零。")
     result['assumptions'].append('血脉或传说学习条件与技能触发条件由使用者确认；特性效果通过已确认的额外修正填写。')
     return result

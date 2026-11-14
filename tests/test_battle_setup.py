@@ -20,18 +20,21 @@ class BattleSetupTests(unittest.TestCase):
                 'skills': {'level': [{'skill_id': 701, 'level': 1}], 'machine': [{'skill_id': 702}]}}
 
     def test_panel_formula_natures_and_current_hp(self):
-        result = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 10}, hp_percent=50))
+        result = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 60}, hp_percent=50))
         self.assertEqual(result['stats']['atk'], 234)
         self.assertEqual(result['stats']['hp'], 340)
         self.assertEqual(result['current_hp'], 170)
-        raised = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 10}, nature_plus='atk', nature_minus='spa'))
+        raised = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 60}, nature_plus='atk', nature_minus='spa'))
         self.assertEqual(raised['stats']['atk'], 271)
         self.assertEqual(raised['stats']['spa'], 227)
         self.assertEqual(result['ivs']['spe'], 0)
+        self.assertEqual(result['ivs']['atk'], 60)
+        partial = panel(self.queries, PetSetup(pet_id=1, ivs={'atk': 31}))
+        self.assertEqual(partial['stats']['atk'], 218)
 
     def test_example_and_auto_physical_channel(self):
-        body = MatchupInput(attacker=PetSetup(pet_id=1, ivs={'atk': 10}),
-                            defender=PetSetup(pet_id=2, ivs={'def': 10}), skill_id=701,
+        body = MatchupInput(attacker=PetSetup(pet_id=1, ivs={'atk': 60}),
+                            defender=PetSetup(pet_id=2, ivs={'def': 60}), skill_id=701,
                             modifiers={'flat_power_bonus': 20, 'power_percent_bonus': .5})
         result = matchup(self.queries, body)
         self.assertEqual(result['estimated_damage'], 332)
@@ -44,12 +47,12 @@ class BattleSetupTests(unittest.TestCase):
     def test_stars_growth_nature_and_float32_rounding(self):
         defaults = panel(self.queries, PetSetup(pet_id=1))
         self.assertEqual((defaults['level'], defaults['stars'], defaults['growth']), (60, 5, 50))
-        setup = dict(pet_id=1, ivs={'atk': 10}, nature_plus='atk', nature_minus='spa')
+        setup = dict(pet_id=1, ivs={'atk': 60}, nature_plus='atk', nature_minus='spa')
         low = panel(self.queries, PetSetup(**setup, stars=0, growth=0))
         grown = panel(self.queries, PetSetup(**setup, stars=0, growth=50))
         raised = panel(self.queries, PetSetup(**setup, stars=5, growth=50))
-        self.assertEqual(low['stats']['atk'], 172)
-        self.assertEqual(grown['stats']['atk'], 222)
+        self.assertEqual(low['stats']['atk'], 202)
+        self.assertEqual(grown['stats']['atk'], 252)
         self.assertEqual(raised['stats']['atk'], 271)
         self.assertEqual(grown['stats']['hp'] - low['stats']['hp'], 100)
         # 社区对拍的半点边界：core=210向下，core=230向上。
@@ -57,9 +60,9 @@ class BattleSetupTests(unittest.TestCase):
         boundary = panel(self.queries, PetSetup(pet_id=1, stars=0, growth=0))
         self.assertEqual(boundary['stats']['atk'], 125)
         self.assertEqual(boundary['stats']['spa'], 137)
-        standard = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, ivs={'atk': 10}),
+        standard = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, ivs={'atk': 60}),
                           defender=PetSetup(pet_id=2), skill_id=701))
-        weaker = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, stars=0, growth=0, ivs={'atk': 10}),
+        weaker = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, stars=0, growth=0, ivs={'atk': 60}),
                         defender=PetSetup(pet_id=2), skill_id=701))
         self.assertLess(weaker['estimated_damage'], standard['estimated_damage'])
         self.assertEqual(weaker['matchup']['attacker']['stars'], 0)
@@ -83,7 +86,7 @@ class BattleSetupTests(unittest.TestCase):
             matchup(self.queries, body.model_copy(update={'modifiers': {'attack': 999}}))
 
     def test_build_constraints_and_missing_data(self):
-        for fields in ({'pet_id': True}, {'ivs': {'atk': True}}, {'ivs': {'atk': 11}},
+        for fields in ({'pet_id': True}, {'ivs': {'atk': True}}, {'ivs': {'atk': 61}},
                        {'ivs': {'atk': .5}}, {'ivs': {'bad': 1}},
                        {'ivs': {'hp': 1, 'atk': 1, 'def': 1, 'spa': 1}},
                        {'nature_plus': 'atk', 'nature_minus': 'atk'}, {'nature_plus': 'atk'},

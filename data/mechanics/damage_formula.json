@@ -64,7 +64,7 @@
             "scope": "level_60_pvp_community_estimate",
             "hp": "RoundToInt(RoundToInt((core / 100f) * 85 + 60 + 10) * nature) + 2 * growth",
             "other_stats": "RoundToInt(RoundToInt((core / 200f) * 110 + 10) * nature) + growth",
-            "iv_scale": "整数0～10；最多3项非零",
+            "iv_scale": "整数0～60；最多3项非零；0与60为常用配置",
             "nature_multipliers": {
                 "plus": "1.1 + 0.02 * stars",
                 "neutral": 1,
@@ -78,7 +78,7 @@
                 "stars": 5,
                 "growth": 50
             },
-            "formula_iv": "iv * (stars + 1)",
+            "formula_iv": "iv（直接采用输入值）",
             "core": "2 * base + formula_iv",
             "reviewed_on": "2026-11-11",
             "constraints": {
