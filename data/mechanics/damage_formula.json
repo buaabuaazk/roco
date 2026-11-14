@@ -66,7 +66,7 @@
             "other_stats": "RoundToInt(RoundToInt((core / 200f) * (level + 50) + 10) * nature) + growth",
             "iv_scale": "整数0～60；最多3项非零；0与60为常用配置",
             "nature_multipliers": {
-                "plus": "1.1 + 0.02 * stars",
+                "plus": 1.2,
                 "neutral": 1,
                 "minus": 0.9
             },
@@ -82,8 +82,8 @@
             "core": "2 * base + formula_iv",
             "reviewed_on": "2026-11-11",
             "constraints": {
-                "stars": "整数0～10",
-                "growth": "整数0～100，且growth >= stars * 10",
+                "stars": "固定5",
+                "growth": "固定50",
                 "level": "整数1～100；仅阿布、冥古龙进化链可手动填写，其他精灵固定60"
             }
         }

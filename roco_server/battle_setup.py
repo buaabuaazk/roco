@@ -22,8 +22,8 @@ class PetSetup(BaseModel):
     model_config = ConfigDict(extra='forbid')
     pet_id: int = Field(strict=True, gt=0)
     level: int = Field(default=60, strict=True, ge=1, le=100)
-    stars: int = Field(default=5, strict=True, ge=0, le=10)
-    growth: int = Field(default=50, strict=True, ge=0, le=100)
+    stars: int = Field(default=5, strict=True, ge=5, le=5)
+    growth: int = Field(default=50, strict=True, ge=50, le=50)
     ivs: dict[str, IV] = Field(default_factory=dict)
     nature_plus: Stat | None = None
     nature_minus: Stat | None = None
@@ -32,8 +32,6 @@ class PetSetup(BaseModel):
 
     @model_validator(mode='after')
     def check_build(self):
-        if self.growth < self.stars * 10:
-            raise ValueError('成长等级需达到星级的10倍，才能突破到该星级')
         if set(self.ivs) - STAT_LABELS.keys():
             raise ValueError('个体配置包含未知能力项')
         if sum(value > 0 for value in self.ivs.values()) > 3:
