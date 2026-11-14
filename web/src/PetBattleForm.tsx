@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import DamageResult, {type DamageAnswer} from './DamageResult'
+import BuffEditor, {buffPayload, type BuffDraft} from './BuffEditor'
 
 type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
 const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
@@ -9,13 +10,6 @@ type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
 type Skill = {skill_id: number; name: string; power: number; element: string; damage_class: string; description: string; learning: Learning[]}
 const emptyBuild = (): Build => ({name: '', level: '60', stars: '5', growth: '50', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, hp_percent: '100'})
-const modifiers = [
-  ['flat_power_bonus', '固定威力加成', '', -100000, 100000], ['power_percent_bonus', '本次威力加成合计', '%', -100, 1000],
-  ['attack_boost', '攻击提升', '%', 0, 1000], ['attack_reduction', '攻击降低', '%', 0, 1000],
-  ['defense_boost', '防御提升', '%', 0, 1000], ['defense_reduction', '防御降低', '%', 0, 1000],
-  ['other_power_multiplier', '其他威力倍率', '×', 0, 100], ['final_damage_multiplier', '最终伤害倍率', '×', 0, 100],
-] as const
-const defaultModifiers: Record<string, string> = Object.fromEntries(modifiers.map(([key, , unit]) => [key, unit === '×' ? '1' : '0']))
 async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const response = await fetch('/api/damage/' + path, {method: body === undefined ? 'GET' : 'POST', signal, headers: body === undefined ? {} : {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)})
   const value = await response.json()
@@ -62,7 +56,7 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
     <div className="iv-table"><div className="iv-row iv-head"><span>能力</span><span>种族</span><span>个体</span><span>估算面板</span></div>{stats.map(([key, title]) => <div className="iv-row" key={key}><span>{title}</span><span>{preview.panel?.base_stats[key] ?? '—'}</span><div className="iv-control"><input aria-label={`${side}${title}个体`} type="number" min={0} max={60} step={1} required value={build.ivs[key]} onChange={e => onChange({...build, ivs: {...build.ivs, [key]: e.target.value}})} /><button type="button" className="iv-max" aria-label={`${side}${title}个体拉满`} title="填满60" disabled={count >= 3 && Number(build.ivs[key]) === 0} onClick={() => onChange({...build, ivs: {...build.ivs, [key]: '60'}})}>拉满</button></div><strong>{preview.loading ? '…' : preview.panel?.stats[key] ?? '—'}</strong></div>)}</div>
     <p className="damage-input-note">个体0～60整数 · 拉满填60 · 已设置 {count}/3 项 · 性格按所选增减项换算</p>
     {side === '受击方' && <label className="damage-field current-hp-field"><span>当前生命比例</span><div><input aria-label="受击方当前生命比例" type="number" min={1} max={100} step={1} required value={build.hp_percent} onChange={e => onChange({...build, hp_percent: e.target.value})} /><em>%</em></div><small>{preview.panel ? `${preview.panel.current_hp} / ${preview.panel.stats.hp} 点生命` : '根据估算最大生命换算当前生命'}</small></label>}
-    {preview.panel?.feature.name && <details className="creature-feature"><summary>特性：{preview.panel.feature.name}</summary><p>{preview.panel.feature.description}</p><small>本次生效效果通过下方修正项填写。</small></details>}
+    {preview.panel?.feature.name && <details className="creature-feature"><summary>特性：{preview.panel.feature.name}</summary><p>{preview.panel.feature.description}</p><small>本次生效效果通过下方战斗Buff填写。</small></details>}
     {preview.error && <div className="data-error" role="alert">{preview.error}</div>}
   </section>
 }
@@ -76,7 +70,7 @@ export default function PetBattleForm() {
   const [skillId, setSkillId] = useState('')
   const [customPower, setCustomPower] = useState('')
   const [overridePower, setOverridePower] = useState(false)
-  const [values, setValues] = useState(defaultModifiers)
+  const [buffs, setBuffs] = useState<BuffDraft[]>([])
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
   const [answer, setAnswer] = useState<DamageAnswer>()
@@ -95,7 +89,7 @@ export default function PetBattleForm() {
     return () => controller.abort()
   }, [attacker.pet_id])
   useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill])
-  useEffect(() => {setAnswer(undefined)}, [attacker, defender, skillId, customPower, overridePower, values])
+  useEffect(() => {setAnswer(undefined)}, [attacker, defender, skillId, customPower, overridePower, buffs])
   const ready = !!(skill && attackPanel.panel && defensePanel.panel && !attackPanel.loading && !defensePanel.loading && !attackPanel.error && !defensePanel.error)
   const attackKey = skill?.damage_class === '物攻' ? 'atk' : 'spa', defenseKey = skill?.damage_class === '物攻' ? 'def' : 'spd'
   const stab = skill && attackPanel.panel?.types.includes(skill.element) ? 1.25 : 1
@@ -105,7 +99,7 @@ export default function PetBattleForm() {
     if (!ready) return
     setBusy(true); setError(''); setAnswer(undefined)
     try {
-      const result = await request<DamageAnswer>('matchup', {attacker: payload(attacker), defender: payload(defender), skill_id: Number(skillId), power_override: overridePower ? Number(customPower) : null, modifiers: Object.fromEntries(modifiers.map(([key, , unit]) => [key, Number(values[key]) / (unit === '%' ? 100 : 1)]))})
+      const result = await request<DamageAnswer>('matchup', {attacker: payload(attacker), defender: payload(defender), skill_id: Number(skillId), power_override: overridePower ? Number(customPower) : null, buffs: buffPayload(buffs)})
       setAnswer(result)
     } catch(e) {setError((e as Error).message)} finally {setBusy(false)}
   }
@@ -115,7 +109,7 @@ export default function PetBattleForm() {
     <section className="damage-card"><div className="damage-card-heading"><h2>攻击技能</h2><span>{skillsLoading ? '读取技能池…' : `${skills.length} 个可选攻击技能`}</span></div><label className="damage-skill-label" htmlFor="battle-skill">从攻击方技能池选择</label><select id="battle-skill" value={skillId} disabled={!attacker.pet_id || skillsLoading} required onChange={e => setSkillId(e.target.value)}><option value="">{attacker.pet_id ? '选择本次攻击技能' : '先选择攻击方精灵'}</option>{skills.map(row => <option key={row.skill_id} value={row.skill_id}>{row.name} · {row.element} · {row.damage_class} · 威力{row.power}</option>)}</select>
       {skill && <><div className="damage-skill-note"><strong>{skill.name} · {skill.element} · {skill.damage_class}</strong><p>{skill.description}</p><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small></div><div className="matchup-auto"><div><span>{skill.damage_class === '物攻' ? '物攻 → 物防' : '魔攻 → 魔防'}</span><strong>{attackPanel.panel?.stats[attackKey] ?? '—'} → {defensePanel.panel?.stats[defenseKey] ?? '—'}</strong></div><div><span>本系倍率</span><strong>×{stab}</strong></div><div><span>克制倍率</span><strong>×{type}</strong></div></div><label className="power-override"><input type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件手动调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label="本次技能基础威力" type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}<p className="damage-input-note">本系与克制读取双方属性及本地克制表。血脉、传说学习条件和条件变威力请按本次对战确认。</p></>}
     </section>
-    <details className="damage-card damage-advanced"><summary>战斗修正<span>强化、威力、减伤等额外效果</span></summary><div className="damage-field-grid">{modifiers.map(([key, label, unit, min, max]) => <label className="damage-field" key={key}><span>{label}</span><div><input aria-label={`精灵配置${label}`} type="number" step="any" min={min} max={max} required value={values[key]} onChange={e => setValues({...values, [key]: e.target.value})} />{unit && <em>{unit}</em>}</div></label>)}</div><p className="damage-input-note">如减伤70%，最终伤害倍率填0.3。特性、天气等效果按本次条件折算为修正。</p></details>
+    <BuffEditor rows={buffs} onChange={setBuffs} />
     {error && <div className="data-error" role="alert">{error}</div>}
     <button type="submit" className="damage-submit" disabled={busy || !ready}>{busy ? '正在计算…' : '计算预计伤害'}<span>↗</span></button>
     {!ready && <p className="damage-input-note">请完成双方精灵、个体与性格配置，并选择一个攻击技能。</p>}

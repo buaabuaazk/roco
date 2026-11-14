@@ -14,6 +14,7 @@ from .service import BusyError, SessionManager
 from .data_updates import DataUpdates
 from roco_data import RocoTools
 from .battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable
+from .buffs import BUFF_CATALOG
 
 
 class SessionInput(BaseModel):
@@ -69,6 +70,10 @@ def create_app(manager=None):
                  'damage_class': skill.get('damage_class'), 'power': skill['power'], 'description': skill.get('desc', '')}
                 for skill in sorted(queries.skills.values(), key=lambda row: (row['name'], row['skill_id']))
                 if skill.get('category') == '攻击' and type(skill.get('power')) in (int, float)]
+
+    @app.get('/api/damage/buffs')
+    def damage_buffs():
+        return BUFF_CATALOG
 
     @app.get('/api/damage/pets')
     def damage_pets(request: Request):

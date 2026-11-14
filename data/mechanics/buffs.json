@@ -1,0 +1,206 @@
+[
+    {
+        "kind": "atk_boost",
+        "label": "物攻提升",
+        "effect": "stat",
+        "stats": [
+            "atk"
+        ],
+        "direction": "boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "atk_reduction",
+        "label": "物攻降低",
+        "effect": "stat",
+        "stats": [
+            "atk"
+        ],
+        "direction": "reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "spa_boost",
+        "label": "魔攻提升",
+        "effect": "stat",
+        "stats": [
+            "spa"
+        ],
+        "direction": "boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "spa_reduction",
+        "label": "魔攻降低",
+        "effect": "stat",
+        "stats": [
+            "spa"
+        ],
+        "direction": "reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "def_boost",
+        "label": "物防提升",
+        "effect": "stat",
+        "stats": [
+            "def"
+        ],
+        "direction": "boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "def_reduction",
+        "label": "物防降低",
+        "effect": "stat",
+        "stats": [
+            "def"
+        ],
+        "direction": "reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "spd_boost",
+        "label": "魔防提升",
+        "effect": "stat",
+        "stats": [
+            "spd"
+        ],
+        "direction": "boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "spd_reduction",
+        "label": "魔防降低",
+        "effect": "stat",
+        "stats": [
+            "spd"
+        ],
+        "direction": "reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "dual_attack_boost",
+        "label": "双攻提升",
+        "effect": "stat",
+        "stats": [
+            "atk",
+            "spa"
+        ],
+        "direction": "boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "dual_attack_reduction",
+        "label": "双攻降低",
+        "effect": "stat",
+        "stats": [
+            "atk",
+            "spa"
+        ],
+        "direction": "reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "dual_defense_boost",
+        "label": "双防提升",
+        "effect": "stat",
+        "stats": [
+            "def",
+            "spd"
+        ],
+        "direction": "boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "dual_defense_reduction",
+        "label": "双防降低",
+        "effect": "stat",
+        "stats": [
+            "def",
+            "spd"
+        ],
+        "direction": "reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "power_flat",
+        "label": "固定威力加成",
+        "effect": "flat_power_bonus",
+        "unit": "点",
+        "minimum": -100000,
+        "maximum": 100000
+    },
+    {
+        "kind": "power_boost",
+        "label": "技能威力提升",
+        "effect": "power_percent_bonus",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "power_reduction",
+        "label": "技能威力降低",
+        "effect": "power_percent_reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+    },
+    {
+        "kind": "power_independent",
+        "label": "独立威力增幅",
+        "effect": "other_power_multiplier",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "damage_boost",
+        "label": "造成伤害提升",
+        "effect": "damage_boost",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "vulnerability",
+        "label": "受到伤害提升",
+        "effect": "vulnerability",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 1000
+    },
+    {
+        "kind": "damage_reduction",
+        "label": "受到伤害减免",
+        "effect": "damage_reduction",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+    }
+]

@@ -7,6 +7,7 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from roco_data.damage import calculate_damage
+from .buffs import BuffInput, resolve_buffs
 
 STAT_LABELS = {'hp': '生命', 'atk': '物攻', 'def': '物防', 'spa': '魔攻', 'spd': '魔防', 'spe': '速度'}
 Stat = Literal['hp', 'atk', 'def', 'spa', 'spd', 'spe']
@@ -47,6 +48,7 @@ class MatchupInput(BaseModel):
     skill_id: int = Field(strict=True, gt=0)
     power_override: float | None = Field(default=None, strict=True, ge=0, le=100000, allow_inf_nan=False)
     modifiers: dict[str, Annotated[float, Field(strict=True, allow_inf_nan=False)]] = Field(default_factory=dict)
+    buffs: list[BuffInput] = Field(default_factory=list, max_length=32)
 
 
 def get_pet(queries, pet_id):
@@ -136,11 +138,14 @@ def matchup(queries, body: MatchupInput):
         raise ValueError('技能属性资料待补齐')
     physical = skill['damage_class'] == '物攻'
     attack_key, defense_key = ('atk', 'def') if physical else ('spa', 'spd')
+    modifiers, buff_details = resolve_buffs(body.buffs, attack_key, defense_key, body.modifiers)
     stab = 1.25 if skill['element'].removesuffix('系') in [value.removesuffix('系') for value in attacker['types']] else 1
     result = calculate_damage(attack=attacker['stats'][attack_key], defense=defender['stats'][defense_key],
         base_power=skill['power'] if body.power_override is None else body.power_override, level=attacker['level'],
         stab_multiplier=stab, type_multiplier=type_multiplier(defender, skill['element']),
-        defender_hp=defender['current_hp'], **body.modifiers)
+        defender_hp=defender['current_hp'], **modifiers)
+    result['buffs'] = buff_details
+    result['resolved_modifiers'] = modifiers
     result['matchup'] = {'attacker': attacker, 'defender': defender, 'skill': skill,
                          'channel': f'{STAT_LABELS[attack_key]} → {STAT_LABELS[defense_key]}',
                          'power_overridden': body.power_override is not None}

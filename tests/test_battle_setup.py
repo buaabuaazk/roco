@@ -43,6 +43,16 @@ class BattleSetupTests(unittest.TestCase):
         self.assertEqual(result['inputs']['stab_multiplier'], 1.25)
         self.assertEqual(result['inputs']['type_multiplier'], 2)
         self.assertEqual(result['matchup']['channel'], '物攻 → 物防')
+        from_buffs = matchup(self.queries, MatchupInput(attacker=body.attacker, defender=body.defender, skill_id=701,
+            buffs=[{'kind': 'power_flat', 'side': 'attacker', 'value': 10, 'layers': 2},
+                   {'kind': 'power_boost', 'side': 'attacker', 'value': 25, 'layers': 2},
+                   {'kind': 'spa_boost', 'side': 'attacker', 'value': 100}]))
+        self.assertEqual(from_buffs['estimated_damage'], 332)
+        self.assertEqual(from_buffs['resolved_modifiers']['power_percent_bonus'], .5)
+        self.assertFalse(from_buffs['buffs'][-1]['applied'])
+        with self.assertRaises(ValidationError):
+            MatchupInput(attacker=body.attacker, defender=body.defender, skill_id=701,
+                         buffs=[{'kind': 'power_boost', 'side': 'attacker', 'value': 1}] * 33)
 
     def test_stars_growth_nature_and_float32_rounding(self):
         defaults = panel(self.queries, PetSetup(pet_id=1))
