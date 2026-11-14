@@ -12,14 +12,17 @@ BUFF_RULES = {row['kind']: row for row in BUFF_CATALOG}
 
 class CombatBuffs(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    attack: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
-    defense: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
+    physical_attack: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
+    magic_attack: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
+    physical_defense: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
+    magic_defense: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
     combo: int = Field(default=0, strict=True, ge=-100, le=100)
     power: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
 
     def effects(self, side):
         rows = []
-        for field, kind in (('attack', 'dual_attack'), ('defense', 'dual_defense')):
+        for field, kind in (('physical_attack', 'atk'), ('magic_attack', 'spa'),
+                            ('physical_defense', 'def'), ('magic_defense', 'spd')):
             amount = getattr(self, field)
             if amount:
                 rows.append(BuffInput(side=side, kind=kind + ('_boost' if amount > 0 else '_reduction'),

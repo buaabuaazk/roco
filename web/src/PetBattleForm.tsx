@@ -19,7 +19,7 @@ async function request<T>(path: string, body?: unknown, signal?: AbortSignal): P
 }
 function buildError(build: Build) {
   if (Object.values(build.buffs).some(value => value === '' || !Number.isInteger(Number(value)))) return 'Buff变化值与连击增减请填整数。'
-  if (Object.entries(build.buffs).some(([key, value]) => Math.abs(Number(value)) > (key === 'combo' ? 100 : 1000) || (key !== 'combo' && Number(value) % 10 !== 0))) return '攻、防和威力请填-1000～1000内10的整数倍，连击增减请填-100～100。'
+  if (Object.entries(build.buffs).some(([key, value]) => Math.abs(Number(value)) > (key === 'combo' ? 100 : 1000) || (key !== 'combo' && Number(value) % 10 !== 0))) return '物攻、魔攻、物防、魔防和威力请填-1000～1000内10的整数倍，连击增减请填-100～100。'
   if (build.level === '' || !Number.isInteger(Number(build.level)) || Number(build.level) < 1 || Number(build.level) > 100) return '入场等级请填1～100的整数。'
   if (!!build.nature_plus !== !!build.nature_minus) return '请选择性格的正面和负面能力，或两项均选无修正。'
   if (build.nature_plus && build.nature_plus === build.nature_minus) return '性格的正面和负面能力需选择不同项。'

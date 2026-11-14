@@ -10,13 +10,15 @@ def buff(kind, value, layers=1, side='attacker', **extra):
 
 class BuffTests(unittest.TestCase):
     def test_card_buffs_direct_changes_in_steps_of_ten(self):
-        attack = CombatBuffs(attack=30, defense=-20, power=30)
-        defense = CombatBuffs(attack=50, defense=-40)
+        attack = CombatBuffs(physical_attack=50, magic_attack=30, physical_defense=-10, magic_defense=-20, power=30)
+        defense = CombatBuffs(physical_attack=90, physical_defense=20, magic_defense=-40)
         totals, details = resolve_buffs(attack.effects('attacker') + defense.effects('defender'), 'spa', 'spd', {})
         self.assertEqual(totals, {'attack_boost': .3, 'defense_reduction': .4, 'flat_power_bonus': 30})
-        self.assertEqual(details[0]['value'], 30)
+        physical, _ = resolve_buffs(attack.effects('attacker') + defense.effects('defender'), 'atk', 'def', {})
+        self.assertEqual(physical, {'attack_boost': .5, 'defense_boost': .2, 'flat_power_bonus': 30})
+        self.assertEqual(details[0]['value'], 50)
         self.assertEqual(details[0]['layers'], 1)
-        for fields in ({'attack': .5}, {'defense': True}, {'combo': 101}, {'attack': -1010}, {'attack': 3},
+        for fields in ({'physical_attack': .5}, {'magic_defense': True}, {'combo': 101}, {'physical_defense': -1010}, {'magic_attack': 3},
                        {'power': float('nan')}, {'power': float('inf')}, {'power': True}, {'power': 1.5},
                        {'power': -1010}, {'power': 1010}, {'power': 3}, {'power_percent': 20}, {'attack_value': 20}):
             with self.subTest(fields=fields), self.assertRaises(ValidationError):

@@ -65,11 +65,13 @@ class BattleSetupTests(unittest.TestCase):
                          buffs=[{'kind': 'power_boost', 'side': 'attacker', 'value': 1}] * 33)
 
     def test_card_buffs_and_combo_only_on_combo_skills(self):
-        body = MatchupInput(attacker=PetSetup(pet_id=1, buffs={'attack': 30, 'combo': 2, 'power': 30}),
-                            defender=PetSetup(pet_id=2, buffs={'defense': -20, 'attack': 90, 'combo': 4}), skill_id=701)
+        body = MatchupInput(attacker=PetSetup(pet_id=1, buffs={'physical_attack': 30, 'magic_attack': 70, 'combo': 2, 'power': 30}),
+                            defender=PetSetup(pet_id=2, buffs={'physical_defense': -20, 'magic_defense': 40, 'physical_attack': 90, 'combo': 4}), skill_id=701)
         plain = matchup(self.queries, body)
         self.assertEqual(plain['resolved_modifiers'], {'attack_boost': .3, 'defense_reduction': .2, 'flat_power_bonus': 30})
         self.assertEqual(plain['inputs']['flat_power_bonus'], 30)
+        magical = matchup(self.queries, MatchupInput(attacker=body.attacker, defender=body.defender, skill_id=702))
+        self.assertEqual(magical['resolved_modifiers'], {'attack_boost': .7, 'defense_boost': .4, 'flat_power_bonus': 30})
         self.assertEqual(plain['combo']['hits'], 1)
         self.assertFalse(plain['buffs'][-2]['applied'])
         self.assertFalse(plain['buffs'][-1]['applied'])
