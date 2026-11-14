@@ -98,6 +98,29 @@ class BattleSetupTests(unittest.TestCase):
                            defender=PetSetup(pet_id=2), skill_id=701))
         self.assertEqual(negative['combo']['hits'], 1)
 
+    def test_deer_entry_traits_and_manual_buffs(self):
+        for feature_id, per_entry in ((200169, .3), (280016, .4)):
+            self.queries.pets[1]['feature_id'] = feature_id
+            self.queries.features[feature_id] = {'name': '电池特性'}
+            for skill_id in (701, 702):
+                for entries in (0, 1, 3):
+                    with self.subTest(feature=feature_id, skill=skill_id, entries=entries):
+                        result = matchup(self.queries, MatchupInput(
+                            attacker=PetSetup(pet_id=1, feature_entries=entries,
+                                              buffs={'physical_attack': 20, 'magic_attack': 20}),
+                            defender=PetSetup(pet_id=2), skill_id=skill_id))
+                        self.assertAlmostEqual(result['resolved_modifiers']['attack_boost'], .2 + per_entry * entries)
+                        self.assertEqual(result['buffs'][-1]['layers'], entries)
+                        self.assertEqual(result['buffs'][-1]['label'], '电池特性 · 双攻提升')
+        self.queries.pets[1]['feature_id'] = 0
+        self.queries.pets[2]['feature_id'] = 200169
+        result = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, feature_entries=3),
+                         defender=PetSetup(pet_id=2, feature_entries=5), skill_id=701))
+        self.assertNotIn('attack_boost', result['resolved_modifiers'])
+        for value in (-1, 101, True, 1.5):
+            with self.subTest(entries=value), self.assertRaises(ValidationError):
+                PetSetup(pet_id=1, feature_entries=value)
+
     def test_fixed_training_nature_and_float32_rounding(self):
         defaults = panel(self.queries, PetSetup(pet_id=1))
         self.assertEqual((defaults['level'], defaults['stars'], defaults['growth']), (60, 5, 50))

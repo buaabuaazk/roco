@@ -14,6 +14,7 @@ from roco_data.damage import calculate_damage
 from .buffs import BuffInput, CombatBuffs, resolve_buffs
 
 STAT_LABELS = {'hp': '生命', 'atk': '物攻', 'def': '物防', 'spa': '魔攻', 'spd': '魔防', 'spe': '速度'}
+ENTRY_ATTACK_BONUS = {200169: 30, 280016: 40}
 Stat = Literal['hp', 'atk', 'def', 'spa', 'spd', 'spe']
 IV = Annotated[int, Field(strict=True, ge=0, le=60)]
 MODIFIERS = {'flat_power_bonus', 'power_percent_bonus', 'attack_boost', 'attack_reduction',
@@ -34,6 +35,7 @@ class PetSetup(BaseModel):
     nature_minus: Stat | None = None
     hp_percent: float = Field(default=100, strict=True, ge=1, le=100, allow_inf_nan=False)
     buffs: CombatBuffs = Field(default_factory=CombatBuffs)
+    feature_entries: int = Field(default=1, strict=True, ge=0, le=100)
 
     @model_validator(mode='after')
     def check_build(self):
@@ -183,7 +185,14 @@ def matchup(queries, body: MatchupInput):
     physical = skill['damage_class'] == '物攻'
     attack_key, defense_key = ('atk', 'def') if physical else ('spa', 'spd')
     buffs = body.attacker.buffs.effects('attacker') + body.defender.buffs.effects('defender') + body.buffs
+    feature_id = get_pet(queries, body.attacker.pet_id)['feature_id']
+    entry_bonus = ENTRY_ATTACK_BONUS.get(feature_id)
+    if entry_bonus:
+        buffs.append(BuffInput(side='attacker', kind='dual_attack_boost', value=entry_bonus,
+                               layers=body.attacker.feature_entries))
     modifiers, buff_details = resolve_buffs(buffs, attack_key, defense_key, body.modifiers)
+    if entry_bonus:
+        buff_details[-1]['label'] = queries.features.get(feature_id, {}).get('name', '入场特性') + ' · 双攻提升'
     stab = 1.25 if skill['element'].removesuffix('系') in [value.removesuffix('系') for value in attacker['types']] else 1
     result = calculate_damage(attack=attacker['stats'][attack_key], defense=defender['stats'][defense_key],
         base_power=skill['power'] if body.power_override is None else body.power_override, level=attacker['level'],
@@ -213,5 +222,5 @@ def matchup(queries, body: MatchupInput):
                          'channel': f'{STAT_LABELS[attack_key]} → {STAT_LABELS[defense_key]}',
                          'power_overridden': body.power_override is not None}
     result['assumptions'].insert(1, f"面板采用PVP社区换算：攻击方{body.attacker.level}级/{body.attacker.stars}星/成长{body.attacker.growth}，受击方{body.defender.level}级/{body.defender.stars}星/成长{body.defender.growth}；个体为0～60整数，最多3项非零。")
-    result['assumptions'].append('血脉或传说学习条件与技能触发条件由使用者确认；特性效果通过已确认的额外修正填写。')
+    result['assumptions'].append('血脉或传说学习条件与技能触发条件由使用者确认；蓄电池与超级电池按累计入场次数自动计算，其余特性通过已确认的额外修正填写。')
     return result

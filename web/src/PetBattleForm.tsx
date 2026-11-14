@@ -5,12 +5,12 @@ import BuffEditor, {buffPayload, emptyBuffs, type CombatBuffDraft} from './BuffE
 
 type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
 const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
-type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean; image_url?: string | null; default_training?: {nature_plus?: Stat; nature_minus?: Stat; ivs?: Record<Stat, number>}}
-type Build = {pet_id?: number; name: string; level: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
+type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean; entry_attack_bonus?: number | null; image_url?: string | null; default_training?: {nature_plus?: Stat; nature_minus?: Stat; ivs?: Record<Stat, number>}}
+type Build = {pet_id?: number; name: string; level: string; feature_entries: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
 type Skill = {skill_id: number; name: string; power: number; energy?: number | null; image_url?: string | null; element: string; damage_class: string; description: string; learning: Learning[]}
-const emptyBuild = (): Build => ({name: '', level: '60', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, buffs: emptyBuffs()})
+const emptyBuild = (): Build => ({name: '', level: '60', feature_entries: '1', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, buffs: emptyBuffs()})
 async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const response = await fetch('/api/damage/' + path, {method: body === undefined ? 'GET' : 'POST', signal, headers: body === undefined ? {} : {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)})
   const value = await response.json()
@@ -18,6 +18,7 @@ async function request<T>(path: string, body?: unknown, signal?: AbortSignal): P
   return value
 }
 function buildError(build: Build) {
+  if (build.feature_entries === '' || !Number.isInteger(Number(build.feature_entries)) || Number(build.feature_entries) < 0 || Number(build.feature_entries) > 100) return '累计入场次数请填0～100的整数。'
   if (Object.values(build.buffs).some(value => value === '' || !Number.isInteger(Number(value)))) return 'Buff变化值与连击增减请填整数。'
   if (Object.entries(build.buffs).some(([key, value]) => Math.abs(Number(value)) > (key === 'combo' ? 100 : 1000) || (key !== 'combo' && Number(value) % 10 !== 0))) return '物攻、魔攻、物防、魔防和威力请填-1000～1000内10的整数倍，连击增减请填-100～100。'
   if (build.level === '' || !Number.isInteger(Number(build.level)) || Number(build.level) < 1 || Number(build.level) > 100) return '入场等级请填1～100的整数。'
@@ -28,7 +29,7 @@ function buildError(build: Build) {
   return ''
 }
 function payload(build: Build) {
-  return {pet_id: build.pet_id, level: Number(build.level), ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: build.nature_plus || null, nature_minus: build.nature_minus || null, buffs: buffPayload(build.buffs)}
+  return {pet_id: build.pet_id, level: Number(build.level), feature_entries: Number(build.feature_entries), ivs: Object.fromEntries(Object.entries(build.ivs).map(([key, value]) => [key, Number(value)])), nature_plus: build.nature_plus || null, nature_minus: build.nature_minus || null, buffs: buffPayload(build.buffs)}
 }
 function usePanel(build: Build) {
   const [state, setState] = useState<{panel?: Panel; error: string; loading: boolean}>({error: '', loading: false})
@@ -57,14 +58,15 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
   const count = Object.values(build.ivs).filter(value => Number(value) > 0).length
   const pet = pets.find(row => row.pet_id === build.pet_id)
   return <section className="damage-card creature-card"><div className="damage-card-heading"><h2>{side}</h2><span>{build.level || '—'}级 · 5星 · 成长50</span></div>
-    <label className="damage-skill-label" htmlFor={`${side}-pet`}>选择{side}精灵</label><input id={`${side}-pet`} className="pet-search-input" aria-label={`${side}精灵`} list={`${side}-pets`} placeholder="输入精灵名称并从列表选择" value={build.name} onChange={e => {const next = pets.find(row => row.name === e.target.value); const training = next && next.pet_id !== build.pet_id ? next.default_training : undefined; onChange({...build, name: e.target.value, pet_id: next?.pet_id, level: next?.level_editable ? build.level : '60', nature_plus: training?.nature_plus ?? build.nature_plus, nature_minus: training?.nature_minus ?? build.nature_minus, ivs: training?.ivs ? Object.fromEntries(stats.map(([key]) => [key, String(training.ivs![key])])) as Record<Stat, string> : build.ivs})}} autoComplete="off" /><datalist id={`${side}-pets`}>{pets.map(row => <option value={row.name} key={row.pet_id} />)}</datalist>
+    <label className="damage-skill-label" htmlFor={`${side}-pet`}>选择{side}精灵</label><input id={`${side}-pet`} className="pet-search-input" aria-label={`${side}精灵`} list={`${side}-pets`} placeholder="输入精灵名称并从列表选择" value={build.name} onChange={e => {const next = pets.find(row => row.name === e.target.value); const training = next && next.pet_id !== build.pet_id ? next.default_training : undefined; onChange({...build, name: e.target.value, pet_id: next?.pet_id, feature_entries: next?.pet_id === build.pet_id ? build.feature_entries : '1', level: next?.level_editable ? build.level : '60', nature_plus: training?.nature_plus ?? build.nature_plus, nature_minus: training?.nature_minus ?? build.nature_minus, ivs: training?.ivs ? Object.fromEntries(stats.map(([key]) => [key, String(training.ivs![key])])) as Record<Stat, string> : build.ivs})}} autoComplete="off" /><datalist id={`${side}-pets`}>{pets.map(row => <option value={row.name} key={row.pet_id} />)}</datalist>
     {pet && <div className="creature-identity"><div className="creature-name"><PetAvatar key={pet.pet_id} pet={pet} /><strong>{pet.name}</strong></div><div className="creature-types" aria-label="精灵系别">{pet.types.map(name => <TypeIcon key={name} name={name} />)}</div></div>}
     {!pet && <p className="damage-input-note">选择具体精灵后，读取种族值并换算面板。</p>}
     {pet?.level_editable && <label className="damage-field cultivation-fields"><span>实际入场等级</span><div><input aria-label={`${side}入场等级`} type="number" min={1} max={100} step={1} required value={build.level} onChange={e => onChange({...build, level: e.target.value})} /><em>级</em></div><small>按特性生效后的实际等级填写，用于换算面板。</small></label>}
     <div className="damage-field-grid cultivation-fields">{(['nature_plus', 'nature_minus'] as const).map(key => <label className="damage-field" key={key}><span>性格{key === 'nature_plus' ? '正面提升' : '负面降低'}</span><select aria-label={`${side}性格${key === 'nature_plus' ? '正面' : '负面'}`} value={build[key]} onChange={e => onChange({...build, [key]: e.target.value as Stat | ''})}><option value="">无修正</option>{stats.map(([stat, title]) => <option key={stat} value={stat} disabled={stat === build[key === 'nature_plus' ? 'nature_minus' : 'nature_plus']}>{title}{key === 'nature_plus' ? `↑20%` : '↓10%'}</option>)}</select></label>)}</div>
     <div className="iv-table"><div className="iv-row iv-head"><span>能力</span><span>种族</span><span>个体</span><span>估算面板</span></div>{stats.map(([key, title]) => <div className="iv-row" key={key}><span>{title}</span><span>{preview.panel?.base_stats[key] ?? '—'}</span><div className="iv-control"><input aria-label={`${side}${title}个体`} type="number" min={0} max={60} step={1} required value={build.ivs[key]} onChange={e => onChange({...build, ivs: {...build.ivs, [key]: e.target.value}})} /><button type="button" className="iv-max" aria-label={`${side}${title}个体拉满`} title="填满60" disabled={count >= 3 && Number(build.ivs[key]) === 0} onClick={() => onChange({...build, ivs: {...build.ivs, [key]: '60'}})}>拉满</button></div><strong>{preview.loading ? '…' : preview.panel?.stats[key] ?? '—'}</strong></div>)}</div>
     <BuffEditor side={side} value={build.buffs} onChange={buffs => onChange({...build, buffs})} />
-    {preview.panel?.feature.name && <details className="creature-feature"><summary>特性：{preview.panel.feature.name}</summary><p>{preview.panel.feature.description}</p><small>本次生效效果通过下方战斗Buff填写。</small></details>}
+    {side === '攻击方' && pet?.entry_attack_bonus && <label className="damage-field cultivation-fields"><span>特性 · 累计入场次数</span><div><input aria-label={`${side}特性累计入场次数`} type="number" min={0} max={100} step={1} required value={build.feature_entries} onChange={e => onChange({...build, feature_entries: e.target.value})} /><em>次</em></div><small>每次入场双攻+{pet.entry_attack_bonus}%，当前合计+{Number(build.feature_entries) * pet.entry_attack_bonus}%。已自动计入伤害，手动Buff填写其他加成。</small></label>}
+    {preview.panel?.feature.name && <details className="creature-feature"><summary>特性：{preview.panel.feature.name}</summary><p>{preview.panel.feature.description}</p><small>{pet?.entry_attack_bonus ? side === '攻击方' ? '按上方累计入场次数自动计算双攻加成。' : '双攻加成在该精灵作为攻击方时参与计算。' : '本次生效效果通过战斗Buff填写。'}</small></details>}
     {preview.error && <div className="data-error" role="alert">{preview.error}</div>}
   </section>
 }

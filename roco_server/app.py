@@ -13,7 +13,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from .service import BusyError, SessionManager
 from .data_updates import DataUpdates
 from roco_data import RocoTools
-from .battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable, pet_image_url, default_training
+from .battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable, pet_image_url, default_training, ENTRY_ATTACK_BONUS
 from .buffs import BUFF_CATALOG
 
 
@@ -78,7 +78,8 @@ def create_app(manager=None):
     @app.get('/api/damage/pets')
     def damage_pets(request: Request):
         return [{'pet_id': pet['pet_id'], 'name': pet['title'], 'types': pet['profile']['types'],
-                 'level_editable': level_editable(pet), 'image_url': pet_image_url(pet), 'default_training': default_training(pet)}
+                 'level_editable': level_editable(pet), 'image_url': pet_image_url(pet), 'default_training': default_training(pet),
+                 'entry_attack_bonus': ENTRY_ATTACK_BONUS.get(pet['feature_id'])}
                 for pet in sorted(request.app.state.manager.queries.pets.values(), key=lambda row: (row['title'], row['pet_id']))]
 
     @app.get('/api/damage/pets/{pet_id}/skills')
