@@ -19,6 +19,7 @@ async function request<T>(path: string, body?: unknown, signal?: AbortSignal): P
 }
 function buildError(build: Build) {
   if (Object.values(build.buffs).some(value => value === '' || !Number.isInteger(Number(value)))) return 'Buff变化值与连击增减请填整数。'
+  if (Object.entries(build.buffs).some(([key, value]) => Math.abs(Number(value)) > (key === 'combo' ? 100 : 1000) || (key !== 'combo' && Number(value) % 10 !== 0))) return '攻、防和威力请填-1000～1000内10的整数倍，连击增减请填-100～100。'
   if (build.level === '' || !Number.isInteger(Number(build.level)) || Number(build.level) < 1 || Number(build.level) > 100) return '入场等级请填1～100的整数。'
   if (!!build.nature_plus !== !!build.nature_minus) return '请选择性格的正面和负面能力，或两项均选无修正。'
   if (build.nature_plus && build.nature_plus === build.nature_minus) return '性格的正面和负面能力需选择不同项。'
@@ -78,6 +79,7 @@ export default function PetBattleForm() {
   const [customPower, setCustomPower] = useState('')
   const [overridePower, setOverridePower] = useState(false)
   const [error, setError] = useState('')
+  const [calculationError, setCalculationError] = useState('')
   const [busy, setBusy] = useState(false)
   const [answer, setAnswer] = useState<DamageAnswer>()
   const skill = skills.find(row => String(row.skill_id) === skillId)
@@ -99,28 +101,34 @@ export default function PetBattleForm() {
     return () => controller.abort()
   }, [attacker.pet_id])
   useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill])
-  useEffect(() => {setAnswer(undefined)}, [attacker, defender, skillId, customPower, overridePower])
-  const ready = !!(skill && attackPanel.panel && defensePanel.panel && !attackPanel.loading && !defensePanel.loading && !attackPanel.error && !defensePanel.error)
+  const ready = !!(skill && attacker.pet_id && defender.pet_id && !skillsLoading && attackPanel.panel?.pet_id === attacker.pet_id && defensePanel.panel?.pet_id === defender.pet_id && !attackPanel.loading && !defensePanel.loading && !attackPanel.error && !defensePanel.error && !buildError(attacker) && !buildError(defender))
+  const validPower = !overridePower || (customPower !== '' && Number.isFinite(Number(customPower)) && Number(customPower) >= 0 && Number(customPower) <= 100000)
+  const calculationKey = ready && validPower ? JSON.stringify({attacker: payload(attacker), defender: payload(defender), skill_id: Number(skillId), power_override: overridePower ? Number(customPower) : null}) : null
+  useEffect(() => {
+    setAnswer(undefined); setCalculationError(''); setBusy(calculationKey !== null)
+    if (calculationKey === null) return
+    const controller = new AbortController()
+    const timer = setTimeout(() => {
+      request<DamageAnswer>('matchup', JSON.parse(calculationKey), controller.signal)
+        .then(result => {if (!controller.signal.aborted) setAnswer(result)})
+        .catch(e => {if (!controller.signal.aborted) setCalculationError(e.message)})
+        .finally(() => {if (!controller.signal.aborted) setBusy(false)})
+    }, 200)
+    return () => {clearTimeout(timer); controller.abort()}
+  }, [calculationKey])
   const attackKey = skill?.damage_class === '物攻' ? 'atk' : 'spa', defenseKey = skill?.damage_class === '物攻' ? 'def' : 'spd'
   const stab = skill && attackPanel.panel?.types.includes(skill.element) ? 1.25 : 1
   const type = skill && defensePanel.panel ? Object.values(defensePanel.panel.type_effectiveness).flat().find(row => row.type === skill.element)?.multiplier ?? 1 : 1
-  async function calculate(event: React.FormEvent) {
-    event.preventDefault()
-    if (!ready) return
-    setBusy(true); setError(''); setAnswer(undefined)
-    try {
-      const result = await request<DamageAnswer>('matchup', {attacker: payload(attacker), defender: payload(defender), skill_id: Number(skillId), power_override: overridePower ? Number(customPower) : null})
-      setAnswer(result)
-    } catch(e) {setError((e as Error).message)} finally {setBusy(false)}
-  }
   function learning(row: Learning) {return [({level: '升级', machine: '技能石', blood: '血脉', legendary: '传说'} as Record<string,string>)[row.source] || row.source, row.level != null ? `Lv.${row.level}` : '', row.blood || '', row.requires || ''].filter(Boolean).join(' · ')}
-  return <div className="damage-layout pet-battle-layout"><form onSubmit={calculate}><fieldset disabled={busy}>
+  return <div className="damage-layout pet-battle-layout"><form onSubmit={event => event.preventDefault()}><fieldset>
     <div className="creature-grid"><CreatureCard side="攻击方" pets={pets} build={attacker} onChange={setAttacker} preview={attackPanel} /><CreatureCard side="受击方" pets={pets} build={defender} onChange={setDefender} preview={defensePanel} /></div>
     <section className="damage-card"><div className="damage-card-heading"><h2>攻击技能</h2><span>{skillsLoading ? '读取技能池…' : `${skills.length} 个可选攻击技能`}</span></div><label className="damage-skill-label" htmlFor="battle-skill">从攻击方技能池选择</label><select id="battle-skill" value={skillId} disabled={!attacker.pet_id || skillsLoading} required onChange={e => setSkillId(e.target.value)}><option value="">{attacker.pet_id ? '选择本次攻击技能' : '先选择攻击方精灵'}</option>{skills.map(row => <option key={row.skill_id} value={row.skill_id}>{row.name} · {row.element} · {row.damage_class} · 威力{row.power}</option>)}</select>
       {skill && <><div className="damage-skill-note"><strong>{skill.name} · {skill.element} · {skill.damage_class}</strong><p>{skill.description}</p><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small></div><div className="matchup-auto"><div><span>{skill.damage_class === '物攻' ? '物攻 → 物防' : '魔攻 → 魔防'}</span><strong>{attackPanel.panel?.stats[attackKey] ?? '—'} → {defensePanel.panel?.stats[defenseKey] ?? '—'}</strong></div><div><span>本系倍率</span><strong>×{stab}</strong></div><div><span>克制倍率</span><strong>×{type}</strong></div></div><label className="power-override"><input type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件手动调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label="本次技能基础威力" type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}<p className="damage-input-note">本系与克制读取双方属性及本地克制表。血脉、传说学习条件和条件变威力请按本次对战确认。</p></>}
     </section>
     {error && <div className="data-error" role="alert">{error}</div>}
-    <button type="submit" className="damage-submit" disabled={busy || !ready}>{busy ? '正在计算…' : '计算预计伤害'}<span>↗</span></button>
+    {calculationError && <div className="data-error" role="alert">{calculationError}</div>}
+    {!validPower && <div className="data-error" role="alert">本次基础威力请填0～100000的有效数值。</div>}
+    {busy && <p className="damage-input-note" role="status">正在自动计算…</p>}
     {!ready && <p className="damage-input-note">请完成双方精灵、个体与性格配置，并选择一个攻击技能。</p>}
-  </fieldset></form><DamageResult answer={answer} /></div>
+  </fieldset></form><DamageResult answer={answer} busy={busy} autoScroll={false} /></div>
 }
