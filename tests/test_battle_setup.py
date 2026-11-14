@@ -3,7 +3,7 @@ from types import SimpleNamespace
 import unittest
 
 from pydantic import ValidationError
-from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup
+from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable
 
 
 class BattleSetupTests(unittest.TestCase):
@@ -93,12 +93,39 @@ class BattleSetupTests(unittest.TestCase):
                        {'hp_percent': 0}, {'hp_percent': float('nan')}, {'unknown': 1},
                        {'stars': -1}, {'stars': 11}, {'stars': True}, {'stars': 5.5},
                        {'growth': -1}, {'growth': 101}, {'growth': True}, {'growth': 50.5},
-                       {'stars': 6, 'growth': 50}, {'growth': 49}):
+                       {'stars': 6, 'growth': 50}, {'growth': 49},
+                       {'level': 0}, {'level': 101}, {'level': True}, {'level': 89.5}):
             with self.subTest(fields=fields), self.assertRaises(ValidationError):
                 PetSetup(**({'pet_id': 1} | fields))
         with self.assertRaises(ValueError): panel(self.queries, PetSetup(pet_id=999))
         del self.queries.pets[1]['profile']['stats']['hp']
         with self.assertRaises(ValueError): panel(self.queries, PetSetup(pet_id=1))
+
+    def test_family_levels_and_observed_247_damage(self):
+        with self.assertRaises(ValueError):
+            panel(self.queries, PetSetup(pet_id=1, level=89))
+        for title in ('阿布', '冥古龙'):
+            self.assertTrue(level_editable({'title': title}))
+            self.assertTrue(level_editable({'title': '进化形态', 'evolution_branches': [{'chain': [{'name': title}]}]}))
+        self.assertFalse(level_editable({'title': '喵喵'}))
+        self.queries.pets[1]['profile'].update(types=['机械系', '火系'])
+        self.queries.pets[1]['profile']['stats']['spa'] = 130
+        self.queries.pets[2]['title'] = '冥古龙'
+        self.queries.pets[2]['profile']['stats'].update(hp=118, spd=63)
+        self.queries.pets[2]['type_effectiveness']['weak'] = [{'type': '幽系', 'multiplier': 2}]
+        self.queries.skills[702]['element'] = '幽系'
+        body = MatchupInput(attacker=PetSetup(pet_id=1), defender=PetSetup(pet_id=2, level=89, ivs={'hp': 60}), skill_id=702)
+        result = matchup(self.queries, body)
+        self.assertEqual(result['inputs']['attack'], 203)
+        self.assertEqual(result['inputs']['defense'], 148)
+        self.assertEqual(result['inputs']['level'], 60)
+        self.assertEqual(result['matchup']['defender']['level'], 89)
+        self.assertEqual(result['matchup']['defender']['stats']['hp'], 536)
+        self.assertEqual(result['estimated_damage'], 247)
+        self.queries.pets[1]['title'] = '阿布'
+        higher = matchup(self.queries, body.model_copy(update={'attacker': PetSetup(pet_id=1, level=89)}))
+        self.assertEqual(higher['inputs']['level'], 89)
+        self.assertGreater(higher['estimated_damage'], result['estimated_damage'])
 
 
 if __name__ == '__main__':
