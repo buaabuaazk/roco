@@ -5,7 +5,7 @@ import BuffEditor, {buffPayload, emptyBuffs, type CombatBuffDraft} from './BuffE
 
 type Stat = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe'
 const stats: [Stat, string][] = [['hp', '生命'], ['atk', '物攻'], ['def', '物防'], ['spa', '魔攻'], ['spd', '魔防'], ['spe', '速度']]
-type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean; image_url?: string | null}
+type Pet = {pet_id: number; name: string; types: string[]; level_editable: boolean; image_url?: string | null; default_training?: {nature_plus?: Stat; nature_minus?: Stat; ivs?: Record<Stat, number>}}
 type Build = {pet_id?: number; name: string; level: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
@@ -57,7 +57,7 @@ function CreatureCard({side, pets, build, onChange, preview}: {side: string; pet
   const count = Object.values(build.ivs).filter(value => Number(value) > 0).length
   const pet = pets.find(row => row.pet_id === build.pet_id)
   return <section className="damage-card creature-card"><div className="damage-card-heading"><h2>{side}</h2><span>{build.level || '—'}级 · 5星 · 成长50</span></div>
-    <label className="damage-skill-label" htmlFor={`${side}-pet`}>选择{side}精灵</label><input id={`${side}-pet`} className="pet-search-input" aria-label={`${side}精灵`} list={`${side}-pets`} placeholder="输入精灵名称并从列表选择" value={build.name} onChange={e => {const next = pets.find(row => row.name === e.target.value); onChange({...build, name: e.target.value, pet_id: next?.pet_id, level: next?.level_editable ? build.level : '60'})}} autoComplete="off" /><datalist id={`${side}-pets`}>{pets.map(row => <option value={row.name} key={row.pet_id} />)}</datalist>
+    <label className="damage-skill-label" htmlFor={`${side}-pet`}>选择{side}精灵</label><input id={`${side}-pet`} className="pet-search-input" aria-label={`${side}精灵`} list={`${side}-pets`} placeholder="输入精灵名称并从列表选择" value={build.name} onChange={e => {const next = pets.find(row => row.name === e.target.value); const training = next && next.pet_id !== build.pet_id ? next.default_training : undefined; onChange({...build, name: e.target.value, pet_id: next?.pet_id, level: next?.level_editable ? build.level : '60', nature_plus: training?.nature_plus ?? build.nature_plus, nature_minus: training?.nature_minus ?? build.nature_minus, ivs: training?.ivs ? Object.fromEntries(stats.map(([key]) => [key, String(training.ivs![key])])) as Record<Stat, string> : build.ivs})}} autoComplete="off" /><datalist id={`${side}-pets`}>{pets.map(row => <option value={row.name} key={row.pet_id} />)}</datalist>
     {pet && <div className="creature-identity"><div className="creature-name"><PetAvatar key={pet.pet_id} pet={pet} /><strong>{pet.name}</strong></div><div className="creature-types" aria-label="精灵系别">{pet.types.map(name => <TypeIcon key={name} name={name} />)}</div></div>}
     {!pet && <p className="damage-input-note">选择具体精灵后，读取种族值并换算面板。</p>}
     {pet?.level_editable && <label className="damage-field cultivation-fields"><span>实际入场等级</span><div><input aria-label={`${side}入场等级`} type="number" min={1} max={100} step={1} required value={build.level} onChange={e => onChange({...build, level: e.target.value})} /><em>级</em></div><small>按特性生效后的实际等级填写，用于换算面板。</small></label>}

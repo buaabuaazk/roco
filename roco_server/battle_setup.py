@@ -20,6 +20,7 @@ MODIFIERS = {'flat_power_bonus', 'power_percent_bonus', 'attack_boost', 'attack_
              'defense_boost', 'defense_reduction', 'other_power_multiplier', 'final_damage_multiplier'}
 IMAGE_URL_FILE = Path(__file__).resolve().parents[1] / 'data/bwiki/image_urls.json'
 IMAGE_URLS = json.loads(IMAGE_URL_FILE.read_text(encoding='utf-8'))['urls'] if IMAGE_URL_FILE.exists() else {}
+TRAINING_LABELS = json.loads((IMAGE_URL_FILE.parent / 'converted/reference.json').read_text(encoding='utf-8'))['training_labels']
 
 
 class PetSetup(BaseModel):
@@ -82,6 +83,29 @@ def pet_image_url(pet):
             return IMAGE_URLS[filename]
     filename = images.get('head') or images.get('illustration')
     return 'https://wiki.biligame.com/nrc/Special:Redirect/file/' + quote(filename, safe='') if filename else None
+
+
+def default_training(pet):
+    """按PVP独立使用次数选热门性格及三个培养能力。"""
+    usage = pet.get('training_reference', {}).get('pvp', {})
+    defaults = {}
+    names = {label: key for key, label in STAT_LABELS.items()}
+    for identifier, count in sorted(usage.get('nature', []), key=lambda row: -row[1]):
+        detail = TRAINING_LABELS['nature'].get(str(identifier), {}).get('detail', '')
+        parts = detail.split(' / ')
+        if count > 0 and len(parts) == 2:
+            plus, minus = names.get(parts[0].removesuffix('↑')), names.get(parts[1].removesuffix('↓'))
+            if plus and minus and plus != minus:
+                defaults.update(nature_plus=plus, nature_minus=minus)
+                break
+    trained = []
+    for identifier, count in sorted(usage.get('talent', []), key=lambda row: -row[1]):
+        key = names.get(TRAINING_LABELS['talent'].get(str(identifier), {}).get('name'))
+        if count > 0 and key and key not in trained:
+            trained.append(key)
+    if len(trained) >= 3:
+        defaults['ivs'] = {key: 60 if key in trained[:3] else 0 for key in STAT_LABELS}
+    return defaults
 
 
 def f32(value):

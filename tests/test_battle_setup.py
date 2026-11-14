@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import patch
 
 from pydantic import ValidationError
-from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable, pet_image_url, IMAGE_URLS
+from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable, pet_image_url, IMAGE_URLS, default_training
 
 
 class BattleSetupTests(unittest.TestCase):
@@ -16,6 +16,17 @@ class BattleSetupTests(unittest.TestCase):
             del IMAGE_URLS['PetAvatar_3431.png']
             self.assertEqual(pet_image_url(pet), 'https://patchwiki.biligame.com/portrait.png')
         self.assertIsNone(pet_image_url({'profile': {}}))
+
+    def test_popular_training_defaults(self):
+        pet = {'training_reference': {'pvp': {
+            'nature': [[2, 5], [23, 100]],
+            'talent': [[1, 60], [3, 2], [6, 100], [2, 90], [4, 10]]}}}
+        self.assertEqual(default_training(pet), {
+            'nature_plus': 'spe', 'nature_minus': 'spa',
+            'ivs': {'hp': 60, 'atk': 60, 'def': 0, 'spa': 0, 'spd': 0, 'spe': 60}})
+        self.assertEqual(default_training({}), {})
+        self.assertEqual(default_training({'training_reference': {'world': pet['training_reference']['pvp']}}), {})
+        self.assertEqual(default_training({'training_reference': {'pvp': {'nature': [[999, 100]], 'talent': [[1, 5]]}}}), {})
 
     def setUp(self):
         base = dict(hp=100, atk=128, spa=170, **{'def': 121}, spd=200, spe=100)
