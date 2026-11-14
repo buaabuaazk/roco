@@ -1,12 +1,22 @@
 from copy import deepcopy
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 from pydantic import ValidationError
-from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable
+from roco_server.battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable, pet_image_url, IMAGE_URLS
 
 
 class BattleSetupTests(unittest.TestCase):
+    def test_image_urls_follow_source_filename_and_fallback(self):
+        pet = {'pet_id': 3433, 'profile': {'image': {'head': 'PetAvatar_3431.png', 'illustration': 'portrait.png'}}}
+        with patch.dict(IMAGE_URLS, {'PetAvatar_3431.png': 'https://patchwiki.biligame.com/head.png',
+                                   'portrait.png': 'https://patchwiki.biligame.com/portrait.png'}, clear=True):
+            self.assertEqual(pet_image_url(pet), 'https://patchwiki.biligame.com/head.png')
+            del IMAGE_URLS['PetAvatar_3431.png']
+            self.assertEqual(pet_image_url(pet), 'https://patchwiki.biligame.com/portrait.png')
+        self.assertIsNone(pet_image_url({'profile': {}}))
+
     def setUp(self):
         base = dict(hp=100, atk=128, spa=170, **{'def': 121}, spd=200, spe=100)
         self.queries = SimpleNamespace(features={}, skills={

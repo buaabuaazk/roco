@@ -1,6 +1,8 @@
 """网页手动精灵配置：PVP社区面板与伤害估算。"""
 from decimal import Decimal, ROUND_HALF_UP
 from math import floor
+import json
+from pathlib import Path
 from struct import pack, unpack
 import re
 from typing import Annotated, Literal
@@ -16,6 +18,8 @@ Stat = Literal['hp', 'atk', 'def', 'spa', 'spd', 'spe']
 IV = Annotated[int, Field(strict=True, ge=0, le=60)]
 MODIFIERS = {'flat_power_bonus', 'power_percent_bonus', 'attack_boost', 'attack_reduction',
              'defense_boost', 'defense_reduction', 'other_power_multiplier', 'final_damage_multiplier'}
+IMAGE_URL_FILE = Path(__file__).resolve().parents[1] / 'data/bwiki/image_urls.json'
+IMAGE_URLS = json.loads(IMAGE_URL_FILE.read_text(encoding='utf-8'))['urls'] if IMAGE_URL_FILE.exists() else {}
 
 
 class PetSetup(BaseModel):
@@ -73,6 +77,9 @@ def level_editable(pet):
 
 def pet_image_url(pet):
     images = pet['profile'].get('image') or {}
+    for filename in (images.get('head'), images.get('illustration')):
+        if filename in IMAGE_URLS:
+            return IMAGE_URLS[filename]
     filename = images.get('head') or images.get('illustration')
     return 'https://wiki.biligame.com/nrc/Special:Redirect/file/' + quote(filename, safe='') if filename else None
 
