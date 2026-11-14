@@ -12,21 +12,20 @@ BUFF_RULES = {row['kind']: row for row in BUFF_CATALOG}
 
 class CombatBuffs(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    attack: int = Field(default=0, strict=True, ge=-100, le=100)
-    defense: int = Field(default=0, strict=True, ge=-100, le=100)
+    attack: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
+    defense: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
     combo: int = Field(default=0, strict=True, ge=-100, le=100)
-    power: int = Field(default=0, strict=True, ge=-100, le=100)
+    power: int = Field(default=0, strict=True, ge=-1000, le=1000, multiple_of=10)
 
     def effects(self, side):
         rows = []
         for field, kind in (('attack', 'dual_attack'), ('defense', 'dual_defense')):
-            layers = getattr(self, field)
-            if layers:
-                rows.append(BuffInput(side=side, kind=kind + ('_boost' if layers > 0 else '_reduction'),
-                                      value=10, layers=abs(layers)))
+            amount = getattr(self, field)
+            if amount:
+                rows.append(BuffInput(side=side, kind=kind + ('_boost' if amount > 0 else '_reduction'),
+                                      value=abs(amount)))
         if self.power:
-            rows.append(BuffInput(side=side, kind='power_flat', value=10 if self.power > 0 else -10,
-                                  layers=abs(self.power)))
+            rows.append(BuffInput(side=side, kind='power_flat', value=self.power))
         return rows
 
 

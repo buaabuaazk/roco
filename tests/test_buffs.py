@@ -9,19 +9,19 @@ def buff(kind, value, layers=1, side='attacker', **extra):
 
 
 class BuffTests(unittest.TestCase):
-    def test_card_buffs_fixed_ten_percent_per_layer(self):
-        attack = CombatBuffs(attack=3, defense=-2, power=3)
-        defense = CombatBuffs(attack=5, defense=-4)
+    def test_card_buffs_direct_changes_in_steps_of_ten(self):
+        attack = CombatBuffs(attack=30, defense=-20, power=30)
+        defense = CombatBuffs(attack=50, defense=-40)
         totals, details = resolve_buffs(attack.effects('attacker') + defense.effects('defender'), 'spa', 'spd', {})
         self.assertEqual(totals, {'attack_boost': .3, 'defense_reduction': .4, 'flat_power_bonus': 30})
-        self.assertEqual(details[0]['value'], 10)
-        self.assertEqual(details[0]['layers'], 3)
-        for fields in ({'attack': .5}, {'defense': True}, {'combo': 101}, {'attack': -101},
+        self.assertEqual(details[0]['value'], 30)
+        self.assertEqual(details[0]['layers'], 1)
+        for fields in ({'attack': .5}, {'defense': True}, {'combo': 101}, {'attack': -1010}, {'attack': 3},
                        {'power': float('nan')}, {'power': float('inf')}, {'power': True}, {'power': 1.5},
-                       {'power': -101}, {'power': 101}, {'power_percent': 20}, {'attack_value': 20}):
+                       {'power': -1010}, {'power': 1010}, {'power': 3}, {'power_percent': 20}, {'attack_value': 20}):
             with self.subTest(fields=fields), self.assertRaises(ValidationError):
                 CombatBuffs(**fields)
-        negative, _ = resolve_buffs(CombatBuffs(power=-2).effects('attacker'), 'spa', 'spd', {})
+        negative, _ = resolve_buffs(CombatBuffs(power=-20).effects('attacker'), 'spa', 'spd', {})
         self.assertEqual(negative['flat_power_bonus'], -20)
         self.assertEqual(CombatBuffs(power=0).effects('attacker'), [])
 
