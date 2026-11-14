@@ -2,12 +2,13 @@
 from decimal import Decimal, ROUND_HALF_UP
 from math import floor
 from struct import pack, unpack
+import re
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from roco_data.damage import calculate_damage
-from .buffs import BuffInput, resolve_buffs
+from .buffs import BuffInput, CombatBuffs, resolve_buffs
 
 STAT_LABELS = {'hp': '生命', 'atk': '物攻', 'def': '物防', 'spa': '魔攻', 'spd': '魔防', 'spe': '速度'}
 Stat = Literal['hp', 'atk', 'def', 'spa', 'spd', 'spe']
@@ -26,6 +27,7 @@ class PetSetup(BaseModel):
     nature_plus: Stat | None = None
     nature_minus: Stat | None = None
     hp_percent: float = Field(default=100, strict=True, ge=1, le=100, allow_inf_nan=False)
+    buffs: CombatBuffs = Field(default_factory=CombatBuffs)
 
     @model_validator(mode='after')
     def check_build(self):
@@ -102,6 +104,11 @@ def panel(queries, setup: PetSetup):
             'verification_status': 'pending_in_game_validation'}
 
 
+def base_hits(skill):
+    match = re.search(r'(\d+)\s*连击', skill.get('desc', ''))
+    return int(match.group(1)) if match else None
+
+
 def pet_skills(queries, pet_id):
     pet = get_pet(queries, pet_id)
     learning = {}
@@ -113,7 +120,7 @@ def pet_skills(queries, pet_id):
                 {'source': source, **{key: row[key] for key in ('level', 'blood', 'requires', 'stage') if key in row}})
     return [{'skill_id': row['skill_id'], 'name': row['name'], 'power': row['power'],
              'element': row.get('element'), 'damage_class': row.get('damage_class'),
-             'description': row.get('desc', ''), 'learning': learning[row['skill_id']]}
+             'description': row.get('desc', ''), 'base_hits': base_hits(row), 'learning': learning[row['skill_id']]}
             for row in sorted(queries.skills.values(), key=lambda value: (value['name'], value['skill_id']))
             if row['skill_id'] in learning and row.get('category') == '攻击'
             and row.get('damage_class') in ('物攻', '魔攻') and type(row.get('power')) in (int, float)]
@@ -138,7 +145,8 @@ def matchup(queries, body: MatchupInput):
         raise ValueError('技能属性资料待补齐')
     physical = skill['damage_class'] == '物攻'
     attack_key, defense_key = ('atk', 'def') if physical else ('spa', 'spd')
-    modifiers, buff_details = resolve_buffs(body.buffs, attack_key, defense_key, body.modifiers)
+    buffs = body.attacker.buffs.effects('attacker') + body.defender.buffs.effects('defender') + body.buffs
+    modifiers, buff_details = resolve_buffs(buffs, attack_key, defense_key, body.modifiers)
     stab = 1.25 if skill['element'].removesuffix('系') in [value.removesuffix('系') for value in attacker['types']] else 1
     result = calculate_damage(attack=attacker['stats'][attack_key], defense=defender['stats'][defense_key],
         base_power=skill['power'] if body.power_override is None else body.power_override, level=attacker['level'],
@@ -146,6 +154,24 @@ def matchup(queries, body: MatchupInput):
         defender_hp=defender['current_hp'], **modifiers)
     result['buffs'] = buff_details
     result['resolved_modifiers'] = modifiers
+    initial_hits = skill['base_hits']
+    hits = max(1, initial_hits + body.attacker.buffs.combo) if initial_hits is not None else 1
+    single_damage = result['estimated_damage']
+    result['combo'] = {'base_hits': initial_hits, 'bonus_hits': body.attacker.buffs.combo,
+                       'hits': hits, 'single_damage': single_damage}
+    for side, setup in (('attacker', body.attacker), ('defender', body.defender)):
+        if setup.buffs.combo:
+            applied = side == 'attacker' and initial_hits is not None
+            buff_details.append({'side': side, 'label': '连击数加成', 'value': 1 if setup.buffs.combo > 0 else -1,
+                'layers': abs(setup.buffs.combo), 'unit': '次', 'total': setup.buffs.combo, 'applied': applied,
+                'reason': '已计入连击次数' if applied else '本次技能无连击效果' if side == 'attacker' else '受击方连击不参与本次攻击'})
+    if hits > 1:
+        result['estimated_damage'] = single_damage * hits
+        result['steps'].append({'label': '连击总伤害', 'expression': '单次估算伤害 × 本次连击次数', 'value': result['estimated_damage']})
+        result['damage_percent'] = result['estimated_damage'] / defender['current_hp'] * 100
+        result['estimated_ko'] = result['estimated_damage'] >= defender['current_hp']
+        result['assumptions'] = [text.replace('本次计算按一次伤害结算；', '每段按一次伤害结算；') for text in result['assumptions']]
+        result['assumptions'].append('连击按单次伤害结算后乘次数估算，各段条件相同；段间触发与取整时点待实测验证。')
     result['matchup'] = {'attacker': attacker, 'defender': defender, 'skill': skill,
                          'channel': f'{STAT_LABELS[attack_key]} → {STAT_LABELS[defense_key]}',
                          'power_overridden': body.power_override is not None}

@@ -54,6 +54,26 @@ class BattleSetupTests(unittest.TestCase):
             MatchupInput(attacker=body.attacker, defender=body.defender, skill_id=701,
                          buffs=[{'kind': 'power_boost', 'side': 'attacker', 'value': 1}] * 33)
 
+    def test_card_buffs_and_combo_only_on_combo_skills(self):
+        body = MatchupInput(attacker=PetSetup(pet_id=1, buffs={'attack': 3, 'combo': 2}),
+                            defender=PetSetup(pet_id=2, buffs={'defense': -2, 'attack': 9, 'combo': 4}), skill_id=701)
+        plain = matchup(self.queries, body)
+        self.assertEqual(plain['resolved_modifiers'], {'attack_boost': .3, 'defense_reduction': .2})
+        self.assertEqual(plain['combo']['hits'], 1)
+        self.assertFalse(plain['buffs'][-2]['applied'])
+        self.assertFalse(plain['buffs'][-1]['applied'])
+        self.queries.skills[701]['desc'] = '造成物伤，2连击，应对状态下连击数翻倍。'
+        multi = matchup(self.queries, body)
+        self.assertEqual(multi['combo']['base_hits'], 2)
+        self.assertEqual(multi['combo']['hits'], 4)
+        self.assertEqual(multi['estimated_damage'], plain['estimated_damage'] * 4)
+        self.assertAlmostEqual(multi['damage_percent'], plain['damage_percent'] * 4)
+        self.assertEqual(multi['steps'][-1]['label'], '连击总伤害')
+        self.assertEqual(multi['estimated_ko'], multi['estimated_damage'] >= multi['matchup']['defender']['current_hp'])
+        negative = matchup(self.queries, MatchupInput(attacker=PetSetup(pet_id=1, buffs={'combo': -10}),
+                           defender=PetSetup(pet_id=2), skill_id=701))
+        self.assertEqual(negative['combo']['hits'], 1)
+
     def test_stars_growth_nature_and_float32_rounding(self):
         defaults = panel(self.queries, PetSetup(pet_id=1))
         self.assertEqual((defaults['level'], defaults['stars'], defaults['growth']), (60, 5, 50))

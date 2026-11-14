@@ -10,6 +10,29 @@ BUFF_CATALOG = json.loads((Path(__file__).resolve().parents[1] / 'data/mechanics
 BUFF_RULES = {row['kind']: row for row in BUFF_CATALOG}
 
 
+class CombatBuffs(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    attack: int = Field(default=0, strict=True, ge=-100, le=100)
+    defense: int = Field(default=0, strict=True, ge=-100, le=100)
+    combo: int = Field(default=0, strict=True, ge=-100, le=100)
+    power_percent: float = Field(default=0, strict=True, ge=-100, le=1000, allow_inf_nan=False)
+    power_flat: float = Field(default=0, strict=True, ge=-100000, le=100000, allow_inf_nan=False)
+
+    def effects(self, side):
+        rows = []
+        for field, kind in (('attack', 'dual_attack'), ('defense', 'dual_defense')):
+            layers = getattr(self, field)
+            if layers:
+                rows.append(BuffInput(side=side, kind=kind + ('_boost' if layers > 0 else '_reduction'),
+                                      value=10, layers=abs(layers)))
+        if self.power_percent:
+            rows.append(BuffInput(side=side, kind='power_boost' if self.power_percent > 0 else 'power_reduction',
+                                  value=abs(self.power_percent)))
+        if self.power_flat:
+            rows.append(BuffInput(side=side, kind='power_flat', value=self.power_flat))
+        return rows
+
+
 class BuffInput(BaseModel):
     model_config = ConfigDict(extra='forbid')
     side: Literal['attacker', 'defender']
