@@ -4,7 +4,8 @@ import DamagePage from './DamagePage'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-const pageFromHash = () => window.location.hash === '#data' ? 'data' : window.location.hash === '#damage' ? 'damage' : 'chat'
+const publicOnly = import.meta.env.VITE_PUBLIC_ONLY === '1'
+const pageFromHash = () => publicOnly ? 'damage' : window.location.hash === '#data' ? 'data' : window.location.hash === '#damage' ? 'damage' : 'chat'
 
 type Trace = {
   sequence: number; event: string; timestamp: string; run_id: string; round?: number;
@@ -158,6 +159,7 @@ export default function App() {
   }
 
   useEffect(() => {
+    if (publicOnly) return
     Promise.all([api<Config>('/config'), api<Session[]>('/sessions')]).then(([settings, list]) => {
       setConfig(settings); setModel(settings.default_model); setSessions(list)
       if (list.length) setSelected(list[0].id)
@@ -225,7 +227,7 @@ export default function App() {
   }
 
   return <div className={`workbench page-${page}`}>
-    <header className="site-header"><a className="site-brand" href="#damage" aria-label="Roco 工具箱"><span className="site-brand-mark">R</span><strong>Roco 工具箱</strong></a><nav className="site-nav" aria-label="功能导航"><a href="#chat" aria-label="对话调试" className={page === 'chat' ? 'active' : ''}><Icon name="chat" /><span>对话调试</span></a><a href="#data" aria-label="数据检测" className={page === 'data' ? 'active' : ''}><Icon name="refresh" /><span>数据检测</span></a><a href="#damage" aria-label="伤害计算" className={page === 'damage' ? 'active' : ''}><Icon name="calculator" /><span>伤害计算</span></a></nav><div className="header-actions">{page === 'chat' && <><button className={'icon-button ' + (loading ? 'spinning' : '')} disabled={loading || busy} onClick={reloadData} title="重新加载 JSON 并清空会话上下文" aria-label="重新加载数据"><Icon name="refresh" /></button><span className="header-divider" /><button className={'icon-button ' + (showInspector ? 'is-on' : '')} onClick={() => setShowInspector(!showInspector)} title="显示或隐藏执行轨迹" aria-label="切换执行轨迹"><Icon name="panel" /></button></>}</div></header>
+    <header className="site-header"><a className="site-brand" href="#damage" aria-label="Roco 工具箱"><span className="site-brand-mark">R</span><strong>Roco 工具箱</strong></a><nav className="site-nav" aria-label="功能导航">{!publicOnly && <><a href="#chat" aria-label="对话调试" className={page === 'chat' ? 'active' : ''}><Icon name="chat" /><span>对话调试</span></a><a href="#data" aria-label="数据检测" className={page === 'data' ? 'active' : ''}><Icon name="refresh" /><span>数据检测</span></a></>}<a href="#damage" aria-label="伤害计算" className={page === 'damage' ? 'active' : ''}><Icon name="calculator" /><span>伤害计算</span></a></nav><div className="header-actions">{page === 'chat' && <><button className={'icon-button ' + (loading ? 'spinning' : '')} disabled={loading || busy} onClick={reloadData} title="重新加载 JSON 并清空会话上下文" aria-label="重新加载数据"><Icon name="refresh" /></button><span className="header-divider" /><button className={'icon-button ' + (showInspector ? 'is-on' : '')} onClick={() => setShowInspector(!showInspector)} title="显示或隐藏执行轨迹" aria-label="切换执行轨迹"><Icon name="panel" /></button></>}</div></header>
     {page === 'chat' && <aside className="sidebar">
 
 
