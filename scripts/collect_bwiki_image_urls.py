@@ -48,11 +48,11 @@ def main():
               for path in (args.data_dir / 'pets').glob('*.json')]
     if not images:
         raise ValueError('精灵资料目录为空')
-    primary = {row.get('head') or row.get('illustration') for row in images} - {None}
+    primary = {row.get('illustration') or row.get('head') for row in images} - {None}
     urls = {}
     resolve(primary, urls)
-    fallback = {row['illustration'] for row in images
-                if row.get('head') not in urls and row.get('illustration') not in urls and row.get('illustration')}
+    fallback = {row['head'] for row in images
+                if row.get('illustration') not in urls and row.get('head') not in urls and row.get('head')}
     resolve(fallback, urls)
     skill_icons = {json.loads(path.read_text(encoding='utf-8')).get('icon')
                    for path in (args.data_dir / 'skills').glob('*.json')} - {None, ''}

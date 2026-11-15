@@ -12,9 +12,9 @@ class BattleSetupTests(unittest.TestCase):
         pet = {'pet_id': 3433, 'profile': {'image': {'head': 'PetAvatar_3431.png', 'illustration': 'portrait.png'}}}
         with patch.dict(IMAGE_URLS, {'PetAvatar_3431.png': 'https://patchwiki.biligame.com/head.png',
                                    'portrait.png': 'https://patchwiki.biligame.com/portrait.png'}, clear=True):
-            self.assertEqual(pet_image_url(pet), 'https://patchwiki.biligame.com/head.png')
-            del IMAGE_URLS['PetAvatar_3431.png']
             self.assertEqual(pet_image_url(pet), 'https://patchwiki.biligame.com/portrait.png')
+            del IMAGE_URLS['portrait.png']
+            self.assertEqual(pet_image_url(pet), 'https://patchwiki.biligame.com/head.png')
         self.assertIsNone(pet_image_url({'profile': {}}))
 
     def test_popular_training_defaults(self):

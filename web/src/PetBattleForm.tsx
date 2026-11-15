@@ -45,7 +45,7 @@ function usePanel(build: Build) {
 }
 function PetAvatar({pet}: {pet: Pet}) {
   const [failed, setFailed] = useState(false)
-  return <div className="creature-avatar">{pet.image_url && !failed ? <img src={pet.image_url} alt={pet.name} width={64} height={64} referrerPolicy="no-referrer" onError={() => setFailed(true)} /> : <b aria-label="暂无精灵图片">{pet.name.slice(0, 1)}</b>}</div>
+  return <div className="creature-avatar">{pet.image_url && !failed ? <img src={pet.image_url} alt={pet.name} width={112} height={112} referrerPolicy="no-referrer" onError={() => setFailed(true)} /> : <b aria-label="暂无精灵图片">{pet.name.slice(0, 1)}</b>}</div>
 }
 
 function TypeIcon({name}: {name: string}) {

@@ -80,10 +80,10 @@ def level_editable(pet):
 
 def pet_image_url(pet):
     images = pet['profile'].get('image') or {}
-    for filename in (images.get('head'), images.get('illustration')):
+    for filename in (images.get('illustration'), images.get('head')):
         if filename in IMAGE_URLS:
             return IMAGE_URLS[filename]
-    filename = images.get('head') or images.get('illustration')
+    filename = images.get('illustration') or images.get('head')
     return 'https://wiki.biligame.com/nrc/Special:Redirect/file/' + quote(filename, safe='') if filename else None
 
 
