@@ -9,7 +9,7 @@ type Pet = {pet_id: number; name: string; types: string[]; level_editable: boole
 type Build = {pet_id?: number; name: string; level: string; feature_entries: string; nature_plus: Stat | ''; nature_minus: Stat | ''; ivs: Record<Stat, string>; buffs: CombatBuffDraft}
 type Panel = Pet & {base_stats: Record<Stat, number>; stats: Record<Stat, number>; current_hp: number; feature: {name?: string; description?: string}; type_effectiveness: Record<string, {type: string; multiplier: number}[]>}
 type Learning = {source: string; level?: number; blood?: string; requires?: string}
-type Skill = {skill_id: number; name: string; power: number; energy?: number | null; image_url?: string | null; element: string; damage_class: string; description: string; learning: Learning[]}
+type Skill = {skill_id: number; name: string; power: number; base_hits: number | null; energy?: number | null; image_url?: string | null; element: string; damage_class: string; description: string; learning: Learning[]}
 const emptyBuild = (): Build => ({name: '', level: '60', feature_entries: '1', nature_plus: '', nature_minus: '', ivs: {hp: '0', atk: '0', def: '0', spa: '0', spd: '0', spe: '0'}, buffs: emptyBuffs()})
 async function request<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const response = await fetch('/api/damage/' + path, {method: body === undefined ? 'GET' : 'POST', signal, headers: body === undefined ? {} : {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)})
@@ -81,13 +81,17 @@ function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, a
   const [customPower, setCustomPower] = useState('')
   const [overridePower, setOverridePower] = useState(false)
   const [showPower, setShowPower] = useState(false)
+  const [customHits, setCustomHits] = useState('1')
+  const [overrideHits, setOverrideHits] = useState(false)
+  const [showHits, setShowHits] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
   const [answer, setAnswer] = useState<DamageAnswer>()
-  useEffect(() => {setOverridePower(false); setShowPower(false); setShowDetails(false); setCustomPower(skill ? String(skill.power) : '')}, [skill?.skill_id, skill?.power])
+  useEffect(() => {setOverrideHits(false); setShowHits(false); setCustomHits(String(Math.max(1, (skill?.base_hits ?? 1) + (skill?.base_hits ? Number(attacker.buffs.combo) : 0)))); setOverridePower(false); setShowPower(false); setShowDetails(false); setCustomPower(skill ? String(skill.power) : '')}, [skill?.skill_id, skill?.power])
   const validPower = !overridePower || (customPower !== '' && Number.isFinite(Number(customPower)) && Number(customPower) >= 0 && Number(customPower) <= 100000)
-  const calculationKey = ready && skill && validPower ? JSON.stringify({attacker: payload(attacker), defender: payload(defender), skill_id: skill.skill_id, power_override: overridePower ? Number(customPower) : null}) : null
+  const validHits = !overrideHits || (customHits !== '' && Number.isInteger(Number(customHits)) && Number(customHits) >= 1 && Number(customHits) <= 1000)
+  const calculationKey = ready && skill && validPower && validHits ? JSON.stringify({attacker: payload(attacker), defender: payload(defender), skill_id: skill.skill_id, power_override: overridePower ? Number(customPower) : null, hits_override: overrideHits ? Number(customHits) : null}) : null
   useEffect(() => {
     setAnswer(undefined); setError(''); setBusy(calculationKey !== null)
     if (calculationKey === null) return
@@ -112,10 +116,12 @@ function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, a
       {answer?.combo && answer.combo.hits > 1 && <small className="skill-combo-note">连击总伤害 · 单次{answer.combo.single_damage} × {answer.combo.hits}次</small>}
     </div> : <p className="skill-empty">选择技能后自动显示伤害</p>}
     {!validPower && <div className="data-error" role="alert">{label}基础威力请填0～100000的有效数值。</div>}
+    {!validHits && <div className="data-error" role="alert">{label}连击次数请填1～1000的整数。</div>}
     {error && <div className="data-error" role="alert">{label}：{error}</div>}
     {skill && <>
-      <div className="skill-actions"><button type="button" aria-label={`${label}调整威力`} aria-expanded={showPower} aria-controls={`skill-power-${index}`} onClick={() => setShowPower(!showPower)}><span aria-hidden="true">{showPower ? '▾' : '▸'}</span>调整威力</button><button type="button" aria-label={`${label}计算详情`} aria-expanded={showDetails} aria-controls={`skill-details-${index}`} onClick={() => setShowDetails(!showDetails)}><span aria-hidden="true">{showDetails ? '▾' : '▸'}</span>计算详情</button></div>
+      <div className="skill-actions"><button type="button" aria-label={`${label}调整威力`} aria-expanded={showPower} aria-controls={`skill-power-${index}`} onClick={() => setShowPower(!showPower)}><span aria-hidden="true">{showPower ? '▾' : '▸'}</span>调整威力</button><button type="button" aria-label={`${label}调整连击数`} aria-expanded={showHits} aria-controls={`skill-hits-${index}`} onClick={() => setShowHits(!showHits)}><span aria-hidden="true">{showHits ? '▾' : '▸'}</span>调整连击数</button><button type="button" aria-label={`${label}计算详情`} aria-expanded={showDetails} aria-controls={`skill-details-${index}`} onClick={() => setShowDetails(!showDetails)}><span aria-hidden="true">{showDetails ? '▾' : '▸'}</span>计算详情</button></div>
       <div id={`skill-power-${index}`} className="skill-options-panel" hidden={!showPower}><label className="power-override"><input aria-label={`${label}调整基础威力`} type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label={`${label}本次基础威力`} type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}</div>
+      <div id={`skill-hits-${index}`} className="skill-options-panel" hidden={!showHits}><label className="power-override"><input aria-label={`${label}手动调整连击数`} type="checkbox" checked={overrideHits} onChange={e => {setOverrideHits(e.target.checked); if (e.target.checked) setCustomHits(String(answer?.combo?.hits ?? Math.max(1, (skill.base_hits ?? 1) + (skill.base_hits ? Number(attacker.buffs.combo) : 0))))}} />手动设置本次总连击数</label>{overrideHits && <label className="damage-field"><span>本次总连击数（含Buff）</span><div><input aria-label={`${label}本次总连击数`} type="number" min={1} max={1000} step={1} required value={customHits} onChange={e => setCustomHits(e.target.value)} /><em>次</em></div></label>}</div>
       <div id={`skill-details-${index}`} className="skill-calculation-details skill-options-panel" hidden={!showDetails}><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small>{answer && <DamageResult answer={answer} autoScroll={false} />}</div>
     </>}
   </section>

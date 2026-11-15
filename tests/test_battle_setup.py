@@ -98,6 +98,24 @@ class BattleSetupTests(unittest.TestCase):
                            defender=PetSetup(pet_id=2), skill_id=701))
         self.assertEqual(negative['combo']['hits'], 1)
 
+    def test_manual_total_hits_override(self):
+        self.queries.skills[701]['desc'] = '造成物伤，2连击。'
+        body = MatchupInput(attacker=PetSetup(pet_id=1, buffs={'combo': 2}),
+                            defender=PetSetup(pet_id=2), skill_id=701)
+        automatic = matchup(self.queries, body)
+        manual = matchup(self.queries, body.model_copy(update={'hits_override': 3}))
+        self.assertEqual(automatic['combo']['hits'], 4)
+        self.assertEqual(manual['combo']['hits'], 3)
+        self.assertEqual(manual['estimated_damage'], manual['combo']['single_damage'] * 3)
+        self.assertFalse(manual['buffs'][-1]['applied'])
+        single = matchup(self.queries, body.model_copy(update={'hits_override': 1}))
+        self.assertEqual(single['estimated_damage'], single['combo']['single_damage'])
+        self.queries.skills[701]['desc'] = '造成物伤。'
+        self.assertEqual(matchup(self.queries, body.model_copy(update={'hits_override': 5}))['combo']['hits'], 5)
+        for invalid in (0, -1, 1001, 1.5, '3', True):
+            with self.subTest(invalid=invalid), self.assertRaises(ValidationError):
+                MatchupInput(attacker=body.attacker, defender=body.defender, skill_id=701, hits_override=invalid)
+
     def test_deer_entry_traits_and_manual_buffs(self):
         for feature_id, per_entry in ((200169, .3), (280016, .4)):
             self.queries.pets[1]['feature_id'] = feature_id

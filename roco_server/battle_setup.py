@@ -55,6 +55,7 @@ class MatchupInput(BaseModel):
     defender: PetSetup
     skill_id: int = Field(strict=True, gt=0)
     power_override: float | None = Field(default=None, strict=True, ge=0, le=100000, allow_inf_nan=False)
+    hits_override: int | None = Field(default=None, strict=True, ge=1, le=1000)
     modifiers: dict[str, Annotated[float, Field(strict=True, allow_inf_nan=False)]] = Field(default_factory=dict)
     buffs: list[BuffInput] = Field(default_factory=list, max_length=32)
 
@@ -201,16 +202,16 @@ def matchup(queries, body: MatchupInput):
     result['buffs'] = buff_details
     result['resolved_modifiers'] = modifiers
     initial_hits = skill['base_hits']
-    hits = max(1, initial_hits + body.attacker.buffs.combo) if initial_hits is not None else 1
+    hits = body.hits_override if body.hits_override is not None else max(1, initial_hits + body.attacker.buffs.combo) if initial_hits is not None else 1
     single_damage = result['estimated_damage']
     result['combo'] = {'base_hits': initial_hits, 'bonus_hits': body.attacker.buffs.combo,
-                       'hits': hits, 'single_damage': single_damage}
+                       'hits': hits, 'single_damage': single_damage, 'overridden': body.hits_override is not None}
     for side, setup in (('attacker', body.attacker), ('defender', body.defender)):
         if setup.buffs.combo:
-            applied = side == 'attacker' and initial_hits is not None
+            applied = side == 'attacker' and initial_hits is not None and body.hits_override is None
             buff_details.append({'side': side, 'label': '连击数加成', 'value': 1 if setup.buffs.combo > 0 else -1,
                 'layers': abs(setup.buffs.combo), 'unit': '次', 'total': setup.buffs.combo, 'applied': applied,
-                'reason': '已计入连击次数' if applied else '本次技能无连击效果' if side == 'attacker' else '受击方连击不参与本次攻击'})
+                'reason': '已计入连击次数' if applied else '采用手动设置的总连击数（含Buff）' if side == 'attacker' and body.hits_override is not None else '本次技能无连击效果' if side == 'attacker' else '受击方连击不参与本次攻击'})
     if hits > 1:
         result['estimated_damage'] = single_damage * hits
         result['steps'].append({'label': '连击总伤害', 'expression': '单次估算伤害 × 本次连击次数', 'value': result['estimated_damage']})
