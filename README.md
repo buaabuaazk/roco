@@ -1,9 +1,9 @@
 # Roco · 洛克王国世界助手
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-[![数据来源：BWIKI](https://img.shields.io/badge/数据来源-BWIKI-00A1D6)](https://wiki.biligame.com/nrc/首页)
-[![在线体验](https://img.shields.io/badge/Demo-在线体验-365C68)](http://49.232.210.244/#damage)
+![Python](https://img.shields.io/badge/Python-3.11-FFD43B?logo=python&logoColor=white&labelColor=3776AB)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=61DAFB&labelColor=20232A)
+[![数据来源：BWIKI](https://img.shields.io/badge/数据来源-BWIKI-FB7299?labelColor=B84870)](https://wiki.biligame.com/nrc/首页)
+[![在线体验](https://img.shields.io/badge/Demo-在线体验-2EAD73?labelColor=196449)](http://49.232.210.244/#damage)
 
 面向《洛克王国：世界》的游戏工具，包含 **Agent 问答助手**和**伤害计算器**。使用 React + TypeScript 构建网页，Python + FastAPI 提供后端服务。
 
