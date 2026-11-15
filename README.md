@@ -1,5 +1,9 @@
 # Roco · 洛克王国世界助手
 
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+[![在线体验](https://img.shields.io/badge/Demo-在线体验-365C68)](http://49.232.210.244/#damage)
+
 面向《洛克王国：世界》的游戏工具，包含 **Agent 问答助手**和**伤害计算器**。使用 React + TypeScript 构建网页，Python + FastAPI 提供后端服务。
 
 ## 在线访问
