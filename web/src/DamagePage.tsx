@@ -74,7 +74,6 @@ function DirectDamageForm() {
 export default function DamagePage() {
   const [mode, setMode] = useState('pets')
   return <main className="data-page damage-page">
-    <div className="data-page-heading"><div><span className="section-kicker">DAMAGE CALCULATOR</span><h1>伤害计算器</h1><p>手动选择双方精灵与配置，按社区规则估算单次伤害。</p></div><span className="source-tag">社区公式 · 估算版</span></div>
     <nav className="damage-mode-tabs" aria-label="计算方式"><button className={mode === 'pets' ? 'active' : ''} onClick={() => setMode('pets')}>精灵配置 · 60级PVP</button><button className={mode === 'direct' ? 'active' : ''} onClick={() => setMode('direct')}>直接输入数值</button></nav>
     <div hidden={mode !== 'pets'}><PetBattleForm /></div>
     <div hidden={mode !== 'direct'}><DirectDamageForm /></div>
