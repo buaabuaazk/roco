@@ -23,13 +23,19 @@ def check(base):
     assert result['estimated_damage'] > 0, '伤害计算无结果'
     assert result['resolved_modifiers']['attack_boost'] == .6, '特性未生效'
     for path, body in (('/api/config', None), ('/api/sessions', None),
-                       ('/api/sessions', {}), ('/api/data/update', {})):
+                       ('/api/sessions', {}), ('/api/data/update', {}), ('/api/visits/stats', None)):
         try:
             request(path, body)
         except HTTPError as error:
             assert error.code == 403, f'{path}预期403，实际{error.code}'
         else:
             raise AssertionError(f'{path}不应公开访问')
+    try:
+        request('/api/visits', {'visitor_id': 'invalid'})
+    except HTTPError as error:
+        assert error.code == 422, f'访问记录输入校验应返回422，实际{error.code}'
+    else:
+        raise AssertionError('无效浏览器标识不应被记录')
     print(f'PASS: {len(pets)} pets, damage={result["estimated_damage"]}, private APIs=403')
 
 

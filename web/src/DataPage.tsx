@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import VisitStats from './VisitStats'
 
 type Change = {title: string; local_revision: number; remote_revision: number; remote_timestamp: string; conversion_rule: boolean}
 type Status = {busy: boolean; operation: string | null; message: string; error: string | null; updated_at: string | null;
@@ -41,6 +42,7 @@ export default function DataPage({onUpdated}: {onUpdated: () => void}) {
   const busy = submitting || status?.busy
   return <main className="data-page">
     <div className="data-page-heading"><div><span className="section-kicker">DATA CENTER</span><h1>数据检测</h1><p>对比 BWIKI 模块版本，将最新资料同步到本地 JSON。</p></div><span className="source-tag">BWIKI · 模块采集</span></div>
+    <VisitStats />
     <div className="data-stat-grid">{[['精灵', status?.local?.pets], ['技能', status?.local?.skills], ['特性', status?.local?.features]].map(([label, count]) => <div className="data-stat" key={label}><span>{label}</span><strong>{count?.toLocaleString() ?? '—'}</strong><small>本地正式数据</small></div>)}</div>
     <section className="data-check-card">
       <div className="data-check-header"><div><h2>{status?.busy ? '任务执行中' : report?.status === 'up_to_date' ? '已是最新版本' : changed.length ? `发现 ${changed.length} 个模块有更新` : '检查资料更新'}</h2><p>检测只读取模块版本；一键更新会下载、转换并校验完整数据。</p></div><span className={'data-state ' + (busy ? 'working' : '')}>{busy ? '处理中' : report?.status === 'up_to_date' ? '已同步' : changed.length ? '有更新' : '待检测'}</span></div>

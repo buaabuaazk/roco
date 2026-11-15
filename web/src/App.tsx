@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import DataPage from './DataPage'
 import DamagePage from './DamagePage'
+import {recordVisit} from './visits'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -159,7 +160,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (publicOnly) return
+    if (publicOnly) {recordVisit(); return}
     Promise.all([api<Config>('/config'), api<Session[]>('/sessions')]).then(([settings, list]) => {
       setConfig(settings); setModel(settings.default_model); setSessions(list)
       if (list.length) setSelected(list[0].id)

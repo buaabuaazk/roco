@@ -54,3 +54,9 @@ ssh -i ~/.ssh/roco_deploy_ed25519 -N -L 8766:127.0.0.1:8765 ubuntu@SERVER_IP
 公网冒烟验证：`python deploy/smoke_test.py http://SERVER_IP`（使用hello-agents环境）。
 
 检查服务日志：`sudo journalctl -u roco -n 100 --no-pager`。试用到期前导出数据与服务器配置。
+
+## 访问统计
+
+公开版每次打开或刷新页面通过`POST /api/visits`记录一次访问，浏览器本地保存随机匿名标识；服务端按北京时间逐日哈希去重，数据库保存在`data/visits.db`。只统计公开版页面，不统计计算API调用，本机调试页面也不计入。浏览器禁止本地存储时仍记录访问次数，独立访客计数可能偏低。清理存储、无痕窗口和更换设备可能重复计为访客。
+
+数据检测页展示今日访问次数、今日独立访客、累计访问次数及最近7天。`GET /api/visits/stats`仅通过SSH隧道访问，公网返回403。统计从功能上线起开始记录；数据库及WAL/SHM由Git忽略，更新应用时保留该数据库。

@@ -12,6 +12,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .service import BusyError, SessionManager
 from .data_updates import DataUpdates
+from .visits import Visits
 from roco_data import RocoTools
 from .battle_setup import PetSetup, MatchupInput, panel, pet_skills, matchup, level_editable, pet_image_url, default_training, ENTRY_ATTACK_BONUS
 from .buffs import BUFF_CATALOG
@@ -19,6 +20,10 @@ from .buffs import BUFF_CATALOG
 
 class SessionInput(BaseModel):
     model: str | None = Field(default=None, max_length=200)
+
+
+class VisitInput(BaseModel):
+    visitor_id: str | None = Field(default=None, pattern=r'^[a-f0-9]{32}$', max_length=32)
 
 
 class QuestionInput(BaseModel):
@@ -37,6 +42,7 @@ def create_app(manager=None):
     async def lifespan(app):
         app.state.manager = manager or SessionManager()
         app.state.updates = DataUpdates(app.state.manager)
+        app.state.visits = Visits(Path(__file__).resolve().parents[1] / 'data/visits.db')
         yield
         app.state.manager.close()
 
@@ -58,6 +64,14 @@ def create_app(manager=None):
     @app.exception_handler(ValueError)
     async def value_error(request, error):
         return JSONResponse({'detail': str(error)}, status_code=400)
+
+    @app.post('/api/visits', status_code=204)
+    def record_visit(body: VisitInput, request: Request):
+        request.app.state.visits.record(body.visitor_id)
+
+    @app.get('/api/visits/stats')
+    def visit_stats(request: Request):
+        return request.app.state.visits.snapshot()
 
     @app.get('/api/config')
     def config(request: Request):
