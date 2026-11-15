@@ -1,0 +1,195 @@
+/* 视觉参考：洛克王国世界 BWIKI。标题使用同款 SSDunDunTi，正文优先保证可读性。 */
+
+:root {
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #304650;
+  background: #edf1ed;
+  --green: #365c68;
+  --line: #dfe5e1;
+  --muted: #718087;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --display: "SSDunDunTi", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #af8944;
+  outline-offset: 3px;
+}
+::selection { background: #f3dfac; }
+.workbench {
+  display: grid;
+  grid-template-rows: 68px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "header" "workspace";
+  min-height: 0;
+}
+.workbench.page-chat {
+  grid-template-columns: 224px minmax(0, 1fr);
+  grid-template-areas: "header header" "sidebar workspace";
+}
+.site-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  padding: 0 max(28px, calc((100vw - 1320px) / 2));
+  background: #304d58;
+  color: #fffdf3;
+  box-shadow: 0 2px 10px #213d4914;
+  z-index: 10;
+}
+.site-brand { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.site-brand strong { font: 400 23px var(--display); letter-spacing: .5px; }
+.site-brand-mark {
+  width: 34px; height: 36px; display: grid; place-items: center;
+  background: #f2d489; color: #304d58; border-radius: 10px 10px 13px 5px;
+  font: 400 25px var(--display); transform: rotate(-5deg);
+}
+.site-nav { display: flex; align-items: stretch; height: 100%; gap: 6px; }
+.site-nav a {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 0 20px; color: #e0e7e7; font: 400 16px var(--display);
+  border-bottom: 3px solid transparent; border-top: 3px solid transparent;
+}
+.site-nav a:hover { background: #ffffff09; color: #fff; }
+.site-nav a.active { color: #f4d68d; background: #ffffff09; border-bottom-color: #f4d68d; }
+.site-header .header-actions { margin-left: auto; }
+.site-header .icon-button { color: #d9e3e4; }
+.site-header .icon-button:hover, .site-header .icon-button.is-on { background: #ffffff14; color: #f4d68d; }
+.site-header .header-divider { background: #ffffff25; }
+.sidebar { grid-area: sidebar; width: auto; min-height: 0; padding-top: 22px; background: #f1f4ef; }
+.workspace { grid-area: workspace; min-height: 0; background: #f2f4ef; }
+.data-page { padding: 26px max(24px, calc((100vw - 1280px) / 2)); background: #f2f4ef; }
+.damage-page { padding-top: 22px; }
+.data-page h1, .data-page h2, .data-page h3, .chat-heading h1, .welcome h2,
+.site-nav, .new-session, .data-actions button { font-family: var(--display); font-weight: 400; }
+.pet-battle-layout.multi-skill-layout { max-width: 1280px; margin: 0 auto; }
+.creature-grid { gap: 20px; align-items: start; }
+.damage-card { padding: 20px; margin-bottom: 20px; border: 1px solid #e0e6df; border-radius: 16px; background: #fffef9; box-shadow: 0 4px 16px #304d5804; }
+.creature-card { position: relative; padding: 18px 22px 16px; overflow: hidden; }
+.creature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: #e7c37a; }
+.creature-card[data-side="defense"]::before { background: #9dc6be; }
+.creature-card .damage-card-heading { margin-bottom: 12px; }
+.damage-card-heading h2 { font-size: 21px; color: #304d58; margin: 0; }
+.damage-card-heading > span { font-size: 11px; color: #758285; }
+.damage-skill-label, .damage-field > span { color: #4e646b; font-size: 12px; font-weight: 600; }
+.pet-search-input {
+  padding: 10px 12px; margin-bottom: 8px; font-size: 14px; color: #304650;
+  border-color: #dce3df; border-radius: 8px; background: #fff;
+}
+.pet-search-input::placeholder { color: #8d999a; font-size: 12px; }
+.creature-identity {
+  min-height: 116px; margin: 0 0 12px; padding: 0 10px 0 0;
+  border-radius: 12px; background: #f5f0df;
+}
+.creature-card[data-side="defense"] .creature-identity { background: #eaf2ed; }
+.creature-name { gap: 14px; }
+.creature-identity strong { color: #304d58; font: 400 24px var(--display); }
+.creature-avatar { width: 116px; height: 116px; border: 0; background: transparent; }
+.creature-avatar img { width: 110px; height: 110px; filter: drop-shadow(0 4px 3px #304d5812); }
+.creature-avatar b { color: #859a9b; font: 400 32px var(--display); }
+.creature-types { gap: 4px; }
+.creature-identity .creature-type-icon { background: #fff9; border-radius: 50%; min-width: 32px; min-height: 32px; }
+.creature-type-icon img { width: 26px; height: 26px; }
+.cultivation-fields { margin-bottom: 12px; gap: 12px; }
+.damage-field { gap: 5px; }
+.damage-field > div { border-color: #dce3df; background: #fff; border-radius: 7px; }
+.damage-field input { padding: 8px 10px; font-size: 14px; color: #304d58; font-family: inherit; font-variant-numeric: tabular-nums; }
+.damage-field em { color: #7e8e90; font-size: 11px; }
+.damage-field small { font-size: 11px; line-height: 1.6; color: #748487; }
+.damage-card select { padding: 8px 10px; color: #344f59; background: #fff; border-color: #dce3df; border-radius: 7px; }
+.creature-card select { font-size: 12px; margin-bottom: 0; min-height: 35px; }
+.iv-table { border-top: 0; }
+.iv-row { grid-template-columns: .8fr .7fr 1.5fr 1fr; gap: 8px; padding: 5px 0; border-bottom-color: #e9ede7; color: #566d74; font-size: 12px; }
+.iv-head { padding: 9px 0; color: #7c8b8d; font-size: 11px; }
+.iv-row input { padding: 5px 4px; background: #fff; border-color: #e0e6e1; border-radius: 6px; font: 12px var(--mono); color: #435d68; }
+.iv-row strong { color: #344f59; font-size: 14px; font-weight: 600; }
+.iv-max { padding: 6px; border-radius: 5px; font-size: 10px; color: #657876; background: #eef2e9; }
+.iv-max:hover { background: #e3eadb; }
+.creature-buffs { margin-top: 13px; padding-top: 11px; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; border-top-color: #e1e6de; }
+.creature-buffs h3 { font-size: 15px; color: #405f68; margin-bottom: 2px; }
+.creature-buffs .damage-field > span { font-size: 11px; }
+.creature-buffs .damage-field input { padding: 7px; font-size: 13px; }
+.creature-buffs .damage-field em { padding-right: 7px; }
+.creature-card[data-side="defense"] .creature-buffs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.creature-feature { margin: 12px 0 0; padding: 10px 12px; border-radius: 8px; background: #f0f4ed; color: #526d6f; font-size: 12px; }
+.creature-feature small { color: #748487; font-size: 11px; }
+.feature-entry { margin: 12px 0 0; display: grid; grid-template-columns: 1fr 100px; align-items: center; gap: 5px 12px; padding: 10px 12px; background: #fbf3dc; border-radius: 8px; }
+.feature-entry small { grid-column: 1 / -1; color: #8c783f; }
+.skill-comparison-grid { gap: 12px; }
+.skill-slot { border: 1px solid #e1e6df; border-radius: 12px; padding: 12px; background: #fafbf6; }
+.skill-slot .damage-skill-label { color: #6f8082; font-size: 11px; }
+.skill-slot select { margin: 0 0 10px; font-size: 12px; }
+.skill-summary { grid-template-columns: 58px minmax(0, 1fr) 76px; gap: 12px; min-height: 84px; }
+.skill-icon { width: 58px; height: 58px; border-radius: 10px; }
+.skill-summary-heading h3 { font: 400 20px var(--display); color: #304d58; }
+.skill-element { color: #5b6c9c; background: #e9ecf7; }
+.skill-meta { font-size: 11px; color: #76868a; gap: 10px; }
+.skill-description { font-size: 12px; color: #506770; margin-top: 6px; line-height: 1.65; }
+.skill-summary .skill-damage { background: #dc6663; border-radius: 10px; min-height: 68px; box-shadow: 0 3px 8px #dc666314; }
+.skill-summary .skill-damage strong { font: 700 25px/1.15 "Arial", sans-serif; font-variant-numeric: tabular-nums; }
+.skill-summary .skill-damage span { font: 600 12px/1.4 "Arial", sans-serif; }
+.skill-combo-note { color: #6e7f84; }
+.skill-calculation-details { margin-top: 10px; padding-top: 8px; border-top-color: #e2e7df; color: #6c8084; font-size: 11px; }
+.skill-calculation-details .damage-result { background: #fffef9; border-radius: 10px; }
+.skill-empty { color: #82908c; min-height: 84px; }
+.damage-input-note { color: #748585; font-size: 11px; margin-top: 12px; }
+.damage-result-heading h2, .damage-total > strong, .damage-step-heading > strong, .damage-step-heading > b { color: #365c68; }
+.damage-source, .damage-assumptions, .damage-steps p, .damage-result-heading > span:last-child { color: #718388; }
+.data-stat, .data-check-card, .data-module-card { background: #fffef9; border-radius: 14px; }
+.data-stat strong { color: #365c68; }
+.data-page-heading p, .data-check-header p, .data-times, .data-scope { color: #718388; }
+.data-update-button, .new-session { font-family: var(--display); }
+.data-update-button { background: #365c68; }
+.inspector { background: #f4f6f0; }
+.new-session { background: #fffdf7; border-radius: 9px; }
+.sidebar-section-label, .sidebar-empty { color: #718388; }
+@media (min-width: 1600px) { .workbench.page-chat { grid-template-columns: 245px minmax(0, 1fr); } }
+@media (max-width: 1000px) {
+  .site-header { padding: 0 20px; gap: 22px; }
+  .site-nav a { padding: 0 14px; }
+  .data-page { padding: 20px; }
+  .creature-card { padding: 16px; }
+  .creature-name { gap: 5px; }
+  .creature-identity strong { font-size: 21px; }
+  .creature-avatar { width: 100px; height: 110px; }
+  .creature-avatar img { width: 96px; height: 104px; }
+}
+@media (max-width: 760px) {
+  .workbench { grid-template-rows: 58px minmax(0, 1fr); }
+  .workbench.page-chat { grid-template-columns: 64px minmax(0, 1fr); }
+  .site-header { padding: 0 14px; gap: 18px; }
+  .site-brand strong { font-size: 19px; }
+  .site-brand-mark { width: 29px; height: 30px; font-size: 22px; }
+  .site-nav { gap: 0; flex: 1; justify-content: flex-end; }
+  .site-nav a { font-size: 13px; padding: 0 10px; }
+  .site-nav svg { display: none; }
+  .site-header .header-actions { margin-left: 0; gap: 2px; }
+  .data-page { padding: 16px; }
+  .creature-grid { gap: 14px; }
+  .creature-grid, .skill-comparison-grid { grid-template-columns: minmax(0, 1fr); }
+  .creature-card, .damage-card { padding: 16px; border-radius: 13px; margin-bottom: 14px; }
+  .creature-buffs { gap: 10px; }
+  .creature-avatar { width: 116px; height: 116px; }
+  .creature-avatar img { width: 110px; height: 110px; }
+  .creature-identity strong { font-size: 24px; }
+  .inspector { top: 58px; }
+}
+@media (max-width: 520px) {
+  .site-header { gap: 10px; padding: 0 12px; }
+  .site-brand { gap: 7px; }
+  .site-brand strong { font-size: 17px; }
+  .site-nav a { padding: 0 8px; font-size: 12px; }
+  .site-nav a span { white-space: nowrap; }
+  .page-chat .site-brand strong { display: none; }
+  .data-page { padding: 12px; }
+  .creature-card .damage-card-heading h2 { font-size: 20px; }
+  .damage-card-heading > span { font-size: 10px; }
+  .creature-buffs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-summary { grid-template-columns: 48px minmax(0, 1fr) 65px; gap: 8px; }
+  .skill-icon { width: 48px; height: 48px; }
+  .skill-summary-heading h3 { font-size: 18px; }
+  .skill-summary .skill-damage strong { font-size: 23px; }
+}
+
+@media (max-width: 360px) { .site-brand strong { display: none; } .site-nav a { padding: 0 7px; } }
