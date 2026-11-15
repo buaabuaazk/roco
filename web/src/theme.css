@@ -195,3 +195,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 360px) { .site-brand strong { display: none; } .site-nav a { padding: 0 7px; } }
 
 .visit-stats .data-module-heading{padding:0 0 16px;border-bottom:0}.visit-stats .data-stat-grid{margin-bottom:16px}.visit-stats .data-stat{background:#f2f5ee;padding:16px;border:0}.visit-stats .data-stat strong{font-variant-numeric:tabular-nums}.visit-history{color:#61767c;font-size:12px}.visit-history summary{cursor:pointer}.visit-history table{width:100%;border-collapse:collapse;text-align:left;margin:12px 0}.visit-history th,.visit-history td{padding:9px 12px;border-bottom:1px solid var(--line);font-size:12px}
+
+.skill-actions{display:flex;justify-content:space-between;gap:16px;border-top:1px solid #e2e7df;margin-top:10px;padding-top:8px}.skill-actions button{display:flex;align-items:center;gap:5px;padding:4px 0;color:#6c8084;font-size:11px}.skill-actions button:hover,.skill-actions button[aria-expanded="true"]{color:#304d58}.skill-options-panel{padding-top:10px}.skill-calculation-details.skill-options-panel{border-top:0;margin-top:0}

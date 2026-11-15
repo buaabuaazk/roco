@@ -80,10 +80,12 @@ function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, a
   const skill = skills.find(row => String(row.skill_id) === ids[index])
   const [customPower, setCustomPower] = useState('')
   const [overridePower, setOverridePower] = useState(false)
+  const [showPower, setShowPower] = useState(false)
+  const [showDetails, setShowDetails] = useState(false)
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
   const [answer, setAnswer] = useState<DamageAnswer>()
-  useEffect(() => {setOverridePower(false); setCustomPower(skill ? String(skill.power) : '')}, [skill?.skill_id, skill?.power])
+  useEffect(() => {setOverridePower(false); setShowPower(false); setShowDetails(false); setCustomPower(skill ? String(skill.power) : '')}, [skill?.skill_id, skill?.power])
   const validPower = !overridePower || (customPower !== '' && Number.isFinite(Number(customPower)) && Number(customPower) >= 0 && Number(customPower) <= 100000)
   const calculationKey = ready && skill && validPower ? JSON.stringify({attacker: payload(attacker), defender: payload(defender), skill_id: skill.skill_id, power_override: overridePower ? Number(customPower) : null}) : null
   useEffect(() => {
@@ -111,7 +113,11 @@ function SkillSlot({index, skills, ids, onChange, loading, hasAttacker, ready, a
     </div> : <p className="skill-empty">选择技能后自动显示伤害</p>}
     {!validPower && <div className="data-error" role="alert">{label}基础威力请填0～100000的有效数值。</div>}
     {error && <div className="data-error" role="alert">{label}：{error}</div>}
-    {skill && <details className="skill-calculation-details"><summary>调整威力与计算详情</summary><label className="power-override"><input aria-label={`${label}调整基础威力`} type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label={`${label}本次基础威力`} type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}<small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small>{answer && <DamageResult answer={answer} autoScroll={false} />}</details>}
+    {skill && <>
+      <div className="skill-actions"><button type="button" aria-label={`${label}调整威力`} aria-expanded={showPower} aria-controls={`skill-power-${index}`} onClick={() => setShowPower(!showPower)}><span aria-hidden="true">{showPower ? '▾' : '▸'}</span>调整威力</button><button type="button" aria-label={`${label}计算详情`} aria-expanded={showDetails} aria-controls={`skill-details-${index}`} onClick={() => setShowDetails(!showDetails)}><span aria-hidden="true">{showDetails ? '▾' : '▸'}</span>计算详情</button></div>
+      <div id={`skill-power-${index}`} className="skill-options-panel" hidden={!showPower}><label className="power-override"><input aria-label={`${label}调整基础威力`} type="checkbox" checked={overridePower} onChange={e => setOverridePower(e.target.checked)} />按本次触发条件调整基础威力</label>{overridePower && <label className="damage-field"><span>本次基础威力</span><div><input aria-label={`${label}本次基础威力`} type="number" min={0} max={100000} step="any" required value={customPower} onChange={e => setCustomPower(e.target.value)} /></div></label>}</div>
+      <div id={`skill-details-${index}`} className="skill-calculation-details skill-options-panel" hidden={!showDetails}><small>{[...new Set(skill.learning.map(learning))].join(' / ')}</small>{answer && <DamageResult answer={answer} autoScroll={false} />}</div>
+    </>}
   </section>
 }
 
